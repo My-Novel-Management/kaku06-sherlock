@@ -6,11 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-08-21
+### Changed
+- StoryBuilder: v0.6.1
+
 ## [0.0.1] - 2020-05-04
 ### Added
 - This CHANGELOG file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
 - README one line implemented.
 
 
-[Unreleased]: https://github.com/My-Novel-Management/long-yunazo/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/My-Novel-Management/long-yunazo/releases/v0.0.1
+[Unreleased]: https://github.com/My-Novel-Management/ln-yunazo/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.0.0
+[0.0.1]: https://github.com/My-Novel-Management/ln-yunazo/releases/v0.0.1

@@ -31,7 +31,7 @@ from config import ASSET
 
 # Constant
 TITLE = "作品タイトル"
-MAJOR, MINOR, MICRO = 0, 0, 1
+MAJOR, MINOR, MICRO = 1, 0, 0
 COPY = "コピィ"
 ONELINE = "一行説明"
 OUTLINE = "あらすじ"
