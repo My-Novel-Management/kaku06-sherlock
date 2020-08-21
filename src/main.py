@@ -1,74 +1,85 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Main story.
-"""
-## path setting
+'''
+Story: "title"
+'''
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append('storybuilder')
-## public libs
-## local libs
 from storybuilder.builder.world import World
-from storybuilder.builder.writer import Writer
-from config import PERSONS, AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS, RUBIS, LAYERS
-## assets
-from storybuilder.assets import basic, accessory
-## local files
-from src.chapter.main import ch_tmp
+from storybuilder.assets import basic
+from storybuilder.assets import common_rubi
+from config import ASSET
+# import scenes
+# from scenes import xxx
 
-## define alias
-W = Writer
-_ = Writer.getWho()
 
 ################################################################
 #
-# Sample step:
-# 1) Create the world
-#       世界を作成する。
-# 2) Create a new chapter
-#       章の作成。
-# 3) Create a episode
-#       エピソード作成。
-# 4) Create a new scene
-#       シーン作成。物語のベース。ここに様々なActionを追加する。
-# 5) Create a new stage
-#       舞台作成。シーンに必須要素
-# 6) Create a new day and time
-#       日時作成。シーンのサブ要素
-# 7) Add a scene plot
-#       シーンプロットの作成。概要のないシーンは原則使えない
-# 8) Add scene actions
-#       シーンアクションの追加。
+#   1. Initialize
+#   2. Story memo
+#   3. Structure    - 1/8
+#   4. Spec
+#   5. Plot         - 1/4
+#   6. Scenes
+#   7. Conte        - 1/2
+#   8. Layout
+#   9. Draft        - 1/1
 #
 ################################################################
 
+# Constant
+TITLE = "作品タイトル"
+MAJOR, MINOR, MICRO = 0, 0, 1
+COPY = "コピィ"
+ONELINE = "一行説明"
+OUTLINE = "あらすじ"
+THEME = "テーマ"
+GENRE = "ジャンル"
+TARGET = "ターゲット（年代）"
+SIZE = "規定サイズ"
+CONTEST_INFO = "コンテスト情報"
+CAUTION = "注意事項"
+NOTE = "備考"
+SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
+TAGS = ["ドラマ",]
+RELEASED = (1, 1, 2020)
 
-## main
-def create_world():
-    """Create a world.
-    """
-    w = World("title")
-    w.setCommonData()
-    w.setAssets(basic.ASSET)
-    w.setAssets(accessory.ASSET)
-    w.buildDB(PERSONS,
-            AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS,
-            RUBIS, LAYERS)
-    w.setBaseDate(2020)
-    w.setBaseArea("Tokyo")
-    # set textures
-    # w.entryBlock()
-    # w.entryHistory()
-    # w.entryLifeNote()
-    w.setOutline("__outline__")
-    return w
+
+# Episodes
+def ep_xxx(w: World):
+    return w.episode('episode_title',
+            outline="description")
+
+
+def ch_main(w: World):
+    return w.chapter('main',
+            )
 
 
 def main(): # pragma: no cover
-    w = create_world()
-    return w.build(
-            ch_tmp(w),
+    w = World.create_world(f"{TITLE}")
+    w.config.set_version(MAJOR, MINOR, MICRO)
+    w.db.set_from_asset(basic.ASSET)
+    w.db.set_from_asset(common_rubi.ASSET)
+    w.db.set_from_asset(ASSET)
+    # spec
+    w.config.set_copy(f"{COPY}")
+    w.config.set_oneline(f"{ONELINE}")
+    w.config.set_outline(f"{OUTLINE}")
+    w.config.set_theme(f"{THEME}")
+    w.config.set_genre(f"{GENRE}")
+    w.config.set_target(f"{TARGET}")
+    w.config.set_size(f"{SIZE}")
+    w.config.set_contest_info(f"{CONTEST_INFO}")
+    w.config.set_caution(f"{CAUTION}")
+    w.config.set_note(f"{NOTE}")
+    w.config.set_sites(*SITES)
+    w.config.set_taginfos(*TAGS)
+    w.config.set_released(*RELEASED)
+    return w.run(
+            ch_main(w),
             )
 
 
