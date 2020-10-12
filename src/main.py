@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
@@ -19,32 +20,32 @@ from config import ASSET
 #
 #   1. Initialize
 #   2. Story memo
-#   3. Structure    - 1/8
+#   3. Structure    - 1/8: 10K
 #   4. Spec
-#   5. Plot         - 1/4
+#   5. Plot         - 1/4: 25K
 #   6. Scenes
-#   7. Conte        - 1/2
+#   7. Conte        - 1/2: 50K
 #   8. Layout
-#   9. Draft        - 1/1
+#   9. Draft        - 1/1: 100K
 #
 ################################################################
 
 # Constant
-TITLE = "作品タイトル"
-MAJOR, MINOR, MICRO = 1, 0, 0
-COPY = "コピィ"
-ONELINE = "一行説明"
-OUTLINE = "あらすじ"
-THEME = "テーマ"
-GENRE = "ジャンル"
-TARGET = "ターゲット（年代）"
-SIZE = "規定サイズ"
-CONTEST_INFO = "コンテスト情報"
-CAUTION = "注意事項"
-NOTE = "備考"
+TITLE = "勇者は冒険より謎解きが得意"
+MAJOR, MINOR, MICRO = 1, 1, 0
+COPY = "勇者は冒険することよりも謎解きをしている方が楽だった"
+ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
+OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
+THEME = "謎解きで世界を救う"
+GENRE = "謎解きファンタジィ"
+TARGET = "10-30years"
+SIZE = "10万字以上"
+CONTEST_INFO = "第6回カクヨムコンテスト（異世界ファンタジー部門）"
+CAUTION = ""
+NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
-TAGS = ["ドラマ",]
-RELEASED = (1, 1, 2020)
+TAGS = ["ファンタジー", "勇者", "謎解き", "ミステリ"]
+RELEASED = (12, 1, 2020)
 
 
 # Episodes
@@ -57,7 +58,33 @@ def ch_main(w: World):
     return w.chapter('main',
             )
 
+# Notes
+def writer_note(w: World):
+    return w.writer_note("覚書",
+            )
 
+def plot_note(w: World):
+    return w.writer_note("プロットメモ",
+            )
+
+def chara_note(w: World):
+    return w.writer_note("人物メモ",
+            )
+
+def stage_note(w: World):
+    return w.writer_note("舞台メモ",
+            )
+
+def theme_note(w: World):
+    return w.writer_note("テーマメモ",
+            )
+
+def motif_note(w: World):
+    return w.writer_note("モチーフ",
+            )
+
+
+# Main
 def main(): # pragma: no cover
     w = World.create_world(f"{TITLE}")
     w.config.set_version(MAJOR, MINOR, MICRO)
@@ -79,6 +106,12 @@ def main(): # pragma: no cover
     w.config.set_taginfos(*TAGS)
     w.config.set_released(*RELEASED)
     return w.run(
+            writer_note(w),
+            plot_note(w),
+            chara_note(w),
+            stage_note(w),
+            theme_note(w),
+            motif_note(w),
             ch_main(w),
             )
 
