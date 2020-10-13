@@ -49,14 +49,14 @@ RELEASED = (12, 1, 2020)
 
 
 # Episodes
-def ep_xxx(w: World):
-    return w.episode('episode_title',
-            outline="description")
-
-
 def ch_main(w: World):
     return w.chapter('main',
+            w.plot_turnpoint(""),
+            w.plot_turnpoint("$heroが谷に落ちて消える"),
+            w.plot_resolve("化けていた$heroが正体を現して事件を解決する"),
+            w.plot_note("後半の中編の途中で最後の事件からの空き家の冒険のコンボを決める"),
             )
+
 
 # Notes
 def writer_note(w: World):
@@ -65,6 +65,11 @@ def writer_note(w: World):
 
 def plot_note(w: World):
     return w.writer_note("プロットメモ",
+            "１０万字の予定は以下のようにする",
+            "短編（１万から２万字）を３本で５万字",
+            "中編（５万字）を１本",
+            "これで１冊分になるように調整する",
+            "今回はホームズシリーズから色々と引っ張ってきて、そのタイトルをかぶせる",
             )
 
 def chara_note(w: World):
@@ -77,10 +82,13 @@ def stage_note(w: World):
 
 def theme_note(w: World):
     return w.writer_note("テーマメモ",
+            "全体に共通するのは「事実は小説より奇なり」",
+            "ファンタジーで不思議な能力や生き物のいる世界を扱うけれども、リアルを考えるとそう心地のいい世界でも都合のいい世界でもないよ、ということ",
             )
 
 def motif_note(w: World):
     return w.writer_note("モチーフ",
+            "ミステリ",
             )
 
 
