@@ -49,6 +49,16 @@ RELEASED = (12, 1, 2020)
 
 
 # Episodes
+def ep_first_meet(w: World):
+    return w.episode("最初の出会い",
+            w.plot_note("$cradesは噂を聞いて$heroの家を訪れる"),
+            w.plot_note("そこで$heroは何も聞かずに$cradesの素性を言い当てる"),
+            "相手を観察する力を見せる、ホームズ最初のやり取り",
+            "$cradesが記述者として後世に書き残した感じに（ただし三人称で）",
+            )
+
+
+# Chapters
 def ch_main(w: World):
     return w.chapter('main',
             w.plot_setup("世界から突如魔王の脅威が消え去った"),
