@@ -13,6 +13,7 @@ ASSET = {
             ("crades", "クラデス", "", 67,(1,1), "male", "魔道士", "me:儂"),
             ("ail", "アイル", "アルドラ,アイル", "female", "王族", "me:私"),
             ("moro", "モロー", "", 50,(1,1), "male", "盗賊", "me:私"),
+            ("mike", "マイク", "ホルムズ,マイク", 27,(1,1), "male", "me:私"),
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)

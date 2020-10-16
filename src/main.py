@@ -58,6 +58,21 @@ def ep_first_meet(w: World):
             )
 
 
+def ep_falling_down(w: World):
+    return w.episode("落下の滝",
+            )
+
+
+def ep_darkdog(w: World):
+    return w.episode("恐怖の魔犬",
+            )
+
+
+def ep_comeback_hero(w: World):
+    return w.episode("戻ってきた英雄",
+            )
+
+
 # Chapters
 def ch_main(w: World):
     return w.chapter('main',
@@ -90,6 +105,9 @@ def plot_note(w: World):
             "全体を通して「緋色の研究」を。内容として細かく「踊る人形」とか入れていく",
             "ボヘミアの醜聞と赤毛組合、",
             "短編は基本的に「冒険」から引く",
+            "１話は「緋色の研究の冒頭」＋「冒険」",
+            "５話以降は「緋色の研究」のラストを使う。ワトソン役の$cradesが記述して残して研究していくことを決める",
+            "勇者は「なぜ突然魔王が消えたのか」を知っていると$cradesと読者に思わせる",
             )
 
 def chara_note(w: World):
