@@ -32,7 +32,7 @@ from config import ASSET
 
 # Constant
 TITLE = "勇者は冒険より謎解きが得意"
-MAJOR, MINOR, MICRO = 1, 1, 0
+MAJOR, MINOR, MICRO = 1, 2, 0
 COPY = "勇者は冒険することよりも謎解きをしている方が楽だった"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -49,6 +49,11 @@ RELEASED = (12, 1, 2020)
 
 
 # Episodes
+def ep_visit_hero(w: World):
+    return w.episode("$heroを訪ねて",
+            w.plot_note("$cradesは"),
+            )
+
 def ep_first_meet(w: World):
     return w.episode("最初の出会い",
             w.plot_note("$cradesは噂を聞いて$heroの家を訪れる"),
