@@ -7,7 +7,7 @@ Story Config
 ASSET = {
         "PERSONS": (
             # (tag / name / full / age (birth) / job / call / info)
-            ("hero", "ゆうしゃ", "", 18,(1,1), "male", "勇者", "me:僕"),
+            ("alex", "アレックス", "ホルムズ,アレックス", 18,(1,1), "male", "勇者", "me:僕"),
             ("pan", "パンナ", "ワーロン,パンナ", 16,(1,1), "female", "武闘家", "me:ウチ"),
             ("emil", "エミール", "", 17,(1,1), "female", "騎士", "me:私"),
             ("crades", "クラデス", "", 67,(1,1), "male", "魔道士", "me:儂"),
@@ -29,6 +29,8 @@ ASSET = {
             ),
         "WORDS": (
             # (tag / name / cate / info)
+            ("hero", "勇者"),
+            ("alec", "アレク"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
