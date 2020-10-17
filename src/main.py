@@ -74,6 +74,39 @@ def ep_comeback_hero(w: World):
 
 
 # Chapters
+def ch_not_a_hero(w: World):
+    return w.chapter("僕は$heroじゃない",
+            )
+
+def ch_kingdom_scandal(w: World):
+    return w.chapter("王国スキャンダル",
+            )
+
+def ch_red_armar_union(w: World):
+    return w.chapter("赤鎧同盟",
+            )
+
+def ch_shamed_man(w: World):
+    return w.chapter("みにくい男",
+            )
+
+def ch_strange_island(w: World):
+    return w.chapter("奇妙な島",
+            )
+
+def ch_dark_dog(w: World):
+    return w.chapter("魔犬の犯行",
+            )
+
+def ch_comeback_detective(w: World):
+    return w.chapter("探偵の帰還",
+            )
+
+def ch_truth_murder(w: World):
+    return w.chapter("真犯人",
+            )
+
+
 def ch_main(w: World):
     return w.chapter('main',
             w.plot_setup("世界から突如魔王の脅威が消え去った"),
