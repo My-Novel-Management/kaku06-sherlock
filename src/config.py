@@ -22,7 +22,8 @@ ASSET = {
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
-            ("Lomda", "ロムダ", "", (1000,1000)),
+            ("Lomda", "ロムダ", "", (1000,1000)),# 国名
+            ("Backer", "ベッカー", "Lomda"),
             ),
         "DAYS": (
             # (tag / name / month / day / year)

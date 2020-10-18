@@ -77,6 +77,16 @@ def ep_clever_lady(w: World):
             w.plot_note("最後のところで逃してしまう"),
             )
 
+def ep_red_armor(w: World):
+    return w.episode("赤鎧組合",
+            w.plot_note("赤い鎧を着た者だけを集めている不思議な組合があった"),
+            w.plot_note("そこで選ばれた赤鎧はずっと写本をしているだけで給料と食べ物が支給された"),
+            w.plot_note("その謎の仕事について依頼がある"),
+            w.plot_note("実は金持ちの家の護衛を休ませて、その間に秘密の抜け穴を掘るということを盗賊団が行っていた"),
+            w.plot_note("その赤鎧組合の中に一人奇妙な鎧がいた"),
+            w.plot_note("それも女性で、実は彼女は失踪中の第二王女だった"),
+            w.plot_note("$emilは$alexたちの住居に居候することになる"),
+            )
 
 def ep_falling_down(w: World):
     return w.episode("落下の滝",
@@ -97,39 +107,6 @@ def ep_comeback_hero(w: World):
 
 
 # Chapters
-def ch_not_a_hero(w: World):
-    return w.chapter("僕は$heroじゃない",
-            )
-
-def ch_kingdom_scandal(w: World):
-    return w.chapter("王国スキャンダル",
-            )
-
-def ch_red_armar_union(w: World):
-    return w.chapter("赤鎧同盟",
-            )
-
-def ch_shamed_man(w: World):
-    return w.chapter("みにくい男",
-            )
-
-def ch_strange_island(w: World):
-    return w.chapter("奇妙な島",
-            )
-
-def ch_dark_dog(w: World):
-    return w.chapter("魔犬の犯行",
-            )
-
-def ch_comeback_detective(w: World):
-    return w.chapter("探偵の帰還",
-            )
-
-def ch_truth_murder(w: World):
-    return w.chapter("真犯人",
-            )
-
-
 def ch_main(w: World):
     return w.chapter('main',
             w.plot_setup("世界から突如魔王の脅威が消え去った"),
