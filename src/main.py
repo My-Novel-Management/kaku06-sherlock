@@ -90,6 +90,9 @@ def ep_darkdog(w: World):
 
 def ep_comeback_hero(w: World):
     return w.episode("戻ってきた英雄",
+            w.plot_note("奇妙な密室殺人についての調査を引き受けた$crades"),
+            w.plot_note("$cradesは頭を悩ませていた"),
+            w.plot_note("謎の男の正体は$alexだった"),
             )
 
 

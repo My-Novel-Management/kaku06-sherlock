@@ -22,6 +22,7 @@ ASSET = {
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
+            ("Lomda", "ロムダ", "", (1000,1000)),
             ),
         "DAYS": (
             # (tag / name / month / day / year)
