@@ -49,9 +49,12 @@ RELEASED = (12, 1, 2020)
 
 
 # Episodes
-def ep_visit_hero(w: World):
+def ep_crades_meet_hero(w: World):
     return w.episode("$heroを訪ねて",
-            w.plot_note("$cradesは"),
+            w.plot_note("$cradesは$alexを訪ねる"),
+            w.plot_note("ある依頼をしようとやってきたのだが、依頼を口にする前から色々と言い当てられてしまう"),
+            w.plot_note("自分の正体が元神官だとばらして、その上で依頼をする"),
+            w.plot_note("依頼内容は「」"),
             )
 
 def ep_first_meet(w: World):
