@@ -54,15 +54,27 @@ def ep_crades_meet_hero(w: World):
             w.plot_note("$cradesは$alexを訪ねる"),
             w.plot_note("ある依頼をしようとやってきたのだが、依頼を口にする前から色々と言い当てられてしまう"),
             w.plot_note("自分の正体が元神官だとばらして、その上で依頼をする"),
-            w.plot_note("依頼内容は「」"),
+            w.plot_note("依頼内容は「ある女性から短刀（宝剣）を取り返して取り返してもらいたい」というもの"),
+            w.plot_note("それがどういう由来を持つかは聞かないなど、条件つき"),
+            w.plot_note("実は王子$adamsが結婚することになり、過去の女性関係を精算したが、その女性にプレゼントした宝剣はどうしても返してもらえなかった"),
+            w.plot_note("そういう事情なら泥棒にでも頼めばいいと断る"),
+            w.plot_note("世間では義賊として「怪盗$rudy」が暗躍していた"),
             )
 
-def ep_first_meet(w: World):
-    return w.episode("最初の出会い",
-            w.plot_note("$cradesは噂を聞いて$heroの家を訪れる"),
-            w.plot_note("そこで$heroは何も聞かずに$cradesの素性を言い当てる"),
-            "相手を観察する力を見せる、ホームズ最初のやり取り",
-            "$cradesが記述者として後世に書き残した感じに（ただし三人称で）",
+def ep_phantom_rudy(w: World):
+    return w.episode("怪盗$rudy",
+            w.plot_note("王国や金持ちが所有している中から宝石などを盗み出し、孤児院などに寄付をしていく怪盗がいた"),
+            w.plot_note("正体を見た者はいない"),
+            w.plot_note("色々な噂があったが、王国警察もまだ捕まえるに至っていない"),
+            )
+
+def ep_clever_lady(w: World):
+    return w.episode("賢い女$ail",
+            w.plot_note("変装して逃亡しようとした$ailを最後のところで追い詰める"),
+            w.plot_note("$alexは$ailが$rudyだと見破っていた"),
+            w.plot_note("宝剣の場所を尋ねるが既に闇マーケットに流したらしい"),
+            w.plot_note("なぜ王国に恨みを持つのかという質問には王国の謎を突き止めれば自然と分かるとだけ"),
+            w.plot_note("最後のところで逃してしまう"),
             )
 
 
