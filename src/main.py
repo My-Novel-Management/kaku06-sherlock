@@ -162,6 +162,19 @@ def plot_note(w: World):
             "３話が$emilの話", "大食い仮面騎士",
             "４話くらいで$ailの話ひっかけ",
             "５話からちょっと大型事件、連続殺人とか、密室殺人とか",
+            "基本方針は「冒険の旅に出るまで」この街で事件解決をしつつ仲間や情報を揃える、が１巻",
+            )
+
+def title_note(w: World):
+    return w.writer_note("タイトル考",
+            "基本的に名作ミステリのタイトルをもじる",
+            "「虹色の研究」",
+            "「赤鎧組合」",
+            "「勇者の帰還」",
+            "「鼻のねじれた男」",
+            "「バンカーブルの魔犬」",
+            "「勇者最後の事件」",
+            "「廃墟の冒険」",
             )
 
 def chara_note(w: World):
@@ -214,6 +227,7 @@ def main(): # pragma: no cover
     return w.run(
             writer_note(w),
             plot_note(w),
+            title_note(w),
             chara_note(w),
             stage_note(w),
             theme_note(w),
