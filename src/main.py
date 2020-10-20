@@ -12,6 +12,9 @@ from storybuilder.builder.world import World
 from storybuilder.assets import basic
 from storybuilder.assets import common_rubi
 from config import ASSET
+from settings import world_note
+from settings import calture_note
+from plots import mystery_note
 # import scenes
 # from scenes import xxx
 
@@ -32,7 +35,7 @@ from config import ASSET
 
 # Constant
 TITLE = "勇者は冒険より謎解きが得意"
-MAJOR, MINOR, MICRO = 1, 2, 0
+MAJOR, MINOR, MICRO = 1, 2, 1
 COPY = "勇者は冒険することよりも謎解きをしている方が楽だった"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -247,6 +250,9 @@ def main(): # pragma: no cover
             stage_note(w),
             theme_note(w),
             motif_note(w),
+            world_note(w),
+            calture_note(w),
+            mystery_note(w),
             ch_main(w),
             )
 
