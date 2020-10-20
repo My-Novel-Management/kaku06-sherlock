@@ -32,7 +32,7 @@ from config import ASSET
 
 # Constant
 TITLE = "勇者は冒険より謎解きが得意"
-MAJOR, MINOR, MICRO = 1, 1, 0
+MAJOR, MINOR, MICRO = 1, 2, 0
 COPY = "勇者は冒険することよりも謎解きをしている方が楽だった"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -49,14 +49,44 @@ RELEASED = (12, 1, 2020)
 
 
 # Episodes
-def ep_first_meet(w: World):
-    return w.episode("最初の出会い",
-            w.plot_note("$cradesは噂を聞いて$heroの家を訪れる"),
-            w.plot_note("そこで$heroは何も聞かずに$cradesの素性を言い当てる"),
-            "相手を観察する力を見せる、ホームズ最初のやり取り",
-            "$cradesが記述者として後世に書き残した感じに（ただし三人称で）",
+def ep_crades_meet_hero(w: World):
+    return w.episode("$heroを訪ねて",
+            w.plot_note("$cradesは$alexを訪ねる"),
+            w.plot_note("ある依頼をしようとやってきたのだが、依頼を口にする前から色々と言い当てられてしまう"),
+            w.plot_note("自分の正体が元神官だとばらして、その上で依頼をする"),
+            w.plot_note("依頼内容は「ある女性から短刀（宝剣）を取り返して取り返してもらいたい」というもの"),
+            w.plot_note("それがどういう由来を持つかは聞かないなど、条件つき"),
+            w.plot_note("実は王子$adamsが結婚することになり、過去の女性関係を精算したが、その女性にプレゼントした宝剣はどうしても返してもらえなかった"),
+            w.plot_note("そういう事情なら泥棒にでも頼めばいいと断る"),
+            w.plot_note("世間では義賊として「怪盗$rudy」が暗躍していた"),
             )
 
+def ep_phantom_rudy(w: World):
+    return w.episode("怪盗$rudy",
+            w.plot_note("王国や金持ちが所有している中から宝石などを盗み出し、孤児院などに寄付をしていく怪盗がいた"),
+            w.plot_note("正体を見た者はいない"),
+            w.plot_note("色々な噂があったが、王国警察もまだ捕まえるに至っていない"),
+            )
+
+def ep_clever_lady(w: World):
+    return w.episode("賢い女$ail",
+            w.plot_note("変装して逃亡しようとした$ailを最後のところで追い詰める"),
+            w.plot_note("$alexは$ailが$rudyだと見破っていた"),
+            w.plot_note("宝剣の場所を尋ねるが既に闇マーケットに流したらしい"),
+            w.plot_note("なぜ王国に恨みを持つのかという質問には王国の謎を突き止めれば自然と分かるとだけ"),
+            w.plot_note("最後のところで逃してしまう"),
+            )
+
+def ep_red_armor(w: World):
+    return w.episode("赤鎧組合",
+            w.plot_note("赤い鎧を着た者だけを集めている不思議な組合があった"),
+            w.plot_note("そこで選ばれた赤鎧はずっと写本をしているだけで給料と食べ物が支給された"),
+            w.plot_note("その謎の仕事について依頼がある"),
+            w.plot_note("実は金持ちの家の護衛を休ませて、その間に秘密の抜け穴を掘るということを盗賊団が行っていた"),
+            w.plot_note("その赤鎧組合の中に一人奇妙な鎧がいた"),
+            w.plot_note("それも女性で、実は彼女は失踪中の第二王女だった"),
+            w.plot_note("$emilは$alexたちの住居に居候することになる"),
+            )
 
 def ep_falling_down(w: World):
     return w.episode("落下の滝",
@@ -70,43 +100,13 @@ def ep_darkdog(w: World):
 
 def ep_comeback_hero(w: World):
     return w.episode("戻ってきた英雄",
+            w.plot_note("奇妙な密室殺人についての調査を引き受けた$crades"),
+            w.plot_note("$cradesは頭を悩ませていた"),
+            w.plot_note("謎の男の正体は$alexだった"),
             )
 
 
 # Chapters
-def ch_not_a_hero(w: World):
-    return w.chapter("僕は$heroじゃない",
-            )
-
-def ch_kingdom_scandal(w: World):
-    return w.chapter("王国スキャンダル",
-            )
-
-def ch_red_armar_union(w: World):
-    return w.chapter("赤鎧同盟",
-            )
-
-def ch_shamed_man(w: World):
-    return w.chapter("みにくい男",
-            )
-
-def ch_strange_island(w: World):
-    return w.chapter("奇妙な島",
-            )
-
-def ch_dark_dog(w: World):
-    return w.chapter("魔犬の犯行",
-            )
-
-def ch_comeback_detective(w: World):
-    return w.chapter("探偵の帰還",
-            )
-
-def ch_truth_murder(w: World):
-    return w.chapter("真犯人",
-            )
-
-
 def ch_main(w: World):
     return w.chapter('main',
             w.plot_setup("世界から突如魔王の脅威が消え去った"),
@@ -162,6 +162,34 @@ def plot_note(w: World):
             "３話が$emilの話", "大食い仮面騎士",
             "４話くらいで$ailの話ひっかけ",
             "５話からちょっと大型事件、連続殺人とか、密室殺人とか",
+            "基本方針は「冒険の旅に出るまで」この街で事件解決をしつつ仲間や情報を揃える、が１巻",
+            "全体の流れ：",
+            "謎の殺人事件が裏で起こっている。関係者はかつて勇者に協力したとされる人間（事実ではなく噂であっても）",
+            "最初は「簡単な依頼」を$cradesが持ってくる",
+            "でもその事件を解決すると殺人事件に遭遇",
+            "その容疑者に$pannaが選ばれる",
+            "容疑を晴らすためにがんばる",
+            "途中で謎の赤鎧組合が関わっているのを知る",
+            "そこに潜んでいたのは「失踪中の第二王女」だった",
+            "鎧の呪いを解いたが彼女は無口でしゃべらない",
+            "四人の仲間と同居することになる",
+            "ここまでが四話",
+            "残りで怪盗と勇者連続殺人事件の真犯人を追い詰める",
+            "実は$cradesが真犯人で、$cradesを名乗る別の人物だった",
+            "$k_shalを$heroと確認し、滝壺に落とす",
+            "しかし廃墟の冒険で生きていたことが分かり、$cradesを追い詰める",
+            )
+
+def title_note(w: World):
+    return w.writer_note("タイトル考",
+            "基本的に名作ミステリのタイトルをもじる",
+            "「虹色の研究」",
+            "「赤鎧組合」",
+            "「勇者の帰還」",
+            "「鼻のねじれた男」",
+            "「バンカーブルの魔犬」",
+            "「勇者最後の事件」",
+            "「廃墟の冒険」",
             )
 
 def chara_note(w: World):
@@ -214,6 +242,7 @@ def main(): # pragma: no cover
     return w.run(
             writer_note(w),
             plot_note(w),
+            title_note(w),
             chara_note(w),
             stage_note(w),
             theme_note(w),
