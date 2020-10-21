@@ -37,8 +37,11 @@ ASSET = {
         "WORDS": (
             # (tag / name / cate / info)
             ("hero", "勇者"),
+            ("boss", "魔王"),
+            ("monster", "魔獣"),
             ("k_shal", "シャル"),
             ("full_Emil", "ロムダ・エル・ミレイ"),
+            ("enagy", "魔素"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
