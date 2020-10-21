@@ -10,6 +10,12 @@ from storybuilder.builder.world import World
 
 
 # world settings
+def main_notes(w: World):
+    return (
+            characters_note(w),
+            )
+
+
 def characters_note(w: World):
     return w.writer_note('人物設定',
             w.tag.title("主人公（勇者で探偵）"),
