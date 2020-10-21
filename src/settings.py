@@ -9,6 +9,11 @@ sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 
 
+def main_notes(w: World):
+    return (
+            )
+
+
 # world settings
 def world_note(w: World):
     return w.writer_note('世界設定',

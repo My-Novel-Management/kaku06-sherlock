@@ -12,11 +12,10 @@ from storybuilder.builder.world import World
 from storybuilder.assets import basic
 from storybuilder.assets import common_rubi
 from config import ASSET
-from settings import world_note
-from settings import calture_note
 import persons
 import stages
 import plots
+import settings
 # import scenes
 # from scenes import xxx
 
@@ -114,7 +113,10 @@ def ep_comeback_hero(w: World):
 # Chapters
 def ch_main(w: World):
     return w.chapter('main',
-            w.plot_setup("世界から突如魔王の脅威が消え去った"),
+            w.plot_setup("かつて世界は$bossの脅威にさらされた"),
+            w.plot_setup("しかし$heroと呼ばれる存在たちの手によりその脅威は拭い去られ、世界に平和がもたらされた"),
+            w.plot_setup("現在世界は$heroとその仲間の末裔たちによって統治、管理されている"),
+            w.plot_setup(""),
             w.plot_setup("かつて勇者と呼ばれていた若者のもとに老人$cradesがやってくる"),
             w.plot_setup("$cradesは魔王が復活して世界を滅ぼそうとしているから助けてほしいと頼むが、勇者は応じない"),
             w.plot_turnpoint("そんな二人の前に、ある事件が持ち込まれた"),
@@ -181,10 +183,9 @@ def main(): # pragma: no cover
             title_note(w),
             *persons.main_notes(w),
             *stages.main_notes(w),
+            *settings.main_notes(w),
             theme_note(w),
             motif_note(w),
-            world_note(w),
-            calture_note(w),
             ch_main(w),
             )
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-About: "プロット（トリック面）"
+About: "プロット"
 '''
 import os
 import sys
