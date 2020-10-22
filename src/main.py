@@ -12,9 +12,10 @@ from storybuilder.builder.world import World
 from storybuilder.assets import basic
 from storybuilder.assets import common_rubi
 from config import ASSET
-from settings import world_note
-from settings import calture_note
-from plots import mystery_note
+import persons
+import stages
+import plots
+import settings
 # import scenes
 # from scenes import xxx
 
@@ -35,7 +36,7 @@ from plots import mystery_note
 
 # Constant
 TITLE = "勇者シャーロックは冒険しない"
-MAJOR, MINOR, MICRO = 1, 2, 1
+MAJOR, MINOR, MICRO = 1, 2, 2
 COPY = "勇者は冒険よりも事件解決を選んだ"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -112,75 +113,28 @@ def ep_comeback_hero(w: World):
 # Chapters
 def ch_main(w: World):
     return w.chapter('main',
-            w.plot_setup("世界から突如魔王の脅威が消え去った"),
-            w.plot_setup("かつて勇者と呼ばれていた若者のもとに老人$cradesがやってくる"),
-            w.plot_setup("$cradesは魔王が復活して世界を滅ぼそうとしているから助けてほしいと頼むが、勇者は応じない"),
+            w.plot_setup("かつて世界は$bossの脅威にさらされた"),
+            w.plot_setup("しかし$heroと呼ばれる存在たちの手によりその脅威は拭い去られ、世界に平和がもたらされた"),
+            w.plot_setup("現在世界は$heroとその仲間の末裔たちによって統治、管理されている"),
+            w.plot_setup("ある目的で$wilsonは捜し物が得意という男の許を訪ねる"),
+            w.plot_setup("依頼しようとした$wilsonの素性を言い当てたその男$sherlockは「勇者さん」と呼ばれていた"),
             w.plot_turnpoint("そんな二人の前に、ある事件が持ち込まれた"),
-            w.plot_turnpoint("$heroが谷に落ちて消える"),
-            w.plot_resolve("化けていた$heroが正体を現して事件を解決する"),
-            "１話あたり5000文字×４話の２万字相当で、全体を２０万字で調整する",
-            "一応中央値１０万字で折り返しになるように",
+            w.plot_develop("$heroはその知的好奇心と抜群の推理力をいかして持ち込まれた事件を解決する"),
+            w.plot_develop("その事件関係者だった、容疑者にされて家から排除されそうになった$maryや、呪いの鎧を着てしゃべれなくなった失踪中の第二王女を仲間にする"),
+            w.plot_develop("一方、世間では謎の怪死事件が続いていた"),
+            w.plot_develop("その事件に関わっているのが宗教団体という情報を手に入れ、その捜査を行う"),
+            w.plot_turnpoint("しかしそれは罠で、$heroがこの世ではないどこかに通じるという穴に落ちて姿を消してしまう"),
+            w.plot_resolve("残された$wilsonと$maryたちは彼の行方を探しつつ、持ち込まれた依頼の対応をしようとする"),
+            w.plot_resolve("実は$wilsonは偽物で、本物の勇者の末裔を探し出し、それの心臓を手に入れようとした闇のモノだった"),
+            w.plot_resolve("偽$wilsonの罠にはまりそうになった$maryたちを謎の男が救出したが、その男は変装していた$sherlockだった"),
+            w.plot_resolve("本物の$wilsonが現れ、王室から正式に「魔王探索」を依頼され、冒険の旅に出ることになった"),
+            "８章か７章でまとめる",
             )
 
 
 # Notes
 def writer_note(w: World):
     return w.writer_note("覚書",
-            )
-
-def plot_note(w: World):
-    return w.writer_note("プロットメモ",
-            "基本路線は「長編１本」で、細かい事件や仲間集めを挟みつつ、冒険嫌いな勇者に冒険させるような展開",
-            "１０万字の予定は以下のようにする",
-            "短編（１万から２万字）を３本で５万字",
-            "中編（５万字）を１本",
-            "これで１冊分になるように調整する",
-            "今回はホームズシリーズから色々と引っ張ってきて、そのタイトルをかぶせる",
-            "冒険に出たくない勇者を大好きな「謎」を餌になんとか冒険させようとする、という形に",
-            "ホームズ（初期型）とワトソン（クラデス）に、途中参加メンバーを加えてパーティにする",
-            "勇者ということは隠しつつ、探偵です、の代わりに「勇者です」と言う",
-            "「ただの謎解き好きな勇者です」",
-            "全体を通して「緋色の研究」を。内容として細かく「踊る人形」とか入れていく",
-            "ボヘミアの醜聞と赤毛組合、",
-            "短編は基本的に「冒険」から引く",
-            "１話は「緋色の研究の冒頭」＋「冒険」",
-            "５話以降は「緋色の研究」のラストを使う。ワトソン役の$cradesが記述して残して研究していくことを決める",
-            "勇者は「なぜ突然魔王が消えたのか」を知っていると$cradesと読者に思わせる",
-            "１話で「$heroと$crades」コンビ結成かつ$heroの能力披露",
-            "２話が$pan参加の話", "以前は「白馬に乗った王子伝説」",
-            "３話が$emilの話", "大食い仮面騎士",
-            "４話くらいで$ailの話ひっかけ",
-            "５話からちょっと大型事件、連続殺人とか、密室殺人とか",
-            "基本方針は「冒険の旅に出るまで」この街で事件解決をしつつ仲間や情報を揃える、が１巻",
-            "全体の流れ：",
-            "謎の殺人事件が裏で起こっている。関係者はかつて勇者に協力したとされる人間（事実ではなく噂であっても）",
-            "最初は「簡単な依頼」を$cradesが持ってくる",
-            "でもその事件を解決すると殺人事件に遭遇",
-            "その容疑者に$pannaが選ばれる",
-            "容疑を晴らすためにがんばる",
-            "途中で謎の赤鎧組合が関わっているのを知る",
-            "そこに潜んでいたのは「失踪中の第二王女」だった",
-            "鎧の呪いを解いたが彼女は無口でしゃべらない",
-            "四人の仲間と同居することになる",
-            "ここまでが四話",
-            "残りで怪盗と勇者連続殺人事件の真犯人を追い詰める",
-            "実は$cradesが真犯人で、$cradesを名乗る別の人物だった",
-            "$k_shalを$heroと確認し、滝壺に落とす",
-            "しかし廃墟の冒険で生きていたことが分かり、$cradesを追い詰める",
-            w.plot_note("１話（安楽椅子・ダイイングメッセージ）：$cradesが$heroを見つけて、魔王退治を依頼する。現場に行かずに事件解決（しかし情報間違っていたので後で推理し直す）"),
-            w.plot_note("２話（アリバイ・人物偽装）：ボヘミアの醜聞。$ail登場"),
-            w.plot_note("３話（事実誤認）：$pan仲間回。ボスコム警告の惨劇"),
-            w.plot_note("４話（奇妙な設定）：$emil仲間回。赤毛組合。鎧騎士だけを集めた謎の組合"),
-            w.plot_note("５話（密室）：くちびるのねじれた男"),
-            w.plot_note("６話（クローズド）：犬の仕業みたいな謎の殺人事件発生"),
-            w.plot_note("７話（奇妙な凶器）：魔獣の討伐依頼"),
-            w.plot_note("８話（不可能犯罪）：$ail再登場し、警告"),
-            w.plot_note("９話（見立て）：冒険嫌いの理由。"),
-            w.plot_note("１０話（心理トリック）：$heroが滝に落ちる。ライヘンバッハの滝（最後の事件）"),
-            w.plot_note("１１話（人物誤認）：実は謎の男の正体は$heroだった。空き家の冒険"),
-            w.plot_note("１２話（叙述トリック）：戻ってきた$hero。実は$gradesは偽物で、連続殺人の真犯人だった"),
-            w.plot_note("実は$cradesは魔王の使いで、勇者がまだ生きていることの確認とその殺害が目的だった"),
-            w.plot_note("本物の$cradesは後になって登場する。ずっと謎の空間に閉じ込められていて、様々な時空を彷徨っていた"),
             )
 
 def title_note(w: World):
@@ -193,20 +147,6 @@ def title_note(w: World):
             "「バンカーブルの魔犬」",
             "「勇者最後の事件」",
             "「廃墟の冒険」",
-            )
-
-def chara_note(w: World):
-    return w.writer_note("人物メモ",
-            "勇者はDQっぽく、何か名前があるんだろうけど「あんた」とか呼ばせる",
-            "全体は三人称で",
-            "特殊な場合に限り、一人称もあり（叙述トリックなど）",
-            "パーティは勇者、元神官の魔法使い、女騎士、女武闘家",
-            )
-
-def stage_note(w: World):
-    return w.writer_note("舞台メモ",
-            "魔王の脅威にさらされていたが、ある日突如として魔王が消えた世界",
-            "なぜか突然戻った平和な世界で、隠居した勇者を引っ張り出す",
             )
 
 def theme_note(w: World):
@@ -244,15 +184,13 @@ def main(): # pragma: no cover
     w.config.set_released(*RELEASED)
     return w.run(
             writer_note(w),
-            plot_note(w),
+            *plots.main_notes(w),
             title_note(w),
-            chara_note(w),
-            stage_note(w),
+            *persons.main_notes(w),
+            *stages.main_notes(w),
+            *settings.main_notes(w),
             theme_note(w),
             motif_note(w),
-            world_note(w),
-            calture_note(w),
-            mystery_note(w),
             ch_main(w),
             )
 
