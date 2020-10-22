@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.2.1] - 2020-10-23
+## [1.2.2] - 2020-10-22
+### Changed
+- base struct
+
+## [1.2.1] - 2020-10-21
 ### Changed
 - main title
 
@@ -32,7 +36,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - README one line implemented.
 
 
-[Unreleased]: https://github.com/My-Novel-Management/ln-yunazo/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/ln-yunazo/compare/v1.2.2...HEAD
+[1.2.2]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.2.2
 [1.2.1]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.2.1
 [1.2.0]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.2.0
 [1.1.0]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.1.0
