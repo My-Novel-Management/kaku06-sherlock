@@ -12,6 +12,7 @@ from storybuilder.builder.world import World
 def main_notes(w: World):
     return (
             base_plot(w),
+            plot_note(w),
             mystery_note(w),
             )
 
@@ -34,6 +35,26 @@ def base_plot(w: World):
             "そこから$wilsonは$sherlockという探偵と奇妙な事件に出くわすことになる",
             )
 
+def chapter_plot(w: World):
+    return w.writer_note("章構成",
+            "プロローグ＋８章＋エピローグかな",
+            "もしくは７章",
+            w.tag.title("プロローグ"),
+            "$wilson（記述者）の語り＋三人称で後から装飾して叙述されていると",
+            "その記録された本を読んでいるというメタになっている",
+            "更に$wilsonの知識は何故か現代人にねざしている（これは実は$wilsonが転生人だというオチ）",
+            w.tag.title("１章"),
+            "$wilsonが$sherlockを訪問し、依頼をしようとする",
+            w.tag.title("２章"),
+            w.tag.title("３章"),
+            w.tag.title("４章"),
+            w.tag.title("５章"),
+            w.tag.title("６章"),
+            w.tag.title("７章"),
+            w.tag.title("８章"),
+            w.tag.title("エピローグ"),
+            "本物の$wilsonが訪れ、$sherlockたちに正式に依頼するという形になる",
+            )
 
 def plot_note(w: World):
     return w.writer_note("プロットメモ",
