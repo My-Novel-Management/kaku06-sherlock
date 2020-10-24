@@ -138,6 +138,7 @@ def ch_prologue(w: World):
 def ch_kingdom_scandal(w: World):
     return w.chapter("皇太子の醜聞",
             "街が舞台",
+            w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),
             w.plot_setup(""),
             )
 
