@@ -131,6 +131,61 @@ def ch_main(w: World):
             "８章か７章でまとめる",
             )
 
+def ch_prologue(w: World):
+    return w.chapter("プロローグ",
+            )
+
+def ch_kingdom_scandal(w: World):
+    return w.chapter("皇太子の醜聞",
+            "街が舞台",
+            w.plot_setup(""),
+            )
+
+def ch_sadness_valley(w: World):
+    return w.chapter("悲しみの谷",
+            "舞台はそう遠くない田舎町",
+            )
+
+def ch_red_armor(w: World):
+    return w.chapter("赤鎧クラブ",
+            )
+
+def ch_blue_garnet(w: World):
+    return w.chapter("紺碧のガーネット",
+            )
+
+def ch_devil_dog(w: World):
+    return w.chapter("魔犬",
+            "舞台は荒野ダートムア",
+            )
+
+def ch_last_case(w: World):
+    return w.chapter("最後の事件",
+            "隣国マイリンゲンのライヘンバッハ",
+            )
+
+def ch_empty_house(w: World):
+    return w.chapter("空き家の事件",
+            "ベックマン街の空き家",
+            )
+
+def ch_epilogue(w: World):
+    return w.chapter("エピローグ",
+            )
+
+def chapters(w: World):
+    return (
+            ch_main(w),
+            ch_prologue(w),
+            ch_kingdom_scandal(w),
+            ch_sadness_valley(w),
+            ch_red_armor(w),
+            ch_blue_garnet(w),
+            ch_devil_dog(w),
+            ch_last_case(w),
+            ch_empty_house(w),
+            ch_epilogue(w),
+            )
 
 # Notes
 def writer_note(w: World):
@@ -191,7 +246,7 @@ def main(): # pragma: no cover
             *settings.main_notes(w),
             theme_note(w),
             motif_note(w),
-            ch_main(w),
+            *chapters(w),
             )
 
 
