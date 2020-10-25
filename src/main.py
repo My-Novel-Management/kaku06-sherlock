@@ -138,26 +138,41 @@ def ch_prologue(w: World):
 def ch_kingdom_scandal(w: World):
     return w.chapter("皇太子の醜聞",
             "街が舞台",
+            w.plot_setup("世間では怪盗$rudyという謎の存在が人気を集めていた"),
             w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),
-            w.plot_setup(""),
+            w.plot_setup("実は皇太子が結婚を控えているが、過去の女に預けた宝剣を取り戻したいというのだ"),
+            w.plot_turnpoint(""),
+            w.plot_resolve("$ailyは最初から存在しない女だった"),
+            w.plot_resolve("宝剣は取り戻したものの、そこにはまっていた宝珠が消えていた"),
+            w.plot_resolve("しかし宝剣に新しい宝珠がつけられ、皇太子の結婚式は無事に行われた"),
             )
 
 def ch_sadness_valley(w: World):
     return w.chapter("悲しみの谷",
             "舞台はそう遠くない田舎町",
+            w.plot_resolve(""),
             )
 
 def ch_red_armor(w: World):
     return w.chapter("赤鎧クラブ",
+            w.plot_resolve("呪いの鎧を着ていたのは$limeという、かつて失踪した王国の第二王女だった"),
+            w.plot_resolve("$limeは事情があり、王室には帰れないというので仕方なく$sherlockたちの家に居候することになった"),
             )
 
 def ch_blue_garnet(w: World):
     return w.chapter("紺碧のガーネット",
+            w.plot_setup("市場の男が持ってきたニワトリから宝石が出てくる"),
+            w.plot_resolve(""),
             )
 
 def ch_devil_dog(w: World):
     return w.chapter("魔犬",
             "舞台は荒野ダートムア",
+            w.plot_setup("その荒野では魔獣の伝説があった"),
+            w.plot_setup("実際に魔獣の仕業と考えられる猟奇殺人が発生する"),
+            w.plot_resolve("降霊術で魔獣を呼び出したが、それはただ愛犬を蘇らせたいという女の気持ちだった"),
+            w.plot_resolve("魔獣に餌を与える必要があり、仕方なく伝説になぞらえて殺人させたのだ"),
+            w.plot_resolve("魔獣は退治され、女は逮捕された"),
             )
 
 def ch_last_case(w: World):
