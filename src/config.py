@@ -35,6 +35,7 @@ ASSET = {
             ),
         "ITEMS": (
             # (tag / name / cate / info)
+            ("gun", "魔銃"),
             ),
         "WORDS": (
             # (tag / name / cate / info)
