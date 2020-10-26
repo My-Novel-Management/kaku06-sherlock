@@ -52,64 +52,6 @@ TAGS = ["ファンタジー", "勇者", "謎解き", "ミステリ"]
 RELEASED = (12, 1, 2020)
 
 
-# Episodes
-def ep_crades_meet_hero(w: World):
-    return w.episode("$heroを訪ねて",
-            w.plot_note("$cradesは$alexを訪ねる"),
-            w.plot_note("ある依頼をしようとやってきたのだが、依頼を口にする前から色々と言い当てられてしまう"),
-            w.plot_note("自分の正体が元神官だとばらして、その上で依頼をする"),
-            w.plot_note("依頼内容は「ある女性から短刀（宝剣）を取り返して取り返してもらいたい」というもの"),
-            w.plot_note("それがどういう由来を持つかは聞かないなど、条件つき"),
-            w.plot_note("実は王子$adamsが結婚することになり、過去の女性関係を精算したが、その女性にプレゼントした宝剣はどうしても返してもらえなかった"),
-            w.plot_note("そういう事情なら泥棒にでも頼めばいいと断る"),
-            w.plot_note("世間では義賊として「怪盗$rudy」が暗躍していた"),
-            )
-
-def ep_phantom_rudy(w: World):
-    return w.episode("怪盗$rudy",
-            w.plot_note("王国や金持ちが所有している中から宝石などを盗み出し、孤児院などに寄付をしていく怪盗がいた"),
-            w.plot_note("正体を見た者はいない"),
-            w.plot_note("色々な噂があったが、王国警察もまだ捕まえるに至っていない"),
-            )
-
-def ep_clever_lady(w: World):
-    return w.episode("賢い女$ail",
-            w.plot_note("変装して逃亡しようとした$ailを最後のところで追い詰める"),
-            w.plot_note("$alexは$ailが$rudyだと見破っていた"),
-            w.plot_note("宝剣の場所を尋ねるが既に闇マーケットに流したらしい"),
-            w.plot_note("なぜ王国に恨みを持つのかという質問には王国の謎を突き止めれば自然と分かるとだけ"),
-            w.plot_note("最後のところで逃してしまう"),
-            )
-
-def ep_red_armor(w: World):
-    return w.episode("赤鎧組合",
-            w.plot_note("赤い鎧を着た者だけを集めている不思議な組合があった"),
-            w.plot_note("そこで選ばれた赤鎧はずっと写本をしているだけで給料と食べ物が支給された"),
-            w.plot_note("その謎の仕事について依頼がある"),
-            w.plot_note("実は金持ちの家の護衛を休ませて、その間に秘密の抜け穴を掘るということを盗賊団が行っていた"),
-            w.plot_note("その赤鎧組合の中に一人奇妙な鎧がいた"),
-            w.plot_note("それも女性で、実は彼女は失踪中の第二王女だった"),
-            w.plot_note("$emilは$alexたちの住居に居候することになる"),
-            )
-
-def ep_falling_down(w: World):
-    return w.episode("落下の滝",
-            )
-
-
-def ep_darkdog(w: World):
-    return w.episode("恐怖の魔犬",
-            )
-
-
-def ep_comeback_hero(w: World):
-    return w.episode("戻ってきた英雄",
-            w.plot_note("奇妙な密室殺人についての調査を引き受けた$crades"),
-            w.plot_note("$cradesは頭を悩ませていた"),
-            w.plot_note("謎の男の正体は$alexだった"),
-            )
-
-
 # Chapters
 def ch_main(w: World):
     return w.chapter('main',
@@ -133,6 +75,12 @@ def ch_main(w: World):
 
 def ch_prologue(w: World):
     return w.chapter("プロローグ",
+            w.plot_setup("新聞を読んでいる$sherlock"),
+            w.plot_setup("再び$bossが？という見出しに苦笑"),
+            w.plot_setup("部屋に入ってきた$wilsonが「また何か面白そうな事件でも見つけたかね？」と問う"),
+            w.plot_develop("$sherlockの御託並べが始まる"),
+            w.plot_resolve("この物語は$sherlockという奇妙な若者との出会いの記録である"),
+            w.plot_resolve("$wilsonが記述者で三人称で書き残したもの、という宣言"),
             )
 
 def ch_kingdom_scandal(w: World):
@@ -197,15 +145,35 @@ def ch_devil_dog(w: World):
 def ch_last_case(w: World):
     return w.chapter("最後の事件",
             "隣国マイリンゲンのライヘンバッハ",
+            w.plot_resolve("$sherlockが$morianoと闇の穴に落ちたと目撃証言が入った"),
             )
 
 def ch_empty_house(w: World):
     return w.chapter("空き家の事件",
             "ベックマン街の空き家",
+            w.plot_setup("穴に落ちた$sherlockがどこかで生きていると信じて探す$maryたち"),
+            w.plot_setup("しかし一ヶ月経っても何も情報が得られなかった"),
+            w.plot_setup("$sherlockが残した資料にあった人物が殺される"),
+            w.plot_turnpoint("$wilsonが$sherlockが隠れて生き延びているらしい空き家の情報を手に入れる"),
+            w.plot_develop("$maryたちはその空き家を調査する"),
+            w.plot_develop("空き家のはずが夜には明かりが灯り、誰かが中に暮らしているのが分かる"),
+            w.plot_turnpoint("$maryたちは眠らされ、気づくと縛られた状態で空き家の中にいた"),
+            w.plot_resolve("知らない男が入ってきて$maryたちを助け出す"),
+            w.plot_resolve("その知らない男の正体は$sherlockだった"),
+            w.plot_resolve("何食わぬ顔で戻ってきた$wilsonが偽物だと見抜いていて、警察が踏み込んでくる"),
+            w.plot_resolve("逮捕された$wilsonだったが、連行中に自爆して消えた"),
             )
 
 def ch_epilogue(w: World):
     return w.chapter("エピローグ",
+            w.plot_setup("一連の事件の黒幕が$morianoではなく$wilsonだったと$sherlockは語る"),
+            w.plot_turnpoint("本物の$wilsonがやってくる"),
+            w.plot_develop("$wilsonは既に解決した事件の正式な書簡を見せ、$sherlockに仕事を依頼しようとする"),
+            w.plot_develop("事情を全て聞かされた$wilson"),
+            w.plot_turnpoint("そんな$wilsonに新しい書簡が届く"),
+            w.plot_resolve("勇者直系の国王が暗殺されたという"),
+            w.plot_resolve("その調査を依頼されるのだ"),
+            w.plot_resolve("王室からの依頼は受けないといっていたが、それが自分の兄だと知り、仕方なく出向くことになった"),
             )
 
 def chapters(w: World):
