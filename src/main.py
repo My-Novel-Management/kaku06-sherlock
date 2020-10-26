@@ -122,13 +122,23 @@ def ch_sadness_valley(w: World):
 
 def ch_red_armor(w: World):
     return w.chapter("赤鎧クラブ",
+            w.plot_setup("$maryが居候し始めた"),
+            w.plot_setup("買い物にでかけた先で口論からいざこざになったところを、謎の赤鎧の騎士に助けられる"),
+            w.plot_setup(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
             w.plot_resolve("呪いの鎧を着ていたのは$limeという、かつて失踪した王国の第二王女だった"),
             w.plot_resolve("$limeは事情があり、王室には帰れないというので仕方なく$sherlockたちの家に居候することになった"),
             )
 
 def ch_blue_garnet(w: World):
     return w.chapter("紺碧のガーネット",
-            w.plot_setup("市場の男が持ってきたニワトリから宝石が出てくる"),
+            w.plot_setup(""),
+            w.plot_setup("$maryが仲良くなった市場の男からニワトリをもらってくる"),
+            w.plot_turnpoint("そのニワトリを捌くと中から宝石が出てくる"),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
             w.plot_resolve(""),
             )
 
