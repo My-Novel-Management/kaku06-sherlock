@@ -13,6 +13,7 @@ def main_notes(w: World):
     return (
             base_plot(w),
             chapter_plot(w),
+            story_lines(w),
             plot_note(w),
             mystery_note(w),
             )
@@ -35,6 +36,31 @@ def base_plot(w: World):
             "何とか依頼を受けてもらおうとしていると、そこに別の依頼人が飛び込んできて「助けてくれ」と",
             "そこから$wilsonは$sherlockという探偵と奇妙な事件に出くわすことになる",
             )
+
+
+def story_lines(w: World):
+    return w.writer_note("ストーリーライン",
+            w.tag.title("基本のライン"),
+            "ざっと見つかったものを挙げる",
+            "勇者殺人事件",
+            "$hero関係者失踪事件",
+            "$boss復活儀式",
+            "第二王女失踪事件（半年前から）",
+            "謎の赤鎧クラブ",
+            "宝剣盗難事件",
+            "皇太子からの宝剣奪取依頼",
+            "魔獣の伝説",
+            "$morianoが黒幕",
+            "謎の空き家の人影",
+            w.tag.title("裏側で進行する全体に共通のもの"),
+            "$hero関係者失踪事件",
+            "$boss復活の兆候",
+            "謎の宗教団体",
+            "↓$moriano黒幕説",
+            "↓偽物の$wilson",
+            w.tag.title("$hero関係者殺人事件"),
+            )
+
 
 def chapter_plot(w: World):
     return w.writer_note("章構成",
