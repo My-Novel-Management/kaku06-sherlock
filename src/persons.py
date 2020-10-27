@@ -47,3 +47,36 @@ def characters_note(w: World):
             "裏で糸を引いているのは$wilsonだが、その影武者としての存在",
             )
 
+
+def chara_sherlock(w: World):
+    return w.chara_note("$sherlock履歴書",
+            )
+
+def chara_mary(w: World):
+    return w.chara_note("$mary履歴書",
+            )
+
+def chara_lime(w: World):
+    return w.chara_note("$lime履歴書",
+            )
+
+def chara_wilson(w: World):
+    return w.chara_note("（偽）$wilson履歴書",
+            )
+
+def chara_wilson2(w: World):
+    return w.chara_note("（真）$wilson履歴書",
+            )
+
+def chara_moriano(w: World):
+    return w.chara_note("$moriano履歴書",
+            )
+
+def chara_aily(w: World):
+    return w.chara_note("$aily履歴書",
+            )
+
+def chara_rudy(w: World):
+    return w.chara_note("$rudy履歴書",
+            )
+
