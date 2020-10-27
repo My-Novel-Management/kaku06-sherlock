@@ -56,6 +56,7 @@ ASSET = {
             ),
         "DAYS": (
             # (tag / name / month / day / year)
+            ("base_year", "基本年", 1,1, 1881),
             ),
         "TIMES": (
             # (tag / name / hour / minute)
