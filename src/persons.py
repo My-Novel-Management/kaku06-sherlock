@@ -21,6 +21,7 @@ def main_notes(w: World):
             chara_aily(w),
             chara_rudy(w),
             chara_moriano(w),
+            sub_chara_note(w),
             )
 
 
@@ -123,6 +124,12 @@ def chara_wilson(w: World):
 
 def chara_wilson2(w: World):
     return w.chara_note("（真）$wilson履歴書",
+            "孤児院にて生まれる",
+            "院に手伝いにきていた女性が襲われて生まれた子で、彼女は彼を産んで予後が悪くて亡くなった",
+            "親はいないと知らされて育つ",
+            "小さな子どもたちの面倒を見るのが得意で、五歳の頃には働いて小遣い稼ぎをしていた",
+            "勉強も図書館や捨てられた参考書、新聞を活用して独学で収める",
+            "学校には行っていない",
             )
 
 def chara_moriano(w: World):
@@ -135,5 +142,17 @@ def chara_aily(w: World):
 
 def chara_rudy(w: World):
     return w.chara_note("$rudy履歴書",
+            )
+
+
+def sub_chara_note(w: World):
+    return w.writer_note("サブキャラ",
+            w.tag.title("街の人間たち"),
+            w.tag.title("$sherlock関係者"),
+            "＊兄。王室関係者であり$heroの血を引く人間。ただ$heroの力はなく、$heroの紋章も全く反応しない。知性があり、正義感が強い。不正を嫌うが今までの慣習を守ることも重視する",
+            w.tag.title("王室関係者"),
+            w.tag.title("$mary関係者"),
+            w.tag.title("$lime関係者"),
+            w.tag.title("$wilson関係者"),
             )
 
