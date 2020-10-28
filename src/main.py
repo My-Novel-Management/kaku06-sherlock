@@ -36,7 +36,7 @@ import settings
 
 # Constant
 TITLE = "勇者シャーロックは冒険しない"
-MAJOR, MINOR, MICRO = 1, 3, 0
+MAJOR, MINOR, MICRO = 1, 4, 0
 COPY = "勇者は冒険よりも事件解決を選んだ"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -86,7 +86,7 @@ def ch_prologue(w: World):
 def ch_kingdom_scandal(w: World):
     return w.chapter("皇太子の醜聞",
             "街が舞台",
-            w.plot_setup("世間では怪盗$rudyという謎の存在が人気を集めていた"),
+            w.plot_setup("世間では怪盗$jackという謎の存在が人気を集めていた"),
             w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),
             w.plot_setup("実は皇太子が結婚を控えているが、過去の女に預けた宝剣を取り戻したいというのだ"),
             w.plot_setup("だが$sherlockは王室からの依頼は全て断っていた"),
@@ -143,16 +143,16 @@ def ch_red_armor(w: World):
 
 def ch_blue_garnet(w: World):
     return w.chapter("紺碧のガーネット",
-            w.plot_setup("最近巷で怪盗$rudyの話を聞かなくなっていた"),
+            w.plot_setup("最近巷で怪盗$jackの話を聞かなくなっていた"),
             w.plot_setup("$maryが仲良くなった市場の男からニワトリをもらってくる"),
             w.plot_turnpoint("そのニワトリを捌くと中から宝石が出てくる"),
             w.plot_develop("その宝石はどうやら$ailyに盗まれた宝剣についていたものと同じだと分かる"),
             w.plot_develop("$sherlockは$ailyの消息を改めて探る"),
-            w.plot_develop("謎の女性の猟奇殺人が発生するが、それが怪盗$rudyの死体と言われる"),
+            w.plot_develop("謎の女性の猟奇殺人が発生するが、それが怪盗$jackの死体と言われる"),
             w.plot_turnpoint("$sherlockのもとに$ailyからの手紙が届く"),
             w.plot_resolve("その暗号を解読し、$sherlockは$ailyに会いに向かう"),
-            w.plot_resolve("宝石がある儀式に必要とされ、自分が狙われたから預かってもらったと$rudyは告白した"),
-            w.plot_resolve("$rudyは改めて$sherlockに全ての糸を引く黒幕の存在を調べて、その情報が欲しいと依頼した"),
+            w.plot_resolve("宝石がある儀式に必要とされ、自分が狙われたから預かってもらったと$jackは告白した"),
+            w.plot_resolve("$jackは改めて$sherlockに全ての糸を引く黒幕の存在を調べて、その情報が欲しいと依頼した"),
             )
 
 def ch_devil_dog(w: World):
@@ -237,6 +237,8 @@ def chapters(w: World):
 # Notes
 def writer_note(w: World):
     return w.writer_note("覚書",
+            "",
+            # TODO
             )
 
 def title_note(w: World):
