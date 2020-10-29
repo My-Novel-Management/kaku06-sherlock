@@ -36,7 +36,7 @@ import settings
 
 # Constant
 TITLE = "勇者シャーロックは冒険しない"
-MAJOR, MINOR, MICRO = 1, 3, 0
+MAJOR, MINOR, MICRO = 1, 4, 0
 COPY = "勇者は冒険よりも事件解決を選んだ"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -50,6 +50,20 @@ NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 TAGS = ["ファンタジー", "勇者", "謎解き", "ミステリ"]
 RELEASED = (12, 1, 2020)
+
+
+# Title
+TITLES = [
+        "プロローグ",
+        "第１章　皇太子の醜聞",
+        "第２章　悲しみの谷",
+        "第３章　謎の赤鎧クラブ",
+        "第４章　ガチョウのガーネット",
+        "第５章　魔獣伝説",
+        "第６章　これが最後の事件",
+        "第７章　空き家には気をつけろ",
+        "エピローグ",
+        ]
 
 
 # Chapters
@@ -74,7 +88,7 @@ def ch_main(w: World):
             )
 
 def ch_prologue(w: World):
-    return w.chapter("プロローグ",
+    return w.chapter(TITLES[0],
             w.plot_setup("新聞を読んでいる$sherlock"),
             w.plot_setup("再び$bossが？という見出しに苦笑"),
             w.plot_setup("部屋に入ってきた$wilsonが「また何か面白そうな事件でも見つけたかね？」と問う"),
@@ -84,9 +98,9 @@ def ch_prologue(w: World):
             )
 
 def ch_kingdom_scandal(w: World):
-    return w.chapter("皇太子の醜聞",
+    return w.chapter(TITLES[1],
             "街が舞台",
-            w.plot_setup("世間では怪盗$rudyという謎の存在が人気を集めていた"),
+            w.plot_setup("世間では怪盗$jackという謎の存在が人気を集めていた"),
             w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),
             w.plot_setup("実は皇太子が結婚を控えているが、過去の女に預けた宝剣を取り戻したいというのだ"),
             w.plot_setup("だが$sherlockは王室からの依頼は全て断っていた"),
@@ -103,7 +117,7 @@ def ch_kingdom_scandal(w: World):
             )
 
 def ch_sadness_valley(w: World):
-    return w.chapter("悲しみの谷",
+    return w.chapter(TITLES[2],
             "舞台はそう遠くない田舎町",
             w.plot_setup("谷の田舎町で$gunを使った殺人事件が発生する"),
             w.plot_setup("その事件の容疑者が被害者の娘$maryだった"),
@@ -121,7 +135,7 @@ def ch_sadness_valley(w: World):
             )
 
 def ch_red_armor(w: World):
-    return w.chapter("赤鎧クラブ",
+    return w.chapter(TITLES[3],
             w.plot_setup("$maryが居候し始めた"),
             w.plot_setup("買い物にでかけた先で口論からいざこざになったところを、謎の赤鎧の騎士に助けられる"),
             w.plot_setup("王国の第二王女が失踪して半年になっていた"),
@@ -142,21 +156,21 @@ def ch_red_armor(w: World):
             )
 
 def ch_blue_garnet(w: World):
-    return w.chapter("紺碧のガーネット",
-            w.plot_setup("最近巷で怪盗$rudyの話を聞かなくなっていた"),
+    return w.chapter(TITLES[4],
+            w.plot_setup("最近巷で怪盗$jackの話を聞かなくなっていた"),
             w.plot_setup("$maryが仲良くなった市場の男からニワトリをもらってくる"),
             w.plot_turnpoint("そのニワトリを捌くと中から宝石が出てくる"),
             w.plot_develop("その宝石はどうやら$ailyに盗まれた宝剣についていたものと同じだと分かる"),
             w.plot_develop("$sherlockは$ailyの消息を改めて探る"),
-            w.plot_develop("謎の女性の猟奇殺人が発生するが、それが怪盗$rudyの死体と言われる"),
+            w.plot_develop("謎の女性の猟奇殺人が発生するが、それが怪盗$jackの死体と言われる"),
             w.plot_turnpoint("$sherlockのもとに$ailyからの手紙が届く"),
             w.plot_resolve("その暗号を解読し、$sherlockは$ailyに会いに向かう"),
-            w.plot_resolve("宝石がある儀式に必要とされ、自分が狙われたから預かってもらったと$rudyは告白した"),
-            w.plot_resolve("$rudyは改めて$sherlockに全ての糸を引く黒幕の存在を調べて、その情報が欲しいと依頼した"),
+            w.plot_resolve("宝石がある儀式に必要とされ、自分が狙われたから預かってもらったと$jackは告白した"),
+            w.plot_resolve("$jackは改めて$sherlockに全ての糸を引く黒幕の存在を調べて、その情報が欲しいと依頼した"),
             )
 
 def ch_devil_dog(w: World):
-    return w.chapter("魔犬",
+    return w.chapter(TITLES[5],
             "舞台は荒野ダートムア",
             w.plot_setup("その荒野では魔獣の伝説があった"),
             w.plot_setup("実際に魔獣の仕業と考えられる猟奇殺人が発生する"),
@@ -175,7 +189,7 @@ def ch_devil_dog(w: World):
             )
 
 def ch_last_case(w: World):
-    return w.chapter("最後の事件",
+    return w.chapter(TITLES[6],
             "隣国マイリンゲンのライヘンバッハ",
             w.plot_setup("今までの事件の黒幕として$morianoが浮かび上がる"),
             w.plot_setup("$sherlockは一人でいるときに$morianoと対峙し、忠告を受ける"),
@@ -193,7 +207,7 @@ def ch_last_case(w: World):
             )
 
 def ch_empty_house(w: World):
-    return w.chapter("空き家の事件",
+    return w.chapter(TITLES[7],
             "ベックマン街の空き家",
             w.plot_setup("穴に落ちた$sherlockがどこかで生きていると信じて探す$maryたち"),
             w.plot_setup("しかし一ヶ月経っても何も情報が得られなかった"),
@@ -209,7 +223,7 @@ def ch_empty_house(w: World):
             )
 
 def ch_epilogue(w: World):
-    return w.chapter("エピローグ",
+    return w.chapter(TITLES[-1],
             w.plot_setup("一連の事件の黒幕が$morianoではなく$wilsonだったと$sherlockは語る"),
             w.plot_turnpoint("本物の$wilsonがやってくる"),
             w.plot_develop("$wilsonは既に解決した事件の正式な書簡を見せ、$sherlockに仕事を依頼しようとする"),
@@ -237,6 +251,19 @@ def chapters(w: World):
 # Notes
 def writer_note(w: World):
     return w.writer_note("覚書",
+            "ライトノベル界隈では異世界ファンタジィが一大勢力となり、その他は衰退した",
+            "出版社側も求められているのは異世界転生か、異世界ものファンタジィ、あるいはラブコメと決めてしまって、",
+            "なかなか他のジャンルは日の目を見ない",
+            "中でも正統派のファンタジィは難しく、またミステリも一部では人気があるものの、やはり肩身が狭い思いをしている",
+            "そこで今回は古典的探偵ものの名作である「シャーロック・ホームズ」をベースにして、そこに「勇者」や「魔王」といった世界観をプラスしてしまおうという企画である",
+            "これが生まれる背景には、以前書いた「勇者は冒険より謎解きが得意」というシリーズがある",
+            "勇謎シリーズは元ネタに「えんどろ〜」というドラクエＲＰＧライクな世界観のゆる百合ファンタジィ作品がある",
+            "あんな絵柄で簡単なミステリを、カクヨムの企画のために短編連作でいけるようにと書いたものだった",
+            "おそらくライトな雰囲気があった方が多くの人がとっつきやすいのだろうが、そういう雰囲気を意識しつつも、ミステリ部分は本格を目指す",
+            "ノリは多少ライトな部分はあるが、ファンタジィの世界観もミステリのトリックもしっかりと構築した、世界と世界観を楽しめる作品とする",
+            "本作はライトノベル業界の新しい潮流の一つとなる可能性を秘めている",
+            "ウェブ派生の作家が、とにかく早く、大量に書くということを強いられているが、やはりしっかりとしたものを、構成を考えて書かれたものを、提供すべきだ",
+            "これはその第一の矢となる作品である",
             )
 
 def title_note(w: World):
@@ -253,8 +280,27 @@ def title_note(w: World):
 
 def theme_note(w: World):
     return w.writer_note("テーマメモ",
-            "全体に共通するのは「事実は小説より奇なり」",
             "ファンタジーで不思議な能力や生き物のいる世界を扱うけれども、リアルを考えるとそう心地のいい世界でも都合のいい世界でもないよ、ということ",
+            w.tag.title("全体テーマ"),
+            "全体に共通するのは「事実は小説より奇なり」",
+            "$sherlockは常に「不思議というのは単なる思考停止だ。それを見て考えることを放棄する行為だ」と",
+            w.tag.title("醜聞のテーマ"),
+            "見栄と知恵",
+            "人間は見栄を張りながら生きていて、どうしても曲げられない部分を持っているのが息苦しい原因である",
+            w.tag.title("谷のテーマ"),
+            "「家族」",
+            "偽物の家族と血筋を巡る駆け引きとか悲しいことがある",
+            w.tag.title("赤鎧テーマ"),
+            "「施し」",
+            w.tag.title("ガーネットテーマ"),
+            "「犠牲」",
+            "誰かの生命は誰かの犠牲の上に成り立っている。人間は動物を植物を食べて生きる。そうやって繋がっている",
+            w.tag.title("魔犬のテーマ"),
+            "「愛情（わがまま）」",
+            w.tag.title("最後の事件テーマ"),
+            "「裏切り」",
+            w.tag.title("空き家のテーマ"),
+            "「信頼」",
             )
 
 def motif_note(w: World):
