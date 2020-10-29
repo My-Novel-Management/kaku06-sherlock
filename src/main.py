@@ -55,13 +55,13 @@ RELEASED = (12, 1, 2020)
 # Title
 TITLES = [
         "プロローグ",
-        "第１章",
-        "第２章",
-        "第３章",
-        "第４章",
-        "第５章",
-        "第６章",
-        "第７章",
+        "第１章　皇太子の醜聞",
+        "第２章　悲しみの谷",
+        "第３章　謎の赤鎧クラブ",
+        "第４章　ガチョウのガーネット",
+        "第５章　魔獣伝説",
+        "第６章　これが最後の事件",
+        "第７章　空き家には気をつけろ",
         "エピローグ",
         ]
 
@@ -88,7 +88,7 @@ def ch_main(w: World):
             )
 
 def ch_prologue(w: World):
-    return w.chapter("プロローグ",
+    return w.chapter(TITLES[0],
             w.plot_setup("新聞を読んでいる$sherlock"),
             w.plot_setup("再び$bossが？という見出しに苦笑"),
             w.plot_setup("部屋に入ってきた$wilsonが「また何か面白そうな事件でも見つけたかね？」と問う"),
@@ -98,7 +98,7 @@ def ch_prologue(w: World):
             )
 
 def ch_kingdom_scandal(w: World):
-    return w.chapter("皇太子の醜聞",
+    return w.chapter(TITLES[1],
             "街が舞台",
             w.plot_setup("世間では怪盗$jackという謎の存在が人気を集めていた"),
             w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),
@@ -117,7 +117,7 @@ def ch_kingdom_scandal(w: World):
             )
 
 def ch_sadness_valley(w: World):
-    return w.chapter("悲しみの谷",
+    return w.chapter(TITLES[2],
             "舞台はそう遠くない田舎町",
             w.plot_setup("谷の田舎町で$gunを使った殺人事件が発生する"),
             w.plot_setup("その事件の容疑者が被害者の娘$maryだった"),
@@ -135,7 +135,7 @@ def ch_sadness_valley(w: World):
             )
 
 def ch_red_armor(w: World):
-    return w.chapter("赤鎧クラブ",
+    return w.chapter(TITLES[3],
             w.plot_setup("$maryが居候し始めた"),
             w.plot_setup("買い物にでかけた先で口論からいざこざになったところを、謎の赤鎧の騎士に助けられる"),
             w.plot_setup("王国の第二王女が失踪して半年になっていた"),
@@ -156,7 +156,7 @@ def ch_red_armor(w: World):
             )
 
 def ch_blue_garnet(w: World):
-    return w.chapter("紺碧のガーネット",
+    return w.chapter(TITLES[4],
             w.plot_setup("最近巷で怪盗$jackの話を聞かなくなっていた"),
             w.plot_setup("$maryが仲良くなった市場の男からニワトリをもらってくる"),
             w.plot_turnpoint("そのニワトリを捌くと中から宝石が出てくる"),
@@ -170,7 +170,7 @@ def ch_blue_garnet(w: World):
             )
 
 def ch_devil_dog(w: World):
-    return w.chapter("魔犬",
+    return w.chapter(TITLES[5],
             "舞台は荒野ダートムア",
             w.plot_setup("その荒野では魔獣の伝説があった"),
             w.plot_setup("実際に魔獣の仕業と考えられる猟奇殺人が発生する"),
@@ -189,7 +189,7 @@ def ch_devil_dog(w: World):
             )
 
 def ch_last_case(w: World):
-    return w.chapter("最後の事件",
+    return w.chapter(TITLES[6],
             "隣国マイリンゲンのライヘンバッハ",
             w.plot_setup("今までの事件の黒幕として$morianoが浮かび上がる"),
             w.plot_setup("$sherlockは一人でいるときに$morianoと対峙し、忠告を受ける"),
@@ -207,7 +207,7 @@ def ch_last_case(w: World):
             )
 
 def ch_empty_house(w: World):
-    return w.chapter("空き家の事件",
+    return w.chapter(TITLES[7],
             "ベックマン街の空き家",
             w.plot_setup("穴に落ちた$sherlockがどこかで生きていると信じて探す$maryたち"),
             w.plot_setup("しかし一ヶ月経っても何も情報が得られなかった"),
@@ -223,7 +223,7 @@ def ch_empty_house(w: World):
             )
 
 def ch_epilogue(w: World):
-    return w.chapter("エピローグ",
+    return w.chapter(TITLES[-1],
             w.plot_setup("一連の事件の黒幕が$morianoではなく$wilsonだったと$sherlockは語る"),
             w.plot_turnpoint("本物の$wilsonがやってくる"),
             w.plot_develop("$wilsonは既に解決した事件の正式な書簡を見せ、$sherlockに仕事を依頼しようとする"),
@@ -280,8 +280,19 @@ def title_note(w: World):
 
 def theme_note(w: World):
     return w.writer_note("テーマメモ",
-            "全体に共通するのは「事実は小説より奇なり」",
             "ファンタジーで不思議な能力や生き物のいる世界を扱うけれども、リアルを考えるとそう心地のいい世界でも都合のいい世界でもないよ、ということ",
+            w.tag.title("全体テーマ"),
+            "全体に共通するのは「事実は小説より奇なり」",
+            "$sherlockは常に「不思議というのは単なる思考停止だ。それを見て考えることを放棄する行為だ」と",
+            w.tag.title("醜聞のテーマ"),
+            "",
+            # TODO
+            w.tag.title("谷のテーマ"),
+            w.tag.title("赤鎧テーマ"),
+            w.tag.title("ガーネットテーマ"),
+            w.tag.title("魔犬のテーマ"),
+            w.tag.title("最後の事件テーマ"),
+            w.tag.title("空き家のテーマ"),
             )
 
 def motif_note(w: World):
