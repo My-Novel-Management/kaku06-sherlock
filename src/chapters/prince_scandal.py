@@ -87,6 +87,13 @@ def main(w: World):
             "尾行",
             w.plot_note("事情を探るために、$sherlockは$ailyの尾行をする"),
             w.plot_note("彼女は孤児院に向かい、そこで寄付をしたり、歌を披露したり、音楽を教えたりしていた"),
+            w.plot_note("$ailyは慈善活動を行っているようだった"),
+            w.plot_note("ただしその財をどこから持ってくるのかよく分からない"),
+            w.plot_note("夜、社交パーティに出向く"),
+            w.plot_note("変装して潜り込む$sherlock"),
+            w.plot_note("しかしダンスに誘われて、仕方なく付き合う"),
+            w.plot_note("$ailyは気づいていて「一日ご苦労さま」と笑う"),
+            w.plot_note("$sherlockは$ailyが分別があり、事情もよく理解できそうなのに、そこまであの皇太子に固執するのが分からないと言う"),
             w.plot_note(""),
             # TODO
             )
