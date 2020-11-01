@@ -81,6 +81,8 @@ ASSET = {
             ("enagy", "魔素"),
             ("magic", "魔導"),
             ("animal", "獣人"),
+            ("elf", "エルフ"),
+            ("werewolf", "人狼"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)

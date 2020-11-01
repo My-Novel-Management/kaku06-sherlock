@@ -72,7 +72,25 @@ def main(w: World):
             w.plot_note("彼女は小さな声で「やってない」とだけ答える"),
             w.plot_note("ただ口論していたことは認めるし、あんな時間に外出したことも証言した"),
             w.plot_note("ただその内容については語りたがらない。黙秘すると"),
+            w.plot_note("$sherlockは一旦その場を離れる"),
             "$maryは実は$animal",
+            w.plot_note("もう一度調べると$sherlockは現場に戻る"),
+            w.plot_note("$wilsonに$maryに対して違和感がなかったか尋ねる"),
+            w.plot_note("彼女は「$animal」だと教える"),
+            w.plot_note("$animalとは昔存在した闇の世界の種族の一つで、人間に外見が似ているが一部や全部が動物の性質を持つ中間的な存在"),
+            w.plot_note("他にも神官になっている$elfなど、古の種族と呼ばれているものがいくつかいる"),
+            w.plot_note("どこかにその特徴が現れてきたのだろう"),
+            w.plot_note("$wilsonは口論はそのことについてだろうと"),
+            w.plot_note("現場を調べると動物の体毛が落ちている"),
+            w.plot_note("彼女は$werewolfだと断言する"),
+            w.plot_note("もし獣化して襲ったのだとしたら、なぜ現場にナイフが落ちていたのだろうか"),
+            "真犯人",
+            w.plot_note("翌日、$sherlockは邸宅に向かう"),
+            w.plot_note("玄関先で$keanが口論していた。どうやら父親の方は完全に$maryが犯人と決めつけているようだ"),
+            w.plot_note("$sherlockはその二人に声をかけ、部屋を用意してもらう"),
+            w.plot_note("部屋に婦人も訪れ、そこで改めて推理した状況の説明を始める$sherlock"),
+            w.plot_note(""),
+            # TODO
             )
 
 
