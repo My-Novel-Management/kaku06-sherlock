@@ -80,6 +80,7 @@ ASSET = {
             ("k_shal", "シャル"),
             ("enagy", "魔素"),
             ("magic", "魔導"),
+            ("animal", "獣人"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
