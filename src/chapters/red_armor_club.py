@@ -30,6 +30,17 @@ def main(w: World):
             w.plot_resolve("事情を理解した騎士$limeは、自分のことについて語る"),
             w.plot_resolve("呪いの鎧を着ていたのは$limeという、かつて失踪した王国の第二王女だった"),
             w.plot_resolve("$limeは事情があり、王室には帰れないというので仕方なく$sherlockたちの家に居候することになった"),
+            "奇妙な仕事",
+            w.plot_note(""),
+            "赤鎧クラブ",
+            w.plot_note(""),
+            "失踪した王女",
+            w.plot_note("結局犯人たちは殺されて発見された"),
+            w.plot_note("解雇された鎧騎士が家にやってくる"),
+            w.plot_note("彼女は自分が失踪中の第二王女だと告白する"),
+            w.plot_note("ただ事情があって王室には戻れないと言う"),
+            w.plot_note("ここでしばらく置いてもらえないかと頼む$lime"),
+            w.plot_note("$maryは友だちができて喜ぶ"),
             )
 
 
