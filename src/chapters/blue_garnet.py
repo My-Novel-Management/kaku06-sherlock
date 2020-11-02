@@ -23,6 +23,15 @@ def main(w: World):
             w.plot_resolve("その暗号を解読し、$sherlockは$ailyに会いに向かう"),
             w.plot_resolve("宝石がある儀式に必要とされ、自分が狙われたから預かってもらったと$jackは告白した"),
             w.plot_resolve("$jackは改めて$sherlockに全ての糸を引く黒幕の存在を調べて、その情報が欲しいと依頼した"),
+            "もらったニワトリ",
+            w.plot_note("市場から$maryがニワトリをもらってくる"),
+            w.plot_note("しかし$sherlockは肉になる前の動物は苦手だという"),
+            w.plot_note("$wilsonがニワトリをさばこうと言ってくれる"),
+            w.plot_note(""),
+            "持ち主は誰だ",
+            w.plot_note("市場に向かい、持ち主を探すことにする"),
+            "",
+            # TODO
             )
 
 
