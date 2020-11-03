@@ -61,6 +61,14 @@ def main(w: World):
             w.plot_note("魔獣の伝説があるが恐くないのか、と尋ねると生まれる前からずっとそうだったと"),
             w.plot_note("どことなく上の空な雰囲気"),
             w.plot_note("一旦家をあとにする"),
+            "殺人事件",
+            w.plot_note("翌朝、観光協会の$mochが殺されている姿で発見された"),
+            w.plot_note("$sherlockは地元警察の応援にやってきた$restradeに協力をしてもらい、情報をもらう"),
+            w.plot_note("事件は今までと同じで、とても人間に襲われたそれとは思えない"),
+            w.plot_note("完全に大型の動物による犯行にしか思えなかった"),
+            w.plot_note("警察は周囲に非常網を張る"),
+            w.plot_note("$sherlockは$mochの言動に怪しいところがあると、彼のことを調べ始める"),
+            # TODO
             "宗教団体",
             w.plot_note(""),
             )
