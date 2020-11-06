@@ -16,6 +16,7 @@ def main_notes(w: World):
             story_lines(w),
             plot_note(w),
             mystery_note(w),
+            fantasy_note(w),
             )
 
 
@@ -202,6 +203,29 @@ def plot_note(w: World):
 
 def mystery_note(w: World):
     return w.writer_note('トリック設定',
+            w.tag.title("全体を通じて"),
+            "叙述トリック",
+            "記述者が犯人だった",
+            w.tag.title("プロローグ"),
+            "ここから叙述の始まり",
+            w.tag.title("醜聞"),
+            "",
+            w.tag.title("谷"),
+            "アリバイトリック",
+            w.tag.title("赤鎧"),
+            "奇妙な仕事（偽装トリック）",
+            w.tag.title("ガーネット"),
+            "奇妙な出来事（日常の謎）",
+            w.tag.title("魔犬"),
+            "偽装トリック（犬が殺したように見せかけた）",
+            "あとできそうなのは「見立て殺人」",
+            w.tag.title("最後"),
+            "",
+            w.tag.title("空き家"),
+            "叙述トリック明かす、がある",
+            w.tag.title("エピローグ"),
+            "叙述トリックを明かすのと、本物$wilson登場ですり替えマジック",
+            "あと実はその$wilsonが「転生人」っぽいと伏線張る",
             w.tag.title("赤鎧組合"),
             "元ネタは「赤毛組合」",
             "赤鎧の人間を募集するという奇妙な内容だが、実はターゲットを守衛場所から遠ざけておくための手段",
