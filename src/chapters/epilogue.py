@@ -13,6 +13,16 @@ from config import TITLES
 ## chapter
 def main(w: World):
     return w.chapter(TITLES[-1],
+            w.plot_setup("$wilsonが偽物だったと$sherlockが説明する"),
+            w.plot_setup("偽$wilsonは最初から$sherlockが$heroと知って近づき、$boss復活に利用しよとした"),
+            w.plot_turnpoint("本物の$wilsonが現れる"),
+            w.plot_develop("$wilsonは$sherlockたちから全ての事情を聞く"),
+            w.plot_develop("$wilsonは$sherlockの仕事を手伝うという"),
+            w.plot_develop("$sherlockは立ち退きを命じられている"),
+            w.plot_turnpoint("$wilsonが金策の提案をする"),
+            w.plot_resolve("$wilsonは$sherlockの活躍を本にして出版することにした"),
+            w.plot_resolve("正式に探偵事務所$heroとして営業を開始した"),
+            #
             w.plot_setup("一連の事件の黒幕が$morianoではなく$wilsonだったと$sherlockは語る"),
             w.plot_turnpoint("本物の$wilsonがやってくる"),
             w.plot_develop("$wilsonは既に解決した事件の正式な書簡を見せ、$sherlockに仕事を依頼しようとする"),

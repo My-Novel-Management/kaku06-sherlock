@@ -10,9 +10,19 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episodes
+
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[0],
+            w.plot_setup("設定"),
+            w.plot_turnpoint("TP"),
+            w.plot_develop("展開"),
+            w.plot_turnpoint("TP"),
+            w.plot_resolve("結果"),
+            #
             w.plot_setup("新聞を読んでいる$sherlock"),
             w.plot_setup("再び$bossが？という見出しに苦笑"),
             w.plot_setup("部屋に入ってきた$wilsonが「また何か面白そうな事件でも見つけたかね？」と問う"),
