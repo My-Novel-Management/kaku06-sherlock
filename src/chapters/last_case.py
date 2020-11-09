@@ -10,7 +10,10 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episode
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
             w.plot_setup("$sherlockが全ての黒幕に$morianoの存在があることを掴む"),
@@ -21,7 +24,8 @@ def main(w: World):
             w.plot_develop("$limeを救出したが、そこで$wilsonがハメられ、死体と一緒に発見された"),
             w.plot_turnpoint("$wilsonが殺人事件の容疑者にされる"),
             w.plot_develop("逮捕された$wilsonの汚名を晴らそうと動く$sherlock"),
-            w.plot_develop(""),
+            w.plot_develop("$wilsonの釈放と交換条件で、隠し持っていた宝石を渡す"),
+            w.plot_develop("$sherlockは$stoneの行方が分かるように仕掛けをしておいた"),
             w.plot_turnpoint("$sherlockは$maryたちの眠っている間に一人で$morianoの隠れ家に向かった"),
             w.plot_resolve("$sherlockが闇の穴に落ちて亡くなったらしいと電報が届いた"),
             w.plot_resolve("$sherlockがこうなることを予期して直前に書いた手紙に、およその内容（推測）が書かれていた"),
