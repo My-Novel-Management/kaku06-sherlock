@@ -10,21 +10,31 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episode
+def missing_sherlock(w: World):
+    return w.episode("$sherlockはいない",
+            )
+
+# TODO: episode divided
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
-            "$Baker街の空き家",
-            w.plot_setup("穴に落ちた$sherlockがどこかで生きていると信じて探す$maryたち"),
-            w.plot_setup("しかし一ヶ月経っても何も情報が得られなかった"),
-            w.plot_setup("$sherlockが残した資料にあった人物が殺される"),
-            w.plot_turnpoint("$wilsonが$sherlockが隠れて生き延びているらしい空き家の情報を手に入れる"),
-            w.plot_develop("$maryたちはその空き家を調査する"),
-            w.plot_develop("空き家のはずが夜には明かりが灯り、誰かが中に暮らしているのが分かる"),
-            w.plot_turnpoint("$maryたちは眠らされ、気づくと縛られた状態で空き家の中にいた"),
-            w.plot_resolve("知らない男が入ってきて$maryたちを助け出す"),
-            w.plot_resolve("その知らない男の正体は$sherlockだった"),
-            w.plot_resolve("何食わぬ顔で戻ってきた$wilsonが偽物だと見抜いていて、警察が踏み込んでくる"),
-            w.plot_resolve("逮捕された$wilsonだったが、連行中に自爆して消えた"),
+            w.plot_setup("$maryたちは$sherlockの生存を信じて探している"),
+            w.plot_setup("しかし$sherlock生存情報は上がってこない"),
+            w.plot_setup(""),
+            w.plot_turnpoint("$sherlockらしき人影を空き家に見つけたと情報が入る"),
+            w.plot_develop("その空き家を確認する"),
+            w.plot_develop("空き家の中に遺体を発見する"),
+            w.plot_develop("警察は$sherlockを容疑者として探し始める"),
+            w.plot_turnpoint("$sherlockから連絡がある"),
+            w.plot_develop("待ち合わせ場所に向かった$maryたちは何者かに捕まる"),
+            w.plot_develop("気づくと$maryと$limeは知らない空き家の中でしばられ、燃え盛る中に放置されていた"),
+            w.plot_develop("そこに謎の男が助けにやってくる"),
+            w.plot_turnpoint("男は$sherlockだった"),
+            w.plot_turnpoint("$wilsonが偽物だと$sherlockは語った"),
+            w.plot_resolve("偽$wilsonは死体となって発見された"),
+            w.plot_resolve("警察は自殺と断定したが、謎が残る結末となる"),
             "$sherlockを探して",
             w.plot_note("$maryたちは$sherclokを探し続けていた"),
             w.plot_note("しかし一月しても見つからないし、情報もなかった"),
