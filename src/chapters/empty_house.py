@@ -15,14 +15,37 @@ def missing_sherlock(w: World):
     return w.episode("$sherlockはいない",
             )
 
-# TODO: episode divided
+
+def empty_house(w: World):
+    return w.episode("空き家の冒険",
+            )
+
+
+def suspect_sherlock(w: World):
+    return w.episode("容疑者$sherlock",
+            )
+
+
+def his_letter(w: World):
+    return w.episode("彼からの手紙",
+            )
+
+
+def reunion(w: World):
+    return w.episode("再会",
+            )
+
+
+def strange_end(w: World):
+    return w.episode("奇妙な結末",
+            )
+
 
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
             w.plot_setup("$maryたちは$sherlockの生存を信じて探している"),
             w.plot_setup("しかし$sherlock生存情報は上がってこない"),
-            w.plot_setup(""),
             w.plot_turnpoint("$sherlockらしき人影を空き家に見つけたと情報が入る"),
             w.plot_develop("その空き家を確認する"),
             w.plot_develop("空き家の中に遺体を発見する"),
@@ -35,6 +58,13 @@ def main(w: World):
             w.plot_turnpoint("$wilsonが偽物だと$sherlockは語った"),
             w.plot_resolve("偽$wilsonは死体となって発見された"),
             w.plot_resolve("警察は自殺と断定したが、謎が残る結末となる"),
+            #
+            missing_sherlock(w),
+            empty_house(w),
+            suspect_sherlock(w),
+            his_letter(w),
+            reunion(w),
+            strange_end(w),
             "$sherlockを探して",
             w.plot_note("$maryたちは$sherclokを探し続けていた"),
             w.plot_note("しかし一月しても見つからないし、情報もなかった"),
