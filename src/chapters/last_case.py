@@ -16,6 +16,18 @@ from config import TITLES
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
+            w.plot_setup(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_resolve(""),
+            #
             w.plot_setup("$sherlockが全ての黒幕に$morianoの存在があることを掴む"),
             w.plot_setup("$morianoは犯罪の天才だと評されている"),
             w.plot_turnpoint("$morianoが出現する"),

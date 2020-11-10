@@ -13,6 +13,18 @@ from config import TITLES
 ## chapter
 def main(w: World):
     return w.chapter(TITLES[5],
+            w.plot_setup(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_resolve(""),
+            #
             "舞台は荒野ダートムア",
             w.plot_setup("その荒野では魔獣の伝説があった"),
             w.plot_setup("実際に魔獣の仕業と考えられる猟奇殺人が発生する"),

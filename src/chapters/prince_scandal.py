@@ -13,6 +13,18 @@ from config import TITLES
 ## chapter
 def main(w: World):
     return w.chapter(TITLES[1],
+            w.plot_setup(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_resolve(""),
+            #
             "街が舞台",
             w.plot_setup("世間では怪盗$jackという謎の存在が人気を集めていた"),
             w.plot_setup("王室からの使者として$wilsonがある短刀を取り返して欲しいと依頼する"),

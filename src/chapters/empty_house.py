@@ -44,6 +44,23 @@ def strange_end(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
+            w.plot_setup("$maryたちは$sherlockが生きていると信じて捜索を続けていた"),
+            w.plot_turnpoint("$sherlockに似た人を空き家で見かけたという情報が入る"),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            # TODO
+            w.plot_turnpoint("$wilsonが偽物だと$sherlockが教える"),
+            w.plot_resolve("偽$wilsonが遺体となって発見された"),
+            #
             w.plot_setup("$maryたちは$sherlockの生存を信じて探している"),
             w.plot_setup("しかし$sherlock生存情報は上がってこない"),
             w.plot_turnpoint("$sherlockらしき人影を空き家に見つけたと情報が入る"),
