@@ -23,7 +23,7 @@ def main(w: World):
             w.plot_turnpoint(""),
             w.plot_develop(""),
             w.plot_turnpoint(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$jackは$sherlockに隠し持っていた$stoneを渡して目的阻止を依頼した"),
             #
             w.plot_setup("最近巷で怪盗$jackの話を聞かなくなっていた"),
             w.plot_setup("$maryが仲良くなった市場の男からニワトリをもらってくる"),
