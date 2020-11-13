@@ -95,6 +95,8 @@ ASSET = {
             ("animal", "獣人"),
             ("elf", "エルフ"),
             ("werewolf", "人狼"),
+            ("science", "魔学"),
+            ("missing", "喪失知識"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)

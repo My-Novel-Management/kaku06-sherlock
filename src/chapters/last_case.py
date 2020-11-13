@@ -10,23 +10,23 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episode
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
-            "隣国マイリンゲンのライヘンバッハ",
-            w.plot_setup("今までの事件の黒幕として$morianoが浮かび上がる"),
-            w.plot_setup("$sherlockは一人でいるときに$morianoと対峙し、忠告を受ける"),
-            w.plot_turnpoint("家が放火された"),
-            w.plot_develop("それぞれ別々の仮宿を取った"),
-            w.plot_develop("$maryや$limeが襲われる"),
-            w.plot_develop("$wilsonまでも負傷し、安全が脅かされる"),
-            w.plot_turnpoint("$sherlockは単身、$morianoとの対決に向かった"),
-            w.plot_resolve("湖畔の屋敷で待っていた$morianoと対峙する"),
-            w.plot_resolve("$morianoは全てを自供する"),
-            w.plot_resolve("闇の世界について語り、$bossを復活させるためにあるものが必要だったと"),
-            w.plot_resolve("全てが仕組まれていたことだと分かりながらここにやってきた$sherlock"),
-            w.plot_resolve("しかし屋敷に続く橋が爆破され、警官隊は来られなかった"),
-            w.plot_resolve("$sherlockが$morianoと闇の穴に落ちたと目撃証言が入った"),
+            w.plot_setup("$sherlockは全ての黒幕として$morianoに辿り着く"),
+            w.plot_turnpoint("$morianoのメッセージ（暗号）が新聞に掲載される"),
+            w.plot_develop("$sherlockが$morianoについて説明する"),
+            w.plot_turnpoint("$morianoが現れる"),
+            w.plot_develop("$morianoは$sherlockに全てから手を引くよう警告する"),
+            w.plot_turnpoint("$maryが人質として連れ去られる"),
+            w.plot_develop("$morianoの手がかりを見つけ出し、$maryの居所を見つける"),
+            w.plot_turnpoint("$maryを助け出す"),
+            w.plot_develop("$sherlockは$maryたちを騙して単身$morianoの隠れ家に向かった"),
+            w.plot_turnpoint("$sherlockから手紙が届く"),
+            w.plot_resolve("$sherlockからの最後の手紙で彼が$morianoと共に穴に落ちたことを知る"),
             "序文",
             w.plot_note("（$wilsonの回顧録）あとになって考えるとこの事件が彼にとっての最後のものになるとは、当初は誰も考えていなかった"),
             w.plot_note("けれどこれまでの微々たる伏線を思い返せば、そうなるべくしてそうなった、と言わざるを得ない"),

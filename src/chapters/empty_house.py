@@ -10,21 +10,60 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episode
+def missing_sherlock(w: World):
+    return w.episode("$sherlockはいない",
+            )
+
+
+def empty_house(w: World):
+    return w.episode("空き家の冒険",
+            )
+
+
+def suspect_sherlock(w: World):
+    return w.episode("容疑者$sherlock",
+            )
+
+
+def his_letter(w: World):
+    return w.episode("彼からの手紙",
+            )
+
+
+def reunion(w: World):
+    return w.episode("再会",
+            )
+
+
+def strange_end(w: World):
+    return w.episode("奇妙な結末",
+            )
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
-            "$Baker街の空き家",
-            w.plot_setup("穴に落ちた$sherlockがどこかで生きていると信じて探す$maryたち"),
-            w.plot_setup("しかし一ヶ月経っても何も情報が得られなかった"),
-            w.plot_setup("$sherlockが残した資料にあった人物が殺される"),
-            w.plot_turnpoint("$wilsonが$sherlockが隠れて生き延びているらしい空き家の情報を手に入れる"),
-            w.plot_develop("$maryたちはその空き家を調査する"),
-            w.plot_develop("空き家のはずが夜には明かりが灯り、誰かが中に暮らしているのが分かる"),
-            w.plot_turnpoint("$maryたちは眠らされ、気づくと縛られた状態で空き家の中にいた"),
-            w.plot_resolve("知らない男が入ってきて$maryたちを助け出す"),
-            w.plot_resolve("その知らない男の正体は$sherlockだった"),
-            w.plot_resolve("何食わぬ顔で戻ってきた$wilsonが偽物だと見抜いていて、警察が踏み込んでくる"),
-            w.plot_resolve("逮捕された$wilsonだったが、連行中に自爆して消えた"),
+            w.plot_setup("$maryたちは$sherlockが生きていると信じて捜索を続けていた"),
+            w.plot_turnpoint("$sherlockに似た人を空き家で見かけたという情報が入る"),
+            w.plot_develop("空き家の調査を行い、そこで身元不明の遺体を発見する"),
+            w.plot_turnpoint("空き家の遺体の犯人が$sherlockとして指名手配される"),
+            w.plot_develop("$sherlockから$maryたちに秘密の連絡がある"),
+            w.plot_turnpoint("$sherlock（偽物）に捕まえられ、$maryたちは監禁される"),
+            w.plot_develop("$maryたちは暗闇に閉じ込められ、同じ手法で殺されそうになる"),
+            w.plot_turnpoint("刑事の一人が改造$gunを使って殺そうとしたところを逮捕される"),
+            w.plot_develop("助け出された$maryたちは$sherlockが生きていると$restradeから知らされる"),
+            w.plot_turnpoint("$wilsonが指名手配される"),
+            w.plot_develop("$sherlockと再会し、全ての事情を聞く"),
+            w.plot_turnpoint("$wilsonが偽物だと$sherlockが教える"),
+            w.plot_resolve("偽$wilsonが遺体となって発見された"),
+            #
+            missing_sherlock(w),
+            empty_house(w),
+            suspect_sherlock(w),
+            his_letter(w),
+            reunion(w),
+            strange_end(w),
             "$sherlockを探して",
             w.plot_note("$maryたちは$sherclokを探し続けていた"),
             w.plot_note("しかし一月しても見つからないし、情報もなかった"),
