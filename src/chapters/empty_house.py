@@ -11,33 +11,44 @@ from config import TITLES
 
 
 # Episode
-def missing_sherlock(w: World):
-    return w.episode("$sherlockはいない",
+def lookfor_sherlock(w: World):
+    return w.episode("$sherlockを探して",
             )
 
 
 def empty_house(w: World):
     return w.episode("空き家の冒険",
+            "$sherlockに似た人を空き家で見かけたという情報が入る",
             )
 
 
-def suspect_sherlock(w: World):
-    return w.episode("容疑者$sherlock",
+def secret_message(w: World):
+    return w.episode("内緒の連絡",
+            "$sherlock（偽物）に捕まえられて$maryたちは監禁される",
             )
 
 
-def his_letter(w: World):
-    return w.episode("彼からの手紙",
+def in_the_darkness(w: World):
+    return w.episode("暗闇の中で",
+            "刑事の一人が改造$gunを使って殺そうとしたところを逮捕",
+            )
+
+
+def his_alive(w: World):
+    return w.episode("$sherlockは生きている",
+            "$wilsonが指名手配される",
             )
 
 
 def reunion(w: World):
     return w.episode("再会",
+            "$wilsonが偽物だと$sherlockが教える",
             )
 
 
 def strange_end(w: World):
     return w.episode("奇妙な結末",
+            "$sherlockは偽$wilsonがまだどこかで生きているんじゃないかと疑う（何かを見つけて）",
             )
 
 
@@ -58,10 +69,10 @@ def main(w: World):
             w.plot_turnpoint("$wilsonが偽物だと$sherlockが教える"),
             w.plot_resolve("偽$wilsonが遺体となって発見された"),
             #
-            missing_sherlock(w),
+            lookfor_sherlock(w),
             empty_house(w),
-            suspect_sherlock(w),
-            his_letter(w),
+            secret_message(w),
+            his_alive(w),
             reunion(w),
             strange_end(w),
             "$sherlockを探して",
