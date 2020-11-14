@@ -13,12 +13,13 @@ from config import TITLES
 # Episode
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
+            "$sherlockに似た人を空き家で見かけたという情報が入る",
             )
 
 
 def empty_house(w: World):
     return w.episode("空き家の冒険",
-            "$sherlockに似た人を空き家で見かけたという情報が入る",
+            "$sherlockが容疑者として手配される",
             )
 
 
@@ -49,6 +50,9 @@ def reunion(w: World):
 def strange_end(w: World):
     return w.episode("奇妙な結末",
             "$sherlockは偽$wilsonがまだどこかで生きているんじゃないかと疑う（何かを見つけて）",
+            w.plot_note("警察は$wilsonの遺体を空き家で見つける"),
+            w.plot_note("同じ手法だったが、それは遠隔操作$gunによる自殺だった"),
+            w.plot_note("$sherlockは"),
             )
 
 
