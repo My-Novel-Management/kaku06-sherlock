@@ -100,6 +100,7 @@ ASSET = {
             ("werewolf", "人狼"),
             ("science", "魔学"),
             ("missing", "喪失知識"),
+            ("cultX", "教団Ｘ"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
