@@ -65,7 +65,6 @@ def fake_reunion(w: World):
 
 def in_the_darkness(w: World):
     return w.episode("暗闇の中で",
-            "刑事の一人が改造$gunを使って殺そうとしたところを逮捕",
             w.plot_note("目覚めると真っ暗な中、縛られた状態で背中合わせだった$maryと$lime"),
             w.plot_note("妙な音が聞こえる"),
             w.plot_note("ぱっと明るくなり、ここがどこかの廃工場の中だと分かる"),
@@ -86,28 +85,44 @@ def in_the_darkness(w: World):
 
 def his_alive(w: World):
     return w.episode("$sherlockは生きている",
-            "$wilsonが指名手配される",
             w.plot_note("発射した弾が何かにはじかれる"),
             w.plot_note("突入してきたのは一度見たことのあるホームレスの一人だった"),
             w.plot_note("彼が$maryたちを助け出してくれる"),
-            w.plot_note(""),
-            # TODO
+            w.plot_note("しかし警戒する$maryと$lime"),
+            w.plot_note("ただ$maryはそのホームレスにどこか懐かしい匂いを感じる"),
+            w.plot_note("彼は「$sherlockは生きている」と言い残して去っていった"),
+            w.plot_note("家に戻ると$wilsonがいて、ひどい怪我を負っていたが、無事に逃げ出したと言う"),
+            w.plot_note("$maryは自分たちを助けた男が$sherlockの生存を言っていたと伝える"),
+            w.plot_note("$wilsonはそのホームレスのことを教えてくれと頼む"),
+            w.plot_note("$maryたちにここで休むようにいい、$wilsonは$sherlockを探しに出ていった"),
+            w.plot_note("そこに$wilsonが指名手配されたと$restradeがやってくる"),
             )
 
 
 def truth(w: World):
     return w.episode("真実",
-            "$wilsonが偽物だと$sherlockが教える",
-            w.plot_note(""),
-            w.plot_note("$sherlockは$maryたちに教える「あの$wilsonは偽物だ」と"),
-            w.plot_note("驚いて互いを見る$maryと$lime"),
+            w.plot_note("$maryたちは$ignesたち少年探偵団に連れられて彼らの隠れ家を訪れる"),
+            w.plot_note("そこは$sherlockがもしものために彼らに準備させていた場所だった"),
+            w.plot_note("多くの資料が集まり、武器なども収納されている"),
+            w.plot_note("そこに$sherlockはいた。大怪我を負っていたが大丈夫だと言う"),
+            w.plot_note("そこで$sherlockは自分がこの半年ほどの間にどうしていたのかを語る"),
+            w.plot_note("そして$wilsonが偽物で、すべての黒幕だと教えた"),
+            w.plot_note("そこに警察から連絡が入る"),
+            w.plot_note("$sherlockの指示で監視していた施設が突如爆発したらしい"),
+            w.plot_note("$sherlockとともに宗教団体の施設を探す"),
+            w.plot_note("その地下で儀式が行われた跡を発見する"),
+            w.plot_note("儀式が失敗したことはわかったが、$wilsonはいなかった"),
             )
 
 
 def strange_end(w: World):
     return w.episode("奇妙な結末",
-            "$sherlockは偽$wilsonがまだどこかで生きているんじゃないかと疑う（何かを見つけて）",
-            w.plot_note("警察は$wilsonの遺体を空き家で見つける"),
+            w.plot_note("$sherlockは$maryたちに偽$wilsonが$bossの復活のために全てを準備していたのだと語る"),
+            w.plot_note("そして儀式に不可欠だったのが$heroの心臓であり、それを探してずっと$heroの血縁の人間を殺しまわっていたと"),
+            w.plot_note("どの心臓も合わなかったらしく、最後に白羽の矢がたったのが$sherlockで、ダミーの$morianoにより誘い出して殺そうとしたと"),
+            w.plot_note("しかし全てが失敗に終わり、$stoneは粉々になって発見された"),
+            w.plot_note("$wilsonは機会を伺って潜伏しているだろうが、また自分を殺しにくると伝える"),
+            w.plot_note("だが警察は$wilsonの遺体を空き家で見つける"),
             w.plot_note("同じ手法だったが、それは遠隔操作$gunによる自殺だった"),
             w.plot_note("その後、警察の捜査により$sherlockが調べ上げた偽$wilsonが協力をしたと思われる人物リストを全て調査したが、全員失踪あるいは自殺、事故死していた"),
             w.plot_note("$sherlockは$wilsonの住居から何か情報がないかと探す"),
