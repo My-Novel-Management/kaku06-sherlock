@@ -14,6 +14,16 @@ from config import TITLES
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
             "$sherlockは黒幕の名前が「$moriano」と語る",
+            w.plot_note("$sherlockは新聞を読んでいた"),
+            w.plot_note("そこに殺人事件の調査依頼が持ち込まれる"),
+            w.plot_note("最初は$maryも驚いていたが今では慣れたもので、依頼人を案内して、飲み物を出しながら依頼内容を話すよう促す"),
+            w.plot_note("$maryは秘書気取りだった"),
+            w.plot_note("だが$sherlockは依頼人が出した名前に驚く"),
+            w.plot_note("それは$morianoの大学の後輩だったからだ"),
+            w.plot_note("犯罪学の研究をしている人間が殺された"),
+            w.plot_note("大学の研究室内での密室殺人。その手口が全く不明だが自殺ではないと警察は断定しているという"),
+            w.plot_note("さっそくその調査に向かう$sherlock"),
+            w.plot_note(""),
             # TODO
             )
 
