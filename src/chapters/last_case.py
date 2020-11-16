@@ -60,8 +60,13 @@ def his_warning(w: World):
 
 def lookfor_mary(w: World):
     return w.episode("$maryの捜索",
-            # TODO
-            w.plot_note("$maryは帰ってこなかった"),
+            w.plot_note("$morianoがきてから$maryの様子がおかしい"),
+            w.plot_note("$sherlockは$morianoを何とか見つけ出そうと躍起になっている"),
+            w.plot_note("$maryは$limeに相談することもできず、市場の$nowlisに愚痴る。自分だけが違う気がすると"),
+            w.plot_note("$maryは市場からの帰り道、知らない男から手紙を渡される"),
+            w.plot_note("手紙は$morianoから君の悩みの相談に乗ろうというものだった"),
+            w.plot_note("$maryはその日、帰ってこなかった"),
+            w.plot_note("すぐに$sherlockたちは$morianoの邸宅に向かう"),
             w.plot_note("$morianoの邸宅は火事になり、全てが消え去った"),
             w.plot_note("しかし後日、$morianoのメッセージが新聞に掲載される"),
             w.plot_note("$maryは無事で丁重に監禁していると。場所は$sherlockなら推理できると書かれて、ヒントが残されていた"),
@@ -70,11 +75,15 @@ def lookfor_mary(w: World):
 
 def rescue_mary(w: World):
     return w.episode("$mary救出劇",
-            "しかし$sherlockは単身で$morianoとの対決に向かった",
             w.plot_note("$sherlockはヒントから$maryの居場所は$morianoと関係ない場所にいると推測する"),
             w.plot_note("$mary救出隊として少年探偵団の協力を仰ぐ"),
             w.plot_note("その間に$sherlockはその新聞記事からたどり、$morianoがどこからメッセージを出しているのかを調べる"),
-            w.plot_note("$maryは爆弾が仕掛けられた"),
+            w.plot_note("$maryは爆弾が仕掛けられた部屋に閉じ込められていた"),
+            w.plot_note("爆弾はダミーだった"),
+            w.plot_note("部屋から出られなくなった$maryと$lime、探偵団たち"),
+            w.plot_note("$sherlockの言葉を思い出して、$maryは脱出法を見つける"),
+            w.plot_note("ダミーとして用意していた爆弾を使い、扉を爆破して何とか抜け出す$maryたち"),
+            w.plot_note("$maryたちが戻ると、そこには$sherlockの姿がなかった"),
             )
 
 
