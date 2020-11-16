@@ -10,7 +10,85 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episodes
+def legend_of_darkdog(w: World):
+    return w.episode("魔獣伝説",
+            w.plot_note("$sherlockは怪奇事件の特集記事を読みながら「こんなものは実在しない」と言う"),
+            w.plot_note("そもそも奇妙な現象、霊的なもの、不思議なものは人間が理解することを放棄していると説明する"),
+            w.plot_note("小さい頃、学校内で七不思議というものがあったが、それを全て解明したらみんなから怒られたと"),
+            w.plot_note("そこに$wilsonがこんな話がある、と、ある孤島に伝わる魔獣伝説を話した"),
+            w.plot_note("そこはこの三年の間に六名もの犠牲者が出ているという"),
+            w.plot_note("最初は飼い犬や家畜が殺されているだけだった"),
+            w.plot_note("しかし最初に人の犠牲者が出た"),
+            w.plot_note("それはどう見ても人の手によるものではなく、何か獣による被害だった"),
+            w.plot_note("最初の事件から次の事件まではかなり時間が開いたが、直近はこの三ヶ月の間に二件も殺人事件が起こっている"),
+            w.plot_note("$sherlockはそれだけ続くなら必ず人の手が関わっていると断言する"),
+            w.plot_note("そこに招待状が届く"),
+            w.plot_note("$wilsonはそれを開封し、噂をしていれば、とその伝説の孤島に暮らす城主からの招待状だと言った"),
+            )
+
+
+def first_murder(w: World):
+    return w.episode("最初の犠牲者",
+            "その夜、最初の犠牲者が出た",
+            # TODO
+            )
+
+
+def second_murder(w: World):
+    return w.episode("第二の犠牲者",
+            "明確に誰かに殺された遺体が発見された",
+            )
+
+
+def exist_darkdog(w: World):
+    return w.episode("魔獣は存在する",
+            "そこに本物の魔獣が出現する",
+            )
+
+
+def real_murder(w: World):
+    return w.episode("犯人",
+            "$sherlockに犯人と指摘された女主人が逃げ出した",
+            )
+
+
+def sad_end(w: World):
+    return w.episode("悲しい結末",
+            w.plot_note("$sherlockは彼女を助けないと危ないという"),
+            w.plot_note("しかし彼女が出ていった出口は閉ざされ、別の出入り口を探すしかなくなった"),
+            w.plot_note("そうこうしているうちに島に到着した警察が、助けに入ってくる"),
+            w.plot_note("やってきた$restradeに事情を説明し、$cherryを捜索してもらう"),
+            w.plot_note("$sherlockは事件の真実を全て語った"),
+            w.plot_note("事件の発端となったのは$cherryの愛犬が彼女の夫によって殺されたことだった"),
+            w.plot_note("その恨みを晴らすために夫は事故死させられた"),
+            w.plot_note("それに関わった人間が後で殺されている"),
+            w.plot_note("彼女は魔獣を手に入れ、それにより殺害を行おうとしたが、魔獣は人殺しをしなかった"),
+            w.plot_note("愛犬の代用となった魔獣は人の血が必要で、そのために彼女は自分の手で殺人を侵さざるを得なかった"),
+            w.plot_note("彼女に協力していたのが地元の観光協会の男だった"),
+            w.plot_note("その男が彼女を愛してしまい、今回の悲劇が訪れた"),
+            w.plot_note("やっと到着した地元警察により$cherryが島の一番北側で魔獣に食い殺されている姿で発見された"),
+            w.plot_note("魔獣は警察により射殺された"),
+            )
+
+
+def rebirth_ritual(w: World):
+    return w.episode("蘇りの技法",
+            "蘇りの秘法により起こった悲劇だった",
+            w.plot_note("女主人$cherryの死去により事件は全てに幕を下ろした"),
+            w.plot_note("死後に見つかった手記により今までの大半の事件の陰に彼女の存在があったことが判明する"),
+            w.plot_note("$sherlockは死後に秘密の地下室を発見し、そこで儀式の跡を見た"),
+            w.plot_note("図書館にやってきて、古文書を調べる"),
+            w.plot_note("太古の技法で失われた魂を呼び戻す、闇の技法だった"),
+            w.plot_note("本当に蘇らせたのだとわかる"),
+            w.plot_note("$sherlockは彼女に接触しその技法を教えた$cultXのことをマークした"),
+            w.plot_note("そこに情報がもたらされる"),
+            w.plot_note("彼女が最後の$stoneの所有者だったという。しかし技法のために売り払い、今手元にはなかった"),
+            w.plot_note("$sherlockは何者かが$stoneを四つ手に入れたのだと理解した"),
+            )
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[5],
             w.plot_setup("魔獣伝説のある場所で猟奇殺人事件が起こる"),
@@ -26,82 +104,13 @@ def main(w: World):
             w.plot_develop("女主人は魔獣とともに脱出を試みる"),
             w.plot_turnpoint("魔獣は女主人を食べてしまった"),
             w.plot_resolve("蘇りの秘法を使って$boss復活を願う宗教団体だったと判明する"),
-            "魔獣の伝説",
-            w.plot_note("朝食をとっているところで、幽霊や怪奇現象についての話題が出る"),
-            w.plot_note("$sherlockは不可思議な現象を信じない"),
-            w.plot_note("かつていたとされている闇の世界の住人も、多くは現実にあったことが歪んで伝えられたのだと言ってのける"),
-            w.plot_note("そこにドアがノックされ、男が現れる"),
-            "調査依頼",
-            w.plot_note("男は$Dartmourから来たといった"),
-            w.plot_note("その土地では古くから巨大な犬の伝説があり、住民に恐れられていた"),
-            w.plot_note("この半年ほどの間にペットの犬や猟犬が怪死するということが続いていて、半月前にはついに人間の被害者が出たらしい"),
-            w.plot_note("現在は三人が被害者になり、引っ越して街を脱出する人間まで現れた"),
-            w.plot_note("地元の観光協会は事態を大変重く見て、こうして問題解決のスペシャリストの$sherlockに依頼にきたという訳だ"),
-            w.plot_note("$sherlockは魔獣の伝説は信じないが、実際に被害者が出ている事件だから捜査をしようと引き受ける"),
-            "$Dartmour",
-            w.plot_note("$trainで$Dartmourへと移動する"),
-            w.plot_note("$maryたちは軽い旅行気分"),
-            w.plot_note("$sherlockはその間に起こっている事件の資料と地域の情報を頭に入れておく"),
-            w.plot_note("昔に荘園主が建てた邸宅があり、そこの主が恋をした娘を監禁した"),
-            w.plot_note("しかし娘は逃げ出した"),
-            w.plot_note("その娘を追わせるために飼っていた犬を放った"),
-            w.plot_note("娘を食い殺した犬は、しかし、その飼い主である主をも食い殺してしまったのだ"),
-            w.plot_note("猟銃すらきかず、野に放たれた魔獣は今でもこの荒野のどこかをうろついては、家に関わるものを呪い殺そうとしていると言われている"),
-            w.plot_note("虫けらのように猟犬を扱っていた主への怨念だとも言われているし、こきつかわれた猟師や小作人、使用人たちが殺したんだとも"),
-            "観光協会",
-            w.plot_note("駅に到着すると迎えに来ていた観光協会の人間について、まずは事務所に向かう"),
-            w.plot_note("観光協会の地図を見ながら、事件のあった場所や、その血筋の生き残りの女性が一人で暮らす家の場所を教わる"),
-            w.plot_note("魔獣の伝説のせいで浮いているその女性$cherryの家に向かう$sherlock"),
-            "$ln_cherry家の呪い",
-            w.plot_note("家は沼地を超えた先にあった"),
-            w.plot_note("家を訪れると未亡人となった婦人が出迎えてくれた"),
-            w.plot_note("家には彼女以外誰もいないらしい"),
-            w.plot_note("魔獣の伝説があるが恐くないのか、と尋ねると生まれる前からずっとそうだったと"),
-            w.plot_note("どことなく上の空な雰囲気"),
-            w.plot_note("一旦家をあとにする"),
-            "殺人事件",
-            w.plot_note("翌朝、観光協会の$mochが殺されている姿で発見された"),
-            w.plot_note("$sherlockは地元警察の応援にやってきた$restradeに協力をしてもらい、情報をもらう"),
-            w.plot_note("事件は今までと同じで、とても人間に襲われたそれとは思えない"),
-            w.plot_note("完全に大型の動物による犯行にしか思えなかった"),
-            w.plot_note("警察は周囲に非常網を張る"),
-            w.plot_note("$sherlockは$mochの言動に怪しいところがあると、彼のことを調べ始める"),
-            "宗教団体",
-            w.plot_note("$mochがある宗教団体に属していたことが分かり、そこの支部を調べる"),
-            w.plot_note("近年国内で信者を獲得している新興教団で、古来の技術の復活と礼賛を基本にしている"),
-            w.plot_note("新しい$enagy技術は大地の力を浪費するばかりで、そのうちに世界が枯れ果てると言う"),
-            w.plot_note("環境にもよくないから昔の生活をしよう、という主張のようだ"),
-            w.plot_note("その会員の中に$cherryの名前を見つける"),
-            "隠された獣",
-            w.plot_note("$cherryの家に向かい、$sherlockは気になっていたものを調べる"),
-            w.plot_note("この家に人ではなく、獣がいませんかと"),
-            w.plot_note("彼女はいないと言い張るが、黒い毛がいたるところで見つかり、言い逃れできなくなる"),
-            w.plot_note("そこに襲いかかってくる黒い巨大な犬"),
-            w.plot_note("それはまさに魔獣だった"),
-            w.plot_note("しかし彼女はそれを身体を張って守ろうとする"),
-            w.plot_note("彼女の愛犬だというのだ"),
-            w.plot_note("$maryはその犬が犯人かと尋ねるが、$sherlockは否定する"),
-            w.plot_note("「あなたがやったんですね？$cherryさん」と"),
-            "告白",
-            w.plot_note("$sherlockは人間ではなくそれまでにたくさんの犬が殺されていた方に着目していた"),
-            w.plot_note("動物を人間の代わりに殺す人間はごくまれにいる"),
-            w.plot_note("裏に小さなお墓があった。それが$cherryが最初に殺した犬だという"),
-            w.plot_note("「自分の愛犬を殺しましたね？」と"),
-            w.plot_note("$cherryは事情を語る"),
-            w.plot_note("自分の飼っていた犬が夫によって体を悪くしてしまい、それを見かねて殺してしまった"),
-            w.plot_note("その頃に夫が事故死しているのは、$cherryが仕組んだもの"),
-            w.plot_note("愛犬を復活させる術をある人物からきいて、それを実行した。それに大量の財産をぶちこんだ"),
-            w.plot_note("愛犬は生き返った。しかし生きながらえるために他の命を食う必要があった"),
-            w.plot_note("最初は野犬を殺して回った"),
-            w.plot_note("しかしそのうちにすぐ空腹になるようになった"),
-            w.plot_note("人間を食らうと長生きすると知る"),
-            w.plot_note("一人を殺して与えたら、大人しくなった"),
-            w.plot_note("そこから先は説明するまでもない。この先もずっと誰かを殺して食べさせるつもりだと語った"),
-            "事後報告",
-            w.plot_note("事件は$cherryが逮捕されて解決を見た"),
-            w.plot_note("しかし後味のすっきりしなさに$maryは落ち込む"),
-            w.plot_note("それから情報屋経由で最後の一つの宝石を彼女が持っていて、それを売り払っていたことを知る"),
-            w.plot_note("$sherlockはこれで相手に四つの$stoneが揃ったと考えた"),
+            legend_of_darkdog(w),
+            first_murder(w),
+            second_murder(w),
+            exist_darkdog(w),
+            real_murder(w),
+            sad_end(w),
+            rebirth_ritual(w),
             )
 
 
