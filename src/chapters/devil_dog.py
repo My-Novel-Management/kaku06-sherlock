@@ -30,14 +30,26 @@ def legend_of_darkdog(w: World):
 
 def first_murder(w: World):
     return w.episode("最初の犠牲者",
-            "その夜、最初の犠牲者が出た",
-            # TODO
+            w.plot_note("$sherlockたちは駅から船に乗り換え、その孤島を目指す"),
+            w.plot_note("$maryたちは旅行だと喜んでいたが、$sherlockは不穏な招待状を怪しんでいた"),
+            w.plot_note("観光協会の男に案内され、怪奇事件の謎を解くイベントに連れて行かれる"),
+            w.plot_note("男からこの島にはかつて五十名ほどの住人がいたが、魔獣の伝説のせいでみんな逃げ出してしまい、今では城主だけが残っていると"),
+            w.plot_note("丘の上の古城にたどり着く"),
+            w.plot_note("城の案内をただ一人でここに住んでいるという女城主$cherryが行う"),
+            w.plot_note("パーティのために料理人やお手伝いを呼んでいて、彼らが忙しくなく準備をしていた"),
+            w.plot_note("$sherlock以外に招かれたのは怪奇事件の専門家や、動物学者、医師、心霊現象の研究家などだった"),
+            w.plot_note("地域の研究者は$bossが生きていた頃から魔獣が存在していて、今もその生き残りがこの島で生き延びているのだと説明する"),
+            w.plot_note("$maryは美味しい料理に喜ぶ"),
+            w.plot_note("食事がお開きになり、$sherlockたちは与えられた部屋に戻る"),
+            w.plot_note("寝ようとしていたときに、悲鳴が聞こえた"),
+            w.plot_note("慌てて駆けつけると、専門家が殺されていた"),
             )
 
 
 def second_murder(w: World):
     return w.episode("第二の犠牲者",
             "明確に誰かに殺された遺体が発見された",
+            # TODO
             )
 
 
