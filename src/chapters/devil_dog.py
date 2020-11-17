@@ -42,26 +42,50 @@ def first_murder(w: World):
             w.plot_note("$maryは美味しい料理に喜ぶ"),
             w.plot_note("食事がお開きになり、$sherlockたちは与えられた部屋に戻る"),
             w.plot_note("寝ようとしていたときに、悲鳴が聞こえた"),
-            w.plot_note("慌てて駆けつけると、専門家が殺されていた"),
+            w.plot_note("慌てて駆けつけると、心霊専門家が殺されていた"),
             )
 
 
 def second_murder(w: World):
     return w.episode("第二の犠牲者",
-            "明確に誰かに殺された遺体が発見された",
-            # TODO
+            w.plot_note("$mockが警察を呼ぼうとしたが海が荒れて船が出せない"),
+            w.plot_note("地方で最新技術の$telephoneもなく、海が収まるまで連絡できないと言われる"),
+            w.plot_note("孤島に閉じ込められた$sherlockたち"),
+            w.plot_note("魔獣の存在に怯える招待客たち"),
+            w.plot_note("それぞれ部屋に閉じこもったり、外の古くて捨てられた民家に避難したりする"),
+            w.plot_note("$sherlockは$cherryに申し出て、城内を調べさせてもらう"),
+            w.plot_note("一通り案内してもらい、部屋を見て回ったが特に何も見つからない"),
+            w.plot_note("$sherlockは最初の事件があった場所に、$mockに案内してもらった"),
+            w.plot_note("そこは城から離れた雑木林"),
+            w.plot_note("看板が建てられ、そこが最初の殺害現場だと示されている"),
+            w.plot_note("観光資源にしようとしている$mockたち"),
+            w.plot_note("翌朝、$mockの姿が城から消えていた"),
             )
 
 
 def exist_darkdog(w: World):
     return w.episode("魔獣は存在する",
-            "そこに本物の魔獣が出現する",
+            w.plot_note("いなくなた$mockが怪しいと招待客たちは探し始める"),
+            w.plot_note("しかし$mockは最初の殺害現場で同じように猟奇的に殺害されていた"),
+            w.plot_note("$sherlockはそこで$mockの遺体に付着しているあるものを拾う"),
+            w.plot_note("地元の研究者から、$cherryを含めたここの城主の歴史を聞く"),
+            w.plot_note("ずっと城主には悲しい運命がつきまとってきた"),
+            w.plot_note("地元の人間を奴隷のようにこきつかい、自分が好んだ娘を勝手に奪っては嫁にした"),
+            w.plot_note("ある時その娘が決死の脱走を行う"),
+            w.plot_note("城主は飼い犬をけしかけ、その匂いを追わせた"),
+            w.plot_note("だが発見されたのは城主の遺体で、それは彼の飼い犬たちによって食い殺されていた"),
+            w.plot_note("彼女が可愛がっていた飼い犬とともにその新しい城主となった"),
+            w.plot_note("だが女が城主になっても圧政は変わらず、その女城主も苦しんだ奴隷によって殺されてしまった"),
+            w.plot_note("その話が魔獣を生んだと"),
+            w.plot_note("ただ現場で見つけた毛は確かに普通の犬のものではなかった、と$sherlockは言う"),
+            w.plot_note("その夜、どこかで犬の吠える声が響いた"),
             )
 
 
 def real_murder(w: World):
     return w.episode("犯人",
             "$sherlockに犯人と指摘された女主人が逃げ出した",
+            # TODO
             )
 
 

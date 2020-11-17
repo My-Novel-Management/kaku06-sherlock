@@ -89,6 +89,7 @@ ASSET = {
             ("taxi", "魔導タクシー"),
             ("car", "魔導車"),
             ("stone", "魔石"),
+            ("telephone", "魔導通話"),
             ),
         "WORDS": (
             # (tag / name / cate / info)
