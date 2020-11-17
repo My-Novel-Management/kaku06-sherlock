@@ -10,7 +10,44 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episodes
+def mary_and_market(w: World):
+    return w.episode("$maryと市場",
+            "$maryがもらってきたガチョウからナイフが出てきた",
+            )
+
+
+def strange_goose(w: World):
+    return w.episode("奇妙なガチョウ",
+            "そのナイフが殺人事件に使われたものだと判明した",
+            )
+
+
+def suspect_jack(w: World):
+    return w.episode("$jackが容疑者",
+            "$jackの使っていたナイフと判明し、$jackが指名手配された",
+            )
+
+
+def whereabouts(w: World):
+    return w.episode("彼女の行方",
+            "$jackからのメッセージを見つけた",
+            )
+
+
+def reunion_her(w: World):
+    return w.episode("彼女との再会",
+            "$jackは自分がはめられたことを告白した",
+            )
+
+
+def her_message(w: World):
+    return w.episode("彼女からのメッセージ",
+            "$jackは$sherlockに$stoneを託して、しばらく世間から姿を消すと言い残して、去っていった",
+            )
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[4],
             w.plot_setup("$maryは市場の人間と仲良くなり、色々ともらってくるようになっていた"),
@@ -24,6 +61,12 @@ def main(w: World):
             w.plot_develop("$sherlockは$ailyが事件に関係あると考えて、彼女に会いに行く"),
             w.plot_turnpoint("$sherlockは$jackが犯人でないと知る"),
             w.plot_resolve("$jackは$sherlockに隠し持っていた$stoneを渡して目的阻止を依頼した"),
+            mary_and_market(w),
+            strange_goose(w),
+            suspect_jack(w),
+            whereabouts(w),
+            reunion_her(w),
+            her_message(w),
             "もらったニワトリ",
             w.plot_note("市場から$maryがニワトリをもらってくる"),
             w.plot_note("しかし$sherlockは肉になる前の動物は苦手だという"),
