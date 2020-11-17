@@ -44,6 +44,13 @@ def reunion_her(w: World):
 def her_message(w: World):
     return w.episode("彼女からのメッセージ",
             "$jackは$sherlockに$stoneを託して、しばらく世間から姿を消すと言い残して、去っていった",
+            w.plot_note("$jackは自分が狙われた原因が$stoneにあると、それを見せる"),
+            w.plot_note(""),
+            # TODO
+            w.plot_note("$jackは$sherlockに$stoneを渡す"),
+            w.plot_note("誰かがこれを四つ集めて何かしようと企んでいると告げる"),
+            w.plot_note("$sherlockになんとしてもそれを阻止してほしいと頼み、彼女は姿を消す"),
+            w.plot_note("$sherlockはその$stoneを見ながら考え込んだ"),
             )
 
 
