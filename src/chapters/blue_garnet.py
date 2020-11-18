@@ -13,13 +13,29 @@ from config import TITLES
 # Episodes
 def mary_and_market(w: World):
     return w.episode("$maryと市場",
-            "$maryがもらってきたガチョウからナイフが出てきた",
+            w.plot_note("$limeも同居するようになり、$sherlockの家で暮らす人数が増えた"),
+            w.plot_note("$maryは料理はあいかわらず下手だが、それでもよく市場に顔を出して買い物をしていた"),
+            w.plot_note("$maryは今日も市場に出かける"),
+            w.plot_note("この町の市場の賑わいが$maryは好きだった"),
+            w.plot_note("市場には少年探偵団の$ignesも働いている"),
+            w.plot_note("最近仲良くなった果物屋の$nowlisから友人からガチョウをもらったと言ってそれを分けてもらえた"),
+            w.plot_note("$maryはガチョウを持って帰る"),
+            w.plot_note("$limeは料理担当になっていて、そのガチョウをもらってさばいてくれる"),
+            w.plot_note("$maryは市場で仕入れた面白い話を$sherlockに話す"),
+            w.plot_note("今市場ではガチョウからダイヤが出てくると話題になっていた"),
+            w.plot_note("$limeがやってきて、何か出たという"),
+            w.plot_note("ガチョウの中から出てきたのは血がついたナイフだった"),
             )
 
 
 def strange_goose(w: World):
     return w.episode("奇妙なガチョウ",
             "そのナイフが殺人事件に使われたものだと判明した",
+            w.plot_note("$sherlockはそれがなにかの事件の凶器だと分かり、すぐに警察に連絡を取る"),
+            w.plot_note("$restradeがやってきて、それは現在彼が追っている事件の重要な証拠品だと言われた"),
+            w.plot_note("$restradeからその事件についての概要を聞く"),
+            w.plot_note("事件は"),
+            # TODO
             )
 
 
@@ -46,7 +62,6 @@ def her_message(w: World):
             "$jackは$sherlockに$stoneを託して、しばらく世間から姿を消すと言い残して、去っていった",
             w.plot_note("$jackは自分が狙われた原因が$stoneにあると、それを見せる"),
             w.plot_note(""),
-            # TODO
             w.plot_note("$jackは$sherlockに$stoneを渡す"),
             w.plot_note("誰かがこれを四つ集めて何かしようと企んでいると告げる"),
             w.plot_note("$sherlockになんとしてもそれを阻止してほしいと頼み、彼女は姿を消す"),
