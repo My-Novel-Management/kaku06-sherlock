@@ -30,24 +30,38 @@ def mary_and_market(w: World):
 
 def strange_goose(w: World):
     return w.episode("奇妙なガチョウ",
-            "そのナイフが殺人事件に使われたものだと判明した",
             w.plot_note("$sherlockはそれがなにかの事件の凶器だと分かり、すぐに警察に連絡を取る"),
             w.plot_note("$restradeがやってきて、それは現在彼が追っている事件の重要な証拠品だと言われた"),
             w.plot_note("$restradeからその事件についての概要を聞く"),
-            w.plot_note("事件は"),
-            # TODO
+            w.plot_note("事件はある一軒家で起こった"),
+            w.plot_note("引退した学者が謎の死を遂げた"),
+            w.plot_note("刺殺だったのだが凶器が発見されず、犯人も特定されないまま現在に至る"),
+            w.plot_note("そのナイフを警部に渡して調べてもらう"),
+            w.plot_note("その間に興味をもった$sherlockは一人でその現場を調べに出ていってしまう"),
+            w.plot_note("後日、そのナイフからずっと失踪中の$jackの指紋が検出された"),
             )
 
 
 def suspect_jack(w: World):
     return w.episode("$jackが容疑者",
-            "$jackの使っていたナイフと判明し、$jackが指名手配された",
+            w.plot_note("$jackが改めてその殺人事件の容疑者として手配される"),
+            w.plot_note("戻ってきた$sherlockは$maryからそのことを聞き、"),
+            w.plot_note("$sherlockは現場を見てきたことを$maryたちに話す"),
+            w.plot_note("現場は住宅街から少し離れた郊外の一軒家で、男は民間の研究所をやめたあとも個人的に何かを研究していた"),
+            w.plot_note("歴史学と民俗学に造形が深く、$sherlockもその所蔵していた資料に関心をしたくらい"),
+            w.plot_note("彼が書き残しているものの一つに古代の技法がいくつか紹介されていた"),
+            w.plot_note("刺された場所は彼の家だが、凶器は消えている"),
+            w.plot_note("ただし$jackとの関係性は全く見えず、彼女ならそんな手段を使わないと$sherlockは考えた"),
+            w.plot_note("$sherlockは誰かが$jackを表舞台に引っ張り出したい、その罠だと考える"),
+            w.plot_note("と、差出人不明の手紙に$jackからのメッセージがあった"),
+            w.plot_note("助けてほしいと"),
             )
 
 
 def whereabouts(w: World):
     return w.episode("彼女の行方",
             "$jackからのメッセージを見つけた",
+            # TODO
             )
 
 
