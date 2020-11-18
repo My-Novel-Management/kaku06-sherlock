@@ -60,14 +60,23 @@ def suspect_jack(w: World):
 
 def whereabouts(w: World):
     return w.episode("彼女の行方",
-            "$jackからのメッセージを見つけた",
-            # TODO
+            w.plot_note("$sherlockはそのメッセージを配達した人間が$jackだと気づいて追いかける"),
+            w.plot_note("見失ったが彼女が残したヒントから居場所を推測する"),
+            w.plot_note("その間に$maryたちはガチョウの中から出てくる宝石の謎を追いかける"),
+            w.plot_note("肉屋の主人からどこでガチョウを仕入れてくるのかを聞いた"),
+            w.plot_note("その経路を辿っていくと、飼育業者がその一箇所だと断定できた"),
+            w.plot_note("飼育業者のおじさんに聞いてもダイヤを餌に混ぜたりはしていないと"),
+            w.plot_note("仲介業者も卸業者も全然入る余地がなく、結局何も情報を得られないまま帰ってきた"),
+            w.plot_note("そこに$sherlockからの伝言を$ignesが持ってくる"),
+            w.plot_note("数日留守にすることと、$jackに会いに行ってくると書かれていた"),
             )
 
 
 def reunion_her(w: World):
     return w.episode("彼女との再会",
             "$jackは自分がはめられたことを告白した",
+            w.plot_note("$sherlockがきたのは"),
+            # TODO
             )
 
 
