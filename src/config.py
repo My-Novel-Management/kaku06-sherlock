@@ -84,6 +84,7 @@ ASSET = {
             ),
         "ITEMS": (
             # (tag / name / cate / info)
+            ("item", "魔具"),
             ("gun", "魔銃"),
             ("train", "魔導列車"),
             ("taxi", "魔導タクシー"),
