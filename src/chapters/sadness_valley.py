@@ -37,13 +37,25 @@ def country_town(w: World):
             w.plot_note("屋敷の主となった、残された母親の$jeanに出会う"),
             w.plot_note("$jeanはどうしてこんなことになったのか分からないと嘆く"),
             w.plot_note("ただ使用人の$kailが二人が言い争うのを聞いていて、それが決定的な証拠になっているらしい"),
-            # TODO
+            w.plot_note("$kailにも出会って話を聞こうとするが、買い出しにいっていて不在だった"),
+            w.plot_note("そこに警官が訪れる"),
+            w.plot_note("$restradeに話を通してもらい、容疑者と面会できることになった"),
             w.plot_note("容疑者として警察に捕まっている少女に会えることになった"),
             )
 
 
 def suspect_girl(w: World):
     return w.episode("容疑者の少女",
+            w.plot_note("警察署にいき、少女と面会する"),
+            w.plot_note("ずっと泣いていて、事情聴取にならないと担当刑事が言っていた"),
+            w.plot_note("$sherlockは自分が$keanから依頼をされたと説明し、事情を聞く"),
+            w.plot_note("$maryと名乗った少女は、自分がどういう状況だったか話す"),
+            w.plot_note("事件のあった日、その朝に父親（被害者）から北の沼地に来るように言われた"),
+            w.plot_note("父親は大切な話があるから、必ず一人で来るようにと注意した"),
+            w.plot_note("時間になり、一人ででかけていくと、そこで待っていた父と少し話をして、それからすぐ別れた"),
+            w.plot_note("一人でそのまま夜道を家まで帰った"),
+            w.plot_note("翌朝になるまで部屋からは出ていない"),
+            w.plot_note(""),
             w.plot_note("$sherlockは$wilsonに彼女が$animalであると告げた"),
             )
 
