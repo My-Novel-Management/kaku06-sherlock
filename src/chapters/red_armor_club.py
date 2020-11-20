@@ -45,7 +45,6 @@ def strange_work(w: World):
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
-            "$limeが仕事を首になったらしいと$maryから伝え聞いた",
             w.plot_note("$maryは彼女に$sherlockのことを謝りながら送っていく"),
             w.plot_note("質屋のオーナー夫婦はいい人そうで、$binsとも顔を合わせて帰っていった"),
             w.plot_note("家に帰った$maryはどうしてあんな風に言ったのか$sherlockに問いただす"),
@@ -56,20 +55,41 @@ def bank_robbery(w: World):
             w.plot_note("警備員が気づいて連絡したが、表からも裏からも誰も入ってはおらず、謎の強盗と話題になっていた"),
             w.plot_note("しかし現地を調べたところ、抜け穴が掘ってあり、大量のダイヤと金塊が盗まれたあとだった"),
             w.plot_note("しかもその抜け穴は質屋に繋がっていたのだ"),
-            w.plot_note(""),
-            # TODO
+            w.plot_note("その質屋のオーナー夫婦も逮捕され、$limeも容疑者の一人として逮捕された"),
             )
 
 
 def truth_of_club(w: World):
     return w.episode("クラブの真相",
-            "$limeが助けてほしいとやってくる",
+            w.plot_note("$maryが$limeを助けてやってほしいと$sherlockに言う"),
+            w.plot_note("$sherlockは自分の忠告を聞かなかったからだと言うが、それでも話だけは聞くと言う"),
+            w.plot_note("質屋につながっていた抜け穴の中で、重要参考人だった$ignesが遺体で発見された"),
+            w.plot_note("その容疑者として$limeが逮捕され、オーナー夫婦も事情聴取を受けている最中らしい"),
+            w.plot_note("強盗の件についても調査中で、全部彼女に押し付けられるかもしれないと言い出す"),
+            w.plot_note("$sherlockはその質屋に案内してもらう"),
+            w.plot_note("$sherlockは$maryになぜ自分が忠告したかについて語る"),
+            w.plot_note("どう考えても妙なアルバイトは彼女をその場から離れさせるための口実だった"),
+            w.plot_note("事実、店番をもう片方にまかせている間に、実際は抜け穴をずっと掘っていた"),
+            w.plot_note("$ignesの監視情報から、$limeが店を離れると店を一時閉めていたと"),
+            w.plot_note("その間に抜け穴を完成させ、盗み出す計画だったが、最後にその計画を知っていた$binsを殺害した"),
+            w.plot_note("$limeもオーナー夫婦も質屋から離れた場所で暮らしている"),
+            w.plot_note("そのアリバイを証明するだけでいいと$sherlockは言う"),
+            w.plot_note("銀行へとやってきた$sherlockはそこにいた$restradeにそのアリバイの証拠を教える"),
+            w.plot_note("前日に鍵が壊れて、誰も質屋に入れなくなっていたのだった"),
             )
 
 
 def what_was_stolen(w: World):
     return w.episode("盗まれたもの",
-            "$limeは自分が王室の人間であることを告白した",
+            w.plot_note("アリバイ証明から$limeとオーナー夫婦の無実は証明された"),
+            w.plot_note("開放された$limeだったがオーナー夫婦からは不審がられ、家を追い出されてしまう"),
+            w.plot_note("$maryが$limeを拾い、再び家へと連れてくる"),
+            w.plot_note("$sherlockは銀行から盗まれたものがダイヤだけじゃないと睨むが、教えてもらえなかった"),
+            w.plot_note("家に戻ってくると$sherlockはそこに$limeがいることに頭を抱える"),
+            w.plot_note("$limeがしゃべれないのは呪いの鎧のせいだと言う"),
+            w.plot_note("その呪いをといてもらおうと、知人の神官を読んでいた"),
+            w.plot_note("呪いを解いたが$limeはしゃべれないままだった"),
+            w.plot_note("その$limeは筆談で自分が王室の人間であると告白する"),
             )
 
 
