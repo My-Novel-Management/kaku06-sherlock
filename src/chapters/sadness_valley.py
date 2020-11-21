@@ -55,13 +55,30 @@ def suspect_girl(w: World):
             w.plot_note("時間になり、一人ででかけていくと、そこで待っていた父と少し話をして、それからすぐ別れた"),
             w.plot_note("一人でそのまま夜道を家まで帰った"),
             w.plot_note("翌朝になるまで部屋からは出ていない"),
-            w.plot_note(""),
-            w.plot_note("$sherlockは$wilsonに彼女が$animalであると告げた"),
+            w.plot_note("父親は夜の間に殺されていて、かえってこなかったから捜索願が出され、沼地で発見された"),
+            w.plot_note("その場に残されていた凶器のナイフが$maryの部屋で発見されたことから、彼女が容疑者として逮捕された"),
+            w.plot_note("でも本当にそれだけで、言い争っていたのを聞いたという$kailがよく分からないという"),
+            w.plot_note("父親は一人で待っていて、自分と父親以外その場にはいなかった"),
+            w.plot_note("場所は近くに高いもの、建物のない沼地で、人影もなかったと"),
+            w.plot_note("自分はやってないし、父親のことを恨んだりもしていないといって、$sherlockに助けを求めた"),
+            w.plot_note("面会を終えた$sherlockは$wilsonに彼女が$animalであると告げた"),
             )
 
 
 def her_mother(w: World):
     return w.episode("彼女の母親",
+            w.plot_note("$sherlockは一晩ホテルに泊まり、その間に$maryの家について調べる"),
+            w.plot_note("翌朝、再び屋敷を訪れた"),
+            w.plot_note("$sherlockは$jeanに会いたいといったが使用人の$kailが体調を崩しているから無理だと返す"),
+            w.plot_note("$maryに関しての大事な話があると言う"),
+            w.plot_note("奥に通されて、顔色の悪い$jeanと出会う"),
+            w.plot_note("$sherlockは$jeanに$maryが$animalだと知っているか、と尋ねる"),
+            w.plot_note("$jeanは答えなかったことから、$sherlockは事実に気づいた"),
+            w.plot_note("それで$jeanに事件当日のアリバイを尋ねる"),
+            w.plot_note("彼女はその日は一度も外出してなくて、体調を崩して自分の部屋で寝込んでいた"),
+            w.plot_note("それは使用人の$kailも$keanも見ている、証言している"),
+            w.plot_note("$sherlockは警察が$maryが獣人だから現場に残されていた獣人の毛が彼女のもので、証拠だとしていると"),
+            # TODO
             w.plot_note("そこに$maryが連れてこられた"),
             )
 
