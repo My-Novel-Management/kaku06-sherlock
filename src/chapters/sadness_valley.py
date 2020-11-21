@@ -78,13 +78,13 @@ def her_mother(w: World):
             w.plot_note("彼女はその日は一度も外出してなくて、体調を崩して自分の部屋で寝込んでいた"),
             w.plot_note("それは使用人の$kailも$keanも見ている、証言している"),
             w.plot_note("$sherlockは警察が$maryが獣人だから現場に残されていた獣人の毛が彼女のもので、証拠だとしていると"),
-            # TODO
             w.plot_note("そこに$maryが連れてこられた"),
             )
 
 
 def real_murder(w: World):
     return w.episode("真犯人",
+            w.plot_note(""),
             w.plot_note("$maryが獣化した"),
             )
 
