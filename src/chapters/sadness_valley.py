@@ -84,7 +84,7 @@ def her_mother(w: World):
 
 def real_murder(w: World):
     return w.episode("真犯人",
-            w.plot_note(""),
+            w.plot_note("$maryのことを$jeanは"),
             w.plot_note("$maryが獣化した"),
             )
 
