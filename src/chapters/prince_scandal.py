@@ -10,7 +10,34 @@ from storybuilder.builder.world import World
 from config import TITLES
 
 
-## chapter
+# Episodes
+def visit_sherlock(w: World):
+    return w.episode("訪問者",
+            )
+
+
+def prince_letter(w: World):
+    return w.episode("皇太子からの密書",
+            )
+
+
+def that_lady(w: World):
+    return w.episode("その女",
+            )
+
+
+def she_is_not_exist(w: World):
+    return w.episode("彼女は存在しない",
+            )
+
+
+def prince_wedding(w: World):
+    return w.episode("皇太子の結婚式",
+            )
+
+
+
+# Chapter
 def main(w: World):
     return w.chapter(TITLES[1],
             w.plot_setup("$wilsonはある依頼をするために$sherlockを訪れる"),
