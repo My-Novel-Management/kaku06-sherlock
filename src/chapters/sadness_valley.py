@@ -84,19 +84,54 @@ def her_mother(w: World):
 
 def real_murder(w: World):
     return w.episode("真犯人",
-            w.plot_note("$maryのことを$jeanは"),
+            w.plot_note("$maryのことを$jeanは「お前のせいでいつも無茶苦茶になる」と言う"),
+            w.plot_note("$maryは自分が父親を殺していないことを訴えるが、母親は二人があまり仲良くなかったと言う"),
+            w.plot_note("その理由は$maryが拾った子供だから"),
+            w.plot_note("二人にはずっと子供がいなかった"),
+            w.plot_note("それでも$jeanはいいと思っていたが$roydはそうじゃなかった"),
+            w.plot_note("ある日、$roydが赤ん坊を抱きかかえて帰ってきて「これが俺たちの子供だ」と見せた。それが$maryだった"),
+            w.plot_note("つまり自分たちの子ではない"),
+            w.plot_note("それがずっと引っかかっていたという"),
+            w.plot_note("最初はよかったが、大きくなるにつれ、自分の子供ではないことが愛せない障害になっていた"),
+            w.plot_note("それをいつも自分にこぼしていたと$jeanは証言する"),
+            w.plot_note("$keanはなぜそのことを警察に言わなかったのかと尋ねる"),
+            w.plot_note("$jeanは自分の最低限の愛情だと弁解する"),
+            w.plot_note("なぜなら$jeanは$maryに関するある秘密を知っているからだ"),
+            w.plot_note("$sherlockはそれを口にする。彼女は$animalだと"),
             w.plot_note("$maryが獣化した"),
             )
 
 
 def animal_girl(w: World):
     return w.episode("獣の少女",
+            w.plot_note("$kailは壁の斧を手に取り、$maryに襲いかかる"),
+            w.plot_note("$jeanを守ろうとしたように見えたが、$sherlockは彼女は何もしないから大丈夫だと立ちふさがる"),
+            w.plot_note("$kailは自分たちを陥れようとしていると$sherlockに言う"),
+            w.plot_note("$sherlockは事件の真相について語る"),
+            w.plot_note("$animlaは自分で獣化できるはずだが、$maryの場合は感情が制御できなくなることにより獣化するのが分かったと"),
+            w.plot_note("現場では父親から娘に「拾った子供」という事実が告げられた"),
+            w.plot_note("「それで獣化して襲ったんだろ」と$kailが言う"),
+            w.plot_note("しかし$sherlockは凶器を使っていると指摘"),
+            w.plot_note("凶器が自分の部屋から見つかっていることからも、誰かが仕組んだ可能性を示唆する"),
+            w.plot_note("更に備品管理は使用人である$kailたちが行っていて、新しくナイフを購入したのを$keanから聞いている"),
+            w.plot_note("最初は$jeanの可能性を疑ったが、$kailが真犯人だと$sherlockは指摘する"),
+            w.plot_note("$kailは全部自分が仕組んだことだと$cherryを人質にとったが、$cherryはもういいと諦めて自白した"),
+            w.plot_note("そこに用意していた警察が突入する"),
+            w.plot_note("$kailは$cherryを殺して自分も死のうとするが、それを$maryが阻止する"),
             w.plot_note("$cherryは自分を守った$maryのことを「それでもお前のことを好きになれない」と言って、警察に逮捕された"),
             )
 
 
 def living_girl(w: World):
     return w.episode("新しい同居人",
+            w.plot_note("事件は犯人の$kailが逮捕され、共犯としての$cherryも逮捕され、幕を下ろした"),
+            w.plot_note("財産はすべて$maryに相続されることになったが、彼女は全てを放棄して地元に寄付したと$keanから聞いた"),
+            w.plot_note("彼からの手紙には自分が残りを管理して、父親と$jeanが罪を償って戻ってくるのを待っていると"),
+            w.plot_note("$maryのその後については、知人のところに預けられることになったとだけ書かれていた"),
+            w.plot_note("そこに訪問者が現れる"),
+            w.plot_note("大きな荷物を持った$maryだった"),
+            w.plot_note("彼女は$sherlockに世話になった恩を返したいと、一緒に暮らすと言い出す"),
+            w.plot_note("$sherlockは断るが、彼女は言うことをきかず、勝手に部屋を決めて、荷物を広げる"),
             w.plot_note("$maryが$sherlockたちの家に居候することになった"),
             )
 
