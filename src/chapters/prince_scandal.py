@@ -30,19 +30,66 @@ def visit_sherlock(w: World):
 
 def prince_letter(w: World):
     return w.episode("皇太子からの密書",
+            w.plot_note("手紙には独特の紙が使われていて、それが王室のものだと$sherlockは分かった"),
+            w.plot_note("中は皇太子からの手紙で、$sherlockに頼みごとが書かれていた"),
+            w.plot_note("皇太子は女遊びがひどくてその界隈では有名だが、今回ついに腰を落ち着けて結婚することになった"),
+            w.plot_note("相手は近隣の公国の王女で、政治的な意味合いも大きい"),
+            w.plot_note("その結婚に際して過去の女性関係をすべて綺麗にした"),
+            w.plot_note("ただある一人の女性にプレゼントしてしまった大切なナイフを返してもらいたいが、相手の女性が応じてくれない"),
+            w.plot_note("揉め事をおこしたくないので、穏便にすませたいから、$sherlockに彼女を説得して、ナイフを返してもらってくれないか、という依頼"),
+            w.plot_note("$sherlockはその依頼内容について、書かれていない部分の推測を述べる"),
+            w.plot_note("ナイフと書いているが、実際は王室に伝わる宝剣で、それが王の証の一つで、結婚の際には儀式内で使われる"),
+            w.plot_note("酒の勢いで大切な宝剣をあげてしまったのだろうと"),
+            w.plot_note("そんなものを取り戻す義理はないが、恩があるので仕方なく依頼を受けると言った"),
             w.plot_note("$sherlockは$wilsonにその女性の家まで送ってほしいと頼んだ"),
             )
 
 
 def that_lady(w: World):
     return w.episode("その女",
+            w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
+            w.plot_note("手紙に同封されていた地図と情報を見る$sherlock"),
+            w.plot_note("女の家は高級住宅街にあった"),
+            w.plot_note("女の家を訪れる前に周囲に聞いて回る"),
+            w.plot_note("周囲の評判はいい人で人当たりもよく、色々分けてもらっている話しか出なかった"),
+            w.plot_note("$sherlockは$wilsonに「何か妙だ」といってから、$ailyの家に向かう"),
+            w.plot_note("しかし誰も出てこない"),
+            w.plot_note("鍵が空いているのを妙に思い、中に入る"),
+            w.plot_note("家の中はがらんとしていて、まるで新居のよう"),
+            w.plot_note("一つだけ木箱が置かれていただけで、そこには人が倒れていた"),
             w.plot_note("女の家で謎の女性の遺体が発見された"),
+            )
+
+
+def murder_case(w: World):
+    return w.episode("殺人事件",
+            w.plot_note("$sherlockは警察に連絡を取る"),
+            w.plot_note("現れたのは$restradeで、$sherlockとは旧知の仲のようだった"),
+            w.plot_note("$sherlockは$restradeと少し話す"),
+            w.plot_note("$sherlockは現場を見て、殺害されていたのは$ailyではないと言う"),
+            w.plot_note("そもそも家の中にものがなさすぎて、生活していた証拠がない"),
+            w.plot_note("遺体の身元は行方不明になっている人間の誰かだろうと"),
+            w.plot_note("自分がここにきたのはある人物に彼女にあずけているものを取り戻してほしいと頼まれたからだ、とだけ"),
+            w.plot_note("$sherlockは$wilsonと一緒に外に出て、ある場所に行くように指示する"),
+            w.plot_note("行き先はある孤児院だった"),
             )
 
 
 def she_is_not_exist(w: World):
     return w.episode("彼女は存在しない",
-            w.plot_note("そこに$ailyという女が存在していた証拠は何もなかった"),
+            w.plot_note("$ailyという女性については謎が多い"),
+            w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
+            w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
+            w.plot_note("孤児院に到着し、そこに入る"),
+            w.plot_note("なぜここにきたのか尋ねると、$ailyという女性が寄付をしていた場所だったと"),
+            w.plot_note("寄付をするとそこの孤児たちが作った栞がもらえるが、それが落ちていたのだ"),
+            w.plot_note("尋ねたが、$ailyという女性に心当たりはないらしい"),
+            w.plot_note("応対してくれた教師（実は$aily）は、ここは養子としてもらわれていく子もいるが、大半は自立して働いて暮らしていると"),
+            w.plot_note("その場所に支援してくれているその女性も素晴らしい人だろうと、彼女は言った"),
+            w.plot_note("$sherlockはそこで子供たちが自分のことをいつもくる女性の知人と思って話しかける"),
+            w.plot_note("子供が彼女からあるものを預かっていることを知った"),
+            w.plot_note("それは宝剣だった"),
+            # TODO
             )
 
 
