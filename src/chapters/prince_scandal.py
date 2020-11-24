@@ -75,8 +75,8 @@ def murder_case(w: World):
             )
 
 
-def she_is_not_exist(w: World):
-    return w.episode("彼女は存在しない",
+def orphanage(w: World):
+    return w.episode("孤児院",
             w.plot_note("$ailyという女性については謎が多い"),
             w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
             w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
@@ -89,18 +89,47 @@ def she_is_not_exist(w: World):
             w.plot_note("$sherlockはそこで子供たちが自分のことをいつもくる女性の知人と思って話しかける"),
             w.plot_note("子供が彼女からあるものを預かっていることを知った"),
             w.plot_note("それは宝剣だった"),
-            # TODO
             )
 
 
-def jack_the_identity(w: World):
-    return w.episode("$jackの正体",
-            w.plot_note("$jackは名前も戸籍も存在しない、悲しい捨て子だった"),
+def she_is_not_exist(w: World):
+    return w.episode("彼女は存在しない",
+            w.plot_note("$sherlockは宝剣をレプリカとすり替え、持ち帰る"),
+            w.plot_note("知人の古物商に鑑定してもらうと、確かに宝剣だと言われ、目的は達成したと皇太子の使者に伝える"),
+            w.plot_note("ただ謎の殺人事件と消えた$ailyについての謎が残った"),
+            w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
+            w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),
+            w.plot_note("やってきた若い刑事は$sherlockがいないことに落胆しつつも、状況を教えてくれる"),
+            w.plot_note("発見された遺体は一月ほど前に行方不明になった女性だった"),
+            w.plot_note("$ailyとは何の関係もなく、そこの接点も見つけられないと嘆く"),
+            w.plot_note("殺害方法も不明で、凶器すら見つけられないと"),
+            w.plot_note("そこに役所の男から$ailyという女性が住民登録をしたという形跡は見つけられなかったと連絡がきた"),
+            )
+
+
+def her_the_identity(w: World):
+    return w.episode("彼女の正体",
+            w.plot_note("数日後、$sherlockは再び孤児院を訪れていた"),
+            w.plot_note("事件は暗礁に乗り上げ、$ailyを重要参考人として警察が探しているらしい、という情報だけが$sherlockに届いた"),
+            w.plot_note("$sherlockは孤児院の女教師に話しかける"),
+            w.plot_note("$ailyさんですね、と"),
+            w.plot_note("彼女は観念し、孤児院の裏庭に出て話す"),
+            w.plot_note("宝剣についてはすぐに返すつもりだったが、それが価値あるものと知り、お金に変えた"),
+            w.plot_note("この孤児院を存続させたいがための行動だった"),
+            w.plot_note("$sherlockはあの宝剣が本物だったことを告げると、彼女は子供たちを呼びつける"),
+            w.plot_note("その子どもたちに囲まれている間に彼女は姿を消してしまった"),
+            w.plot_note("$sherlockは子供たちからここに寄付している本当の人間の名前を聞く"),
+            w.plot_note("それは$jackという、巷で噂の盗賊だった"),
             )
 
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚式",
+            w.plot_note("殺人の謎は改造された$gunの発見により、犯人はわからないまま、解決された"),
+            w.plot_note("$sherlockは犯人はプロの人間だろうという"),
+            w.plot_note("そもそも$jackと関係していたかどうか分からないし、それを追うための情報もないと"),
+            w.plot_note("更に彼女があの宝剣ではなく、そこにはまっていた$stoneを売り払ったのだと分かった"),
+            w.plot_note("一番大事な$stoneが偽物とわかり、どうするか問題となった"),
             w.plot_note("偽物の$stoneを使い、無事に皇太子の結婚式は行われた"),
             )
 
@@ -123,8 +152,9 @@ def main(w: World):
             visit_sherlock(w),
             prince_letter(w),
             that_lady(w),
+            orphanage(w),
             she_is_not_exist(w),
-            jack_the_identity(w),
+            her_the_identity(w),
             prince_wedding(w),
             )
 
