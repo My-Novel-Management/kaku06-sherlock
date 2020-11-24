@@ -19,6 +19,8 @@ ASSET = {
             ("moriano", "モリアーノ", "ジェーンズ,モリアーノ", 50,(1,1), "教授", "me:私"),
             ## 少年探偵団
             ("ignes", "イグネス", "", 14,(1,1), "male", "市場の手伝い", "me:俺"),
+            ## 市場
+            ("nowlis", "ノーリス", "", 30,(1,1), "male", "市場の男性", "me:俺"),# NOTE: 本物のwilson
             ## kingdom
             ## police
             ("appolo", "アポロ", "リキュール,アポロ", 50,(1,1), "male", "警察（警視）", "me:私"),
@@ -35,9 +37,14 @@ ASSET = {
             ## 魔獣
             ("cherry", "チェリー", "ヴィルヘルム,チェリー", 30,(1,1), "female", "婦人", "me:私"),
             ("moch", "モック", "ジリアン,モック", 35,(1,1), "male", "観光協会", "me:私"),
+            ## プロローグ
+            ("stanry", "スタンリー", "", 35,(1,1), "male", "不動産屋", "me:俺"),
+            ## 最後の事件
+            # モリアーノの後輩。殺される男
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
+            ("Office", "勇者探偵社", "London"),
             ("London", "ロムダス", "", (1000,1000)),# ロンドン
             ("Baker", "ベイリー", "London"),# ベイカー街
             ("Dartmour", "ダースモア", "London"),# ダートムア
@@ -77,11 +84,13 @@ ASSET = {
             ),
         "ITEMS": (
             # (tag / name / cate / info)
+            ("item", "魔具"),
             ("gun", "魔銃"),
             ("train", "魔導列車"),
             ("taxi", "魔導タクシー"),
             ("car", "魔導車"),
             ("stone", "魔石"),
+            ("telephone", "魔導通話"),
             ),
         "WORDS": (
             # (tag / name / cate / info)
@@ -97,6 +106,7 @@ ASSET = {
             ("werewolf", "人狼"),
             ("science", "魔学"),
             ("missing", "喪失知識"),
+            ("cultX", "教団Ｘ"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
