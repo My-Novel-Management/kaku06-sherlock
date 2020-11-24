@@ -13,14 +13,17 @@ from config import TITLES
 # Episodes
 def visit_sherlock(w: World):
     return w.episode("訪問者",
+            "$Baker街・通り",
             w.plot_note("$wilsonは$carで$sherlockの家の前までやってくる"),
             w.plot_note("$wilsonは近くにいた子供（$ignes）に家を尋ねて教えてもらう"),
             w.plot_note("そこで子供たちがもめ始めて、困惑"),
             w.plot_note("なんとか場が収まり、$sherlockの家を訪問する"),
+            "$sherlockの住居・前",
             w.plot_note("$sherlockは何も言っていないのに$wilsonの素性を言い当てる"),
             w.plot_note("その上で王室からの依頼は受けないと言って断る"),
             w.plot_note("最後に「さっきの子供に財布をすられてるよ」と"),
             w.plot_note("$wilsonは振り返ったがもう子供たちの姿は消えていた"),
+            "$sherlockの家の中",
             w.plot_note("知っていたならなぜ忠告してくれなかったんだ、と$wilsonが$sherlockに文句をいい、なんとか家に入れてもらえる"),
             w.plot_note("中に入るとそこら中に本や資料がちらばっていた"),
             w.plot_note("$wilsonはそこで依頼をしようと思ったが、"),
@@ -30,6 +33,7 @@ def visit_sherlock(w: World):
 
 def prince_letter(w: World):
     return w.episode("皇太子からの密書",
+            "$sherlockの家の中",
             w.plot_note("手紙には独特の紙が使われていて、それが王室のものだと$sherlockは分かった"),
             w.plot_note("中は皇太子からの手紙で、$sherlockに頼みごとが書かれていた"),
             w.plot_note("皇太子は女遊びがひどくてその界隈では有名だが、今回ついに腰を落ち着けて結婚することになった"),
@@ -47,15 +51,21 @@ def prince_letter(w: World):
 
 def that_lady(w: World):
     return w.episode("その女",
+            "車内",
             w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
             w.plot_note("手紙に同封されていた地図と情報を見る$sherlock"),
+            "住宅街",
             w.plot_note("女の家は高級住宅街にあった"),
             w.plot_note("女の家を訪れる前に周囲に聞いて回る"),
+            "近所の家",
             w.plot_note("周囲の評判はいい人で人当たりもよく、色々分けてもらっている話しか出なかった"),
             w.plot_note("$sherlockは$wilsonに「何か妙だ」といってから、$ailyの家に向かう"),
+            "$ailyの家",
             w.plot_note("しかし誰も出てこない"),
             w.plot_note("鍵が空いているのを妙に思い、中に入る"),
+            "$ailyの家の中",
             w.plot_note("家の中はがらんとしていて、まるで新居のよう"),
+            "同・寝室",
             w.plot_note("一つだけ木箱が置かれていただけで、そこには人が倒れていた"),
             w.plot_note("女の家で謎の女性の遺体が発見された"),
             )
@@ -63,9 +73,11 @@ def that_lady(w: World):
 
 def murder_case(w: World):
     return w.episode("殺人事件",
+            "$ailyの家・寝室",
             w.plot_note("$sherlockは警察に連絡を取る"),
             w.plot_note("現れたのは$restradeで、$sherlockとは旧知の仲のようだった"),
             w.plot_note("$sherlockは$restradeと少し話す"),
+            "同・キッチン",
             w.plot_note("$sherlockは現場を見て、殺害されていたのは$ailyではないと言う"),
             w.plot_note("そもそも家の中にものがなさすぎて、生活していた証拠がない"),
             w.plot_note("遺体の身元は行方不明になっている人間の誰かだろうと"),
@@ -77,13 +89,16 @@ def murder_case(w: World):
 
 def orphanage(w: World):
     return w.episode("孤児院",
+            "車",
             w.plot_note("$ailyという女性については謎が多い"),
             w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
             w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
+            "孤児院",
             w.plot_note("孤児院に到着し、そこに入る"),
             w.plot_note("なぜここにきたのか尋ねると、$ailyという女性が寄付をしていた場所だったと"),
             w.plot_note("寄付をするとそこの孤児たちが作った栞がもらえるが、それが落ちていたのだ"),
             w.plot_note("尋ねたが、$ailyという女性に心当たりはないらしい"),
+            "同・部屋",
             w.plot_note("応対してくれた教師（実は$aily）は、ここは養子としてもらわれていく子もいるが、大半は自立して働いて暮らしていると"),
             w.plot_note("その場所に支援してくれているその女性も素晴らしい人だろうと、彼女は言った"),
             w.plot_note("$sherlockはそこで子供たちが自分のことをいつもくる女性の知人と思って話しかける"),
@@ -94,8 +109,13 @@ def orphanage(w: World):
 
 def she_is_not_exist(w: World):
     return w.episode("彼女は存在しない",
+            "孤児院・前",
             w.plot_note("$sherlockは宝剣をレプリカとすり替え、持ち帰る"),
+            "市場・裏通り",
+            "古物商",
             w.plot_note("知人の古物商に鑑定してもらうと、確かに宝剣だと言われ、目的は達成したと皇太子の使者に伝える"),
+            "市場・表通り",
+            # TODO
             w.plot_note("ただ謎の殺人事件と消えた$ailyについての謎が残った"),
             w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
             w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),

@@ -13,6 +13,7 @@ from config import TITLES
 # Episodes
 def troublesome(w: World):
     return w.episode("厄介事",
+            "$wilson家・家の中",
             w.plot_note("私（$wilson）は出かける準備をしていた"),
             w.plot_note("テーブルの上には新聞記事がちらばっている"),
             w.plot_note("謎の失踪事件が多発していた"),
@@ -23,6 +24,7 @@ def troublesome(w: World):
 
 def handyman_sherlock(w: World):
     return w.episode("便利屋$sherlock",
+            "家の前・車が止まっている",
             w.plot_note("$wilsonは外にとめてあった$carに向かう"),
             w.plot_note("そこで大家と出会う"),
             w.plot_note("大家からは家賃を支払ってもらわないと困ると言われるが、今受けた仕事の金が入ったらと"),
@@ -34,6 +36,7 @@ def handyman_sherlock(w: World):
 
 def note_for_novel(w: World):
     return w.episode("作品のための注意書き",
+            "書斎",
             w.plot_note("本作品は全て三人称で記述される"),
             w.plot_note("記述者＝私により後から整理され、書かれたもの"),
             w.plot_note("聞いた時が前後しても、読んでいくのにいいように並べ替えてある"),
