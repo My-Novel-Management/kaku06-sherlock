@@ -11,7 +11,34 @@ from config import TITLES
 
 
 # Episodes
+def troublesome(w: World):
+    return w.episode("厄介事",
+            w.plot_note("私（$wilson）は出かける準備をしていた"),
+            w.plot_note("テーブルの上には新聞記事がちらばっている"),
+            w.plot_note("謎の失踪事件が多発していた"),
+            w.plot_note("食べかけの朝食を片付け、部屋から出る"),
+            w.plot_note("いつも厄介事を頼まれる、そういう運命の下に生まれたんだと語る"),
+            )
 
+
+def handyman_sherlock(w: World):
+    return w.episode("便利屋$sherlock",
+            w.plot_note("$wilsonは外にとめてあった$carに向かう"),
+            w.plot_note("そこで大家と出会う"),
+            w.plot_note("大家からは家賃を支払ってもらわないと困ると言われるが、今受けた仕事の金が入ったらと"),
+            w.plot_note("同じような男がいて困っている。結婚しない男の一人暮らしはどうも信用ならないと"),
+            w.plot_note("それが$sherlockという、自称便利屋だが、何をやっているのかさっぱりだと"),
+            w.plot_note("$wilsonは$carに乗り込み、出かける"),
+            )
+
+
+def note_for_novel(w: World):
+    return w.episode("作品のための注意書き",
+            w.plot_note("本作品は全て三人称で記述される"),
+            w.plot_note("記述者＝私により後から整理され、書かれたもの"),
+            w.plot_note("聞いた時が前後しても、読んでいくのにいいように並べ替えてある"),
+            w.plot_note("本作は$sherlockという男を中心に巻き起こった事件について書いた、伝記的作品である"),
+            )
 
 
 # Chapter
@@ -23,23 +50,9 @@ def main(w: World):
             w.plot_turnpoint("$sherlockという男が街の便利屋という噂を知ったところから物語は始まる"),
             w.plot_resolve("$sherlockの家を訪問する$wilson"),
             #
-            "プロローグとエピローグについては本物の$wilsonの行動と語りになる。だからここには作品本編そのものは書かないこと。内容を回想して触れる程度",
-            "$wilsonの語り",
-            w.plot_note("$wilsonは「役に立つ」という言葉の意味を考察する"),
-            w.plot_note("今の時代を簡単に振り返る$wilson"),
-            w.plot_note("魔導タクシーが走り始める"),
-            w.plot_note("繁華街に出て、賑やかな、文明に溢れた街並み"),
-            w.plot_note("産業革命と呼ばれた、と。$enegyを元とした$magicにより様々なものが動かせるようになった"),
-            w.plot_note("近代化と呼ばれているが、それでもまだ人々の心のどこかではかつて存在した$bossへの脅威が見え隠れする"),
-            w.plot_note("だからこそ人は$heroを未だに神聖視するのだろうと考える"),
-            w.plot_note("$wilsonは手にしてものから$heroの紋章を見る"),
-            w.plot_note("それから新聞を取り出してその見出しに注目する"),
-            w.plot_note("見出しには失踪事件再びと"),
-            "$hero関係の失踪者は簡単なリストを作る",
-            w.plot_note("※ここで注釈が入る"),
-            w.plot_note("本作は$sherlockとその仲間たちの活躍をまとめたもので、あとから情報を補足し「私」が記述したものだ"),
-            w.plot_note("物語は「私」を含めてすべて三人称で記述され、読者が理解しやすいように時系列を整理して情報を並べてあるし、補足して書いてある"),
-            w.plot_note("注釈後は「まもなく着きますよ」という声に微睡みから目覚めて、さてこの物語が始まる地点へと向かおうと"),
+            troublesome(w),
+            handyman_sherlock(w),
+            note_for_novel(w),
             )
 
 
