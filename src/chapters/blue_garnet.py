@@ -13,14 +13,18 @@ from config import TITLES
 # Episodes
 def mary_and_market(w: World):
     return w.episode("$maryと市場",
+            "通り",
             w.plot_note("$limeも同居するようになり、$sherlockの家で暮らす人数が増えた"),
+            "市場",
             w.plot_note("$maryは料理はあいかわらず下手だが、それでもよく市場に顔を出して買い物をしていた"),
             w.plot_note("$maryは今日も市場に出かける"),
             w.plot_note("この町の市場の賑わいが$maryは好きだった"),
             w.plot_note("市場には少年探偵団の$ignesも働いている"),
             w.plot_note("最近仲良くなった果物屋の$nowlisから友人からガチョウをもらったと言ってそれを分けてもらえた"),
             w.plot_note("$maryはガチョウを持って帰る"),
+            "$sherlockの家",
             w.plot_note("$limeは料理担当になっていて、そのガチョウをもらってさばいてくれる"),
+            "同・キッチン",
             w.plot_note("$maryは市場で仕入れた面白い話を$sherlockに話す"),
             w.plot_note("今市場ではガチョウからダイヤが出てくると話題になっていた"),
             w.plot_note("$limeがやってきて、何か出たという"),
@@ -30,6 +34,7 @@ def mary_and_market(w: World):
 
 def strange_goose(w: World):
     return w.episode("奇妙なガチョウ",
+            "$sherlockの家",
             w.plot_note("$sherlockはそれがなにかの事件の凶器だと分かり、すぐに警察に連絡を取る"),
             w.plot_note("$restradeがやってきて、それは現在彼が追っている事件の重要な証拠品だと言われた"),
             w.plot_note("$restradeからその事件についての概要を聞く"),
@@ -44,9 +49,11 @@ def strange_goose(w: World):
 
 def suspect_jack(w: World):
     return w.episode("$jackが容疑者",
+            "$sherlockの家",
             w.plot_note("$jackが改めてその殺人事件の容疑者として手配される"),
             w.plot_note("戻ってきた$sherlockは$maryからそのことを聞き、"),
             w.plot_note("$sherlockは現場を見てきたことを$maryたちに話す"),
+            "回想で研究者の家を出すか？",
             w.plot_note("現場は住宅街から少し離れた郊外の一軒家で、男は民間の研究所をやめたあとも個人的に何かを研究していた"),
             w.plot_note("歴史学と民俗学に造形が深く、$sherlockもその所蔵していた資料に関心をしたくらい"),
             w.plot_note("彼が書き残しているものの一つに古代の技法がいくつか紹介されていた"),
@@ -60,13 +67,18 @@ def suspect_jack(w: World):
 
 def whereabouts(w: World):
     return w.episode("彼女の行方",
+            "通り",
             w.plot_note("$sherlockはそのメッセージを配達した人間が$jackだと気づいて追いかける"),
             w.plot_note("見失ったが彼女が残したヒントから居場所を推測する"),
+            "市場",
             w.plot_note("その間に$maryたちはガチョウの中から出てくる宝石の謎を追いかける"),
+            "肉屋",
             w.plot_note("肉屋の主人からどこでガチョウを仕入れてくるのかを聞いた"),
             w.plot_note("その経路を辿っていくと、飼育業者がその一箇所だと断定できた"),
+            "肉の卸売業者",
             w.plot_note("飼育業者のおじさんに聞いてもダイヤを餌に混ぜたりはしていないと"),
             w.plot_note("仲介業者も卸業者も全然入る余地がなく、結局何も情報を得られないまま帰ってきた"),
+            "$sherlockの家",
             w.plot_note("そこに$sherlockからの伝言を$ignesが持ってくる"),
             w.plot_note("数日留守にすることと、$jackに会いに行ってくると書かれていた"),
             )
@@ -74,8 +86,10 @@ def whereabouts(w: World):
 
 def reunion_her(w: World):
     return w.episode("彼女との再会",
+            "学園",
             w.plot_note("$sherlockがきたのは自分がかつて通っていた学園だった"),
             w.plot_note("そこの臨時教師になっていた$jackと出会う"),
+            "教室",
             w.plot_note("$jackは自分の将来の夢が教師だったと告白する"),
             w.plot_note("生まれたときから孤独で、孤児院で大勢の小さい子のために物心ついたころから盗みを働いていた"),
             w.plot_note("あの$stoneを集めようとしたのは、その孤児院を救うためだったと言う"),
@@ -91,6 +105,7 @@ def reunion_her(w: World):
 
 def her_message(w: World):
     return w.episode("彼女からのメッセージ",
+            "教室",
             w.plot_note("$sherlockは泥棒の頼みは聞けないというが、一度助けてもらった恩があるといい、その条件を聞く"),
             w.plot_note("$jackはしばらく遠方に身を隠しながら、孤児院の支援を続けるから、ここが潰れないようにはからってほしいと"),
             w.plot_note("$jackは自分が狙われた原因が$stoneにあると、持っていたそれを見せる"),
