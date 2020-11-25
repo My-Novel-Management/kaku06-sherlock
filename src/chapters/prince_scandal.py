@@ -115,8 +115,8 @@ def she_is_not_exist(w: World):
             "古物商",
             w.plot_note("知人の古物商に鑑定してもらうと、確かに宝剣だと言われ、目的は達成したと皇太子の使者に伝える"),
             "市場・表通り",
-            # TODO
             w.plot_note("ただ謎の殺人事件と消えた$ailyについての謎が残った"),
+            "$sherlockの家",
             w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
             w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),
             w.plot_note("やってきた若い刑事は$sherlockがいないことに落胆しつつも、状況を教えてくれる"),
@@ -129,11 +129,13 @@ def she_is_not_exist(w: World):
 
 def her_the_identity(w: World):
     return w.episode("彼女の正体",
+            "孤児院",
             w.plot_note("数日後、$sherlockは再び孤児院を訪れていた"),
             w.plot_note("事件は暗礁に乗り上げ、$ailyを重要参考人として警察が探しているらしい、という情報だけが$sherlockに届いた"),
             w.plot_note("$sherlockは孤児院の女教師に話しかける"),
             w.plot_note("$ailyさんですね、と"),
             w.plot_note("彼女は観念し、孤児院の裏庭に出て話す"),
+            "同・裏庭",
             w.plot_note("宝剣についてはすぐに返すつもりだったが、それが価値あるものと知り、お金に変えた"),
             w.plot_note("この孤児院を存続させたいがための行動だった"),
             w.plot_note("$sherlockはあの宝剣が本物だったことを告げると、彼女は子供たちを呼びつける"),
@@ -145,11 +147,13 @@ def her_the_identity(w: World):
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚式",
+            "$sherlockの家",
             w.plot_note("殺人の謎は改造された$gunの発見により、犯人はわからないまま、解決された"),
             w.plot_note("$sherlockは犯人はプロの人間だろうという"),
             w.plot_note("そもそも$jackと関係していたかどうか分からないし、それを追うための情報もないと"),
             w.plot_note("更に彼女があの宝剣ではなく、そこにはまっていた$stoneを売り払ったのだと分かった"),
             w.plot_note("一番大事な$stoneが偽物とわかり、どうするか問題となった"),
+            "メインストリート",
             w.plot_note("偽物の$stoneを使い、無事に皇太子の結婚式は行われた"),
             )
 

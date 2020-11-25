@@ -13,11 +13,14 @@ from config import TITLES
 # Episodes
 def missing_persons(w: World):
     return w.episode("失踪者たち",
+            "$sherlockの家・居間",
             w.plot_note("同居するようになった$maryはやたらと$sherlockにまとわりつく"),
             w.plot_note("$sherlockは大好きな読書もできず、困っていた"),
+            "同・キッチン",
             w.plot_note("$maryは彼の迷惑になりたくなくて、$wilsonに相談する"),
             w.plot_note("女手が不足しているから自分が役立つところをアピールしてみたら、と助言を受ける"),
             w.plot_note("$maryは掃除や買い物を買って出る"),
+            "同・居間",
             w.plot_note("やっと外に出てくれてほっとした$sherlockは$wilsonに事件について相談する"),
             w.plot_note("最近謎の失踪者が増えていた"),
             w.plot_note("失踪事件として新聞や雑誌も特集を組んでいる"),
@@ -29,6 +32,7 @@ def missing_persons(w: World):
 
 def strange_work(w: World):
     return w.episode("不思議な仕事",
+            "$sherlockの家・居間",
             w.plot_note("その鎧騎士は$sherlockに$limeと名乗った（筆談で）"),
             w.plot_note("彼女は今ある老夫婦の家に居候しているが、彼らの知人の質屋の護衛のアルバイトをしていた"),
             w.plot_note("守衛仲間の$binsと交代しながら閉店時刻まで警備をしている"),
@@ -45,8 +49,12 @@ def strange_work(w: World):
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
+            "外の通り",
             w.plot_note("$maryは彼女に$sherlockのことを謝りながら送っていく"),
+            "質屋の前",
+            "オーナー夫婦の家",
             w.plot_note("質屋のオーナー夫婦はいい人そうで、$binsとも顔を合わせて帰っていった"),
+            "$sherlockの家・居間",
             w.plot_note("家に帰った$maryはどうしてあんな風に言ったのか$sherlockに問いただす"),
             w.plot_note("$sherlockはそんなにうまい話は存在しないし、自分が知る限り「赤鎧クラブ」なんてものは存在しないと断言する"),
             w.plot_note("$maryは実際に持ち帰ったチラシを見せながら、彼女を拾ってくれたオーナーさんや同僚の$binsの優しさを力説する"),
@@ -61,12 +69,14 @@ def bank_robbery(w: World):
 
 def truth_of_club(w: World):
     return w.episode("クラブの真相",
+            "$sherlockの家・居間",
             w.plot_note("$maryが$limeを助けてやってほしいと$sherlockに言う"),
             w.plot_note("$sherlockは自分の忠告を聞かなかったからだと言うが、それでも話だけは聞くと言う"),
             w.plot_note("質屋につながっていた抜け穴の中で、重要参考人だった$ignesが遺体で発見された"),
             w.plot_note("その容疑者として$limeが逮捕され、オーナー夫婦も事情聴取を受けている最中らしい"),
             w.plot_note("強盗の件についても調査中で、全部彼女に押し付けられるかもしれないと言い出す"),
             w.plot_note("$sherlockはその質屋に案内してもらう"),
+            "外の通り",
             w.plot_note("$sherlockは$maryになぜ自分が忠告したかについて語る"),
             w.plot_note("どう考えても妙なアルバイトは彼女をその場から離れさせるための口実だった"),
             w.plot_note("事実、店番をもう片方にまかせている間に、実際は抜け穴をずっと掘っていた"),
@@ -74,6 +84,7 @@ def truth_of_club(w: World):
             w.plot_note("その間に抜け穴を完成させ、盗み出す計画だったが、最後にその計画を知っていた$binsを殺害した"),
             w.plot_note("$limeもオーナー夫婦も質屋から離れた場所で暮らしている"),
             w.plot_note("そのアリバイを証明するだけでいいと$sherlockは言う"),
+            "銀行",
             w.plot_note("銀行へとやってきた$sherlockはそこにいた$restradeにそのアリバイの証拠を教える"),
             w.plot_note("前日に鍵が壊れて、誰も質屋に入れなくなっていたのだった"),
             )
@@ -81,6 +92,7 @@ def truth_of_club(w: World):
 
 def what_was_stolen(w: World):
     return w.episode("盗まれたもの",
+            "$sherlockの家",
             w.plot_note("アリバイ証明から$limeとオーナー夫婦の無実は証明された"),
             w.plot_note("開放された$limeだったがオーナー夫婦からは不審がられ、家を追い出されてしまう"),
             w.plot_note("$maryが$limeを拾い、再び家へと連れてくる"),
@@ -95,6 +107,7 @@ def what_was_stolen(w: World):
 
 def new_living(w: World):
     return w.episode("新しい居候",
+            "$sherlockの家",
             w.plot_note("$limeは自分が誘拐された訳ではなく、普通に家出をしたのだと告白する"),
             w.plot_note("王室はそんな品の悪い発表をできないから失踪事件にして公表したのだと言った"),
             w.plot_note("もともと妾の子で、周囲から浮いていて、王室にも自分の居場所がなく帰りたくないと泣く"),

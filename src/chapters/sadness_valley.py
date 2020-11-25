@@ -13,6 +13,7 @@ from config import TITLES
 # Episodes
 def sadness_case(w: World):
     return w.episode("悲しい事件",
+            "$sherlockの家・リビング",
             w.plot_note("$sherlockは新聞を読んでいた"),
             w.plot_note("$wilsonがやってきていつも何か読んでいるねと言う"),
             w.plot_note("$sherlockは新聞に掲載されていた田舎町の事件を説明する"),
@@ -27,14 +28,21 @@ def sadness_case(w: World):
 
 def country_town(w: World):
     return w.episode("田舎町",
+            "$sherlockの家・リビング",
+            "回想で$Dartmourを使うかも",
             w.plot_note("$keanはある屋敷に務める使用人の一家の息子だった"),
             w.plot_note("彼は自分が使えている家でその殺人事件があったと言う"),
             w.plot_note("その容疑者になっているのがその家の一人娘だが、彼女は絶対にそんなことをしないと力説する"),
             w.plot_note("なけなしの金を見せて$sherlockに頼む"),
             w.plot_note("$wilsonがそんなはした金で受けるのかと尋ねたが$sherlockは「仕事だよ」と席をたった"),
+            "駅",
             w.plot_note("駅から$trainにのって$Dartmourに向かう"),
+            "列車内",
+            "$Dartmour駅・駅前",
             w.plot_note("そこに迎えにきていた$keanに案内され、まずは屋敷に向かう"),
+            "屋敷",
             w.plot_note("屋敷の主となった、残された母親の$jeanに出会う"),
+            "同・応接間",
             w.plot_note("$jeanはどうしてこんなことになったのか分からないと嘆く"),
             w.plot_note("ただ使用人の$kailが二人が言い争うのを聞いていて、それが決定的な証拠になっているらしい"),
             w.plot_note("$kailにも出会って話を聞こうとするが、買い出しにいっていて不在だった"),
@@ -46,8 +54,10 @@ def country_town(w: World):
 
 def suspect_girl(w: World):
     return w.episode("容疑者の少女",
+            "$Dartmour警察",
             w.plot_note("警察署にいき、少女と面会する"),
             w.plot_note("ずっと泣いていて、事情聴取にならないと担当刑事が言っていた"),
+            "同・取調室",
             w.plot_note("$sherlockは自分が$keanから依頼をされたと説明し、事情を聞く"),
             w.plot_note("$maryと名乗った少女は、自分がどういう状況だったか話す"),
             w.plot_note("事件のあった日、その朝に父親（被害者）から北の沼地に来るように言われた"),
@@ -61,19 +71,25 @@ def suspect_girl(w: World):
             w.plot_note("父親は一人で待っていて、自分と父親以外その場にはいなかった"),
             w.plot_note("場所は近くに高いもの、建物のない沼地で、人影もなかったと"),
             w.plot_note("自分はやってないし、父親のことを恨んだりもしていないといって、$sherlockに助けを求めた"),
+            "同・外",
             w.plot_note("面会を終えた$sherlockは$wilsonに彼女が$animalであると告げた"),
             )
 
 
 def her_mother(w: World):
     return w.episode("彼女の母親",
+            "宿・自室",
             w.plot_note("$sherlockは一晩ホテルに泊まり、その間に$maryの家について調べる"),
+            "屋敷",
             w.plot_note("翌朝、再び屋敷を訪れた"),
+            "同・玄関",
             w.plot_note("$sherlockは$jeanに会いたいといったが使用人の$kailが体調を崩しているから無理だと返す"),
             w.plot_note("$maryに関しての大事な話があると言う"),
+            "同・寝室",
             w.plot_note("奥に通されて、顔色の悪い$jeanと出会う"),
             w.plot_note("$sherlockは$jeanに$maryが$animalだと知っているか、と尋ねる"),
             w.plot_note("$jeanは答えなかったことから、$sherlockは事実に気づいた"),
+            "同・リビング",
             w.plot_note("それで$jeanに事件当日のアリバイを尋ねる"),
             w.plot_note("彼女はその日は一度も外出してなくて、体調を崩して自分の部屋で寝込んでいた"),
             w.plot_note("それは使用人の$kailも$keanも見ている、証言している"),
@@ -84,6 +100,7 @@ def her_mother(w: World):
 
 def real_murder(w: World):
     return w.episode("真犯人",
+            "同・リビング",
             w.plot_note("$maryのことを$jeanは「お前のせいでいつも無茶苦茶になる」と言う"),
             w.plot_note("$maryは自分が父親を殺していないことを訴えるが、母親は二人があまり仲良くなかったと言う"),
             w.plot_note("その理由は$maryが拾った子供だから"),
@@ -104,6 +121,7 @@ def real_murder(w: World):
 
 def animal_girl(w: World):
     return w.episode("獣の少女",
+            "同・リビング",
             w.plot_note("$kailは壁の斧を手に取り、$maryに襲いかかる"),
             w.plot_note("$jeanを守ろうとしたように見えたが、$sherlockは彼女は何もしないから大丈夫だと立ちふさがる"),
             w.plot_note("$kailは自分たちを陥れようとしていると$sherlockに言う"),
@@ -124,6 +142,7 @@ def animal_girl(w: World):
 
 def living_girl(w: World):
     return w.episode("新しい同居人",
+            "$sherlockの家・居間",
             w.plot_note("事件は犯人の$kailが逮捕され、共犯としての$cherryも逮捕され、幕を下ろした"),
             w.plot_note("財産はすべて$maryに相続されることになったが、彼女は全てを放棄して地元に寄付したと$keanから聞いた"),
             w.plot_note("彼からの手紙には自分が残りを管理して、父親と$jeanが罪を償って戻ってくるのを待っていると"),
