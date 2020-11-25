@@ -13,6 +13,7 @@ from config import TITLES
 # Episode
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
+            "$sherlockの家・居間",
             w.plot_note("$sherlockは新聞を読んでいた"),
             w.plot_note("そこに殺人事件の調査依頼が持ち込まれる"),
             w.plot_note("最初は$maryも驚いていたが今では慣れたもので、依頼人を案内して、飲み物を出しながら依頼内容を話すよう促す"),
@@ -22,6 +23,8 @@ def the_fixer(w: World):
             w.plot_note("犯罪学の研究をしている人間が殺された"),
             w.plot_note("大学の研究室内での密室殺人。その手口が全く不明だが自殺ではないと警察は断定しているという"),
             w.plot_note("さっそくその調査に向かう$sherlock"),
+            "車",
+            "一軒家",
             w.plot_note("$restradeと合流し、事件についての情報をもらう"),
             w.plot_note("現場にはＭの文字が書き残されていた"),
             )
@@ -29,6 +32,7 @@ def the_fixer(w: World):
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
+            "一軒家",
             w.plot_note("$sherlockは$morianoだと語る"),
             w.plot_note("$restradeですら耳にしたことがなかったその男のことを、$sherlockは友人のように仔細に話してみせる"),
             w.plot_note("$morianoは教育者の家庭に生まれた"),
@@ -45,6 +49,7 @@ def about_moriano(w: World):
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
+            "$sherlockの家",
             w.plot_note("$sherlockが家に戻ってくるとそこには老人の姿があった", "$morianoだ"),
             w.plot_note("$morianoは「はじめまして」と挨拶をし、それから今$sherlockたちがどういう経路で戻ってきたかを言い当てる"),
             w.plot_note("$morianoは$sherlockに自分に関するすべてのことから手を引くようにと警告する"),
@@ -60,13 +65,18 @@ def his_warning(w: World):
 
 def lookfor_mary(w: World):
     return w.episode("$maryの捜索",
+            "$sherlockの家・居間",
             w.plot_note("$morianoがきてから$maryの様子がおかしい"),
             w.plot_note("$sherlockは$morianoを何とか見つけ出そうと躍起になっている"),
             w.plot_note("$maryは$limeに相談することもできず、市場の$nowlisに愚痴る。自分だけが違う気がすると"),
+            "市場",
             w.plot_note("$maryは市場からの帰り道、知らない男から手紙を渡される"),
             w.plot_note("手紙は$morianoから君の悩みの相談に乗ろうというものだった"),
             w.plot_note("$maryはその日、帰ってこなかった"),
+            "$sherlockの家",
             w.plot_note("すぐに$sherlockたちは$morianoの邸宅に向かう"),
+            "住宅街",
+            "$morianoの住居",
             w.plot_note("$morianoの邸宅は火事になり、全てが消え去った"),
             w.plot_note("しかし後日、$morianoのメッセージが新聞に掲載される"),
             w.plot_note("$maryは無事で丁重に監禁していると。場所は$sherlockなら推理できると書かれて、ヒントが残されていた"),
@@ -75,25 +85,31 @@ def lookfor_mary(w: World):
 
 def rescue_mary(w: World):
     return w.episode("$mary救出劇",
+            "$sherlockの家",
             w.plot_note("$sherlockはヒントから$maryの居場所は$morianoと関係ない場所にいると推測する"),
             w.plot_note("$mary救出隊として少年探偵団の協力を仰ぐ"),
             w.plot_note("その間に$sherlockはその新聞記事からたどり、$morianoがどこからメッセージを出しているのかを調べる"),
+            "謎の家",
             w.plot_note("$maryは爆弾が仕掛けられた部屋に閉じ込められていた"),
             w.plot_note("爆弾はダミーだった"),
             w.plot_note("部屋から出られなくなった$maryと$lime、探偵団たち"),
             w.plot_note("$sherlockの言葉を思い出して、$maryは脱出法を見つける"),
             w.plot_note("ダミーとして用意していた爆弾を使い、扉を爆破して何とか抜け出す$maryたち"),
+            "$sherlockの家",
             w.plot_note("$maryたちが戻ると、そこには$sherlockの姿がなかった"),
             )
 
 
 def his_letter(w: World):
     return w.episode("$sherlockからの手紙",
-            "$sherlockから少し前に書いたと思われる内容の手紙が届く",
+            "$sherlockの家",
             w.plot_note("$maryが目覚めるとそこに$sherlockの姿がいなかった"),
             w.plot_note("戻ってきた$wilsonは$sherlockの手がかりを追ったが見失ったと言う"),
             w.plot_note("$maryは$sherlockが戻ってくると信じて待っていたが、連絡も戻ってくることもなかった"),
+            "同・寝室",
             w.plot_note("一月が経ち、$maryたちは$sherlockのいない生活に馴染み始めていた"),
+            "同・キッチン",
+            "同・居間",
             w.plot_note("町では$morianoも$sherlockも消えたというのに犯罪は起こっていた"),
             w.plot_note("$wilsonは手を尽くして$sherlockを探す"),
             w.plot_note("$limeが王室のツテを使い、何とか情報を集めると言い出す"),
@@ -107,7 +123,7 @@ def his_letter(w: World):
 
 def sad_news(w: World):
     return w.episode("悲しいお知らせ",
-            "$sherlockが穴に落ちてなくなったと知らせが届いた",
+            "$sherlockの家",
             w.plot_note("手紙の冒頭にはこう書かれていた"),
             w.plot_note("この手紙が届いたならば自分はすでにこの世界にいないだろうと$sherlockは書いていた"),
             w.plot_note("手紙は$morianoの隠れ家に向かう直前に書いて出したと書かれている"),

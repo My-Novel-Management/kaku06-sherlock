@@ -13,6 +13,7 @@ from config import TITLES
 # Episode
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
+            "$sherlockの家",
             w.plot_note("$maryたちは$sherlockが生きていると思って捜索を続けていた"),
             w.plot_note("しかし何の情報もなく、ただ時間だけが過ぎていく"),
             w.plot_note("家を失い、$wilsonの住まいに居候していた$maryたち"),
@@ -26,6 +27,8 @@ def lookfor_sherlock(w: World):
 
 def empty_house(w: World):
     return w.episode("空き家の冒険",
+            "スラム街",
+            "空き家・前",
             w.plot_note("$wilsonに連れられて$maryと$limeは$sherlockに似た人を見たという空き家にやってくる"),
             w.plot_note("バラックが並ぶスラム街にあるたくさんの空き家の一つ"),
             w.plot_note("見たというホームレスは夜にその空き家だけ明かりがつくのが妙だと思って監視していたと証言する"),
@@ -36,6 +39,7 @@ def empty_house(w: World):
             w.plot_note("もう一人の人間もいるようで、二人で会話をしている風でもある"),
             w.plot_note("しばらくするとその明かりは消えてしまう"),
             w.plot_note("誰も出てこないので、翌朝、$maryたちはその空き家に訪問してみる"),
+            "空き家・中",
             w.plot_note("呼びかけても応答はなく、奥に入っていく"),
             w.plot_note("空き家の中で殺された男性の死体を発見した"),
             w.plot_note("それは先月から行方不明の神官だった"),
@@ -46,12 +50,17 @@ def empty_house(w: World):
 
 def fake_reunion(w: World):
     return w.episode("偽りの再会",
+            "警察署",
             w.plot_note("警察の事情聴取を受けた$maryたち"),
+            "$sherlockの家",
             w.plot_note("一旦家に戻り、犯人にされてしまった$sherlockについて考える"),
             w.plot_note("$wilsonは$sherlockが$moriano一味に騙されたというのだが"),
             w.plot_note("もう一度あの空き家を訪れる"),
+            "空き家",
             w.plot_note("そこで$wilsonは抜け道を発見する"),
+            "地下道",
             w.plot_note("地下道に繋がっていて、そこを進んでいく"),
+            "廃工場",
             w.plot_note("その地下道を抜けた先に廃工場があり、その中に失踪した多くの人間の遺体が放置されていた"),
             w.plot_note("そこで$sherlockと再会する"),
             w.plot_note("$sherlockは自分の正体が「$moriano」だと告白する"),
