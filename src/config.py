@@ -45,10 +45,16 @@ ASSET = {
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
+            ("England", "ブリギス", "", (0,0)),
             ("Office", "勇者探偵社", "London"),
             ("London", "ロムダス", "", (1000,1000)),# ロンドン
+            #
             ("Baker", "ベイリー", "London"),# ベイカー街
             ("Dartmour", "ダースモア", "London"),# ダートムア
+            # ベーガー街
+            ("SherlockHouse", "シャーロックの家", "Baker"),
+            ## 醜聞
+            ("Sarpentain", "サーペント通り", "London"),# サーペンタイン通り。アイリーンの家がある
             # ライヘンバッハ
             # ウェストミンスター駅
             # キングス・クロス駅
@@ -75,6 +81,13 @@ ASSET = {
             # アイランド・ガーデンズ駅
             # エッジウェア・ロード駅
             # エンジェル駅
+            ("WilsonHouse", "ウィルソンの家", "London"),
+            ("InCar", "車内", "London"),
+            ("InTrain", "列車内", "London"),
+            ("Street", "路地", "London"),
+            ("MainStreet", "大通り", "London"),
+            # 現代
+            ("ReadingRoom", "書斎", "London"),
             ),
         "DAYS": (
             # (tag / name / month / day / year)
