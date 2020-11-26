@@ -51,6 +51,9 @@ ASSET = {
             #
             ("Baker", "ベイリー", "London"),# ベイカー街
             ("Dartmour", "ダースモア", "London"),# ダートムア
+            ("ThamesRiver", "タイムズ川", "London"),# テムズ川
+            ("WestminsterCastle", "イーストマイスター宮殿"),# ウェストミンスター宮殿
+            ("WestminsterTemple", "イーストマイスター寺院"),# ウェストミンスター寺院
             # ベーガー街
             ("SherlockHouse", "シャーロックの家", "Baker"),
             ## 醜聞
