@@ -85,6 +85,7 @@ ASSET = {
             # エッジウェア・ロード駅
             # エンジェル駅
             ("WilsonHouse", "ウィルソンの家", "London"),
+            #
             ("InCar", "車内", "London"),
             ("InTrain", "列車内", "London"),
             ("Street", "路地", "London"),
@@ -121,7 +122,7 @@ ASSET = {
             ("animal", "獣人"),
             ("elf", "エルフ"),
             ("werewolf", "人狼"),
-            ("science", "魔学"),
+            ("science", "魔導学"),
             ("missing", "喪失知識"),
             ("cultX", "教団Ｘ"),
             ),

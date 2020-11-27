@@ -8,44 +8,25 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import InCity
+from scenes import SherlockHouse
+from scenes import Street
 
 
 # Episodes
 def visit_sherlock(w: World):
     return w.episode("訪問者",
-            "$Baker街・通り",
-            w.plot_note("$wilsonは$carで$sherlockの家の前までやってくる"),
-            w.plot_note("$wilsonは近くにいた子供（$ignes）に家を尋ねて教えてもらう"),
-            w.plot_note("そこで子供たちがもめ始めて、困惑"),
-            w.plot_note("なんとか場が収まり、$sherlockの家を訪問する"),
-            "$sherlockの住居・前",
-            w.plot_note("$sherlockは何も言っていないのに$wilsonの素性を言い当てる"),
-            w.plot_note("その上で王室からの依頼は受けないと言って断る"),
-            w.plot_note("最後に「さっきの子供に財布をすられてるよ」と"),
-            w.plot_note("$wilsonは振り返ったがもう子供たちの姿は消えていた"),
+            InCity.magic_and_tech_city(w),
+            Street.baker_street(w),
+            Street.he_is_sherlock(w),
             "$sherlockの家の中",
-            w.plot_note("知っていたならなぜ忠告してくれなかったんだ、と$wilsonが$sherlockに文句をいい、なんとか家に入れてもらえる"),
-            w.plot_note("中に入るとそこら中に本や資料がちらばっていた"),
-            w.plot_note("$wilsonはそこで依頼をしようと思ったが、"),
-            w.plot_note("そこに何も記載のない手紙が投げ込まれた"),
+            SherlockHouse.about_sherlock(w),
             )
 
 
 def prince_letter(w: World):
     return w.episode("皇太子からの密書",
-            "$sherlockの家の中",
-            w.plot_note("手紙には独特の紙が使われていて、それが王室のものだと$sherlockは分かった"),
-            w.plot_note("中は皇太子からの手紙で、$sherlockに頼みごとが書かれていた"),
-            w.plot_note("皇太子は女遊びがひどくてその界隈では有名だが、今回ついに腰を落ち着けて結婚することになった"),
-            w.plot_note("相手は近隣の公国の王女で、政治的な意味合いも大きい"),
-            w.plot_note("その結婚に際して過去の女性関係をすべて綺麗にした"),
-            w.plot_note("ただある一人の女性にプレゼントしてしまった大切なナイフを返してもらいたいが、相手の女性が応じてくれない"),
-            w.plot_note("揉め事をおこしたくないので、穏便にすませたいから、$sherlockに彼女を説得して、ナイフを返してもらってくれないか、という依頼"),
-            w.plot_note("$sherlockはその依頼内容について、書かれていない部分の推測を述べる"),
-            w.plot_note("ナイフと書いているが、実際は王室に伝わる宝剣で、それが王の証の一つで、結婚の際には儀式内で使われる"),
-            w.plot_note("酒の勢いで大切な宝剣をあげてしまったのだろうと"),
-            w.plot_note("そんなものを取り戻す義理はないが、恩があるので仕方なく依頼を受けると言った"),
-            w.plot_note("$sherlockは$wilsonにその女性の家まで送ってほしいと頼んだ"),
+            SherlockHouse.read_prince_letter(w),
             )
 
 
