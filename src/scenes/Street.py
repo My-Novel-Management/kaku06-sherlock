@@ -31,3 +31,4 @@ def he_is_sherlock(w: World):
             w.plot_note("最後に「さっきの子供に財布をすられてるよ」と"),
             w.plot_note("$wilsonは振り返ったがもう子供たちの姿は消えていた"),
             )
+

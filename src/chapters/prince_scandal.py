@@ -8,9 +8,13 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import AilyHouse
+from scenes import InCar
 from scenes import InCity
+from scenes import Orphanage
 from scenes import SherlockHouse
 from scenes import Street
+from scenes import StSarpentain
 
 
 # Episodes
@@ -32,59 +36,26 @@ def prince_letter(w: World):
 
 def that_lady(w: World):
     return w.episode("その女",
-            "車内",
-            w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
-            w.plot_note("手紙に同封されていた地図と情報を見る$sherlock"),
-            "住宅街",
-            w.plot_note("女の家は高級住宅街にあった"),
-            w.plot_note("女の家を訪れる前に周囲に聞いて回る"),
-            "近所の家",
-            w.plot_note("周囲の評判はいい人で人当たりもよく、色々分けてもらっている話しか出なかった"),
-            w.plot_note("$sherlockは$wilsonに「何か妙だ」といってから、$ailyの家に向かう"),
-            "$ailyの家",
-            w.plot_note("しかし誰も出てこない"),
-            w.plot_note("鍵が空いているのを妙に思い、中に入る"),
-            "$ailyの家の中",
-            w.plot_note("家の中はがらんとしていて、まるで新居のよう"),
-            "同・寝室",
-            w.plot_note("一つだけ木箱が置かれていただけで、そこには人が倒れていた"),
-            w.plot_note("女の家で謎の女性の遺体が発見された"),
+            InCar.goto_aily_house(w),
+            StSarpentain.rumor_of_aily(w),
+            AilyHouse.her_absence(w),
+            AilyHouse.found_corpse(w),
             )
 
 
 def murder_case(w: World):
     return w.episode("殺人事件",
-            "$ailyの家・寝室",
-            w.plot_note("$sherlockは警察に連絡を取る"),
-            w.plot_note("現れたのは$restradeで、$sherlockとは旧知の仲のようだった"),
-            w.plot_note("$sherlockは$restradeと少し話す"),
-            "同・キッチン",
-            w.plot_note("$sherlockは現場を見て、殺害されていたのは$ailyではないと言う"),
-            w.plot_note("そもそも家の中にものがなさすぎて、生活していた証拠がない"),
-            w.plot_note("遺体の身元は行方不明になっている人間の誰かだろうと"),
-            w.plot_note("自分がここにきたのはある人物に彼女にあずけているものを取り戻してほしいと頼まれたからだ、とだけ"),
-            w.plot_note("$sherlockは$wilsonと一緒に外に出て、ある場所に行くように指示する"),
-            w.plot_note("行き先はある孤児院だった"),
+            AilyHouse.hello_restrade(w),
+            AilyHouse.investigation_aily_room(w),
             )
 
 
 def orphanage(w: World):
     return w.episode("孤児院",
-            "車",
-            w.plot_note("$ailyという女性については謎が多い"),
-            w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
-            w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
-            "孤児院",
-            w.plot_note("孤児院に到着し、そこに入る"),
-            w.plot_note("なぜここにきたのか尋ねると、$ailyという女性が寄付をしていた場所だったと"),
-            w.plot_note("寄付をするとそこの孤児たちが作った栞がもらえるが、それが落ちていたのだ"),
-            w.plot_note("尋ねたが、$ailyという女性に心当たりはないらしい"),
-            "同・部屋",
-            w.plot_note("応対してくれた教師（実は$aily）は、ここは養子としてもらわれていく子もいるが、大半は自立して働いて暮らしていると"),
-            w.plot_note("その場所に支援してくれているその女性も素晴らしい人だろうと、彼女は言った"),
-            w.plot_note("$sherlockはそこで子供たちが自分のことをいつもくる女性の知人と思って話しかける"),
-            w.plot_note("子供が彼女からあるものを預かっていることを知った"),
-            w.plot_note("それは宝剣だった"),
+            InCar.goto_orphanage(w),
+            Orphanage.a_orphanage(w),
+            Orphanage.teachers_talk(w),
+            Orphanage.secret_treasure(w),
             )
 
 
