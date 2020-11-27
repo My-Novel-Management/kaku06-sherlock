@@ -71,32 +71,15 @@ def she_is_not_exist(w: World):
 
 def her_the_identity(w: World):
     return w.episode("彼女の正体",
-            "孤児院",
-            w.plot_note("数日後、$sherlockは再び孤児院を訪れていた"),
-            w.plot_note("事件は暗礁に乗り上げ、$ailyを重要参考人として警察が探しているらしい、という情報だけが$sherlockに届いた"),
-            w.plot_note("$sherlockは孤児院の女教師に話しかける"),
-            w.plot_note("$ailyさんですね、と"),
-            w.plot_note("彼女は観念し、孤児院の裏庭に出て話す"),
-            "同・裏庭",
-            w.plot_note("宝剣についてはすぐに返すつもりだったが、それが価値あるものと知り、お金に変えた"),
-            w.plot_note("この孤児院を存続させたいがための行動だった"),
-            w.plot_note("$sherlockはあの宝剣が本物だったことを告げると、彼女は子供たちを呼びつける"),
-            w.plot_note("その子どもたちに囲まれている間に彼女は姿を消してしまった"),
-            w.plot_note("$sherlockは子供たちからここに寄付している本当の人間の名前を聞く"),
-            w.plot_note("それは$jackという、巷で噂の盗賊だった"),
+            Orphanage.investigation_her(w),
+            Orphanage.aily_confession(w),
             )
 
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚式",
-            "$sherlockの家",
-            w.plot_note("殺人の謎は改造された$gunの発見により、犯人はわからないまま、解決された"),
-            w.plot_note("$sherlockは犯人はプロの人間だろうという"),
-            w.plot_note("そもそも$jackと関係していたかどうか分からないし、それを追うための情報もないと"),
-            w.plot_note("更に彼女があの宝剣ではなく、そこにはまっていた$stoneを売り払ったのだと分かった"),
-            w.plot_note("一番大事な$stoneが偽物とわかり、どうするか問題となった"),
-            "メインストリート",
-            w.plot_note("偽物の$stoneを使い、無事に皇太子の結婚式は行われた"),
+            Street.later_talk_of_aily(w),
+            Street.prince_wedding(w),
             )
 
 
