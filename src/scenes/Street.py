@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Stage: "stage name"
+Stage: "通り"
 '''
 import os
 import sys
@@ -9,8 +9,10 @@ sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 
 
+# NOTE
+#   路地は基本ここで処理。家の前なども路地側なので、こちらで
+#   市内の路地の多くは石畳化されている
+
+
 ## scenes
-def scene_name(w: World):
-    return w.scene("__scene__",
-            )
 
