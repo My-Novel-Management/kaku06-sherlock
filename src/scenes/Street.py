@@ -32,3 +32,8 @@ def he_is_sherlock(w: World):
             w.plot_note("$wilsonは振り返ったがもう子供たちの姿は消えていた"),
             )
 
+
+def goto_curio_dealer(w: World):
+    return w.scene("古物商を訪ねて",
+            w.plot_note("$sherlockは裏通りを歩く"),
+            )

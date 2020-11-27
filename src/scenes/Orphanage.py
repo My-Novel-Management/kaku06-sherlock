@@ -40,5 +40,7 @@ def secret_treasure(w: World):
     return w.scene("子供たちの宝物",
             w.plot_note("子供が彼女からあるものを預かっていることを知った"),
             w.plot_note("それは宝剣だった"),
+            "孤児院・前",
+            w.plot_note("$sherlockは宝剣をレプリカとすり替え、持ち帰る"),
             )
 

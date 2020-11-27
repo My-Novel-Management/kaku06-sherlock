@@ -9,8 +9,10 @@ sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
 from scenes import AilyHouse
+from scenes import CurioDealer
 from scenes import InCar
 from scenes import InCity
+from scenes import Market
 from scenes import Orphanage
 from scenes import SherlockHouse
 from scenes import Street
@@ -61,21 +63,9 @@ def orphanage(w: World):
 
 def she_is_not_exist(w: World):
     return w.episode("彼女は存在しない",
-            "孤児院・前",
-            w.plot_note("$sherlockは宝剣をレプリカとすり替え、持ち帰る"),
-            "市場・裏通り",
-            "古物商",
-            w.plot_note("知人の古物商に鑑定してもらうと、確かに宝剣だと言われ、目的は達成したと皇太子の使者に伝える"),
-            "市場・表通り",
-            w.plot_note("ただ謎の殺人事件と消えた$ailyについての謎が残った"),
-            "$sherlockの家",
-            w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
-            w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),
-            w.plot_note("やってきた若い刑事は$sherlockがいないことに落胆しつつも、状況を教えてくれる"),
-            w.plot_note("発見された遺体は一月ほど前に行方不明になった女性だった"),
-            w.plot_note("$ailyとは何の関係もなく、そこの接点も見つけられないと嘆く"),
-            w.plot_note("殺害方法も不明で、凶器すら見つけられないと"),
-            w.plot_note("そこに役所の男から$ailyという女性が住民登録をしたという形跡は見つけられなかったと連絡がきた"),
+            CurioDealer.rumor_treasure_sword(w),
+            Market.mystery_of_aily_corpse(w),
+            SherlockHouse.important_than_sword(w),
             )
 
 

@@ -48,3 +48,15 @@ def read_prince_letter(w: World):
             w.plot_note("そんなものを取り戻す義理はないが、恩があるので仕方なく依頼を受けると言った"),
             w.plot_note("$sherlockは$wilsonにその女性の家まで送ってほしいと頼んだ"),
             )
+
+
+def important_than_sword(w: World):
+    return w.scene("宝剣より大事なこと",
+            w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
+            w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),
+            w.plot_note("やってきた若い刑事は$sherlockがいないことに落胆しつつも、状況を教えてくれる"),
+            w.plot_note("発見された遺体は一月ほど前に行方不明になった女性だった"),
+            w.plot_note("$ailyとは何の関係もなく、そこの接点も見つけられないと嘆く"),
+            w.plot_note("殺害方法も不明で、凶器すら見つけられないと"),
+            w.plot_note("そこに役所の男から$ailyという女性が住民登録をしたという形跡は見つけられなかったと連絡がきた"),
+            )
