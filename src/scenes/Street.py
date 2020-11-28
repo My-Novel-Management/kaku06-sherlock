@@ -54,3 +54,8 @@ def prince_wedding(w: World):
             w.plot_note("偽物の$stoneを使い、無事に皇太子の結婚式は行われた"),
             )
 
+
+def mary_walked_lime(w: World):
+    return w.scene("$limeを送り届ける",
+            w.plot_note("$maryは彼女に$sherlockのことを謝りながら送っていく"),
+            )

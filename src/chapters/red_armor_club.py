@@ -8,50 +8,31 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import PawnShop
+from scenes import SherlockHouse
+from scenes import Street
 
 
 # Episodes
 def missing_persons(w: World):
     return w.episode("失踪者たち",
-            "$sherlockの家・居間",
-            w.plot_note("同居するようになった$maryはやたらと$sherlockにまとわりつく"),
-            w.plot_note("$sherlockは大好きな読書もできず、困っていた"),
-            "同・キッチン",
-            w.plot_note("$maryは彼の迷惑になりたくなくて、$wilsonに相談する"),
-            w.plot_note("女手が不足しているから自分が役立つところをアピールしてみたら、と助言を受ける"),
-            w.plot_note("$maryは掃除や買い物を買って出る"),
-            "同・居間",
-            w.plot_note("やっと外に出てくれてほっとした$sherlockは$wilsonに事件について相談する"),
-            w.plot_note("最近謎の失踪者が増えていた"),
-            w.plot_note("失踪事件として新聞や雑誌も特集を組んでいる"),
-            w.plot_note("$wilsonはその調査を$sherlockに依頼していたが、未だに何も情報がなかった"),
-            w.plot_note("そこに$maryが見知らぬ人を連れて戻ってくる"),
-            w.plot_note("道端で困っていたから拾ったけれど言葉がしゃべれないのだと$maryは説明した"),
+            SherlockHouse.housemate_mary(w),
+            SherlockHouse.mary_has_worry(w),
+            SherlockHouse.about_missings(w),
+            SherlockHouse.strange_armor_knight(w),
             )
 
 
 def strange_work(w: World):
     return w.episode("不思議な仕事",
-            "$sherlockの家・居間",
-            w.plot_note("その鎧騎士は$sherlockに$limeと名乗った（筆談で）"),
-            w.plot_note("彼女は今ある老夫婦の家に居候しているが、彼らの知人の質屋の護衛のアルバイトをしていた"),
-            w.plot_note("守衛仲間の$binsと交代しながら閉店時刻まで警備をしている"),
-            w.plot_note("その$binsから別のバイトを紹介され、今は途中にそちらもやっている"),
-            w.plot_note("その別のバイトが相談したいことだった"),
-            w.plot_note("最初に$binsからチラシを見せてもらったときには「赤い鎧の者だけがバイト資格がある」と書かれていた"),
-            w.plot_note("仕事内容はじっと座ってある本の写しを作る作業を三時間行うだけで、週給で結構な金額がもらえた"),
-            w.plot_note("実際に面接に行ってみると確かに赤い鎧を来た人間が集まっていたが、$limeみたいに見事に全身赤という者はいなかった"),
-            w.plot_note("主催者である赤鎧クラブは彼女を合格とし、その翌日から守衛を抜け出して三時間、そのアルバイトをしているらしい"),
-            w.plot_note("オーナー夫婦には申し訳なく感じているが、そのお金でプレゼントしたいと思っているのだと説明する"),
-            w.plot_note("その話をきいて$sherlockは彼女に今すぐそのアルバイトを辞めるようにとだけ言った"),
+            SherlockHouse.strange_work(w),
             )
 
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
-            "外の通り",
-            w.plot_note("$maryは彼女に$sherlockのことを謝りながら送っていく"),
-            "質屋の前",
+            Street.mary_walked_lime(w),
+            PawnShop.limes_job_place(w),
             "オーナー夫婦の家",
             w.plot_note("質屋のオーナー夫婦はいい人そうで、$binsとも顔を合わせて帰っていった"),
             "$sherlockの家・居間",
