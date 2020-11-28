@@ -59,3 +59,15 @@ def mary_walked_lime(w: World):
     return w.scene("$limeを送り届ける",
             w.plot_note("$maryは彼女に$sherlockのことを謝りながら送っていく"),
             )
+
+
+def meaning_for_his_advice(w: World):
+    return w.scene("忠告の意味",
+            w.plot_note("$sherlockは$maryになぜ自分が忠告したかについて語る"),
+            w.plot_note("どう考えても妙なアルバイトは彼女をその場から離れさせるための口実だった"),
+            w.plot_note("事実、店番をもう片方にまかせている間に、実際は抜け穴をずっと掘っていた"),
+            w.plot_note("$ignesの監視情報から、$limeが店を離れると店を一時閉めていたと"),
+            w.plot_note("その間に抜け穴を完成させ、盗み出す計画だったが、最後にその計画を知っていた$binsを殺害した"),
+            w.plot_note("$limeもオーナー夫婦も質屋から離れた場所で暮らしている"),
+            w.plot_note("そのアリバイを証明するだけでいいと$sherlockは言う"),
+            )

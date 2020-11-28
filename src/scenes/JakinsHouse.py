@@ -11,11 +11,25 @@ from storybuilder.builder.world import World
 
 # NOTE
 #   ライムを拾った質屋のオーナーの家
-#   どこに設定する？　近所かな
+#   場所はSaxeCoburgSquareにある
+#   ：２F
+#   [寝室][寝室]
+#   ：１F
+#   [キッチン][バス][トイレ]
+#   [応接間]
+#   [リビング][応接間（顧客用）]
+#   [事務室]
 
 
 ## scenes
-def scene_name(w: World):
-    return w.scene("__scene__",
+def orners_home(w: World):
+    return w.scene("オーナー夫婦の家",
+            w.plot_note("質屋のオーナー夫婦はいい人そうで、$binsとも顔を合わせて帰っていった"),
             )
 
+
+def orners_talk(w: World):
+    return w.scene("オーナーの話",
+            w.plot_note("アリバイ証明から$limeとオーナー夫婦の無実は証明された"),
+            w.plot_note("開放された$limeだったがオーナー夫婦からは不審がられ、家を追い出されてしまう"),
+            )

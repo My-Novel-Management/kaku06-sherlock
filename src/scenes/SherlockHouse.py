@@ -107,3 +107,58 @@ def strange_work(w: World):
             w.plot_note("オーナー夫婦には申し訳なく感じているが、そのお金でプレゼントしたいと思っているのだと説明する"),
             w.plot_note("その話をきいて$sherlockは彼女に今すぐそのアルバイトを辞めるようにとだけ言った"),
             )
+
+
+def reason_for_lime_work(w: World):
+    return w.scene("$sherlockの忠告",
+            w.plot_note("家に帰った$maryはどうしてあんな風に言ったのか$sherlockに問いただす"),
+            w.plot_note("$sherlockはそんなにうまい話は存在しないし、自分が知る限り「赤鎧クラブ」なんてものは存在しないと断言する"),
+            w.plot_note("$maryは実際に持ち帰ったチラシを見せながら、彼女を拾ってくれたオーナーさんや同僚の$binsの優しさを力説する"),
+            w.plot_note("しかし後日$sherlockの言っていたように問題が発生する"),
+            w.plot_note("その近所にあった改装中の銀行が強盗に襲われた"),
+            w.plot_note("警備員が気づいて連絡したが、表からも裏からも誰も入ってはおらず、謎の強盗と話題になっていた"),
+            w.plot_note("しかし現地を調べたところ、抜け穴が掘ってあり、大量のダイヤと金塊が盗まれたあとだった"),
+            w.plot_note("しかもその抜け穴は質屋に繋がっていたのだ"),
+            w.plot_note("その質屋のオーナー夫婦も逮捕され、$limeも容疑者の一人として逮捕された"),
+            )
+
+
+def help_lime_please(w: World):
+    return w.scene("$limeを助けて",
+            w.plot_note("$maryが$limeを助けてやってほしいと$sherlockに言う"),
+            w.plot_note("$sherlockは自分の忠告を聞かなかったからだと言うが、それでも話だけは聞くと言う"),
+            w.plot_note("質屋につながっていた抜け穴の中で、重要参考人だった$ignesが遺体で発見された"),
+            w.plot_note("その容疑者として$limeが逮捕され、オーナー夫婦も事情聴取を受けている最中らしい"),
+            w.plot_note("強盗の件についても調査中で、全部彼女に押し付けられるかもしれないと言い出す"),
+            w.plot_note("$sherlockはその質屋に案内してもらう"),
+            )
+
+
+def limes_talk_of_strange_case(w: World):
+    return w.scene("奇妙な事件についての$limeの話",
+            w.plot_note("$maryが$limeを拾い、再び家へと連れてくる"),
+            w.plot_note("$sherlockは銀行から盗まれたものがダイヤだけじゃないと睨むが、教えてもらえなかった"),
+            w.plot_note("家に戻ってくると$sherlockはそこに$limeがいることに頭を抱える"),
+            w.plot_note("$limeがしゃべれないのは呪いの鎧のせいだと言う"),
+            w.plot_note("その呪いをといてもらおうと、知人の神官を読んでいた"),
+            w.plot_note("呪いを解いたが$limeはしゃべれないままだった"),
+            w.plot_note("その$limeは筆談で自分が王室の人間であると告白する"),
+            )
+
+
+def lime_was_royal_family(w: World):
+    return w.scene("$limeは王家の人間",
+            w.plot_note("$limeは自分が誘拐された訳ではなく、普通に家出をしたのだと告白する"),
+            w.plot_note("王室はそんな品の悪い発表をできないから失踪事件にして公表したのだと言った"),
+            w.plot_note("もともと妾の子で、周囲から浮いていて、王室にも自分の居場所がなく帰りたくないと泣く"),
+            )
+
+
+def newcommer_lime(w: World):
+    return w.scene("新しい同居人$lime",
+            w.plot_note("$maryは$sherlockに$limeを一緒に住まわせてほしいとお願いする"),
+            w.plot_note("$sherlockは金銭的な問題さえ解決できればと提案する"),
+            w.plot_note("$wilsonは金のことなら大丈夫だと、なぜか大金を手にして言う"),
+            w.plot_note("$wilsonは$sherlockの秘蔵コレクションを売り払っていた"),
+            w.plot_note("こうして新しい住人$limeをここに加えることになった"),
+            )
