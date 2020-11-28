@@ -71,3 +71,9 @@ def meaning_for_his_advice(w: World):
             w.plot_note("$limeもオーナー夫婦も質屋から離れた場所で暮らしている"),
             w.plot_note("そのアリバイを証明するだけでいいと$sherlockは言う"),
             )
+
+
+def lime_and_marys_talk(w: World):
+    return w.scene("$limeと$mary",
+            w.plot_note("$limeも同居するようになり、$sherlockの家で暮らす人数が増えた"),
+            )
