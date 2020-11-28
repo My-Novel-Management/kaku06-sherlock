@@ -35,3 +35,23 @@ def wanted_jack(w: World):
     return w.scene("$jackが指名手配",
             w.plot_note("$jackが改めてその殺人事件の容疑者として手配される"),
             )
+
+
+def goose_jewely_mystery(w: World):
+    return w.scene("ガチョウの宝石の謎",
+            w.plot_note("その間に$maryたちはガチョウの中から出てくる宝石の謎を追いかける"),
+            )
+
+
+def meatshop_talk(w: World):
+    return w.scene("肉屋の話",
+            w.plot_note("肉屋の主人からどこでガチョウを仕入れてくるのかを聞いた"),
+            w.plot_note("その経路を辿っていくと、飼育業者がその一箇所だと断定できた"),
+            )
+
+
+def wholesaler_talk(w: World):
+    return w.scene("卸売業者の話",
+            w.plot_note("飼育業者のおじさんに聞いてもダイヤを餌に混ぜたりはしていないと"),
+            w.plot_note("仲介業者も卸業者も全然入る余地がなく、結局何も情報を得られないまま帰ってきた"),
+            )

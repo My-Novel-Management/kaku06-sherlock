@@ -221,3 +221,10 @@ def jacks_letter(w: World):
             w.plot_note("と、差出人不明の手紙に$jackからのメッセージがあった"),
             w.plot_note("助けてほしいと"),
             )
+
+
+def sherlocks_message_for_jack(w: World):
+    return w.scene("$sherlockのメッセージ",
+            w.plot_note("そこに$sherlockからの伝言を$ignesが持ってくる"),
+            w.plot_note("数日留守にすることと、$jackに会いに行ってくると書かれていた"),
+            )

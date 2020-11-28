@@ -77,3 +77,10 @@ def lime_and_marys_talk(w: World):
     return w.scene("$limeと$mary",
             w.plot_note("$limeも同居するようになり、$sherlockの家で暮らす人数が増えた"),
             )
+
+
+def lookfor_jack(w: World):
+    return w.scene("$jackを探して",
+            w.plot_note("$sherlockはそのメッセージを配達した人間が$jackだと気づいて追いかける"),
+            w.plot_note("見失ったが彼女が残したヒントから居場所を推測する"),
+            )

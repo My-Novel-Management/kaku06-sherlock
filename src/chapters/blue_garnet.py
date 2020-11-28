@@ -41,20 +41,11 @@ def suspect_jack(w: World):
 
 def whereabouts(w: World):
     return w.episode("彼女の行方",
-            "通り",
-            w.plot_note("$sherlockはそのメッセージを配達した人間が$jackだと気づいて追いかける"),
-            w.plot_note("見失ったが彼女が残したヒントから居場所を推測する"),
-            "市場",
-            w.plot_note("その間に$maryたちはガチョウの中から出てくる宝石の謎を追いかける"),
-            "肉屋",
-            w.plot_note("肉屋の主人からどこでガチョウを仕入れてくるのかを聞いた"),
-            w.plot_note("その経路を辿っていくと、飼育業者がその一箇所だと断定できた"),
-            "肉の卸売業者",
-            w.plot_note("飼育業者のおじさんに聞いてもダイヤを餌に混ぜたりはしていないと"),
-            w.plot_note("仲介業者も卸業者も全然入る余地がなく、結局何も情報を得られないまま帰ってきた"),
-            "$sherlockの家",
-            w.plot_note("そこに$sherlockからの伝言を$ignesが持ってくる"),
-            w.plot_note("数日留守にすることと、$jackに会いに行ってくると書かれていた"),
+            Street.lookfor_jack(w),
+            Market.goose_jewely_mystery(w),
+            Market.meatshop_talk(w),
+            Market.wholesaler_talk(w),
+            SherlockHouse.sherlocks_message_for_jack(w),
             )
 
 
