@@ -8,58 +8,30 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import InCar
+from scenes import SherlockHouse
+from scenes import SteinHouse
 
 
 # Episode
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
-            "$sherlockの家・居間",
-            w.plot_note("$sherlockは新聞を読んでいた"),
-            w.plot_note("そこに殺人事件の調査依頼が持ち込まれる"),
-            w.plot_note("最初は$maryも驚いていたが今では慣れたもので、依頼人を案内して、飲み物を出しながら依頼内容を話すよう促す"),
-            w.plot_note("$maryは秘書気取りだった"),
-            w.plot_note("だが$sherlockは依頼人が出した名前に驚く"),
-            w.plot_note("それは$morianoの大学の後輩だったからだ"),
-            w.plot_note("犯罪学の研究をしている人間が殺された"),
-            w.plot_note("大学の研究室内での密室殺人。その手口が全く不明だが自殺ではないと警察は断定しているという"),
-            w.plot_note("さっそくその調査に向かう$sherlock"),
-            "車",
-            "一軒家",
-            w.plot_note("$restradeと合流し、事件についての情報をもらう"),
-            w.plot_note("現場にはＭの文字が書き残されていた"),
+            SherlockHouse.commision_of_murder_case(w),
+            InCar.goto_incident_scene(w),
+            SteinHouse.case_of_house(w),
             )
 
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
-            "一軒家",
-            w.plot_note("$sherlockは$morianoだと語る"),
-            w.plot_note("$restradeですら耳にしたことがなかったその男のことを、$sherlockは友人のように仔細に話してみせる"),
-            w.plot_note("$morianoは教育者の家庭に生まれた"),
-            w.plot_note("幼い頃に神童とよばれ、あらゆる学問について素晴らしい成績を収めたが、彼が大学で興味を持ったのは人間そのものだった"),
-            w.plot_note("大学時代に書いた論文は一本で、それは「人間と犯罪について」というものだ"),
-            w.plot_note("統計手法を用いて実際にあった事件から犯人や被害者の心理、行動が細かく観察されている"),
-            w.plot_note("今でも警察が犯罪心理学の基礎として流用しているものの多くがここから派生したもので、犯罪学の父と呼ばれる存在だと"),
-            w.plot_note("しかしある時、急に大学をやめ、世間から遠ざかってしまった"),
-            w.plot_note("個人の研究所を立ち上げて個人的な研究をしているという噂はあるが、研究成果を発表したりはしていない"),
-            w.plot_note("その$morianoと連絡を取り合っていた形跡がある男が殺されたのだ、それも密室で、怪死した"),
-            w.plot_note("$sherlockは全ての事件は$morianoにつながると言い切った"),
+            SteinHouse.restrade_meets(w),
+            SteinHouse.about_moriano(w),
             )
 
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
-            "$sherlockの家",
-            w.plot_note("$sherlockが家に戻ってくるとそこには老人の姿があった", "$morianoだ"),
-            w.plot_note("$morianoは「はじめまして」と挨拶をし、それから今$sherlockたちがどういう経路で戻ってきたかを言い当てる"),
-            w.plot_note("$morianoは$sherlockに自分に関するすべてのことから手を引くようにと警告する"),
-            w.plot_note("$sherlockは$morianoがここに来ることも推測して既に逮捕する準備を整えているとブラフを張るが、彼には通用しなかった"),
-            w.plot_note("警察は別のところで起こった事件に駆けつけている"),
-            w.plot_note("$morianoは言う。すべての人間は自分の意志ではなく、環境要因によって動かされると。つまり誰でもが犯罪者になりうると"),
-            w.plot_note("$morianoは$maryに問いかける。彼女は$sherlockを好きだろうと"),
-            w.plot_note("$morianoは$limeに本心では王室に帰りたいだろうと"),
-            w.plot_note("$wilsonについての言及はとくないが、ここの人間には言えない本音を隠しているだろうと"),
-            w.plot_note("$morianoは逃げないからいつでも自分の屋敷に来るがいいと言い残して、去っていく"),
+            SherlockHouse.moriano_is_here(w),
             )
 
 

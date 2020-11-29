@@ -28,3 +28,8 @@ def goto_orphanage(w: World):
             w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
             w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
             )
+
+
+def goto_incident_scene(w: World):
+    return w.scene("事件現場に向かう",
+            )

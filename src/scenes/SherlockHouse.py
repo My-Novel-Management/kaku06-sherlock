@@ -255,3 +255,37 @@ def invitation_from_dark_island(w: World):
             w.plot_note("そこに招待状が届く"),
             w.plot_note("$wilsonはそれを開封し、噂をしていれば、とその伝説の孤島に暮らす城主からの招待状だと言った"),
             )
+
+
+def commision_of_murder_case(w: World):
+    return w.scene("殺人事件の解決依頼",
+            w.plot_note("$sherlockは新聞を読んでいた"),
+            w.plot_note("そこに殺人事件の調査依頼が持ち込まれる"),
+            w.plot_note("最初は$maryも驚いていたが今では慣れたもので、依頼人を案内して、飲み物を出しながら依頼内容を話すよう促す"),
+            w.plot_note("$maryは秘書気取りだった"),
+            w.plot_note("だが$sherlockは依頼人が出した名前に驚く"),
+            w.plot_note("それは$morianoの大学の後輩だったからだ"),
+            w.plot_note("犯罪学の研究をしている人間が殺された"),
+            w.plot_note("大学の研究室内での密室殺人。その手口が全く不明だが自殺ではないと警察は断定しているという"),
+            w.plot_note("さっそくその調査に向かう$sherlock"),
+            )
+
+
+def moriano_is_here(w: World):
+    return w.scene("$moriano見参",
+            w.plot_note("$sherlockが家に戻ってくるとそこには老人の姿があった", "$morianoだ"),
+            w.plot_note("$morianoは「はじめまして」と挨拶をし、それから今$sherlockたちがどういう経路で戻ってきたかを言い当てる"),
+            w.plot_note("$morianoは$sherlockに自分に関するすべてのことから手を引くようにと警告する"),
+            w.plot_note("$sherlockは$morianoがここに来ることも推測して既に逮捕する準備を整えているとブラフを張るが、彼には通用しなかった"),
+            w.plot_note("警察は別のところで起こった事件に駆けつけている"),
+            w.plot_note("$morianoは言う。すべての人間は自分の意志ではなく、環境要因によって動かされると。つまり誰でもが犯罪者になりうると"),
+            w.plot_note("$morianoは$maryに問いかける。彼女は$sherlockを好きだろうと"),
+            w.plot_note("$morianoは$limeに本心では王室に帰りたいだろうと"),
+            w.plot_note("$wilsonについての言及はとくないが、ここの人間には言えない本音を隠しているだろうと"),
+            w.plot_note("$morianoは逃げないからいつでも自分の屋敷に来るがいいと言い残して、去っていく"),
+            )
+
+# TODO
+def marys_strange(w: World):
+    return w.scene("",
+            )
