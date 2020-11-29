@@ -228,3 +228,30 @@ def sherlocks_message_for_jack(w: World):
             w.plot_note("そこに$sherlockからの伝言を$ignesが持ってくる"),
             w.plot_note("数日留守にすることと、$jackに会いに行ってくると書かれていた"),
             )
+
+
+def mysterious_case(w :World):
+    return w.scene("怪奇事件",
+            w.plot_note("$sherlockは怪奇事件の特集記事を読みながら「こんなものは実在しない」と言う"),
+            w.plot_note("そもそも奇妙な現象、霊的なもの、不思議なものは人間が理解することを放棄していると説明する"),
+            w.plot_note("小さい頃、学校内で七不思議というものがあったが、それを全て解明したらみんなから怒られたと"),
+            )
+
+
+def legend_of_dark_dog(w: World):
+    return w.scene("魔獣伝説",
+            w.plot_note("そこに$wilsonがこんな話がある、と、ある孤島に伝わる魔獣伝説を話した"),
+            w.plot_note("そこはこの三年の間に六名もの犠牲者が出ているという"),
+            w.plot_note("最初は飼い犬や家畜が殺されているだけだった"),
+            w.plot_note("しかし最初に人の犠牲者が出た"),
+            w.plot_note("それはどう見ても人の手によるものではなく、何か獣による被害だった"),
+            w.plot_note("最初の事件から次の事件まではかなり時間が開いたが、直近はこの三ヶ月の間に二件も殺人事件が起こっている"),
+            w.plot_note("$sherlockはそれだけ続くなら必ず人の手が関わっていると断言する"),
+            )
+
+
+def invitation_from_dark_island(w: World):
+    return w.scene("孤島からの招待状",
+            w.plot_note("そこに招待状が届く"),
+            w.plot_note("$wilsonはそれを開封し、噂をしていれば、とその伝説の孤島に暮らす城主からの招待状だと言った"),
+            )
