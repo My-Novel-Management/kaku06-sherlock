@@ -84,3 +84,8 @@ def lookfor_jack(w: World):
             w.plot_note("$sherlockはそのメッセージを配達した人間が$jackだと気づいて追いかける"),
             w.plot_note("見失ったが彼女が残したヒントから居場所を推測する"),
             )
+
+
+def back_street(w: World):
+    return w.scene("裏通り",
+            )
