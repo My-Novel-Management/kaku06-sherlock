@@ -408,3 +408,5 @@ def injured_wilson(w: World):
             w.plot_note("$maryたちにここで休むようにいい、$wilsonは$sherlockを探しに出ていった"),
             w.plot_note("そこに$wilsonが指名手配されたと$restradeがやってくる"),
             )
+
+

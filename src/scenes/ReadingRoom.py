@@ -25,3 +25,16 @@ def note_for_thisnovel(w: World):
             w.plot_note("本作は$sherlockという男を中心に巻き起こった事件について書いた、伝記的作品である"),
             )
 
+
+def allend_and_allstart(w: World):
+    return w.scene("すべての始まりと終わり",
+            w.plot_note("こうして、$wilsonは探偵小説を書くことになった、と告白する"),
+            w.plot_note("またこの作品の記述者は自分だったと告白"),
+            w.plot_note("ここまで書いてきたのは全て$wilsonである、と告白"),
+            w.plot_note("$wilsonはずっとライターをしてきた"),
+            w.plot_note("$sherlockが$heroだということには驚きを隠せないが、その知性は自分が知る「探偵」そのものだ"),
+            w.plot_note("この世界で再び$bossが復活し、世界を闇に包み込むようなことがないよう監視する必要もある"),
+            w.plot_note("いつか$sherlockが本物の$heroとして冒険の旅に出るなら、それも見届けたいと思うと記述"),
+            w.plot_note("そこに再び奇妙な依頼主が現れる"),
+            w.plot_note("そこからとんでもない冒険の旅にまきこまれるのだが、それはまた別の物語としよう、と閉める"),
+            )

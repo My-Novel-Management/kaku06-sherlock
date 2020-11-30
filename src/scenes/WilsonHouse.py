@@ -41,4 +41,45 @@ def rumor_sherlock(w: World):
             )
 
 
-def 
+def after_case(w: World):
+    return w.scene("事件が終わって",
+            w.plot_note("事件は偽$wilsonの自殺と関連する人や施設の消滅により、すべてが闇に葬り去られた"),
+            )
+
+
+def lost_home(w: World):
+    return w.scene("家を失う",
+            w.plot_note("事務所を失った$sherlockたちは一旦そのまま$wilsonの住宅で暮らしていた"),
+            w.plot_note("$maryたちは新居の候補地を探していたがなかなかいい物件は見つからない"),
+            w.plot_note("不動産屋の$stanryがやってきて、家主が長らく家賃を滞納していて、それをまとめて払ってほしいと言ってくる"),
+            w.plot_note("その上、改装したいから出ていってほしいと言ってくる"),
+            w.plot_note("$sherlockは金を工面する宛はなく、自分に$wilsonの支払いをする義務もないと言う"),
+            w.plot_note("今までのように一人ならどんなところでも暮らせると言い出して読書を始める$sherlock"),
+            w.plot_note("困る$maryたち"),
+            )
+
+
+def real_wilson(w: World):
+    return w.scene("本物の$wilson",
+            w.plot_note("そこに訪問者がくる。依頼人かと思ったら、知らない男だった"),
+            w.plot_note("「君たちはここで何をしているんだい？」と男"),
+            w.plot_note("男は本物の$wilsonだった"),
+            )
+
+
+def know_all_things(w: World):
+    return w.scene("すべての事情を知って",
+            w.plot_note("$wilsonは$sherlockたちから自分の偽物によって行われたことや、多くの事件を解決したことなどを聞く"),
+            w.plot_note("$wilsonは滞納家賃の取り立て書を見つけて、頭を抱える"),
+            w.plot_note("$wilsonは$sherlockたちから借りようとするが、ないと突っぱねられる"),
+            w.plot_note("自分の隠し金庫から金を出そうとするが、すでに空っぽだった"),
+            )
+
+
+def wilsons_proposal(w: World):
+    return w.scene("$wilsonの提案",
+            w.plot_note("$wilsonに客がくる。新聞社の人間で一つ小話を書いてもらいたいと"),
+            w.plot_note("そこで$wilsonは探偵小説の提案をする"),
+            w.plot_note("探偵という言葉について$wilsonが$sherlockのような人間のことだと説明する"),
+            w.plot_note("そして$wilsonは「$Office」としてここを立ち上げ、その仕事を自分が小説にして金にしようと提案した"),
+            )
