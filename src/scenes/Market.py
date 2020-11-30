@@ -55,3 +55,11 @@ def wholesaler_talk(w: World):
             w.plot_note("飼育業者のおじさんに聞いてもダイヤを餌に混ぜたりはしていないと"),
             w.plot_note("仲介業者も卸業者も全然入る余地がなく、結局何も情報を得られないまま帰ってきた"),
             )
+
+
+def strange_letter(w: World):
+    return w.scene("奇妙な手紙",
+            w.plot_note("$maryは市場からの帰り道、知らない男から手紙を渡される"),
+            w.plot_note("手紙は$morianoから君の悩みの相談に乗ろうというものだった"),
+            w.plot_note("$maryはその日、帰ってこなかった"),
+            )

@@ -24,3 +24,7 @@ def magic_and_tech_city(w: World):
             w.plot_note("ただこの街で既に百名が失踪している"),
             )
 
+
+def goto_moriano(w: World):
+    return w.scene("$morianoの住居に",
+            )
