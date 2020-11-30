@@ -27,3 +27,5 @@ def escape_from_danger(w: World):
             w.plot_note("$sherlockの言葉を思い出して、$maryは脱出法を見つける"),
             w.plot_note("ダミーとして用意していた爆弾を使い、扉を爆破して何とか抜け出す$maryたち"),
             )
+
+

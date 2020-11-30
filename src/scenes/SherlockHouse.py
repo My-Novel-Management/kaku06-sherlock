@@ -372,3 +372,39 @@ def sadness_report(w: World):
             w.plot_note("だが$wilsonによりそれは止められる"),
             w.plot_note("兄の$mikelがやってきて「$sherlockがなくなった」と告げた"),
             )
+
+
+def believed_his_alive(w: World):
+    return w.scene("$sherlockの生存を信じて",
+            w.plot_note("$maryたちは$sherlockが生きていると思って捜索を続けていた"),
+            w.plot_note("しかし何の情報もなく、ただ時間だけが過ぎていく"),
+            w.plot_note("家を失い、$wilsonの住まいに居候していた$maryたち"),
+            w.plot_note("$wilsonは忙しそうに外に出ていることが増えた"),
+            w.plot_note("$maryは$sherlockの手紙にヒントはないかと考えるが、何も見つからない"),
+            )
+
+
+def news_of_sherlock_alive(w: World):
+    return w.scene("$sherlock生存情報",
+            w.plot_note("だが$limeはそこに$sherlockが生きているという証拠を見つけた"),
+            w.plot_note("そこに$wilsonが戻ってくる"),
+            w.plot_note("$wilsonは「$sherlockに似た人間を見かけた」という情報を聞いたと話した"),
+            )
+
+
+def consideration_of_sherlock(w: World):
+    return w.scene("容疑者$sherlockについての考察",
+            w.plot_note("一旦家に戻り、犯人にされてしまった$sherlockについて考える"),
+            w.plot_note("$wilsonは$sherlockが$moriano一味に騙されたというのだが"),
+            w.plot_note("もう一度あの空き家を訪れる"),
+            )
+
+
+def injured_wilson(w: World):
+    return w.scene("負傷した$wilson",
+            w.plot_note("家に戻ると$wilsonがいて、ひどい怪我を負っていたが、無事に逃げ出したと言う"),
+            w.plot_note("$maryは自分たちを助けた男が$sherlockの生存を言っていたと伝える"),
+            w.plot_note("$wilsonはそのホームレスのことを教えてくれと頼む"),
+            w.plot_note("$maryたちにここで休むようにいい、$wilsonは$sherlockを探しに出ていった"),
+            w.plot_note("そこに$wilsonが指名手配されたと$restradeがやってくる"),
+            )
