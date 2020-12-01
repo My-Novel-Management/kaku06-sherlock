@@ -8,6 +8,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import Market
 from scenes import ReadingRoom
 from scenes import SherlockHouse
 from scenes import WilsonHouse
@@ -18,6 +19,7 @@ def true_wilson(w: World):
     return w.episode("本物の$wilson",
             "ここはまだ三人称のまま",
             WilsonHouse.after_case(w),
+            Market.social_condition(w),
             WilsonHouse.lost_home(w),
             WilsonHouse.real_wilson(w),
             WilsonHouse.know_all_things(w),

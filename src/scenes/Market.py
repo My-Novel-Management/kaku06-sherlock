@@ -63,3 +63,11 @@ def strange_letter(w: World):
             w.plot_note("手紙は$morianoから君の悩みの相談に乗ろうというものだった"),
             w.plot_note("$maryはその日、帰ってこなかった"),
             )
+
+
+## in Epilogue
+def social_condition(w: World):
+    return w.scene("事件後の社会情勢",
+            # TODO
+            )
+
