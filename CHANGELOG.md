@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.6.0] - 2020-12-01
+### Added
+- scenes
+
 ## [1.5.2] - 2020-11-24
 ### Added
 - plot
@@ -60,7 +64,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - README one line implemented.
 
 
-[Unreleased]: https://github.com/My-Novel-Management/ln-yunazo/compare/v1.5.2...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/ln-yunazo/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.6.0
 [1.5.2]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.5.2
 [1.5.1]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.5.1
 [1.5.0]: https://github.com/My-Novel-Management/ln-yunazo/releases/v1.5.0
