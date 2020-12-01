@@ -410,3 +410,25 @@ def injured_wilson(w: World):
             )
 
 
+def last_scene(w: World):
+    wil = w.get("wilson")
+    shal, mary, lime = w.get("sherlock"), w.get("mary"), w.get("lime")
+    return w.scene("ラストシーン",
+            w.change_camera("wilson"),
+            w.change_stage("SherlockHouseLiving"),
+            wil.come(),
+            shal.be(),
+            mary.be(),
+            lime.be(),
+            wil.do("リビングに出ていくと、そこには$maryと$lime、そして生涯に渡って$meに多大な影響を与えてくれた人生の最高の友人にして、$heroである$sherlockがいた"),
+            shal.talk("早くそこに座ってくれないか", "でないと始められない"),
+            wil.talk("一体何なんだ？"),
+            mary.talk("これやよ。見てわからん？"),
+            wil.do("テーブルの上のケーキには歪んだ文字で（おそらく$maryの手によるものだろう）『$wilson誕生日おめでとう』とあった"),
+            wil.think("すっかり忘れていたが、あの日、長旅から戻ってきて彼らから色々聞いた日は$meの誕生日だった"),
+            wil.talk("ありがとう"),
+            wil.do("こうして楽しげなパーティが始まったが"),
+            shal.talk("そもそも誕生日を祝うという風習はね"),
+            wil.think("また始まった", "$sherlockはいつもと変わらない調子で自分の広大な知識を披露し始める"),
+            wil.do("こうして$meたちの夜は更けていった"),
+            )

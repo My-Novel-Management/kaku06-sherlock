@@ -36,7 +36,7 @@ from chapters import sadness_valley
 #   4. Spec
 #   5. Plot         - 1/4: 25K
 #   6. Scenes
-#   7. Conte        - 1/2: 50K
+# > 7. Conte        - 1/2: 50K
 #   8. Layout
 #   9. Draft        - 1/1: 100K
 #
@@ -44,7 +44,7 @@ from chapters import sadness_valley
 
 # Constant
 TITLE = "勇者シャーロックは冒険しない"
-MAJOR, MINOR, MICRO = 1, 6, 0
+MAJOR, MINOR, MICRO = 1, 7, 0
 COPY = "勇者は冒険よりも事件解決を選んだ"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"

@@ -58,6 +58,9 @@ ASSET = {
             ("WestminsterTemple", "イーストマイスター寺院"),# ウェストミンスター寺院
             # ベーガー街
             ("SherlockHouse", "シャーロックの家", "Baker"),
+            ("SherlockHouseLiving", "シャーロックの家・リビング", "SherlockHouse"),
+            ("SherlockHouseKitchen", "シャーロックの家・キッチン", "SherlockHouse"),
+            ("SherlockHouseDining", "シャーロックの家・食堂", "SherlockHouse"),
             ## 醜聞
             ("StJhonsWood", "サンジョーウォード", "London"),# リージェンツパークの北西
             ("StSarpentain", "サーペント通り", "London"),# サーペンタイン通り。アイリーンの家がある
@@ -104,6 +107,7 @@ ASSET = {
         "DAYS": (
             # (tag / name / month / day / year)
             ("base_year", "基本年", 1,1, 1881),
+            ("future_day", "本を書いている日", 1,1, 1891),
             ),
         "TIMES": (
             # (tag / name / hour / minute)
