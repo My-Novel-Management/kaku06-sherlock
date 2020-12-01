@@ -56,6 +56,8 @@ ASSET = {
             ("ThamesRiver", "タイムズ川", "London"),# テムズ川
             ("WestminsterCastle", "イーストマイスター宮殿"),# ウェストミンスター宮殿
             ("WestminsterTemple", "イーストマイスター寺院"),# ウェストミンスター寺院
+            # シティ（旧市内）
+            ("Market", "中央市場", "London"),
             # ベーガー街
             ("SherlockHouse", "シャーロックの家", "Baker"),
             ("SherlockHouseLiving", "シャーロックの家・リビング", "SherlockHouse"),

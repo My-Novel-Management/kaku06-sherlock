@@ -67,7 +67,10 @@ def strange_letter(w: World):
 
 ## in Epilogue
 def social_condition(w: World):
+    mary = w.get("mary")
     return w.scene("事件後の社会情勢",
-            # TODO
+            w.change_camera("mary"),
+            w.change_stage("Market"),
+            mary.come(""),
             )
 
