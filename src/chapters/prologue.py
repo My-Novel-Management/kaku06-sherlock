@@ -8,36 +8,26 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import ReadingRoom
+from scenes import WilsonHouse
 
 
 # Episodes
 def troublesome(w: World):
     return w.episode("厄介事",
-            w.plot_note("私（$wilson）は出かける準備をしていた"),
-            w.plot_note("テーブルの上には新聞記事がちらばっている"),
-            w.plot_note("謎の失踪事件が多発していた"),
-            w.plot_note("食べかけの朝食を片付け、部屋から出る"),
-            w.plot_note("いつも厄介事を頼まれる、そういう運命の下に生まれたんだと語る"),
+            WilsonHouse.prepare_something(w),
             )
 
 
 def handyman_sherlock(w: World):
     return w.episode("便利屋$sherlock",
-            w.plot_note("$wilsonは外にとめてあった$carに向かう"),
-            w.plot_note("そこで大家と出会う"),
-            w.plot_note("大家からは家賃を支払ってもらわないと困ると言われるが、今受けた仕事の金が入ったらと"),
-            w.plot_note("同じような男がいて困っている。結婚しない男の一人暮らしはどうも信用ならないと"),
-            w.plot_note("それが$sherlockという、自称便利屋だが、何をやっているのかさっぱりだと"),
-            w.plot_note("$wilsonは$carに乗り込み、出かける"),
+            WilsonHouse.rumor_sherlock(w),
             )
 
 
 def note_for_novel(w: World):
     return w.episode("作品のための注意書き",
-            w.plot_note("本作品は全て三人称で記述される"),
-            w.plot_note("記述者＝私により後から整理され、書かれたもの"),
-            w.plot_note("聞いた時が前後しても、読んでいくのにいいように並べ替えてある"),
-            w.plot_note("本作は$sherlockという男を中心に巻き起こった事件について書いた、伝記的作品である"),
+            ReadingRoom.note_for_thisnovel(w),
             )
 
 

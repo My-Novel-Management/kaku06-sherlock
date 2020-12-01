@@ -8,129 +8,78 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import AilyHouse
+from scenes import CurioDealer
+from scenes import InCar
+from scenes import InCity
+from scenes import Market
+from scenes import Orphanage
+from scenes import SherlockHouse
+from scenes import Street
+from scenes import StSarpentain
 
 
 # Episodes
 def visit_sherlock(w: World):
     return w.episode("訪問者",
-            w.plot_note("$wilsonは$carで$sherlockの家の前までやってくる"),
-            w.plot_note("$wilsonは近くにいた子供（$ignes）に家を尋ねて教えてもらう"),
-            w.plot_note("そこで子供たちがもめ始めて、困惑"),
-            w.plot_note("なんとか場が収まり、$sherlockの家を訪問する"),
-            w.plot_note("$sherlockは何も言っていないのに$wilsonの素性を言い当てる"),
-            w.plot_note("その上で王室からの依頼は受けないと言って断る"),
-            w.plot_note("最後に「さっきの子供に財布をすられてるよ」と"),
-            w.plot_note("$wilsonは振り返ったがもう子供たちの姿は消えていた"),
-            w.plot_note("知っていたならなぜ忠告してくれなかったんだ、と$wilsonが$sherlockに文句をいい、なんとか家に入れてもらえる"),
-            w.plot_note("中に入るとそこら中に本や資料がちらばっていた"),
-            w.plot_note("$wilsonはそこで依頼をしようと思ったが、"),
-            w.plot_note("そこに何も記載のない手紙が投げ込まれた"),
+            InCity.magic_and_tech_city(w),
+            Street.baker_street(w),
+            Street.he_is_sherlock(w),
+            "$sherlockの家の中",
+            SherlockHouse.about_sherlock(w),
             )
 
 
 def prince_letter(w: World):
     return w.episode("皇太子からの密書",
-            w.plot_note("手紙には独特の紙が使われていて、それが王室のものだと$sherlockは分かった"),
-            w.plot_note("中は皇太子からの手紙で、$sherlockに頼みごとが書かれていた"),
-            w.plot_note("皇太子は女遊びがひどくてその界隈では有名だが、今回ついに腰を落ち着けて結婚することになった"),
-            w.plot_note("相手は近隣の公国の王女で、政治的な意味合いも大きい"),
-            w.plot_note("その結婚に際して過去の女性関係をすべて綺麗にした"),
-            w.plot_note("ただある一人の女性にプレゼントしてしまった大切なナイフを返してもらいたいが、相手の女性が応じてくれない"),
-            w.plot_note("揉め事をおこしたくないので、穏便にすませたいから、$sherlockに彼女を説得して、ナイフを返してもらってくれないか、という依頼"),
-            w.plot_note("$sherlockはその依頼内容について、書かれていない部分の推測を述べる"),
-            w.plot_note("ナイフと書いているが、実際は王室に伝わる宝剣で、それが王の証の一つで、結婚の際には儀式内で使われる"),
-            w.plot_note("酒の勢いで大切な宝剣をあげてしまったのだろうと"),
-            w.plot_note("そんなものを取り戻す義理はないが、恩があるので仕方なく依頼を受けると言った"),
-            w.plot_note("$sherlockは$wilsonにその女性の家まで送ってほしいと頼んだ"),
+            SherlockHouse.read_prince_letter(w),
             )
 
 
 def that_lady(w: World):
     return w.episode("その女",
-            w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
-            w.plot_note("手紙に同封されていた地図と情報を見る$sherlock"),
-            w.plot_note("女の家は高級住宅街にあった"),
-            w.plot_note("女の家を訪れる前に周囲に聞いて回る"),
-            w.plot_note("周囲の評判はいい人で人当たりもよく、色々分けてもらっている話しか出なかった"),
-            w.plot_note("$sherlockは$wilsonに「何か妙だ」といってから、$ailyの家に向かう"),
-            w.plot_note("しかし誰も出てこない"),
-            w.plot_note("鍵が空いているのを妙に思い、中に入る"),
-            w.plot_note("家の中はがらんとしていて、まるで新居のよう"),
-            w.plot_note("一つだけ木箱が置かれていただけで、そこには人が倒れていた"),
-            w.plot_note("女の家で謎の女性の遺体が発見された"),
+            InCar.goto_aily_house(w),
+            StSarpentain.rumor_of_aily(w),
+            AilyHouse.her_absence(w),
+            AilyHouse.found_corpse(w),
             )
 
 
 def murder_case(w: World):
     return w.episode("殺人事件",
-            w.plot_note("$sherlockは警察に連絡を取る"),
-            w.plot_note("現れたのは$restradeで、$sherlockとは旧知の仲のようだった"),
-            w.plot_note("$sherlockは$restradeと少し話す"),
-            w.plot_note("$sherlockは現場を見て、殺害されていたのは$ailyではないと言う"),
-            w.plot_note("そもそも家の中にものがなさすぎて、生活していた証拠がない"),
-            w.plot_note("遺体の身元は行方不明になっている人間の誰かだろうと"),
-            w.plot_note("自分がここにきたのはある人物に彼女にあずけているものを取り戻してほしいと頼まれたからだ、とだけ"),
-            w.plot_note("$sherlockは$wilsonと一緒に外に出て、ある場所に行くように指示する"),
-            w.plot_note("行き先はある孤児院だった"),
+            AilyHouse.hello_restrade(w),
+            AilyHouse.investigation_aily_room(w),
             )
 
 
 def orphanage(w: World):
     return w.episode("孤児院",
-            w.plot_note("$ailyという女性については謎が多い"),
-            w.plot_note("市場によって$ignesたちに情報を集めるように指示する"),
-            w.plot_note("$wilsonの財布を返してもらったが、中身は減っていた"),
-            w.plot_note("孤児院に到着し、そこに入る"),
-            w.plot_note("なぜここにきたのか尋ねると、$ailyという女性が寄付をしていた場所だったと"),
-            w.plot_note("寄付をするとそこの孤児たちが作った栞がもらえるが、それが落ちていたのだ"),
-            w.plot_note("尋ねたが、$ailyという女性に心当たりはないらしい"),
-            w.plot_note("応対してくれた教師（実は$aily）は、ここは養子としてもらわれていく子もいるが、大半は自立して働いて暮らしていると"),
-            w.plot_note("その場所に支援してくれているその女性も素晴らしい人だろうと、彼女は言った"),
-            w.plot_note("$sherlockはそこで子供たちが自分のことをいつもくる女性の知人と思って話しかける"),
-            w.plot_note("子供が彼女からあるものを預かっていることを知った"),
-            w.plot_note("それは宝剣だった"),
+            InCar.goto_orphanage(w),
+            Orphanage.a_orphanage(w),
+            Orphanage.teachers_talk(w),
+            Orphanage.secret_treasure(w),
             )
 
 
 def she_is_not_exist(w: World):
     return w.episode("彼女は存在しない",
-            w.plot_note("$sherlockは宝剣をレプリカとすり替え、持ち帰る"),
-            w.plot_note("知人の古物商に鑑定してもらうと、確かに宝剣だと言われ、目的は達成したと皇太子の使者に伝える"),
-            w.plot_note("ただ謎の殺人事件と消えた$ailyについての謎が残った"),
-            w.plot_note("$sherlockは宝剣よりも殺人事件についての調査をしたいと、$wilsonを家に置いて出ていってしまう"),
-            w.plot_note("$wilsonは$sherlockの家に戻り、そこで彼を待つことにする"),
-            w.plot_note("やってきた若い刑事は$sherlockがいないことに落胆しつつも、状況を教えてくれる"),
-            w.plot_note("発見された遺体は一月ほど前に行方不明になった女性だった"),
-            w.plot_note("$ailyとは何の関係もなく、そこの接点も見つけられないと嘆く"),
-            w.plot_note("殺害方法も不明で、凶器すら見つけられないと"),
-            w.plot_note("そこに役所の男から$ailyという女性が住民登録をしたという形跡は見つけられなかったと連絡がきた"),
+            CurioDealer.rumor_treasure_sword(w),
+            Market.mystery_of_aily_corpse(w),
+            SherlockHouse.important_than_sword(w),
             )
 
 
 def her_the_identity(w: World):
     return w.episode("彼女の正体",
-            w.plot_note("数日後、$sherlockは再び孤児院を訪れていた"),
-            w.plot_note("事件は暗礁に乗り上げ、$ailyを重要参考人として警察が探しているらしい、という情報だけが$sherlockに届いた"),
-            w.plot_note("$sherlockは孤児院の女教師に話しかける"),
-            w.plot_note("$ailyさんですね、と"),
-            w.plot_note("彼女は観念し、孤児院の裏庭に出て話す"),
-            w.plot_note("宝剣についてはすぐに返すつもりだったが、それが価値あるものと知り、お金に変えた"),
-            w.plot_note("この孤児院を存続させたいがための行動だった"),
-            w.plot_note("$sherlockはあの宝剣が本物だったことを告げると、彼女は子供たちを呼びつける"),
-            w.plot_note("その子どもたちに囲まれている間に彼女は姿を消してしまった"),
-            w.plot_note("$sherlockは子供たちからここに寄付している本当の人間の名前を聞く"),
-            w.plot_note("それは$jackという、巷で噂の盗賊だった"),
+            Orphanage.investigation_her(w),
+            Orphanage.aily_confession(w),
             )
 
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚式",
-            w.plot_note("殺人の謎は改造された$gunの発見により、犯人はわからないまま、解決された"),
-            w.plot_note("$sherlockは犯人はプロの人間だろうという"),
-            w.plot_note("そもそも$jackと関係していたかどうか分からないし、それを追うための情報もないと"),
-            w.plot_note("更に彼女があの宝剣ではなく、そこにはまっていた$stoneを売り払ったのだと分かった"),
-            w.plot_note("一番大事な$stoneが偽物とわかり、どうするか問題となった"),
-            w.plot_note("偽物の$stoneを使い、無事に皇太子の結婚式は行われた"),
+            Street.later_talk_of_aily(w),
+            Street.prince_wedding(w),
             )
 
 
