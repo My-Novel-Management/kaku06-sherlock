@@ -68,9 +68,17 @@ def strange_letter(w: World):
 ## in Epilogue
 def social_condition(w: World):
     mary = w.get("mary")
+    ignes = w.get("ignes")
     return w.scene("事件後の社会情勢",
             w.change_camera("mary"),
             w.change_stage("Market"),
-            mary.come(""),
+            mary.come("市場にやってくる$S"),
+            mary.do("市場はいつもとおりの賑わい"),
+            ignes.be("仲間たちと笑いながらうろついている$S"),
+            mary.talk("あ、$ignes"),
+            ignes.talk("おう、$maryさんか", "買い物？"),
+            mary.talk("うん"),
+            mary.do("話を聞くと少年探偵団もそれなりに小さな問題を解決して、ちょっと名が上がったと"),
+            mary.think("肉屋の主人の姿を見なくて、あれ？と感じる"),
             )
 

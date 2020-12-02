@@ -16,6 +16,12 @@ from storybuilder.builder.world import World
 #   [リビング]
 
 
+# alias
+HOME = "WilsonHouse"
+LIVING = "WilsonHouseLiving"
+KITCHEN = "WilsonHouseKitchen"
+
+
 ## scenes
 def prepare_something(w: World):
     return w.scene("何かの準備",
@@ -40,6 +46,7 @@ def rumor_sherlock(w: World):
             w.plot_note("それが$sherlockという、自称便利屋だが、何をやっているのかさっぱりだと"),
             w.plot_note("$wilsonは$carに乗り込み、出かける"),
             )
+
 
 ## in Epilogue
 def after_case(w: World):

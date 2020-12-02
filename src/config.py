@@ -51,26 +51,53 @@ ASSET = {
             ("Office", "勇者探偵社", "London"),
             ("London", "ロムダス", "", (1000,1000)),# ロンドン
             #
-            ("Baker", "ベイリー", "London"),# ベイカー街
             ("Dartmour", "ダースモア", "London"),# ダートムア
             ("ThamesRiver", "タイムズ川", "London"),# テムズ川
-            ("WestminsterCastle", "イーストマイスター宮殿"),# ウェストミンスター宮殿
-            ("WestminsterTemple", "イーストマイスター寺院"),# ウェストミンスター寺院
             # シティ（旧市内）
+            ("TownCity", "シティ", "London"),
             ("Market", "中央市場", "London"),
+            ("WilsonHouse", "ウィルソンの家", "London"),
+            # 中心部
+            ("Westminster", "イーストミンストル", "London"),# ウェストミンスター
+            ("WestminsterCastle", "イーストミンストル宮殿", "London"),# ウェストミンスター宮殿
+            ("WestminsterTemple", "イーストミンストル寺院", "London"),# ウェストミンスター寺院
+            ("CharingCross", "チェリーグロス", "London"),# チャリング・クロス
+            ("PicadilyCircus", "ピカッドリー", "London"),# ピカデリーサーカス
+            ("Portsmouth", "パーツマス", "London"),# ポーツマス
             # ベーガー街
+            ("Baker", "ベイリー", "London"),# ベイカー街
             ("SherlockHouse", "シャーロックの家", "Baker"),
             ("SherlockHouseLiving", "シャーロックの家・リビング", "SherlockHouse"),
             ("SherlockHouseKitchen", "シャーロックの家・キッチン", "SherlockHouse"),
             ("SherlockHouseDining", "シャーロックの家・食堂", "SherlockHouse"),
             ## 醜聞
-            ("StJhonsWood", "サンジョーウォード", "London"),# リージェンツパークの北西
+            ("StJhonsWood", "サンジョーウォード", "London"),# セントジョンズウッド。リージェンツパークの北西
             ("StSarpentain", "サーペント通り", "London"),# サーペンタイン通り。アイリーンの家がある
+            ("EdgewareRoad", "エッジロード", "London"),# エッジウェアロード
+            ("Temple", "エンプル", "London"),# テンプル
             ## 赤鎧クラブ
-            ("SaxeCoburgSquare", "サコバーズスクエア"),# ザクセン・コーブルク・スクエア
-            ("JakinsHouse", "ジェイキンスの家"),
+            ("SaxeCoburgSquare", "サコバーズスクエア", "London"),# ザクセン・コーブルク・スクエア
+            ("StPaul", "サンポール", "London"),# セントポール
+            ("JakinsHouse", "ジェイキンスの家", "London"),
+            ("Farringdon", "ファイドン", "London"),# ファリンドン街
             ## ガーネット
+            ("Angel", "アンヘル", "London"),# エンジェル駅
+            ("Kilburn", "ギルバー", "London"),# キルバーン
+            ("Goodge", "グージ", "London"),# グッジ街
+            ("CoventGarden", "グベントカーデン", "London"),# コベントガーデン
             ("SpecialSchool", "王立学園", "London"),# 王立学園
+            ## 魔獣
+            ("Embankment", "エンバンク", "London"),# エンバクメント
+            ("Tottenham", "トッテンム", "London"),# トッテナム
+            ("Bourough", "ボロー", "London"),# バラ
+            ("Fulham", "ウルアム", "London"),# フルハム
+            ("Holborn", "ホールバー", "London"),# ホルボーン
+            ## 最後の事件
+            ("Oxford", "ノクスフォード", "London"),# オックスフォード・サーカス
+            ("Olympia", "オムニピア", "London"),# オリンピア
+            ("Bond", "ボンドル", "London"),# ボンド
+            ## 空き家
+            ("MarbleArch", "マールアート", "London"),# マーブルアーチ
             # ライヘンバッハ
             # ウェストミンスター駅
             # キングス・クロス駅
@@ -97,7 +124,6 @@ ASSET = {
             # アイランド・ガーデンズ駅
             # エッジウェア・ロード駅
             # エンジェル駅
-            ("WilsonHouse", "ウィルソンの家", "London"),
             #
             ("InCar", "車内", "London"),
             ("InTrain", "列車内", "London"),
