@@ -47,21 +47,48 @@ ASSET = {
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
-            ("England", "ブリギス", "", (0,0)),
             ("Office", "勇者探偵社", "London"),
-            ("London", "ロムダス", "", (1000,1000)),# ロンドン
             #
             ("Dartmour", "ダースモア", "London"),# ダートムア
             ("ThamesRiver", "タイムズ川", "London"),# テムズ川
+            # 王国内
+            ("England", "ブリギス", "", (0,0)),
+            ("Leeds", "レード", "England", (800,100)),# リーズ
+            ("Manchester", "カンチェスター", "England", (800,200)),# マンチェスター
+            ("Sheffield", "シーフィール", "England", (900,300)),# シェーフィールド
+            ("Liverpool", "イバール", "England", (600,300)),# リバプール
+            ("Leicester", "リスター", "England", (900,400)),# レスター
+            ("Birmingham", "アーミング", "England", (800,500)),# バーミンガム
+            ("Cambridge", "キャンバッジ", "England", (1000,700)),# ケンブリッジ
+            ("Bristol", "ウリストル", "England", (700,1000)),# ブリストル
+            ("Oxford", "オーカスフォール", "England", (900,900),),# オックスフォード
+            ("London", "ロムダス", "England", (1000,1000)),# ロンドン
+            # ロンドン市内
+            ("RegentsPark", "リーネンツ", "London", (-10, -100)),# リージェンツパーク
+            ("KingsCross", "キングロス", "London", (0,-100)),# キングスクロス
+            ("NottingHill", "ナッタンヒル", "London", (-300,0)),# ノッティングヒル
+            ("Paddington", "アディンポン", "London", (-200,0)),# パディントン
+            ("Soho", "ソルホー", "London", (0,100)), # ソーホー
+            ("Shoreditch", "ショーディ", "London", (200,100)),# ショアディッチ
+            ("Kensington", "ケーニトン", "London", (-300,100)),# ケンジントン
+            ("OldCity", "シティ", "London", (200,200)),# シティ
+            ("Westminster", "イーストミンストル", "London", (0,300)), # ウェストミンスター
+            # ソーホー。代表的な歓楽街
             # シティ（旧市内）
-            ("TownCity", "シティ", "London"),
             ("Market", "中央市場", "London"),
-            ("WilsonHouse", "ウィルソンの家", "London"),
+            ("WilsonHouse", "ウィルソンの家", "OldCity"),
+            ("WilsonHouseLiving", "ウィルソンの家・リビング", "WilsonHouse"),
+            ("WilsonHouseDining", "ウィルソンの家・ダイニング", "WilsonHouse"),
+            ("WilsonHouseKitchen", "ウィルソンの家・キッチン", "WilsonHouse"),
+            ("WilsonHouseBedroom", "ウィルソンの家・寝室", "WilsonHouse"),
+            ("WilsonHouseStorage", "ウィルソンの家・物置", "WilsonHouse"),
+            ("WilsonHouseBathroom", "ウィルソンの家・浴室", "WilsonHouse"),
+            ("WilsonHouseDrawing", "ウィルソンの家・応接間", "WilsonHouse"),
+            # ウェストミンスター。昔からの政治の中心部
+            ("CharingCross", "チェリーグロス", "London", ),# チャリングクロス
             # 中心部
-            ("Westminster", "イーストミンストル", "London"),# ウェストミンスター
             ("WestminsterCastle", "イーストミンストル宮殿", "London"),# ウェストミンスター宮殿
             ("WestminsterTemple", "イーストミンストル寺院", "London"),# ウェストミンスター寺院
-            ("CharingCross", "チェリーグロス", "London"),# チャリング・クロス
             ("PicadilyCircus", "ピカッドリー", "London"),# ピカデリーサーカス
             ("Portsmouth", "パーツマス", "London"),# ポーツマス
             # ベーガー街
@@ -71,8 +98,7 @@ ASSET = {
             ("SherlockHouseKitchen", "シャーロックの家・キッチン", "SherlockHouse"),
             ("SherlockHouseDining", "シャーロックの家・食堂", "SherlockHouse"),
             ## 醜聞
-            ("StJhonsWood", "サンジョーウォード", "London"),# セントジョンズウッド。リージェンツパークの北西
-            ("StSarpentain", "サーペント通り", "London"),# サーペンタイン通り。アイリーンの家がある
+            ("StJhonsWood", "サーペント", "London"),# セントジョンズウッド（作中のサーペンタイン通り）。リージェンツパークの北西。アイリーンの家がある
             ("EdgewareRoad", "エッジロード", "London"),# エッジウェアロード
             ("Temple", "エンプル", "London"),# テンプル
             ## 赤鎧クラブ
@@ -98,37 +124,12 @@ ASSET = {
             ("Bond", "ボンドル", "London"),# ボンド
             ## 空き家
             ("MarbleArch", "マールアート", "London"),# マーブルアーチ
-            # ライヘンバッハ
-            # ウェストミンスター駅
-            # キングス・クロス駅
-            # チャリング・クロス駅
-            # ピカデリー・サーカス駅
-            # ボンド街駅
-            # グリニッジ駅
-            # グリーンパーク駅
-            # コヴェントガーデン駅
-            # エンバクメント駅
-            # オックスフォード・サーカス駅
-            # オリンピア駅
-            # オールドゲイト駅
-            # オールドゲイト・イースト駅
-            # カムデン・タウン駅
-            # キャノン駅
-            # キルバーン駅
-            # グッジ街駅
-            # クラパムコモン駅
-            # クラパムサウス駅
-            # クラパムノース駅
-            # セント・ジェームズ・パーク駅
-            # ヴィクトリア駅
-            # アイランド・ガーデンズ駅
-            # エッジウェア・ロード駅
-            # エンジェル駅
-            #
+            # Commons
+            ("Street", "路地", "London"),
+            # 乗り物
             ("InCar", "車内", "London"),
             ("InTrain", "列車内", "London"),
-            ("Street", "路地", "London"),
-            ("MainStreet", "大通り", "London"),
+            ("InShip", "船内", "London"),
             # 現代
             ("ReadingRoom", "書斎", "London"),
             ),

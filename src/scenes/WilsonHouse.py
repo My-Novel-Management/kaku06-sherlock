@@ -20,6 +20,11 @@ from storybuilder.builder.world import World
 HOME = "WilsonHouse"
 LIVING = "WilsonHouseLiving"
 KITCHEN = "WilsonHouseKitchen"
+DINING = "WilsonHouseDining"
+BEDROOM = "WilsonHouseBedroom"
+STORAGE = "WilsonHouseStorage"
+BATHROOM = "WilsonHouseBathroom"
+DRAWING = "WilsonHouseDrawing"
 
 
 ## scenes
@@ -54,7 +59,7 @@ def after_case(w: World):
     shal, mary, lime = w.get("sherlock"), w.get("mary"), w.get("lime")
     return w.scene("事件が終わって",
             w.change_camera("mary"),
-            w.change_stage("WilsonHouse"),
+            w.change_stage(LIVING),
             w.change_time("afternoon"),
             w.plot_note("事件は偽$wilsonの自殺と関連する人や施設の消滅により、すべてが闇に葬り去られた"),
             shal.be("新聞を読んでいる"),
@@ -76,8 +81,11 @@ def after_case(w: World):
 
 
 def lost_home(w: World):
+    mary = w.get("mary")
+    shal, lime = w.get("sherlock"), w.get("lime")
     return w.scene("家を失う",
-            w.change_stage("WilsonHouse"),
+            w.change_stage(LIVING),
+            w.change_time("midmorning"),
             w.plot_note("事務所を失った$sherlockたちは一旦そのまま$wilsonの住宅で暮らしていた"),
             w.plot_note("$maryたちは新居の候補地を探していたがなかなかいい物件は見つからない"),
             w.plot_note("不動産屋の$stanryがやってきて、家主が長らく家賃を滞納していて、それをまとめて払ってほしいと言ってくる"),
@@ -85,25 +93,79 @@ def lost_home(w: World):
             w.plot_note("$sherlockは金を工面する宛はなく、自分に$wilsonの支払いをする義務もないと言う"),
             w.plot_note("今までのように一人ならどんなところでも暮らせると言い出して読書を始める$sherlock"),
             w.plot_note("困る$maryたち"),
+            #
+            shal.be("拾ってきた新聞を読んでいる"),
+            lime.be("掃除をしている"),
+            mary.be("一人で困惑している"),
+            mary.do("事務所兼住居を失い、$Sたちはそのまま$wilsonの家に間借りしていた"),
+            mary.do("でも偽$wilsonがいなくなり、資金的にも底を尽き、どうすればいいだろうと悩んでいた"),
+            mary.talk("あのー"),
+            shal.do("黙ったままちらっと見て、首を横に振る"),
+            mary.think("ため息をついて、またキッチンに引っ込もうとする"),
+            mary.do("そこに郵便が届いて、顔を出す"),
+            mary.talk("あっ……"),
+            mary.do("手にしたそれは督促状だった"),
+            mary.do("大家からずっと未払いで、もう半年になっているので、一括して払ってもらわないと追い出すと書かれていた"),
+            mary.talk("どないしたらええのん？"),
+            shal.talk("出ていくしかない"),
+            mary.talk("けど、どこに？"),
+            shal.talk("$meはどこでもいいよ。本が読めて新聞が手に入れば、どこでも"),
+            mary.think("自分が考えたないと、と思う"),
             )
 
 
 def real_wilson(w: World):
+    mary = w.get("mary")
+    shal, lime = w.get("sherlock"), w.get("lime")
+    wil = w.get("wilson")
     return w.scene("本物の$wilson",
-            w.change_stage("WilsonHouse"),
+            w.change_stage(LIVING),
             w.plot_note("そこに訪問者がくる。依頼人かと思ったら、知らない男だった"),
             w.plot_note("「君たちはここで何をしているんだい？」と男"),
             w.plot_note("男は本物の$wilsonだった"),
+            #
+            shal.be(),
+            mary.be(),
+            lime.be(),
+            mary.think("どうすればいいのか困惑"),
+            shal.talk("どうせまだ二、三通は督促状がくるから、それまで時間がある。ゆっくり考えればいい"),
+            mary.think("$sherlockの物言いに、この人は本当に自分が興味ないことに対しては何も考えないと"),
+            lime.do("所在なく棚の整理をしている"),
+            lime.do("なにかに気づいた"),
+            mary.talk("どうしたん？"),
+            mary.do("$limeから棚にあった旅券を受け取る"),
+            mary.do("それはどうやら本物の$wilsonのもののようだった"),
+            mary.talk("あのさ、本物の$wilsonさんてどうなったん？"),
+            shal.talk("さてね", "どうやら旅行記事を書いて暮らしていたみたいだけれど、偽物が暮らしていた以外の形跡は見つけられなかったよ"),
+            mary.think("半年も家賃を滞納しているというのは、もうどこかで死んでしまっているのかもしれないと考える"),
+            mary.do("そこに訪問客がくる"),
+            lime.do("$Sが応対に出る"),
+            lime.do("驚きながら知らない男の人を連れてくる$S"),
+            mary.talk("ああ、何かご依頼ですか？"),
+            wil.talk("依頼というか、その……ここ、$meの家なんですが"),
+            mary.talk("え？"),
             )
 
 
 def know_all_things(w: World):
+    mary = w.get("mary")
+    shal, lime = w.get("sherlock"), w.get("lime")
+    wil = w.get("wilson")
     return w.scene("すべての事情を知って",
-            w.change_stage("WilsonHouse"),
+            w.change_stage(LIVING),
             w.plot_note("$wilsonは$sherlockたちから自分の偽物によって行われたことや、多くの事件を解決したことなどを聞く"),
             w.plot_note("$wilsonは滞納家賃の取り立て書を見つけて、頭を抱える"),
             w.plot_note("$wilsonは$sherlockたちから借りようとするが、ないと突っぱねられる"),
             w.plot_note("自分の隠し金庫から金を出そうとするが、すでに空っぽだった"),
+            mary.be(),
+            wil.be(),
+            shal.be(),
+            lime.be(),
+            wil.do("$Sは$sherlockたちから今までの話を全部聞く"),
+            mary.do("$sherlockの話はよく整理され、$Sたちが知らないことまで付け加えられていた"),
+            lime.do("お茶とお茶菓子を出していく$S"),
+            mary.do("黙ってきいている$S"),
+            wil.do("$maryが$animalと分かってにこやかな笑みを浮かべる$S"),
             )
 
 
