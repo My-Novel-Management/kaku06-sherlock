@@ -32,7 +32,7 @@ def heros_office(w: World):
             "ここで$wilsonの一人称に変更",
             "これからの物語",
             ReadingRoom.allend_and_allstart(w),
-            SherlockHouse.last_scene(w),
+            WilsonHouse.last_scene(w),
             )
 
 
