@@ -14,7 +14,8 @@ from storybuilder.builder.world import World
 #   場所は現在のウィルソンの家とは異なり、隠遁生活中のコテージの中
 
 
-## scenes
+# Scenes
+## in Prologue
 def note_for_thisnovel(w: World):
     return w.scene("作品のための注意書き",
             w.change_stage("ReadingRoom"),
@@ -26,6 +27,7 @@ def note_for_thisnovel(w: World):
             )
 
 
+## in Epilogue
 def allend_and_allstart(w: World):
     wil = w.get("wilson")
     mary = w.get("mary")
