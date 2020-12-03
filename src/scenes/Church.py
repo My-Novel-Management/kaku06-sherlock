@@ -37,6 +37,7 @@ def basement_hall(w: World):
 ## in EmptyHouse
 def unexpected_end(w: World):
     shal, mary, lime = w.get("sherlock"), w.get("mary"), w.get("lime")
+    rest = w.get("restrade")
     return w.scene("意外な最後",
             w.change_camera("mary"),
             w.change_stage("Church"),
@@ -49,10 +50,15 @@ def unexpected_end(w: World):
             shal.come("$Sとともに教会にやってくる"),
             mary.come(),
             lime.come(),
+            rest.be(),
             shal.do("$Xeno教徒の中央教会にやってきたが、そこの隣に建っている倉庫のような場所"),
             shal.do("$Sはこの施設の下に儀式の場所が作られているという"),
             shal.do("$restradeと合流し、警察とともにそこに突入する"),
             shal.do("階段があり、降りていく"),
-            shal.do(""),
-            # TODO
+            shal.do("そこは五十人ほどが収容できる空間が作られていた"),
+            shal.do("祭壇が作られ、その中心に失踪した大司教の死体が置かれていた"),
+            shal.do("$Sは$gunによる殺人だと見抜く"),
+            shal.do("そこには４つの$stoneと一つの心臓を捧げるための祭壇の設備があったが、$stoneは砕け、心臓を捧げるはずの場所には血だまりがあっただけ"),
+            shal.do("他にも多くの使者たちの死体が転がっていた"),
+            shal.do("それを見て$sherlockは$wilsonがいないことに気づく"),
             )
