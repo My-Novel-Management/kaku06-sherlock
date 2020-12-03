@@ -88,6 +88,7 @@ ASSET = {
             ("WilsonHouseDrawing", "ウィルソンの家・応接間", "WilsonHouse"),
             # ウェストミンスター。昔からの政治の中心部
             ("CharingCross", "チェリーグロス", "London", ),# チャリングクロス
+            ("Church", "教会", "London"),
             # 中心部
             ("WestminsterCastle", "イーストミンストル宮殿", "London"),# ウェストミンスター宮殿
             ("WestminsterTemple", "イーストミンストル寺院", "London"),# ウェストミンスター寺院
@@ -169,6 +170,7 @@ ASSET = {
             ("science", "魔導学"),
             ("missing", "喪失知識"),
             ("cultX", "教団Ｘ"),
+            ("Xeno", "ゼノ教"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)

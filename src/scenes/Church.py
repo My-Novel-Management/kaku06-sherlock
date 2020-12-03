@@ -34,12 +34,25 @@ def basement_hall(w: World):
             )
 
 
+## in EmptyHouse
 def unexpected_end(w: World):
+    shal, mary, lime = w.get("sherlock"), w.get("mary"), w.get("lime")
     return w.scene("意外な最後",
+            w.change_camera("mary"),
+            w.change_stage("Church"),
             w.plot_note("$sherlockは$maryたちに偽$wilsonが$bossの復活のために全てを準備していたのだと語る"),
             w.plot_note("そして儀式に不可欠だったのが$heroの心臓であり、それを探してずっと$heroの血縁の人間を殺しまわっていたと"),
             w.plot_note("どの心臓も合わなかったらしく、最後に白羽の矢がたったのが$sherlockで、ダミーの$morianoにより誘い出して殺そうとしたと"),
             w.plot_note("しかし全てが失敗に終わり、$stoneは粉々になって発見された"),
             w.plot_note("$wilsonは機会を伺って潜伏しているだろうが、また自分を殺しにくると伝える"),
             w.plot_note("だが警察は$wilsonの遺体を空き家で見つける"),
+            shal.come("$Sとともに教会にやってくる"),
+            mary.come(),
+            lime.come(),
+            shal.do("$Xeno教徒の中央教会にやってきたが、そこの隣に建っている倉庫のような場所"),
+            shal.do("$Sはこの施設の下に儀式の場所が作られているという"),
+            shal.do("$restradeと合流し、警察とともにそこに突入する"),
+            shal.do("階段があり、降りていく"),
+            shal.do(""),
+            # TODO
             )
