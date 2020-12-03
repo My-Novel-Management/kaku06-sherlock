@@ -17,6 +17,7 @@ from scenes import MountCottage
 from scenes import PoliceStation
 from scenes import SherlockHouse
 from scenes import SlumTown
+from scenes import WilsonHouse
 
 
 # Episode
@@ -74,12 +75,7 @@ def strange_end(w: World):
     return w.episode("奇妙な結末",
             Church.unexpected_end(w),
             MountCottage.his_dead(w),
-            w.plot_note("その後、警察の捜査により$sherlockが調べ上げた偽$wilsonが協力をしたと思われる人物リストを全て調査したが、全員失踪あるいは自殺、事故死していた"),
-            w.plot_note("$sherlockは$wilsonの住居から何か情報がないかと探す"),
-            w.plot_note("しかし偽$wilsonは何もかも綺麗に処分をしていた"),
-            w.plot_note("ただ一つだけ、この世界のものとは思えないものを発見する"),
-            w.plot_note("それは$wilsonが愛用していた謎の端末だった"),
-            w.plot_note("$sherlockは確信するのだ。まだ偽$wilsonは生きていると"),
+            WilsonHouse.strange_end(w),
             )
 
 
