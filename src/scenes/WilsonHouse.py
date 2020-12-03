@@ -55,13 +55,39 @@ def rumor_sherlock(w: World):
 
 ## in Empty House
 def strange_end(w: World):
+    wil = w.get("wilson")
+    mary, shal, lime = w.get("mary"), w.get("sherlock"), w.get("lime")
     return w.scene("奇妙な終わり",
+            w.change_camera("mary"),
+            w.change_stage(LIVING),
+            w.change_time("afternoon"),
             w.plot_note("その後、警察の捜査により$sherlockが調べ上げた偽$wilsonが協力をしたと思われる人物リストを全て調査したが、全員失踪あるいは自殺、事故死していた"),
             w.plot_note("$sherlockは$wilsonの住居から何か情報がないかと探す"),
             w.plot_note("しかし偽$wilsonは何もかも綺麗に処分をしていた"),
             w.plot_note("ただ一つだけ、この世界のものとは思えないものを発見する"),
             w.plot_note("それは$wilsonが愛用していた謎の端末だった"),
             w.plot_note("$sherlockは確信するのだ。まだ偽$wilsonは生きていると"),
+            mary.be(),
+            shal.be(),
+            lime.be(),
+            mary.do("$Sは警察からきた書簡を$sherlockに渡す"),
+            mary.do("結局まだそのまま$wilsonの家を使っている"),
+            mary.do("$sherlockからその後の状況を聞いた"),
+            mary.do("警察は$sherlockの情報をもとに偽$wilsonに関係する人間と場所を捜索したが、全てがもみ消されていた"),
+            mary.do("$wilson自身が服用していたのと同じと見られる毒薬による自殺、あるいは事故、あるいは殺され、あるいは失踪し、全て足跡が辿れないようにされていた"),
+            mary.do("施設についてはこの本物の$wilsonが使っていた家以外の場所は、燃やすか爆破するかで破壊され、証拠もあとかたもなく消え去っていた"),
+            mary.do("それでも僅かな目撃情報をかき集めて、他にも$wilsonの手が及んだ犯罪はないか警察、特に$restradeは躍起になって探している"),
+            mary.do("しかし$sherlockはこの国の優秀な警察の捜査能力でも何も見つけられないだろうと推測する"),
+            mary.do("それは偽$wilsonが人間世界の住人ではなく、どうも闇の世界の存在だったらしいからだ"),
+            mary.do("$Sは自分の祖先もかつてそこの住人だったと言われ、少し気落ちしていた"),
+            lime.do("紅茶をいれてもってくる$S"),
+            mary.talk("ありがとう"),
+            shal.talk("ところで今日の夕食は？"),
+            mary.talk("たまには$shalが作ってよ"),
+            shal.talk("$meが作ると半日くらいかかるけど、それでもいい？"),
+            mary.talk("わかったわよ！"),
+            mary.do("キッチンに向かう"),
+            shal.do("渋い顔をしている$S"),
             )
 
 

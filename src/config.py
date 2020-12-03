@@ -9,7 +9,7 @@ ASSET = {
             # (tag / name / full / age (birth) / job / call / info)
             ## main
             ("sherlock", "シャーロック", "ホーマー,シャーロック", 20,(1,1), "male", "勇者", "me:僕"),
-            ("mary", "メアリー", "", 16,(1,1), "female", "武闘家", "me:ウチ"),
+            ("mary", "メアリー", "", 16,(1,1), "female", "武闘家", "me:ウチ:shal:シャル"),
             ("wilson", "ウィルソン", "ハドル,ウィルソン", 40,(1,1), "元神官", "me:私"),
             ("lime", "ライム", "", 19,(1,1), "female", "騎士（王女）", "me:私"),
             ## sub
@@ -51,6 +51,8 @@ ASSET = {
             #
             ("Dartmour", "ダースモア", "London"),# ダートムア
             ("ThamesRiver", "タイムズ川", "London"),# テムズ川
+            # 他国
+            ("Belfast", "ウェルフォース", "", (-200,-200)),# ベルファスト
             # 王国内
             ("England", "ブリギス", "", (0,0)),
             ("Leeds", "レード", "England", (800,100)),# リーズ
@@ -124,6 +126,7 @@ ASSET = {
             ("Bond", "ボンドル", "London"),# ボンド
             ## 空き家
             ("MarbleArch", "マールアート", "London"),# マーブルアーチ
+            ("MountCottage", "山小屋", "Belfast"),
             # Commons
             ("Street", "路地", "London"),
             # 乗り物
