@@ -73,7 +73,6 @@ def truth(w: World):
 
 def strange_end(w: World):
     return w.episode("奇妙な結末",
-            Church.unexpected_end(w),
             MountCottage.his_dead(w),
             WilsonHouse.strange_end(w),
             )
