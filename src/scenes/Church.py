@@ -13,6 +13,9 @@ from storybuilder.builder.world import World
 #   教会については、こちらを利用する
 
 
+TEMPLE = "WestminsterTemple"
+
+
 ## scenes
 def mystery_cult(w: World):
     return w.scene("神秘教団",

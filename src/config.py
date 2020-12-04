@@ -76,6 +76,11 @@ ASSET = {
             ("OldCity", "シティ", "London", (200,200)),# シティ
             ("Westminster", "イーストミンストル", "London", (0,300)), # ウェストミンスター
             # ソーホー。代表的な歓楽街
+            # イーストエンド（シティの東側、テムズ川の北側）下町
+            ("EastEnd", "エンドタウン", "London"),# イーストエンド。下町。スラム街
+            ("TowerLondon", "ロムダス塔", "London"),# ロンドン塔。昔占い師にいわれ大量のワタリガラスを飼っている
+            # ウェストエンド（シティの西側）繁華街
+            ("WestEnd", "ウェストタウン", "London"),
             # シティ（旧市内）
             ("Market", "中央市場", "London"),
             ("WilsonHouse", "ウィルソンの家", "OldCity"),
@@ -92,6 +97,7 @@ ASSET = {
             # 中心部
             ("WestminsterCastle", "イーストミンストル宮殿", "London"),# ウェストミンスター宮殿
             ("WestminsterTemple", "イーストミンストル寺院", "London"),# ウェストミンスター寺院
+            ("WestminsterParliament", "王国議事堂", "London"),# 国会議事堂
             ("PicadilyCircus", "ピカッドリー", "London"),# ピカデリーサーカス
             ("Portsmouth", "パーツマス", "London"),# ポーツマス
             # ベーガー街
