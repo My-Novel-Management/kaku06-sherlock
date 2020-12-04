@@ -9,7 +9,7 @@ ASSET = {
             # (tag / name / full / age (birth) / job / call / info)
             ## main
             ("sherlock", "シャーロック", "ホーマー,シャーロック", 20,(1,1), "male", "勇者", "me:僕"),
-            ("mary", "メアリー", "", 16,(1,1), "female", "武闘家", "me:ウチ:shal:シャル"),
+            ("mary", "メアリー", "", 16,(1,1), "female", "武闘家", "me:ウチ:shal:シャル:k_pat:パット"),
             ("wilson", "ウィルソン", "ハドル,ウィルソン", 40,(1,1), "元神官", "me:私"),
             ("lime", "ライム", "", 19,(1,1), "female", "騎士（王女）", "me:私"),
             ## sub
@@ -170,6 +170,7 @@ ASSET = {
             ("car", "魔導車"),
             ("stone", "魔石"),
             ("telephone", "魔導通話"),
+            ("compass", "魔導盤"),
             ),
         "WORDS": (
             # (tag / name / cate / info)

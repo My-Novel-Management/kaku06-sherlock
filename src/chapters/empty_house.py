@@ -67,12 +67,15 @@ def truth(w: World):
             Hideout.visit_hideout(w),
             Hideout.sherlocks_talk(w),
             Church.cult_facility(w),
+            Church.lookfor_ritual_place(w),
+            Church.goto_ritual_room(w),
             Church.basement_hall(w),
             )
 
 
 def strange_end(w: World):
     return w.episode("奇妙な結末",
+            Church.betray_man(w),
             MountCottage.his_dead(w),
             WilsonHouse.strange_end(w),
             )
