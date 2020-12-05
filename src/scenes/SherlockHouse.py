@@ -23,6 +23,18 @@ from storybuilder.builder.world import World
 #   [リビング][書斎]
 
 
+# alias
+HOME = "SherlockHouse"
+LIVING = "SherlockHouseLiving"
+KITCHEN = "SherlockHouseKitchen"
+BATHROOM = "SherlockHouseBathroom"
+DINING = "SherlockHouseDining"
+LABO = "SherlockHouseLabo"
+READING = "SherlockHouseReadingRoom"
+BEDROOM = "SherlockHouseBedroom"
+STORAGE = "SherlockHouseStorage"
+
+
 ## scenes
 def about_sherlock(w: World):
     return w.scene("$sherlockという男について",
@@ -374,13 +386,22 @@ def sadness_report(w: World):
             )
 
 
+## in EmptyHouse
 def believed_his_alive(w: World):
+    mary, lime, wil = w.get("mary"), w.get("lime"), w.get("wilson")
     return w.scene("$sherlockの生存を信じて",
+            w.change_camera("mary"),
+            w.change_stage(KITCHEN),
+            w.change_time("morning"),
             w.plot_note("$maryたちは$sherlockが生きていると思って捜索を続けていた"),
             w.plot_note("しかし何の情報もなく、ただ時間だけが過ぎていく"),
             w.plot_note("家を失い、$wilsonの住まいに居候していた$maryたち"),
             w.plot_note("$wilsonは忙しそうに外に出ていることが増えた"),
             w.plot_note("$maryは$sherlockの手紙にヒントはないかと考えるが、何も見つからない"),
+            mary.be("皿洗いをしている$S"),
+            mary.think("もう一月も$sherlockは失踪を続けている"),
+            mary.think("完全に死んだものと思われていたが、$Sたちは捜索を続けていた"),
+            # TODO
             )
 
 

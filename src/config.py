@@ -116,6 +116,11 @@ ASSET = {
             ("SherlockHouseLiving", "シャーロックの家・リビング", "SherlockHouse"),
             ("SherlockHouseKitchen", "シャーロックの家・キッチン", "SherlockHouse"),
             ("SherlockHouseDining", "シャーロックの家・食堂", "SherlockHouse"),
+            ("SherlockHouseLabo", "シャーロックの家・研究室", "SherlockHouse"),
+            ("SherlockHouseBedroom", "シャーロックの家・寝室", "SherlockHouse"),
+            ("SherlockHouseReadingRoom", "シャーロックの家・書斎", "SherlockHouse"),
+            ("SherlockHouseStorage", "シャーロックの家・物置", "SherlockHouse"),
+            ("SherlockHouseBathroom", "シャーロックの家・バス", "SherlockHouse"),
             ## 醜聞
             ("StJhonsWood", "サーペント", "London"),# セントジョンズウッド（作中のサーペンタイン通り）。リージェンツパークの北西。アイリーンの家がある
             ("EdgewareRoad", "エッジロード", "London"),# エッジウェアロード
@@ -183,6 +188,7 @@ ASSET = {
             ("magic", "魔導"),
             ("animal", "獣人"),
             ("elf", "エルフ"),
+            ("ajin", "亜人"),
             ("werewolf", "人狼"),
             ("science", "魔導学"),
             ("missing", "喪失知識"),
