@@ -402,7 +402,12 @@ def believed_his_alive(w: World):
             mary.think("もう一月も$sherlockは失踪を続けている"),
             mary.think("完全に死んだものと思われていたが、$Sたちは捜索を続けていた"),
             mary.do("棚には$sherlockのコップが残っている"),
-            mary.think(""),# TODO
+            mary.think("それを目にして涙が滲む"),
+            mary.think("でも$sherlockが送ってきたメッセージにはわざわざ自分が死んだと思ってくれと書かれていた"),
+            mary.think("何故そんなことを書いたのか、$Sは気になっていた"),
+            mary.talk("あっ"),
+            mary.do("$wilsonの湯呑が割れてしまう"),
+            mary.talk("$wilsonのだし、いいか"),
             )
 
 

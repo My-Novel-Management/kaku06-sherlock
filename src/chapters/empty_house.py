@@ -13,6 +13,7 @@ from scenes import AbandonedHouse
 from scenes import Church
 from scenes import EmptyHouse
 from scenes import Hideout
+from scenes import Market
 from scenes import MountCottage
 from scenes import PoliceStation
 from scenes import SherlockHouse
@@ -24,6 +25,8 @@ from scenes import WilsonHouse
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             SherlockHouse.believed_his_alive(w),
+            Market.shal_disappearance_talk(w),
+            Market.new_religions(w),
             SherlockHouse.news_of_sherlock_alive(w),
             )
 

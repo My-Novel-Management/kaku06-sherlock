@@ -13,6 +13,10 @@ from storybuilder.builder.world import World
 #   立っている市場はどこでもここを使う。基本は古くから立っている賑わいのあるバラ市場
 
 
+# alias
+MARKET = "Market"
+
+
 ## scenes
 def mystery_of_aily_corpse(w: World):
     return w.scene("$aily家の遺体の謎",
@@ -62,6 +66,46 @@ def strange_letter(w: World):
             w.plot_note("$maryは市場からの帰り道、知らない男から手紙を渡される"),
             w.plot_note("手紙は$morianoから君の悩みの相談に乗ろうというものだった"),
             w.plot_note("$maryはその日、帰ってこなかった"),
+            )
+
+
+## in Empty House
+def shal_disappearance_talk(w: World):
+    mary = w.get("mary")
+    ignes, nowl = w.get("ignes"), w.get("nowlis")
+    return w.scene("$sherlockの失踪について",
+            w.change_stage(MARKET),
+            w.change_time("midmorning"),
+            mary.come("市場にやってくる$S"),
+            ignes.be("$Sが客引きをしている"),
+            ignes.talk("おう$maryちゃん。何か探してる？"),
+            mary.talk("おはよう", "$k_shal一人くらいいおらんかな？"),
+            ignes.talk("$meらも探してはいるんだけどよ、どうにも情報ないんだわ",
+                "結構ネットワークあるんだけど、全然ひっかからねえ"),
+            ignes.do("$Sたち少年団も困っていた",
+                "彼らは必死にホームレスや少年少女のネットワークを通して情報収集をしてくれていたが、いつものように$sherlockの情報は集まらない"),
+            mary.do("ありがとう、といってから、市場を見て歩く"),
+            mary.do("最近市場に並ぶものが物騒なものが増えてきていた"),
+            mary.do("事件件数もうなぎのぼりで、警察も大変だと$k_patが愚痴っていた"),
+            mary.do("$sherlockがいなくなったことで、未解決事件も増え、警察も人員が足りないといっていた"),
+            nowl.be("肉屋の$Sがにこやかに声をかける"),
+            nowl.talk("お肉買ってく？　今日はちょっといいのが入ってね"),
+            mary.talk("$nowlisさん、おはようございます"),
+            nowl.talk("なんだ元気ないね。やっぱりあの行方不明になってる？"),
+            mary.talk("$nowlisさんだけは死んだって言わないんですね"),
+            nowl.talk("だって$maryちゃんは信じてないんだろう？　だったら$meも信じない"),
+            mary.talk("ありがとうございます"),
+            mary.do("不思議な感じがする相手だった"),
+            )
+
+
+def new_religions(w: World):
+    mary = w.get("mary")
+    man = w.get("man")
+    return w.scene("新興宗教",
+            mary.come("市場で買い物を済ませて帰ろうとしている$S"),
+            man.be("紺色に染めたフードをかぶった男が配りものをしている"),
+            # TODO
             )
 
 
