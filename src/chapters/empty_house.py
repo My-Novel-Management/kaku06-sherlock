@@ -35,6 +35,7 @@ def empty_house(w: World):
     return w.episode("空き家の冒険",
             SlumTown.goto_empty_house(w),
             EmptyHouse.strange_empty_house(w),
+            EmptyHouse.resident_of_empty_house(w),
             EmptyHouse.searching_empty_house(w),
             EmptyHouse.night_and_light(w),
             EmptyHouse.silent_house(w),
