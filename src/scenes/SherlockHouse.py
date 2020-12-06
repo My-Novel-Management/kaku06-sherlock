@@ -412,10 +412,30 @@ def believed_his_alive(w: World):
 
 
 def news_of_sherlock_alive(w: World):
+    mary, lime, wil = w.get("mary"), w.get("lime"), w.get("wilson")
     return w.scene("$sherlock生存情報",
+            w.change_camera("mary"),
+            w.change_stage(LIVING),
+            w.change_time("noon"),
             w.plot_note("だが$limeはそこに$sherlockが生きているという証拠を見つけた"),
             w.plot_note("そこに$wilsonが戻ってくる"),
             w.plot_note("$wilsonは「$sherlockに似た人間を見かけた」という情報を聞いたと話した"),
+            mary.come("買い物を終えて帰ってきた$S"),
+            lime.be("$Sは家の片付けをしていた"),
+            wil.come("そこに$Sが興奮した様子で戻ってくる"),
+            mary.talk("何かあったん？"),
+            wil.talk("聞いてくれ", "いた", "$sherlockが、いたんだ"),
+            mary.do("驚きで声が出ない$S"),
+            lime.do("掃除の手が止まる$S"),
+            wil.talk("$meもまだ聞いたばかりの話で、本当かどうかの確認すらできていないんだが、それでもこれまで何の情報もなかったところにこれは大きいよ"),
+            wil.talk("$EastEndの空き家に夜な夜な明かりが灯る家があるそうなんだ",
+                "どうやらそこに$sherlockによく似た人間が入っていくのを見たって、ホームレスの目撃情報があった"),
+            mary.talk("でもどうしてそれが$sherlockなん？　別人の可能性はないん？"),
+            wil.talk("それが以前$sherlockが世話をしたホームレスで、彼のことをよく覚えていたんだよ",
+                "遠目にもあの特徴的な寝癖頭とそこに被ったハンチング、チェック柄のコートは$sherlockに間違いないって"),
+            mary.think("その話に興奮する$S"),
+            mary.talk("場所は？"),
+            mary.do("荷物を置くと、$wilsonに詰め寄った"),
             )
 
 

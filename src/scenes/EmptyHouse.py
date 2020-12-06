@@ -10,15 +10,29 @@ from storybuilder.builder.world import World
 
 
 # NOTE
-#   シャーロックがいたと言われる空き家
+#   シャーロックがいたと言われる空き家。ホワイト・チャペル地区のスラム街にある。比較的ガワが残っていて、隣の家のように崩れてはいない
+#   [キッチン][バス]
+#   [寝室][寝室]
+#   [リビング][応接間]
+#   [玄関]
 
 
-## scenes
+# alias
+HOME = "EmptyHouse"
+
+# Scenes
+## in Empty House
 def strange_empty_house(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
     return w.scene("奇妙な空き家",
+            w.change_stage(HOME),
+            w.change_time("afternoon"),
             w.plot_note("$wilsonに連れられて$maryと$limeは$sherlockに似た人を見たという空き家にやってくる"),
             w.plot_note("バラックが並ぶスラム街にあるたくさんの空き家の一つ"),
             w.plot_note("見たというホームレスは夜にその空き家だけ明かりがつくのが妙だと思って監視していたと証言する"),
+            mary.be(),
+            wil.be(),
+            lime.be(),
             )
 
 

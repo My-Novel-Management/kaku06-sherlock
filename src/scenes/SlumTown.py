@@ -10,12 +10,27 @@ from storybuilder.builder.world import World
 
 
 # NOTE
-#   切り裂きジャック事件で有名なホワイト・チャペル地区
+#   切り裂きジャック事件で有名なホワイト・チャペル地区（イーストエンドの一部）。有名な貧困街
 #   チャリング・クロスの東5.5Km
 
 
-## scenes
+# alias
+TOWN = "Whitechapel"
+
+# Scenes
+## in Empty House
 def goto_empty_house(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
     return w.scene("空き家に向かう",
+            w.change_stage(TOWN),
+            mary.come("$wilsonにつれられ、スラム街にやってくる"),
+            wil.come(),
+            lime.come(),
+            mary.do("この一年ほどの間に連続失踪・殺人事件が発生している有名な$Whitechapel地区だった"),
+            mary.do("恐い、と感じていつも足を踏み入れないように$Sは注意していた"),
+            mary.do("煙をくゆらせ、男も女も鋭い眼光でちらっと見てくる"),
+            lime.do("$maryを守るようにして歩く$S"),
+            wil.talk("この先らしい"),
+            wil.do("手帳を見ながら先に歩いていく$S"),
             )
 
