@@ -36,9 +36,9 @@ def empty_house(w: World):
             SlumTown.goto_empty_house(w),
             EmptyHouse.strange_empty_house(w),
             EmptyHouse.resident_of_empty_house(w),
-            EmptyHouse.searching_empty_house(w),
             EmptyHouse.night_and_light(w),
             EmptyHouse.silent_house(w),
+            EmptyHouse.discover_dead(w),
             )
 
 
@@ -46,7 +46,7 @@ def fake_reunion(w: World):
     return w.episode("偽りの再会",
             PoliceStation.interrogation(w),
             SherlockHouse.consideration_of_sherlock(w),
-            EmptyHouse.re_searching_house(w),
+            EmptyHouse.searching_house(w),
             AbandonedFactory.many_dead(w),
             AbandonedFactory.sherlocks_confession(w),
             )

@@ -82,6 +82,9 @@ ASSET = {
             ("Kensington", "ケーニトン", "London", (-300,100)),# ケンジントン
             ("OldCity", "シティ", "London", (200,200)),# シティ
             ("Westminster", "イーストミンストル", "London", (0,300)), # ウェストミンスター
+            ("PoliceStation", "派出所", "London"),
+            ("PoliceOffice", "中央警察署", "London"),
+            ("PoliceInterrogationRoom", "警察・取調室", "London"),
             # ソーホー。代表的な歓楽街
             # イーストエンド（シティの東側、テムズ川の北側）下町
             ("EastEnd", "エンドタウン", "London"),# イーストエンド。下町。スラム街

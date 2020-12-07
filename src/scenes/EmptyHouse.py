@@ -76,34 +76,79 @@ def resident_of_empty_house(w: World):
             )
 
 
-def searching_empty_house(w: World):
-    return w.scene("空き家の探索",
-            w.plot_note("一度空き家の中を探索するが、確かに人が暮らしている証拠が見つかる"),
-            w.plot_note("$maryたちは夜になるのを待った"),
-            )
-
-
 def night_and_light(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
+    man = w.get("man")
     return w.scene("夜の明かりと人影",
+            w.change_time("night"),
             w.plot_note("空き家に人影が入り、そこで明かりが灯る"),
             w.plot_note("明かりの人影は読書しているように見えた"),
             w.plot_note("もう一人の人間もいるようで、二人で会話をしている風でもある"),
             w.plot_note("しばらくするとその明かりは消えてしまう"),
             w.plot_note("誰も出てこないので、翌朝、$maryたちはその空き家に訪問してみる"),
+            mary.be(),
+            lime.be(),
+            mary.do("結局そのまま動きがなく夜になる"),
+            wil.come("外から戻ってくる$S"),
+            wil.talk("何か進展は？"),
+            lime.do("首を振る$S"),
+            wil.talk("見回ってきたが特に怪しげな人物はいなかったよ", "たぶんまだ$sherlockの存在に気づいているのは$meたちだけなんだろう"),
+            mary.do("見ているとうっすらと明かりが灯る部屋がある"),
+            mary.do("シルエット越しに、いつも$sherlockが椅子に座って本を読んでいる姿が見える"),
+            mary.talk("何してるんやろ"),
+            wil.talk("さあね"),
+            wil.talk("しばらくこのまま見ておくから、君たちは少し眠るといい"),
+            mary.talk("ありがとう、$wilsonさん"),
             )
 
 
 def silent_house(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
+    man = w.get("man")
     return w.scene("静まる空き家",
+            w.change_time("midnight"),
             w.plot_note("呼びかけても応答はなく、奥に入っていく"),
             w.plot_note("空き家の中で殺された男性の死体を発見した"),
             w.plot_note("それは先月から行方不明の神官だった"),
             w.plot_note("現場からは$sherlockの愛用していた手袋が発見される"),
             w.plot_note("警察は$sherlockを重要参考人として指名手配する"),
+            wil.be(),
+            mary.be(),
+            lime.be(),
+            wil.talk("なんだ？"),
+            mary.do("$wilsonの声で目覚める"),
+            mary.do("$wilsonに言われて見てみると、明かりがついた部屋で二人の人影が争っている風"),
+            mary.talk("どうしたん？"),
+            wil.talk("わからない。少し目を離したすきにああなってて"),
+            mary.do("と、何かが割れる音がして、明かりが消えた"),
+            mary.do("しばらく待っていたが静かなままだった"),
+            mary.think("どうしようと考える"),
+            mary.think("もし$sherlockに危険が及んでいるなら助けに行かないといけないけれど、自分たちが出ていって本当の危険が及ぶのも恐い"),
+            wil.talk("様子を見てくる"),
+            wil.go("だが$Sが先に出ていってしまう"),
+            mary.talk("$meらも"),
+            mary.go("$Sと$limeも続いた"),
+            lime.go(),
             )
 
 
-def re_searching_house(w: World):
+def discover_dead(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
+    return w.scene("遺体の発見",
+            mary.come("$Sたちは空き家に侵入する"),
+            wil.come(),
+            lime.come(),
+            mary.do("先頭をいく$wilsonのオイルライターを光源にして、進む"),
+            mary.do("ドアは施錠されていなく、少し開けられていた"),
+            mary.do("中は一般的な一戸建てで、玄関に続いてリビングといくつか部屋がある構造らしい"),
+            mary.do("$Sたちが見ていたのはリビングの隣の書斎らしく、しかし、そこのドアが開け放たれている"),
+            wil.talk("いいか"),
+            wil.do("$Sが確認してから、中を照らす"),
+            mary.do("そこに黒い人形が倒れているのを見つけて、$Sは悲鳴を上げた"),
+            )
+
+
+def searching_house(w: World):
     return w.scene("空き家の再調査",
             w.plot_note("そこで$wilsonは抜け道を発見する"),
             )
