@@ -48,6 +48,7 @@ def fake_reunion(w: World):
             PoliceStation.shal_is_suspect(w),
             SherlockHouse.consideration_of_sherlock(w),
             EmptyHouse.searching_house(w),
+            EmptyHouse.mystery_subway(w),
             AbandonedFactory.many_dead(w),
             AbandonedFactory.sherlocks_confession(w),
             )

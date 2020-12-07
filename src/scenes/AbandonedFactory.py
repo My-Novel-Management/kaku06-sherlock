@@ -13,11 +13,26 @@ from storybuilder.builder.world import World
 #   廃工場。いろいろな死体が捨てられていた
 
 
-## scenes
+FACTORY = "AbandonedFactory"
+
+
+# Scenes
+## in Empty House
 def many_dead(w: World):
+    mary, lime = w.get("mary"), w.get("lime")
     return w.scene("多くの遺体",
+            w.change_camera("mary"),
+            w.change_stage(FACTORY),
             w.plot_note("その地下道を抜けた先に廃工場があり、その中に失踪した多くの人間の遺体が放置されていた"),
             w.plot_note("そこで$sherlockと再会する"),
+            mary.come(),
+            lime.come(),
+            mary.do("梯子を上がると、そこはどこかの廃工場の中だった"),
+            mary.do("むわっと何かが腐った臭いが充満している"),
+            mary.do("暗くてよく分からない"),
+            mary.do("足元はぬめぬめしていた"),
+            mary.do(""),
+            # TODO
             )
 
 

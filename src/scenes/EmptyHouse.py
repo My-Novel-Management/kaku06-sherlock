@@ -19,6 +19,7 @@ from storybuilder.builder.world import World
 
 # alias
 HOME = "EmptyHouse"
+SUBWAY = "EmptyHouseSubway"
 
 
 # Scenes
@@ -172,11 +173,34 @@ def searching_house(w: World):
             mary.do("けど違和感があった"),
             mary.do("リビングを見る"),
             mary.do("床に敷かれたカーペットは破れ、ソファも穴だらけ"),
-            mary.do(""),
+            mary.do("おまけにネズミまでいる"),
+            mary.do("奥はキッチンやバスがあったが、使われている形跡がない"),
+            mary.think("ここで暮らしていた訳じゃないんだと分かる"),
+            mary.think("そもそも$wilson含めた自分たちが見守っていたのにどこか逃げる場所があったのだろうか"),
+            mary.do("再度書斎を確認すると、窓は施錠されていて、更に入り口は一つしかない"),
+            mary.do("明かりを灯していたはずのランプがないことに気づく"),
+            lime.come("そこに$Sがやってくる"),
+            mary.do("もうすぐ警察が戻ってくると言われて、どうしようと"),
+            mary.do("その時、本棚が少し動かされていることに気づいた"),
+            mary.talk("ねえ$limeちゃん、手伝って"),
+            lime.do("うなずいて、本棚動かすのを手伝う"),
+            mary.do("本棚をずらすと、その裏側に入り口が現れた"),
+            mary.talk("ここから逃げたの？"),
+            mary.do("そのまま地下通路に向かう"),
             )
 
 
 def mystery_subway(w: World):
+    mary, lime = w.get("mary"), w.get("lime")
     return w.scene("謎多き地下道",
+            w.change_stage(SUBWAY),
             w.plot_note("地下道に繋がっていて、そこを進んでいく"),
+            mary.come("狭い地下道を進む$Sたち"),
+            lime.come(),
+            mary.do("薄暗い中、夜目がきく$Sは先頭を行く"),
+            lime.do("$Sはその後をなんとかついていく"),
+            mary.talk("大丈夫？"),
+            mary.do("確認しながら進む"),
+            mary.do("ところどころ上につながっているようで、うっすらと光が差し込む場所もあるが、はめ殺しで出られない"),
+            mary.do("一番突き当りまでいくと、そこに血がついた梯子が見つかった"),
             )
