@@ -45,6 +45,7 @@ def empty_house(w: World):
 def fake_reunion(w: World):
     return w.episode("偽りの再会",
             PoliceStation.interrogation(w),
+            PoliceStation.shal_is_suspect(w),
             SherlockHouse.consideration_of_sherlock(w),
             EmptyHouse.searching_house(w),
             AbandonedFactory.many_dead(w),

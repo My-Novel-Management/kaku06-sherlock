@@ -149,8 +149,17 @@ def discover_dead(w: World):
 
 
 def searching_house(w: World):
+    mary, wil, lime = w.get("mary"), w.get("wilson"), w.get("lime")
     return w.scene("空き家の再調査",
+            w.change_stage(HOME),
+            w.change_time("midmorning"),
             w.plot_note("そこで$wilsonは抜け道を発見する"),
+            mary.come("$Sは一人で空き家にやってくる"),
+            mary.do("入り口に警官が立っていて、中に入れないでいる"),
+            mary.do("しかし近所のホームレスが揉め事をはじめて、その間に持ち場を離れてしまう"),
+            mary.do("$Sはそのすきに家の中に入る"),
+            mary.do("中は既に警察が調べた後だった"),
+            mary.do("遺体はなくなっていて、そこに遺体の形にチョークでかかれている"),
             )
 
 
