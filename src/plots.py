@@ -15,7 +15,7 @@ def main_notes(w: World):
             chapter_plot(w),
             story_lines(w),
             plot_note(w),
-            mystery_note(w),
+            *mystery_note(w),
             fantasy_note(w),
             )
 
@@ -202,6 +202,12 @@ def plot_note(w: World):
 
 
 def mystery_note(w: World):
+    return (mystery_main(w),
+            mystery_of_empty_house(w),
+            )
+
+
+def mystery_main(w: World):
     return w.writer_note('トリック設定',
             "できれば不可能犯罪っぽさを全体通して使いたい",
             w.tag.title("全体を通じて"),
@@ -302,6 +308,31 @@ def mystery_note(w: World):
             "そこに最近街で見かけていた「鼻のひんまがった男」がちょうどやってきて彼女たちを助け出す",
             "自分のおんぼろホームに案内し、そこで正体を明かす",
             "この事件により彼は$cradesが殺人犯であることを確信するのだった",
+            )
+
+
+def mystery_of_empty_house(w: World):
+    return w.writer_note("空き家事件のミステリ構成",
+            w.title("空き家殺人事件"),
+            "空き家を監視していたら、夜に揉め事を目撃し、明けたら、人が死んでいた",
+            "一連の謎の密室殺人事件の続き",
+            "改造$gunによる殺人。センサーと監視カメラのように仕込みによって起動させる。あとで刑事の$patsonが回収する手はずになっている",
+            "争っているのを装っていたのは$sherlockに似た殺人鬼",
+            "実は$sherlockがおびき寄せるために使っていたが、それを$wilsonたちが利用した形",
+            "目的は$sherlockを殺人犯に仕立て上げて、弁解のために表に出てこさせようとする",
+            "しかし$sherlockはそれを理解していて、潜伏を続けていた",
+            "一方、$maryが一人で勝手に$sherlockの容疑を晴らそうと立ち回り、その空き家から繋がっていた廃工場に行ってしまう",
+            "その抜け穴は偽$sherlockが密室から消えた抜け道だった",
+            "廃工場を発見した$maryをとりあえず拉致し、別の廃工場に監禁した",
+            "$maryを囮にして$sherlockを誘い出そうとした",
+            "$limeは$sherlockの家に手紙が送られたのを見る",
+            "$maryを助けに向かう",
+            "助けにやってきた$limeと、脱出を試みる$mary",
+            "爆破準備されたところに救出に現れた$sherlock",
+            "その$sherlockを偽$sherlockが殺そうと襲いかかるが、彼の準備（防具？）でなんとか助かり、逮捕できた",
+            "空き家事件解決かに見えたが、$sherlockの家が燃やされる",
+            "仕方なく$wilsonの家に移動し、",
+            # TODO
             )
 
 
