@@ -25,19 +25,23 @@ def many_dead(w: World):
             w.change_stage(FACTORY),
             w.plot_note("その地下道を抜けた先に廃工場があり、その中に失踪した多くの人間の遺体が放置されていた"),
             w.plot_note("そこで$sherlockと再会する"),
+            "ここは$mary一人だけできたことにする",
             mary.come(),
-            lime.come(),
             mary.do("梯子を上がると、そこはどこかの廃工場の中だった"),
             mary.do("むわっと何かが腐った臭いが充満している"),
             mary.do("暗くてよく分からない"),
             mary.do("足元はぬめぬめしていた"),
-            mary.do(""),
-            # TODO
+            mary.do("何か濡れている"),
+            mary.do("そこに誰かが明かりを照らす"),
+            mary.do("見ると$sherlockによく似たシルエットだが逆光になって分からない"),
+            mary.do("$Sはその明かりで転がっているのが人の死体だと分かり、悲鳴を上げた"),
+            mary.do("その男に口を押さえられ、強引に何か薬品をかがされて意識が消えた"),
             )
 
 
 def sherlocks_confession(w: World):
     return w.scene("$sherlockの告白",
+            # NOTE: ここはomitする
             w.plot_note("$sherlockは自分の正体が「$moriano」だと告白する"),
             w.plot_note("実は二重人格で表は正義感を振りかざしながら裏では犯罪者として振る舞うことに快感を覚えるのだと"),
             w.plot_note("信じられない$maryは$sherlockが薬でおかしくなっているのだと考えた"),
@@ -48,12 +52,29 @@ def sherlocks_confession(w: World):
 
 
 def in_the_darkness(w: World):
+    mary = w.get("mary")
+    man = w.get("man")
     return w.scene("暗闇の中で",
+            w.change_stage(FACTORY),
             w.plot_note("目覚めると真っ暗な中、縛られた状態で背中合わせだった$maryと$lime"),
             w.plot_note("妙な音が聞こえる"),
             w.plot_note("ぱっと明るくなり、ここがどこかの廃工場の中だと分かる"),
             w.plot_note("明るくなったのは炎だった"),
             w.plot_note("火事で事故死に見せかけて殺すつもりだと分かる"),
+            mary.be("目覚めるとどこかの廃工場の中"),
+            mary.do("暗くてよく分からないが、自分の手が後ろで縛られていて動けない"),
+            mary.think("どうしよう、と焦るが、まずは$sherlockに教わったように情報を集めることだと、周囲を確認する"),
+            mary.do("周囲を確認する"),
+            mary.do("窓は閉ざされて薄暗く、それでも夜目の力を使わなくても見えるのは屋根の一部が崩壊しているから"),
+            mary.do("ただ高くてとてもそこからは出られない"),
+            mary.do("窓はトゲの針金で覆われ、出られなくされている"),
+            mary.do("妙な臭いがした"),
+            mary.do("可燃性の液体が広がっているのが分かる"),
+            mary.do("そこに誰かやってくる"),
+            man.come(),
+            man.do("$sherlockによく似た男が、$maryを一瞥してから、火種を窓越しに投げ込んで走り去っていく"),
+            mary.think("混乱する$mary"),
+            mary.do("燃え広がる炎を前になすすべがない"),
             )
 
 

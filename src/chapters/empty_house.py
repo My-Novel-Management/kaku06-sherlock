@@ -46,11 +46,11 @@ def fake_reunion(w: World):
     return w.episode("偽りの再会",
             PoliceStation.interrogation(w),
             PoliceStation.shal_is_suspect(w),
-            SherlockHouse.consideration_of_sherlock(w),
+            SherlockHouse.consideration_of_sherlock(w).omit(),
             EmptyHouse.searching_house(w),
             EmptyHouse.mystery_subway(w),
             AbandonedFactory.many_dead(w),
-            AbandonedFactory.sherlocks_confession(w),
+            AbandonedFactory.sherlocks_confession(w).omit(),
             )
 
 
@@ -103,6 +103,12 @@ def main(w: World):
             w.plot_develop("$sherlockと再会し、全ての事情を聞く"),
             w.plot_turnpoint("$wilsonが偽物だと$sherlockが教える"),
             w.plot_resolve("偽$wilsonが遺体となって発見された"),
+            #
+            "事件：空き家での密室殺人事件",
+            "設定：$sherlock失踪？中で捜索中",
+            "イベント：",
+            "裏イベント：$boss復活の儀式（そのために$sherlockの心臓が必要）",
+            "解決：$sherlockが$wilsonを偽物と見抜いた。ただ$wilsonは不思議な力で逃亡し、自殺した",
             #
             lookfor_sherlock(w),
             empty_house(w),

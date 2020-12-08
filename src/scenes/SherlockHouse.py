@@ -386,7 +386,7 @@ def sadness_report(w: World):
             )
 
 
-## in EmptyHouse
+## in Empty House
 def believed_his_alive(w: World):
     mary, lime, wil = w.get("mary"), w.get("lime"), w.get("wilson")
     return w.scene("$sherlockの生存を信じて",
@@ -441,9 +441,23 @@ def news_of_sherlock_alive(w: World):
 
 def consideration_of_sherlock(w: World):
     return w.scene("容疑者$sherlockについての考察",
+            # NOTE: omit?
             w.plot_note("一旦家に戻り、犯人にされてしまった$sherlockについて考える"),
             w.plot_note("$wilsonは$sherlockが$moriano一味に騙されたというのだが"),
             w.plot_note("もう一度あの空き家を訪れる"),
+            )
+
+
+def help_from_sherlock(w: World):
+    lime = w.get("lime")
+    wil = w.get("wilson")
+    return w.scene("$sherlockからの救援情報",
+            w.change_camera("lime"),
+            w.change_stage(LIVING),
+            lime.be("一人で$sherlockの家に戻っている$S"),
+            lime.do("消えた$maryを探してくるとでかけた$wilson"),
+            lime.do("$Sはポストに入っていた宛名のない封書を見つける"),
+            lime.do("そこには$maryが$morianoの手の者に捕まり、監禁されていると書かれていた"),
             )
 
 
