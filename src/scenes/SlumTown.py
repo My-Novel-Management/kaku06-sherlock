@@ -34,3 +34,22 @@ def goto_empty_house(w: World):
             wil.do("手帳を見ながら先に歩いていく$S"),
             )
 
+
+def rescue_mary(w: World):
+    lime = w.get("lime")
+    ignes = w.get("ignes")
+    pat = w.get("patson")
+    return w.scene("$maryを助けに",
+            w.change_camera("lime"),
+            w.change_stage(TOWN),
+            lime.come("$Sは$ignesとともに彼らが見つけた廃工場にやってくる"),
+            ignes.come(),
+            pat.come("$Sも駆けつけてくれた"),
+            pat.talk("本当にここに？"),
+            ignes.talk("$sherlockの指示通りだとちょうどこの辺りなんだ"),
+            lime.do("その時、大きな爆音がして吹き飛んだ"),
+            pat.talk("な、何だ！？"),
+            ignes.talk("あっちか"),
+            ignes.do("$Sが先に走り出す"),
+            lime.do("$Sもそのあとを追った"),
+            )

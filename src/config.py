@@ -47,9 +47,10 @@ ASSET = {
             ("moch", "モック", "ジリアン,モック", 35,(1,1), "male", "観光協会", "me:私"),
             ## 最後の事件
             ("stein", "シュタイン", "ワーラー,シュタイン", 40,(1,1), "male", "元大学教授", "me:僕"),
+            ## 空き家の事件
+            ("jake", "ジェイク", "", 40,(1,1), "male", "連続殺人犯", "me:オデ"),
             ## プロローグ
             ("stanry", "スタンリー", "", 35,(1,1), "male", "不動産屋", "me:俺"),
-            ## 最後の事件
             # モリアーノの後輩。殺される男
             ),
         "STAGES": (
@@ -92,6 +93,7 @@ ASSET = {
             ("EmptyHouse", "空き家", "London"),
             ("EmptyHouseSubway", "空き家の地下道", "London"),
             ("TowerLondon", "ロムダス塔", "London"),# ロンドン塔。昔占い師にいわれ大量のワタリガラスを飼っている
+            ("AbandonedFactory", "廃工場", "EastEnd"),
             # ウェストエンド（シティの西側）繁華街
             ("WestEnd", "ウェストタウン", "London"),
             # シティ（旧市内）
@@ -105,7 +107,7 @@ ASSET = {
             ("WilsonHouseBathroom", "ウィルソンの家・浴室", "WilsonHouse"),
             ("WilsonHouseDrawing", "ウィルソンの家・応接間", "WilsonHouse"),
             # ウェストミンスター。昔からの政治の中心部
-            ("CharingCross", "チェリーグロス", "London", ),# チャリングクロス
+            ("CharingCross", "チェリーグロス", "London"),# チャリングクロス
             ("Church", "教会", "London"),
             # 中心部
             ("WestminsterCastle", "イーストミンストル宮殿", "London"),# ウェストミンスター宮殿

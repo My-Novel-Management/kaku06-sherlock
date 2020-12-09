@@ -451,6 +451,7 @@ def consideration_of_sherlock(w: World):
 def help_from_sherlock(w: World):
     lime = w.get("lime")
     wil = w.get("wilson")
+    ignes = w.get("ignes")
     return w.scene("$sherlockからの救援情報",
             w.change_camera("lime"),
             w.change_stage(LIVING),
@@ -458,6 +459,10 @@ def help_from_sherlock(w: World):
             lime.do("消えた$maryを探してくるとでかけた$wilson"),
             lime.do("$Sはポストに入っていた宛名のない封書を見つける"),
             lime.do("そこには$maryが$morianoの手の者に捕まり、監禁されていると書かれていた"),
+            ignes.come("$Sがやってきて"),
+            ignes.talk("$mary嬢ちゃんは？"),
+            ignes.do("事情を聞く$S"),
+            ignes.talk("すぐ手配して、場所を突き止める", "$limeさんは警察に行って事情を説明してきて"),
             )
 
 

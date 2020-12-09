@@ -79,7 +79,10 @@ def in_the_darkness(w: World):
 
 
 def desparete_escape(w: World):
+    mary = w.get("mary")
     return w.scene("決死の脱出劇",
+            w.change_camera("mary"),
+            w.change_stage(FACTORY),
             w.plot_note("$maryは獣化して抜け出そうとするが、月の光が遮光されていて変身できない"),
             w.plot_note("$limeは仕込みナイフを使って縄を切ろうとするが、特殊な金属の縄で切れない"),
             w.plot_note("八方塞がりの中でも$sherlockの言葉を思い出して推理する"),
@@ -90,15 +93,56 @@ def desparete_escape(w: World):
             w.plot_note("そこで闇から現れる銃口が自分を狙っていることに気づく"),
             w.plot_note("これが空き家の殺人の正体だった"),
             w.plot_note("$maryは撃たれそうになる$limeを庇って撃たれる"),
+            mary.be("縛られたまま、炎に囲まれている"),
+            mary.think("一旦冷静に落ち着こうと自分に話し掛ける"),
+            mary.do("状況は最悪だった"),
+            mary.do("炎の周りは早く、しかし、液体がかけられているのは周辺ばかりで蒸し風呂状態。逃げ場はない"),
+            mary.do("獣化するにも月がなく、鉄格子の窓と有刺鉄線で囲まれているのを見て、脱出できないように細工されているのが分かった"),
+            mary.do("けれど状況は詰みではないと、$sherlockが教えてくれている"),
+            mary.do("わずかに空いた天井の隙間、そこに薄っすらと月が見える"),
+            mary.do("ひとまず獣化し、鎖をちぎる"),
+            mary.do("ただ炎の壁はどうしようもない"),
+            mary.do("消化方法は、油だから、空気をなくすことだ"),
+            mary.do("$Sは積み上げられていた鉄くずを炎の壁に投げ込んでいく"),
+            mary.do("空気をなくせば炎は消える"),
+            mary.do("加勢が弱まったのを見てハッチを開け、物置に潜り込む"),
+            mary.do("爆薬を見つけて、それで爆破することを思いつく"),
+            mary.do("置かれていた大型の金属製の箱に隠れることにして、火薬を導火線にしてその先に火薬詰めた樽を並べた"),
+            mary.do("$Sは導火線との間の衝立をはずし、一気に箱に逃げ込む"),
+            mary.do("大爆発した"),
             )
 
 
 def hero_appairs(w: World):
+    mary, lime = w.get("mary"), w.get("lime")
+    shal = w.get("sherlock")
+    ignes, pat = w.get("ignes"), w.get("patson")
+    jake = w.get("jake")
     return w.scene("遅れてきた英雄",
+            w.change_camera("lime"),
+            w.change_stage(FACTORY),
             w.plot_note("発射した弾が何かにはじかれる"),
             w.plot_note("突入してきたのは一度見たことのあるホームレスの一人だった"),
             w.plot_note("彼が$maryたちを助け出してくれる"),
             w.plot_note("しかし警戒する$maryと$lime"),
             w.plot_note("ただ$maryはそのホームレスにどこか懐かしい匂いを感じる"),
             w.plot_note("彼は「$sherlockは生きている」と言い残して去っていった"),
+            lime.come("燃え盛る瓦礫の山にかけつける$Sたち"),
+            ignes.come(),
+            pat.come(),
+            lime.do("その炎の中で剣を手に戦っている人影を見つける"),
+            shal.be(),
+            jake.be(),
+            lime.do("$sherlockと知らない男、だがよく彼に似ている男だった"),
+            ignes.talk("$sherlock！"),
+            shal.talk("$ignes！　そこの箱の中に$maryがいる！　すぐに助け出すんだ！"),
+            ignes.talk("わかった"),
+            ignes.do("箱に向かう$S"),
+            pat.talk("一体どうなってるんだ……"),
+            pat.do("状況が理解できずに呆然とする$S"),
+            lime.do("$Sは$sherlockの加勢に向かう"),
+            shal.talk("ありがとう。$meは肉体労働は苦手なんだ"),
+            lime.do("$Sにより組み伏せられる$jake"),
+            shal.talk("この男がね、連続誘拐犯だよ", "それも$ajinだ"),
+            # TODO
             )

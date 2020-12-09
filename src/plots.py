@@ -313,7 +313,7 @@ def mystery_main(w: World):
 
 def mystery_of_empty_house(w: World):
     return w.writer_note("空き家事件のミステリ構成",
-            w.title("空き家殺人事件"),
+            w.tag.title("空き家殺人事件"),
             "空き家を監視していたら、夜に揉め事を目撃し、明けたら、人が死んでいた",
             "一連の謎の密室殺人事件の続き",
             "改造$gunによる殺人。センサーと監視カメラのように仕込みによって起動させる。あとで刑事の$patsonが回収する手はずになっている",

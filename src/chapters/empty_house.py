@@ -57,7 +57,9 @@ def fake_reunion(w: World):
 def in_the_darkness(w: World):
     return w.episode("暗闇の中で",
             AbandonedFactory.in_the_darkness(w),
+            SherlockHouse.help_from_sherlock(w),
             AbandonedFactory.desparete_escape(w),
+            SlumTown.rescue_mary(w),
             )
 
 
