@@ -86,6 +86,8 @@ ASSET = {
             ("PoliceStation", "派出所", "London"),
             ("PoliceOffice", "中央警察署", "London"),
             ("PoliceInterrogationRoom", "警察・取調室", "London"),
+            ("Hospital", "病院", "London"),
+            ("SickRoom", "病院・病室", "London"),
             # ソーホー。代表的な歓楽街
             # イーストエンド（シティの東側、テムズ川の北側）下町
             ("EastEnd", "エンドタウン", "London"),# イーストエンド。下町。スラム街

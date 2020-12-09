@@ -14,7 +14,7 @@ from storybuilder.builder.world import World
 #   後部座席あわせて四人まではいける
 
 
-## scenes
+# Scenes
 def goto_aily_house(w: World):
     return w.scene("$ailyの家に向かう",
             w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
@@ -33,3 +33,7 @@ def goto_orphanage(w: World):
 def goto_incident_scene(w: World):
     return w.scene("事件現場に向かう",
             )
+
+
+## in Empty House
+

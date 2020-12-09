@@ -144,5 +144,6 @@ def hero_appairs(w: World):
             shal.talk("ありがとう。$meは肉体労働は苦手なんだ"),
             lime.do("$Sにより組み伏せられる$jake"),
             shal.talk("この男がね、連続誘拐犯だよ", "それも$ajinだ"),
-            # TODO
+            shal.do("$Sはそう言って、男の覆面を外す"),
+            shal.do("そこには獣の毛がびっしりと生えていて、ひと目で$animalだと分かった"),
             )

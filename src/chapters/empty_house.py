@@ -13,6 +13,7 @@ from scenes import AbandonedHouse
 from scenes import Church
 from scenes import EmptyHouse
 from scenes import Hideout
+from scenes import Hospital
 from scenes import Market
 from scenes import MountCottage
 from scenes import PoliceStation
@@ -60,13 +61,15 @@ def in_the_darkness(w: World):
             SherlockHouse.help_from_sherlock(w),
             AbandonedFactory.desparete_escape(w),
             SlumTown.rescue_mary(w),
+            AbandonedFactory.hero_appairs(w),
             )
 
 
 def his_alive(w: World):
-    return w.episode("$sherlockは生きている",
-            AbandonedFactory.hero_appairs(w),
-            SherlockHouse.injured_wilson(w),
+    return w.episode("$sherlockの帰還",
+            Hospital.shal_comes_back(w),
+            SherlockHouse.injured_wilson(w).omit(),
+            SherlockHouse.burned_shal_home(w),
             )
 
 

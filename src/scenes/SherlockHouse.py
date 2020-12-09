@@ -468,6 +468,7 @@ def help_from_sherlock(w: World):
 
 def injured_wilson(w: World):
     return w.scene("負傷した$wilson",
+            # NOTE: omit／方針変更
             w.plot_note("家に戻ると$wilsonがいて、ひどい怪我を負っていたが、無事に逃げ出したと言う"),
             w.plot_note("$maryは自分たちを助けた男が$sherlockの生存を言っていたと伝える"),
             w.plot_note("$wilsonはそのホームレスのことを教えてくれと頼む"),
@@ -476,4 +477,34 @@ def injured_wilson(w: World):
             )
 
 
+def burned_shal_home(w: World):
+    shal = w.get("sherlock")
+    wil, lime = w.get("wilson"), w.get("lime")
+    ignes, pat = w.get("ignes"), w.get("patson")
+    lisa = w.get("lisa")
+    return w.scene("家が燃えて",
+            w.change_camera("sherlock"),
+            w.change_stage(HOME),
+            shal.come("$Sたちは$wilsonの車で火事で全焼してしまった住居前にやってくる"),
+            wil.come(),
+            lime.come(),
+            shal.do("みんな呆然としてその光景を見ている"),
+            shal.do("消防士たちが$magicポンプで水をかけている。少しずつ火勢は衰え、もう消火が近い"),
+            shal.do("近所の人も出て、野次馬が集まっている"),
+            lisa.come("大家の$Sがやってきて、びっくりして呆然"),
+            lisa.talk("な、何なんですか、これは！"),
+            shal.talk("ああ、$ln_lisaさん、どうもご無沙汰しています"),
+            lisa.talk("ねえ$sherlockさん、これは一体どういうことなのかしら"),
+            shal.talk("火事みたいですね。おそらく放火でしょう。迷惑なことです"),
+            lisa.talk("燃えたのは誰の家なの？"),
+            shal.talk("$meが借りていたあなたの家です"),
+            lisa.talk("ええ、そうよね。そうだと思ったわ"),
+            lisa.do("見る間に表情が変わっていく夫人"),
+            lisa.talk("この弁償、誰が支払ってくれるのかしら"),
+            shal.talk("契約上は$meに過失があった場合は$meですが、放火の責任を取れと言われても困りますから、おそらくオーナー夫人の方になるかと"),
+            lisa.talk("何ですって！"),
+            shal.talk("用事があったのを思い出したので失礼"),
+            shal.do("$wilsonの車に乗り込む$S"),
+            wil.do("仕方ない、といった感じで車に乗り込む$S"),
+            )
 
