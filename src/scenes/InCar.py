@@ -36,4 +36,17 @@ def goto_incident_scene(w: World):
 
 
 ## in Empty House
-
+def goto_wilson_house(w: World):
+    wil = w.get("wilson")
+    shal, lime = w.get("sherlock"), w.get("lime")
+    return w.scene("$wilsonの家へ",
+            w.change_camera("sherlock"),
+            w.change_stage("InCar"),
+            wil.be("$carを運転している$S"),
+            shal.be(),
+            lime.be(),
+            shal.talk("すまないね"),
+            wil.talk("いや、ほとんど使ってないし、全然片付いてないから"),
+            shal.do("$Sは窓から外を見て、世間の空気が変わっているのを感じている"),
+            shal.do("フード姿の男が神の存在を訴えていた"),
+            )

@@ -14,6 +14,7 @@ from scenes import Church
 from scenes import EmptyHouse
 from scenes import Hideout
 from scenes import Hospital
+from scenes import InCar
 from scenes import Market
 from scenes import MountCottage
 from scenes import PoliceStation
@@ -70,13 +71,23 @@ def his_alive(w: World):
             Hospital.shal_comes_back(w),
             SherlockHouse.injured_wilson(w).omit(),
             SherlockHouse.burned_shal_home(w),
+            InCar.goto_wilson_house(w),
+            WilsonHouse.this_is_wilson_house(w),
+            )
+
+
+def purpose_of_cases(w: World):
+    return w.episode("事件の本当の目的",
+            WilsonHouse.search_wilson_house(w),
+            WilsonHouse.secret_of_sherlock(w),
+            WilsonHouse.sherlocks_request(w),
             )
 
 
 def truth(w: World):
     return w.episode("真実",
-            Hideout.visit_hideout(w),
-            Hideout.sherlocks_talk(w),
+            Hideout.visit_hideout(w).omit(),
+            Hideout.sherlocks_talk(w).omit(),
             Church.cult_facility(w),
             Church.lookfor_ritual_place(w),
             Church.goto_ritual_room(w),
@@ -119,6 +130,7 @@ def main(w: World):
             empty_house(w),
             fake_reunion(w),
             his_alive(w),
+            purpose_of_cases(w),
             truth(w),
             strange_end(w),
             )

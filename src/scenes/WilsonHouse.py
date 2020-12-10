@@ -27,7 +27,7 @@ BATHROOM = "WilsonHouseBathroom"
 DRAWING = "WilsonHouseDrawing"
 
 
-## scenes
+# Scenes
 def prepare_something(w: World):
     return w.scene("何かの準備",
             w.change_camera("wilson"),
@@ -54,6 +54,78 @@ def rumor_sherlock(w: World):
 
 
 ## in Empty House
+def this_is_wilson_house(w: World):
+    shal = w.get("sherlock")
+    wil, lime = w.get("wilson"), w.get("mary")
+    return w.scene("$wilsonの家にようこそ",
+            w.change_camera("lime"),
+            w.change_stage(HOME),
+            shal.come("$wilsonの家にやってくる"),
+            wil.come(),
+            lime.come(),
+            shal.do("$wilsonの家は高級住宅街にある一軒家だった"),
+            shal.do("$Sが暮らしていたところよりも豪華で、備品の質もいいものが揃っている"),
+            shal.do("$Sは本棚に並ぶ専門書や古文書が気になった"),
+            wil.talk("ほとんど使っていないけれど、適当に使ってもらっていいよ"),
+            shal.do("とりあえずここを拠点に使わせてもらい、今後どうするか考えることになった"),
+            )
+
+
+def search_wilson_house(w: World):
+    shal = w.get("sherlock")
+    wil, lime = w.get("wilson"), w.get("mary")
+    return w.scene("$wilsonの家を調べる",
+            w.change_camera("sherlock"),
+            w.change_stage(HOME),
+            w.change_time("night"),
+            shal.be(),
+            lime.be(),
+            shal.do("時間が経ち、$wilsonが買ってきたもので夕食を取る"),
+            shal.do("$wilsonは夕食後に用事があるとでかけていった"),
+            shal.do("$limeはキッチンまわりの片付けをしている"),
+            shal.do("$wilsonという男には謎が多い、と感じていた$S"),
+            shal.do("適当に本を開きながら、彼から頼まれた失踪事件とそれに関係する一連の事件について考える"),
+            shal.do("失踪事件については$jakeの誘拐と殺人によって全てが片付いたかに思えた"),
+            shal.do("だが$Sの推理した、裏側に四つの$stone集めとの関連性が見いだせないでいる"),
+            shal.do("古文書を見て、殺害された$morianoの知人のことを思い出す"),
+            shal.do("$Sは$limeに少し出てくると告げ、そこに向かった"),
+            )
+
+
+def secret_of_sherlock(w: World):
+    lime = w.get("lime")
+    wil = w.get("wilson")
+    pat = w.get("patson")
+    return w.scene("$sherlockの秘密",
+            w.change_camera("lime"),
+            w.change_stage(HOME),
+            lime.be("一人で片付けをしている$S"),
+            lime.think("自分が$maryと出会ってからここ数ヶ月の激変した生活を思い返していた"),
+            lime.think("王室にいた頃には、こんな風に色々なことをさせてもらえず、常に誰かの監視がつき、自由はなかった"),
+            lime.think("ただ政略の道具としてだけ自分に価値があり、すぐに出ていくものとされ、商品として磨くこと以外は何もなかった。愛されなかった"),
+            lime.think("だから家出した。誘拐犯の手に乗って"),
+            lime.think("$sherlockは失踪事件の全てが$jakeという男の仕業といっていたが、$Sの場合は完全に違っていた"),
+            lime.think("王室の人間はもともと価値が高く常に狙われている"),
+            lime.think("自分を誘拐した男たちがどうなったかは知らない"),
+            lime.think("呪いの鎧によってうまく脱出できたからだ"),
+            lime.think("呪いがとけた今、それでも自分が鎧を着る理由はない"),
+            lime.do("兜をはずして、息をつく"),
+            pat.come("そこに$Sが入ってきた"),
+            pat.talk("ああ、それって外れるんですね。いや失礼。ちょっと尋ねたいことがあって"),
+            lime.talk("なん、です？"),
+            pat.talk("端的に聞きます。$sherlockさんは$heroですか？"),
+            lime.think("$sherlockがそう話してくれたことを思い出す", "ただ答えていいものかどうか迷う"),
+            pat.talk("実はまだ警察は$sherlockさんを容疑者から外していなくて。それを否定するのにあなたの証言が必要なんですよ"),
+            lime.do("$Sは自分が$sherlockから聞いたことを話した"),
+            )
+
+
+def sherlocks_request(w: World):
+    return w.scene("$sherlockからの依頼",
+            # TODO
+            )
+
+
 def strange_end(w: World):
     wil = w.get("wilson")
     mary, shal, lime = w.get("mary"), w.get("sherlock"), w.get("lime")
