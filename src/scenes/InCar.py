@@ -68,5 +68,5 @@ def about_this_cases(w: World):
             shal.talk("向かう場所は現在修繕中の大聖堂だ"),
             wil.talk("なぜそんな場所に？　何かあるっていうのか"),
             shal.talk("そもそも今回の事件について、我々は情報がなさすぎた"),
-            shal.talk(""),
+            shal.talk(""),# TODO
             )
