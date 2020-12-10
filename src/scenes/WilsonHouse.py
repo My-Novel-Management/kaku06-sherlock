@@ -117,12 +117,26 @@ def secret_of_sherlock(w: World):
             lime.think("$sherlockがそう話してくれたことを思い出す", "ただ答えていいものかどうか迷う"),
             pat.talk("実はまだ警察は$sherlockさんを容疑者から外していなくて。それを否定するのにあなたの証言が必要なんですよ"),
             lime.do("$Sは自分が$sherlockから聞いたことを話した"),
+            "ここはもっと$heroの証を何かで計測する必要がある。あと$sherlockの母親の話が出てくること",
             )
 
 
 def sherlocks_request(w: World):
+    shal = w.get("sherlock")
+    wil = w.get("wilson")
+    lime = w.get("lime")
     return w.scene("$sherlockからの依頼",
-            # TODO
+            w.change_camera("sherlock"),
+            w.change_stage(HOME),
+            shal.be("翌朝、$Sは$limeが用意してくれた朝食の席で$wilsonに話しかけた"),
+            wil.be(),
+            lime.be(),
+            shal.talk("そういえば$wilsonから頼まれていた件なんだが"),
+            wil.talk("ああ", "けどそれについては$jakeの逮捕と自殺によって終了したんじゃないのか？"),
+            shal.talk("実はその件で今日連れていってもらいたところがあるんだ",
+                "食事を終えたら$carを準備して待っていてもらいたい"),
+            wil.talk("ああ、別に構わないが"),
+            shal.talk("最後に確認したいことがあってね。あとで全部話す"),
             )
 
 

@@ -81,6 +81,7 @@ def purpose_of_cases(w: World):
             WilsonHouse.search_wilson_house(w),
             WilsonHouse.secret_of_sherlock(w),
             WilsonHouse.sherlocks_request(w),
+            InCar.about_this_cases(w),
             )
 
 
