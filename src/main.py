@@ -63,9 +63,23 @@ RELEASED = (12, 1, 2020)
 # Chapters
 def ch_main(w: World):
     return w.chapter('main',
-            w.plot_setup("かつて世界は$bossの脅威にさらされた"),
-            w.plot_setup("しかし$heroと呼ばれる存在たちの手によりその脅威は拭い去られ、世界に平和がもたらされた"),
-            w.plot_setup("現在世界は$heroとその仲間の末裔たちによって統治、管理されている"),
+            # NOTE
+            #   - （勇者の）血にまつわる数々の事件
+            #   - 亜人が関係する悲しい事件
+            #   - 魔王復活のために四つの魔石と勇者の心臓が必要
+            #   - 魔導により、かつての魔法や魔術は古いものとされている変革の時代
+            w.plot_setup("$heroたちにより$bossが倒され、平和が取り戻された世界"),
+            w.plot_setup("かつて存在した$magicや$sorceryは廃れ、代わりに$scienceが世界技術の基盤になっていた"),
+            w.plot_setup("世間では謎の連続失踪事件が発生していた"),
+            "王国関連の重要人物が失踪する",
+            w.plot_turnpoint("$wilsonは"),
+            w.plot_turnpoint("$sherlockが$morianoとともに死ぬ"),
+            w.plot_develop(""),
+            w.plot_turnpoint("$wilsonは偽物だった"),
+            w.plot_resolve("$wilsonは偽物で$boss復活のために裏で色々と動いていた"),
+            w.plot_resolve("$magicを使い姿を消した偽$wilsonはその後、山中の小屋で自殺しているのが発見された"),
+            w.plot_resolve("本物の$wilsonが出現し、$sherlockたちの活躍を本にして金にすることになった"),
+            #
             w.plot_setup("ある目的で$wilsonは捜し物が得意という男の許を訪ねる"),
             w.plot_setup("依頼しようとした$wilsonの素性を言い当てたその男$sherlockは「勇者さん」と呼ばれていた"),
             w.plot_turnpoint("そんな二人の前に、ある事件が持ち込まれた"),
