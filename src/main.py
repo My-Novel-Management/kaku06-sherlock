@@ -61,8 +61,8 @@ RELEASED = (12, 1, 2020)
 
 
 # Chapters
-def ch_main(w: World):
-    return w.chapter('main',
+def chapters(w: World):
+    return (
             # NOTE
             #   - （勇者の）血にまつわる数々の事件
             #   - 亜人が関係する悲しい事件
@@ -71,33 +71,30 @@ def ch_main(w: World):
             w.plot_setup("$heroたちにより$bossが倒され、平和が取り戻された世界"),
             w.plot_setup("かつて存在した$magicや$sorceryは廃れ、代わりに$scienceが世界技術の基盤になっていた"),
             w.plot_setup("世間では謎の連続失踪事件が発生していた"),
-            "王国関連の重要人物が失踪する",
-            w.plot_turnpoint("$wilsonは"),
+            w.plot_setup("そんな中、王室の第二王女が失踪する"),
+            w.plot_setup("$wilsonは王室からの依頼でその第二王女を探すことになった"),
+            w.plot_setup("難解な謎を解決する便利屋の$sherlockという男がいた"),
+            w.plot_turnpoint("$wilsonは$sherlockに連続失踪事件についての依頼をする"),
+            w.plot_develop("$sherlockは持ち込まれた依頼を解決する"),
+            w.plot_develop("解決した事件で天涯孤独の身になった$maryが$sherlockの家に居候するようになる"),
+            w.plot_develop("$maryが謎の鎧騎士を連れてきて、奇妙な仕事について$sherlockに助言を求める"),
+            w.plot_turnpoint("謎の鎧騎士の正体は失踪中の第二王女$limeだった"),
+            w.plot_develop("ある事情から王室に戻りたくないという$limeが、$sherlockの家に居候する"),
+            w.plot_develop("$morianoが全ての事件の糸を引いていると知る"),
+            w.plot_develop("$morianoが$sherlockに手を引けと警告する"),
             w.plot_turnpoint("$sherlockが$morianoとともに死ぬ"),
-            w.plot_develop(""),
-            w.plot_turnpoint("$wilsonは偽物だった"),
+            w.plot_develop("$maryたちは$sherlockが残した手がかりを使い、$boss復活を阻止するために四つの$stoneを集める"),
+            w.plot_turnpoint("だが$patsonに裏切られ、集めた$stoneを盗まれる"),
+            w.plot_develop("$boss復活の儀式を行う$patson"),
+            w.plot_develop("しかし儀式は失敗し、$patsonは死んでしまう"),
+            w.plot_develop("$sherlockが生きていることが分かる"),
+            w.plot_turnpoint("$sherlockが$heroの血を引く人間だった"),
+            w.plot_develop("$sherlockが囚われ、儀式に利用されようとする"),
+            w.plot_develop("$maryたちは$sherlockを救出に向かう"),
+            w.plot_turnpoint("全ての黒幕は$wilsonだった"),
             w.plot_resolve("$wilsonは偽物で$boss復活のために裏で色々と動いていた"),
             w.plot_resolve("$magicを使い姿を消した偽$wilsonはその後、山中の小屋で自殺しているのが発見された"),
             w.plot_resolve("本物の$wilsonが出現し、$sherlockたちの活躍を本にして金にすることになった"),
-            #
-            w.plot_setup("ある目的で$wilsonは捜し物が得意という男の許を訪ねる"),
-            w.plot_setup("依頼しようとした$wilsonの素性を言い当てたその男$sherlockは「勇者さん」と呼ばれていた"),
-            w.plot_turnpoint("そんな二人の前に、ある事件が持ち込まれた"),
-            w.plot_develop("$heroはその知的好奇心と抜群の推理力をいかして持ち込まれた事件を解決する"),
-            w.plot_develop("その事件関係者だった、容疑者にされて家から排除されそうになった$maryや、呪いの鎧を着てしゃべれなくなった失踪中の第二王女を仲間にする"),
-            w.plot_develop("一方、世間では謎の怪死事件が続いていた"),
-            w.plot_develop("その事件に関わっているのが宗教団体という情報を手に入れ、その捜査を行う"),
-            w.plot_turnpoint("しかしそれは罠で、$heroがこの世ではないどこかに通じるという穴に落ちて姿を消してしまう"),
-            w.plot_resolve("残された$wilsonと$maryたちは彼の行方を探しつつ、持ち込まれた依頼の対応をしようとする"),
-            w.plot_resolve("実は$wilsonは偽物で、本物の勇者の末裔を探し出し、それの心臓を手に入れようとした闇のモノだった"),
-            w.plot_resolve("偽$wilsonの罠にはまりそうになった$maryたちを謎の男が救出したが、その男は変装していた$sherlockだった"),
-            w.plot_resolve("本物の$wilsonが現れ、王室から正式に「魔王探索」を依頼され、冒険の旅に出ることになった"),
-            "８章か７章でまとめる",
-            )
-
-def chapters(w: World):
-    return (
-            ch_main(w),
             prologue.main(w),
             prince_scandal.main(w),
             sadness_valley.main(w),
