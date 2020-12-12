@@ -107,6 +107,27 @@ def strange_end(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
+            w.plot_setup("$sherlockが死んだことを信じられず、$maryたちは彼の捜索を続けていた"),
+            w.plot_setup("$morianoがいなくなったが同時に$sherlockも消えたことで、世間では犯罪が激増していた"),
+            w.plot_setup("新興宗教団体$cultXが勢力を増して、街の至るところで信者を見かけるようになった"),
+            w.plot_setup("地震があり、大聖堂が修繕工事をしている"),
+            w.plot_turnpoint("$wilsonが$sherlockを目撃したという情報を持ってくる"),
+            w.plot_develop("$maryたちは$sherlockが入るのを見たという空き家を監視する"),
+            w.plot_develop("空き家で二人が争う影を見る"),
+            w.plot_develop("翌朝、失踪中だった大司祭の遺体が発見される"),
+            w.plot_turnpoint("$sherlockが殺人事件の容疑者として手配される"),
+            w.plot_develop("$maryは$sherlockの容疑を晴らすために空き家を調べる"),
+            w.plot_develop("空き家に抜け道を発見し、それが廃工場に繋がっていた"),
+            w.plot_develop("廃工場では失踪者の遺体が発見される"),
+            w.plot_turnpoint("$sherlockに似た男に$maryは拉致・監禁される"),
+            w.plot_develop(""),
+            # TODO
+            w.plot_turnpoint("$wilsonが偽物だった"),
+            w.plot_resolve("偽$wilson（$zeron）は$sherlockの血を使い、$boss復活を行う"),
+            w.plot_resolve("しかし$stoneの一つが偽物にすり替えられていて儀式は失敗し、$wilsonは大怪我を負う"),
+            w.plot_resolve("用意していた警察隊が突入するが、$zeronは$sorceryにより脱出し、逃亡した"),
+            w.plot_resolve("山中の小屋で偽物$wilsonが自殺しているのが発見された"),
+            #
             w.plot_setup("$maryたちは$sherlockが生きていると信じて捜索を続けていた"),
             w.plot_turnpoint("$sherlockに似た人を空き家で見かけたという情報が入る"),
             w.plot_develop("空き家の調査を行い、そこで身元不明の遺体を発見する"),
