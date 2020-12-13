@@ -94,6 +94,15 @@ def chapters(w: World):
             w.plot_resolve("$wilsonは偽物で$boss復活のために裏で色々と動いていた"),
             w.plot_resolve("$magicを使い姿を消した偽$wilsonはその後、山中の小屋で自殺しているのが発見された"),
             w.plot_resolve("本物の$wilsonが出現し、$sherlockたちの活躍を本にして金にすることになった"),
+            # NOTE
+            #   $boss復活／$scienceと$magic／血／$animal（闇の住人）／革命により変わりゆく世界
+            #   1. 世界観披露（$hero後の世界）／$sherlock紹介／$scienceと$magic
+            #   2. $animal登場
+            #   3. 王室（血脈）／
+            #   4. $jackと孤児院（$animalの）／黒幕／$stoneの意味
+            #   5. 古代$magic／
+            #   6. 黒幕$morianoと改造$gun
+            #   7. $boss復活の儀式と全ての伏線回収
             prologue.main(w),
             prince_scandal.main(w),
             sadness_valley.main(w),

@@ -77,6 +77,16 @@ def sad_news(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
+            w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
+            w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
+            w.plot_setup(""),
+            w.plot_turnpoint(""),# TODO
+            w.plot_turnpoint("$sherlockから手紙が届いた"),
+            w.plot_resolve("手紙には$sherlockが$morianoと会う直前にその後のことを推測して書いた結末が書かれていた"),
+            w.plot_resolve("手紙が届いたということは$morianoを道連れにして$sherlockも亡くなったということだと"),
+            w.plot_resolve("それでも信じられない$maryは$sherlockが向かったという$morianoの別荘に向かう"),
+            w.plot_resolve("しかしそこで警察の捜索隊により$sherlockの帽子が事故現場から発見された"),
+            #
             w.plot_setup("$sherlockは全ての黒幕として$morianoに辿り着く"),
             w.plot_turnpoint("$morianoのメッセージ（暗号）が新聞に掲載される"),
             w.plot_develop("$sherlockが$morianoについて説明する"),
