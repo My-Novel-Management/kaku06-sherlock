@@ -96,7 +96,7 @@ def chapters(w: World):
             w.plot_resolve("本物の$wilsonが出現し、$sherlockたちの活躍を本にして金にすることになった"),
             # NOTE
             #   $boss復活／$scienceと$magic／血／$animal（闇の住人）／革命により変わりゆく世界
-            #   1. 世界観披露（$hero後の世界）／$sherlock紹介／$scienceと$magic
+            #   1. 世界観披露（$hero後の世界）／$sherlock紹介／$scienceと$magic／$stone
             #   2. $animal登場
             #   3. 王室（血脈）／
             #   4. $jackと孤児院（$animalの）／黒幕／$stoneの意味

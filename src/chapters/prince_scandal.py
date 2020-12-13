@@ -87,6 +87,18 @@ def prince_wedding(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[1],
+            w.plot_setup(""),
+            w.plot_turnpoint("皇太子から依頼の書簡が届く"),
+            w.plot_develop("書簡にはある女性にプレゼントしてしまった宝剣を取り戻してほしいと書かれていた"),
+            w.plot_develop("王室からの依頼は受けないはずの$sherlockだが、恩があるので依頼を受けると言う"),
+            w.plot_develop("$sherlockは$wilsonとともに$ailyのことを調べる"),
+            w.plot_turnpoint("$ailyの自宅で謎の殺人死体を発見した"),
+            w.plot_develop("警察から$restradeと$patsonがやってきて、事件の担当であると告げる"),
+            w.plot_develop("見つかった死体は最近頻発している謎の失踪事件の失踪者の一人だった"),
+            w.plot_develop("密室殺人で、凶器も不明。$sherlockは"),# TODO
+            w.plot_resolve("しかし取り戻した宝剣には$stoneが付いていなかった"),
+            w.plot_resolve("皇太子は偽物の$stoneをつけた宝剣を使って婚姻の儀式を行った"),
+            #
             w.plot_setup("$wilsonはある依頼をするために$sherlockを訪れる"),
             w.plot_turnpoint("皇太子からの書簡により$sherlockはそちらの依頼を受けることになる"),
             w.plot_develop("$sherlockは皇太子が贈った宝剣を取り戻すために$ailyの家を訪れる"),
