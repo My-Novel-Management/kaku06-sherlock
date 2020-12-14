@@ -65,6 +65,9 @@ def new_living(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[3],
+            # NOTE
+            #   事件：赤鎧クラブという奇妙な仕事　→銀行強盗
+            #   容疑者：
             w.plot_setup("失踪者のリストの中に第二王女も含まれている"),
             w.plot_turnpoint("$maryは困っている赤鎧の騎士を連れてくる"),
             w.plot_develop("$limeは赤鎧の人間にだけできる不思議なアルバイトをしていると告白する"),
