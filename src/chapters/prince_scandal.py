@@ -95,7 +95,7 @@ def main(w: World):
             #   トリック：偽装（密室殺人に見せかけた自殺
             #   依頼人：皇太子
             #   結果：宝剣を取り戻したが肝心の$stoneは付いていなかった
-            #   ポイント：$science技術／毒薬／$jack／$stone／王室
+            #   ポイント：$science技術／毒薬／$jack／$stone赤／王室
             w.plot_setup("謎の失踪事件が頻発していた"),
             w.plot_setup("街は$scienceにより技術革命が起こり、近代化が進んでいた"),
             w.plot_setup("街では怪盗$jackが富豪や国の宝を奪い、恵まれない人たちに寄付して回っていた"),

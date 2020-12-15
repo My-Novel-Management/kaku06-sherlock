@@ -78,10 +78,14 @@ def sad_news(w: World):
 def main(w: World):
     return w.chapter(TITLES[6],
             # NOTE
-            #   事件：研究者殺害事件／$moriano殺人
+            #   事件：研究者密室殺害事件／$moriano殺人
             #   被害者：$stein元教授／$moriano
             #   容疑者：$moriano／$sherlock
             #   犯人：$jake／$jake
+            #   依頼者：$appolo（$sherlockの恩師）
+            #   トリック：改造$gunにより外から遠隔操作で毒薬を打ち込み、死亡
+            #   結果：$morianoが死に、姿を消した$sherlockがその重要参考人として手配された
+            #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
             w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
             w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
             w.plot_setup(""),

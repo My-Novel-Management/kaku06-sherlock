@@ -112,6 +112,11 @@ def main(w: World):
             #   被害者：$ronald卿
             #   容疑者：$sherlock
             #   犯人：$jake（$sherlockに似た$ajin）
+            #   依頼者：$wilson？
+            #   トリック：
+            #   結果：
+            #   ポイント：
+            # TODO
             w.plot_setup("$sherlockが死んだことを信じられず、$maryたちは彼の捜索を続けていた"),
             w.plot_setup("$morianoがいなくなったが同時に$sherlockも消えたことで、世間では犯罪が激増していた"),
             w.plot_setup("新興宗教団体$cultXが勢力を増して、街の至るところで信者を見かけるようになった"),
