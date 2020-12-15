@@ -77,6 +77,11 @@ def sad_news(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
+            # NOTE
+            #   事件：研究者殺害事件／$moriano殺人
+            #   被害者：$stein元教授／$moriano
+            #   容疑者：$moriano／$sherlock
+            #   犯人：$jake／$jake
             w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
             w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
             w.plot_setup(""),

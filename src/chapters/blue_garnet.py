@@ -66,6 +66,11 @@ def her_message(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[4],
+            # NOTE
+            #   事件：$hornet夫人殺害／ガチョウから凶器（ナイフ）と$stone青が出てくる
+            #   被害者：$hornet夫人
+            #   容疑者：$jack／配管工や卸問屋の男
+            #   犯人：$stoneは$jack／殺害は旦那
             w.plot_setup("$maryは市場の人間と仲良くなり、色々ともらってくるようになっていた"),
             w.plot_turnpoint("市場からもらったガチョウに$stoneと血の付着したナイフが入っているのを発見する"),
             w.plot_develop("殺人事件の凶器と分かり、$maryの友人（市場の男）に容疑がかかる"),

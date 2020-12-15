@@ -66,8 +66,10 @@ def new_living(w: World):
 def main(w: World):
     return w.chapter(TITLES[3],
             # NOTE
-            #   事件：赤鎧クラブという奇妙な仕事　→銀行強盗
-            #   容疑者：
+            #   事件：赤鎧クラブという奇妙な仕事　→銀行強盗／バイトの$bins殺害
+            #   被害者：銀行の大金庫の宝石群／$bins
+            #   容疑者：オーナー夫婦／$lime
+            #   犯人：$binsたち強盗団／強盗団（$bins殺害）
             w.plot_setup("失踪者のリストの中に第二王女も含まれている"),
             w.plot_turnpoint("$maryは困っている赤鎧の騎士を連れてくる"),
             w.plot_develop("$limeは赤鎧の人間にだけできる不思議なアルバイトをしていると告白する"),

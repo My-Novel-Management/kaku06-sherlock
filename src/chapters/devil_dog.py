@@ -106,6 +106,11 @@ def rebirth_ritual(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[5],
+            # NOTE
+            #   事件：犬による猟奇殺人／孤島の招待客連続殺人
+            #   被害者：数名の地域の人／
+            #   容疑者：伝説の魔犬
+            #   犯人：$cherry（犬の餌として必要だった）
             w.plot_setup("魔獣伝説のある場所で猟奇殺人事件が起こる"),
             w.plot_turnpoint("$sherlockの許にその孤島のパーティの招待状が届く"),
             w.plot_develop("$restradeの弟から事件解明を頼まれる"),
