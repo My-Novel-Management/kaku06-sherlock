@@ -75,14 +75,22 @@ def main(w: World):
             #   トリック：消失する凶器（ガチョウの中に隠す）→実は偽装で、容疑を$jackにかけるため
             #   結果：痴情のもつれから夫人の間男（ガチョウクラブ主催）が行ったもので、$jackの偽装は闇オークションに出回っていたものを利用
             #   ポイント：$stone青／$jackへの恩（最後の事件後匿ってもらう）
-            w.plot_setup(""),
+            w.plot_setup("$limeが新しい同居人になり、料理は彼女の担当となっていた"),
+            w.plot_setup("自分の居場所が危うくなったと感じた$maryは空回りしては失敗してしまう"),
+            w.plot_setup("落ち込んで買い物にでかけた$maryを見て、肉屋の$nowlisがもらったガチョウを安く売ってくれる"),
+            w.plot_setup("$sherlockは第二王女を発見し$wilsonからの依頼を達成したものの、まだ失踪事件について調べていた"),
+            w.plot_setup("また消えた$stoneについても調べていて、あれはかつて$heroたちがそれぞれ所有した四つの武器についていたものだと分かる"),
+            w.plot_setup("$hornet夫人殺害事件が発生していたが、その凶器が発見されていないと謎になっていた"),
             w.plot_turnpoint("ガチョウの中から袋に入った血付き小型のナイフと青い宝石が出てくる"),
-            w.plot_develop("$sherlockは"),# TODO
-            w.plot_resolve(""),
+            w.plot_develop("$sherlockはナイフを世話になっている鑑識官$edoに見せて調べてもらう"),
+            w.plot_develop("そのナイフが$hornet夫人殺害の凶器と判明"),
+            w.plot_develop("また同時に付いていた血が$jackと同一だと分かる"),
+            w.plot_develop("$jackが容疑者として指名手配される"),
+            w.plot_turnpoint("$sherlockの前に$jackが現れる"),
+            w.plot_develop(""),# TODO
+            w.plot_turnpoint(""),
+            w.plot_resolve("助けてもらった$jackは$sherlockに必ず恩は返すといって姿を消した"),
             #
-            w.plot_setup("$maryは市場の人間と仲良くなり、色々ともらってくるようになっていた"),
-            w.plot_turnpoint("市場からもらったガチョウに$stoneと血の付着したナイフが入っているのを発見する"),
-            w.plot_develop("殺人事件の凶器と分かり、$maryの友人（市場の男）に容疑がかかる"),
             w.plot_turnpoint("遺体が$jackの仲間と判明する"),
             w.plot_develop("ガチョウの仕入れ先を調べて$jackの関連が浮かび上がる"),
             w.plot_turnpoint("$jackが容疑者として浮上する"),
