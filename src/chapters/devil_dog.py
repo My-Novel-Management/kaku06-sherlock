@@ -115,6 +115,17 @@ def main(w: World):
             #   トリック：偽装（歯型の凶器を使い、犬がやったように見せかけた
             #   結果：二人が死亡（うち一人は共犯）、城主の$cherryは飼い犬に食い殺され、魔犬は射殺
             #   ポイント：蘇りの$sorcery／$stone黒の行方情報（闇オークションに出回った）
+            w.plot_setup("その島では魔獣伝説が残っていた"),
+            w.plot_setup("実際に近年も犬に食い殺されたような猟奇殺人が発生している"),
+            w.plot_setup("$sherlockは特集記事を読みながらも怪奇伝説や幽霊は信じないと豪語する"),
+            w.plot_turnpoint("$sherlockのもとにその孤島からパーティの紹介状が届く"),
+            w.plot_develop("$sherlockたちは船で孤島に渡る"),
+            w.plot_develop("城の主である$cherryは島に人が戻ってくるようにと、探偵や心霊研究家などに声を掛けて集めた"),
+            w.plot_develop("それぞれ伝説について持論を展開する"),
+            w.plot_develop("$sherlockは観光課の職員$mochに最初の事件があった場所に案内してもらう"),
+            w.plot_develop("事件があった雑木林で$sherlockは"),# TODO
+            w.plot_resolve(""),
+            #
             w.plot_setup("魔獣伝説のある場所で猟奇殺人事件が起こる"),
             w.plot_turnpoint("$sherlockの許にその孤島のパーティの招待状が届く"),
             w.plot_develop("$restradeの弟から事件解明を頼まれる"),
