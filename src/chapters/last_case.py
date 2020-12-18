@@ -88,7 +88,12 @@ def main(w: World):
             #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
             w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
             w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
+            w.plot_setup("他にも"),
             w.plot_setup("元研究者の謎の密室殺人事件が発生する"),
+            w.plot_turnpoint("$restradeがやってきて、殺人事件の解決を依頼する"),
+            w.plot_develop("$restradeから事件の概要を詳しく聞く"),
+            w.plot_develop("$sherlockは研究者の家を訪れて調査する"),
+            w.plot_develop("一方"),# TODO
             w.plot_turnpoint("$morianoが家に上がっていた"),
             w.plot_develop("$morianoは"),
             w.plot_turnpoint(""),
