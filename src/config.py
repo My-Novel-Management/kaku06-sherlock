@@ -213,6 +213,7 @@ ASSET = {
             ("missing", "喪失知識"),
             ("cultX", "教団Ｘ"),
             ("Xeno", "聖ゼノ教"),# Xenoは異物の意味。正式には「ゼノ・カトル教」。カトルは普遍的。カトリックとも
+            ("festival", "勇者生誕祭"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
