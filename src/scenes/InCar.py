@@ -14,7 +14,10 @@ from storybuilder.builder.world import World
 #   後部座席あわせて四人まではいける
 
 
-## scenes
+# alias
+INCAR = "InCar"
+
+# Scenes
 def goto_aily_house(w: World):
     return w.scene("$ailyの家に向かう",
             w.plot_note("$carに乗せてもらい$wilsonの運転でその女の家に向かう"),
@@ -32,4 +35,38 @@ def goto_orphanage(w: World):
 
 def goto_incident_scene(w: World):
     return w.scene("事件現場に向かう",
+            )
+
+
+## in Empty House
+def goto_wilson_house(w: World):
+    wil = w.get("wilson")
+    shal, lime = w.get("sherlock"), w.get("lime")
+    return w.scene("$wilsonの家へ",
+            w.change_camera("sherlock"),
+            w.change_stage(INCAR),
+            wil.be("$carを運転している$S"),
+            shal.be(),
+            lime.be(),
+            shal.talk("すまないね"),
+            wil.talk("いや、ほとんど使ってないし、全然片付いてないから"),
+            shal.do("$Sは窓から外を見て、世間の空気が変わっているのを感じている"),
+            shal.do("フード姿の男が神の存在を訴えていた"),
+            )
+
+
+def about_this_cases(w: World):
+    shal = w.get("sherlock")
+    wil = w.get("wilson")
+    return w.scene("事件についての話",
+            w.change_camera("sherlock"),
+            w.change_stage(INCAR),
+            shal.be("$wilsonの運転である場所に向かっていた。$Sは助手席に座っている"),
+            wil.be("運転している$S"),
+            wil.talk("それで話というのは？　わざわざ二人きりになったのは彼女に聞かせたくないからなんだろう？"),
+            shal.talk("察しがいいね", "まあ端的にはそのとおりなんだが、これから向かう場所が危険ということもある"),
+            shal.talk("向かう場所は現在修繕中の大聖堂だ"),
+            wil.talk("なぜそんな場所に？　何かあるっていうのか"),
+            shal.talk("そもそも今回の事件について、我々は情報がなさすぎた"),
+            shal.talk(""),# TODO
             )

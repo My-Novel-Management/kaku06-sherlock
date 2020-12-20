@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
@@ -36,7 +35,7 @@ from chapters import sadness_valley
 #   4. Spec
 #   5. Plot         - 1/4: 25K
 #   6. Scenes
-#   7. Conte        - 1/2: 50K
+# > 7. Conte        - 1/2: 50K
 #   8. Layout
 #   9. Draft        - 1/1: 100K
 #
@@ -44,7 +43,7 @@ from chapters import sadness_valley
 
 # Constant
 TITLE = "勇者シャーロックは冒険しない"
-MAJOR, MINOR, MICRO = 1, 6, 0
+MAJOR, MINOR, MICRO = 1, 7, 1
 COPY = "勇者は冒険よりも事件解決を選んだ"
 ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
 OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
@@ -61,29 +60,49 @@ RELEASED = (12, 1, 2020)
 
 
 # Chapters
-def ch_main(w: World):
-    return w.chapter('main',
-            w.plot_setup("かつて世界は$bossの脅威にさらされた"),
-            w.plot_setup("しかし$heroと呼ばれる存在たちの手によりその脅威は拭い去られ、世界に平和がもたらされた"),
-            w.plot_setup("現在世界は$heroとその仲間の末裔たちによって統治、管理されている"),
-            w.plot_setup("ある目的で$wilsonは捜し物が得意という男の許を訪ねる"),
-            w.plot_setup("依頼しようとした$wilsonの素性を言い当てたその男$sherlockは「勇者さん」と呼ばれていた"),
-            w.plot_turnpoint("そんな二人の前に、ある事件が持ち込まれた"),
-            w.plot_develop("$heroはその知的好奇心と抜群の推理力をいかして持ち込まれた事件を解決する"),
-            w.plot_develop("その事件関係者だった、容疑者にされて家から排除されそうになった$maryや、呪いの鎧を着てしゃべれなくなった失踪中の第二王女を仲間にする"),
-            w.plot_develop("一方、世間では謎の怪死事件が続いていた"),
-            w.plot_develop("その事件に関わっているのが宗教団体という情報を手に入れ、その捜査を行う"),
-            w.plot_turnpoint("しかしそれは罠で、$heroがこの世ではないどこかに通じるという穴に落ちて姿を消してしまう"),
-            w.plot_resolve("残された$wilsonと$maryたちは彼の行方を探しつつ、持ち込まれた依頼の対応をしようとする"),
-            w.plot_resolve("実は$wilsonは偽物で、本物の勇者の末裔を探し出し、それの心臓を手に入れようとした闇のモノだった"),
-            w.plot_resolve("偽$wilsonの罠にはまりそうになった$maryたちを謎の男が救出したが、その男は変装していた$sherlockだった"),
-            w.plot_resolve("本物の$wilsonが現れ、王室から正式に「魔王探索」を依頼され、冒険の旅に出ることになった"),
-            "８章か７章でまとめる",
-            )
-
 def chapters(w: World):
     return (
-            ch_main(w),
+            # NOTE
+            #   - （勇者の）血にまつわる数々の事件
+            #   - 亜人が関係する悲しい事件
+            #   - 魔王復活のために四つの魔石と勇者の心臓が必要
+            #   - 魔導により、かつての魔法や魔術は古いものとされている変革の時代
+            w.plot_setup("$heroたちにより$bossが倒され、平和が取り戻された世界"),
+            w.plot_setup("かつて存在した$magicや$sorceryは廃れ、代わりに$scienceが世界技術の基盤になっていた"),
+            w.plot_setup("世間では謎の連続失踪事件が発生していた"),
+            w.plot_setup("そんな中、王室の第二王女が失踪する"),
+            w.plot_setup("$wilsonは王室からの依頼でその第二王女を探すことになった"),
+            w.plot_setup("難解な謎を解決する便利屋の$sherlockという男がいた"),
+            w.plot_turnpoint("$wilsonは$sherlockに連続失踪事件についての依頼をする"),
+            w.plot_develop("$sherlockは持ち込まれた依頼を解決する"),
+            w.plot_develop("解決した事件で天涯孤独の身になった$maryが$sherlockの家に居候するようになる"),
+            w.plot_develop("$maryが謎の鎧騎士を連れてきて、奇妙な仕事について$sherlockに助言を求める"),
+            w.plot_turnpoint("謎の鎧騎士の正体は失踪中の第二王女$limeだった"),
+            w.plot_develop("ある事情から王室に戻りたくないという$limeが、$sherlockの家に居候する"),
+            w.plot_develop("$morianoが全ての事件の糸を引いていると知る"),
+            w.plot_develop("$morianoが$sherlockに手を引けと警告する"),
+            w.plot_turnpoint("$sherlockが$morianoとともに死ぬ"),
+            w.plot_develop("$maryたちは$sherlockが残した手がかりを使い、$boss復活を阻止するために四つの$stoneを集める"),
+            w.plot_turnpoint("だが$patsonに裏切られ、集めた$stoneを盗まれる"),
+            w.plot_develop("$boss復活の儀式を行う$patson"),
+            w.plot_develop("しかし儀式は失敗し、$patsonは死んでしまう"),
+            w.plot_develop("$sherlockが生きていることが分かる"),
+            w.plot_turnpoint("$sherlockが$heroの血を引く人間だった"),
+            w.plot_develop("$sherlockが囚われ、儀式に利用されようとする"),
+            w.plot_develop("$maryたちは$sherlockを救出に向かう"),
+            w.plot_turnpoint("全ての黒幕は$wilsonだった"),
+            w.plot_resolve("$wilsonは偽物で$boss復活のために裏で色々と動いていた"),
+            w.plot_resolve("$magicを使い姿を消した偽$wilsonはその後、山中の小屋で自殺しているのが発見された"),
+            w.plot_resolve("本物の$wilsonが出現し、$sherlockたちの活躍を本にして金にすることになった"),
+            # NOTE
+            #   $boss復活／$scienceと$magic／血／$animal（闇の住人）／革命により変わりゆく世界
+            #   1. 世界観披露（$hero後の世界）／$sherlock紹介／$scienceと$magic／$stone
+            #   2. $animal登場
+            #   3. 王室（血脈）／
+            #   4. $jackと孤児院（$animalの）／黒幕／$stoneの意味
+            #   5. 古代$magic／
+            #   6. 黒幕$morianoと改造$gun
+            #   7. $boss復活の儀式と全ての伏線回収
             prologue.main(w),
             prince_scandal.main(w),
             sadness_valley.main(w),

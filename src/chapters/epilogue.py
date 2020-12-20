@@ -8,17 +8,18 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from scenes import Market
 from scenes import ReadingRoom
+from scenes import SherlockHouse
 from scenes import WilsonHouse
 
 
 # Episode
 def true_wilson(w: World):
     return w.episode("本物の$wilson",
-            "ここで「展開」までやる",
             "ここはまだ三人称のまま",
-            "すべてが終わった",
             WilsonHouse.after_case(w),
+            Market.social_condition(w),
             WilsonHouse.lost_home(w),
             WilsonHouse.real_wilson(w),
             WilsonHouse.know_all_things(w),
@@ -31,6 +32,7 @@ def heros_office(w: World):
             "ここで$wilsonの一人称に変更",
             "これからの物語",
             ReadingRoom.allend_and_allstart(w),
+            WilsonHouse.last_scene(w),
             )
 
 
@@ -45,6 +47,7 @@ def main(w: World):
             #
             true_wilson(w),
             heros_office(w),
+            w.symbol("（了）"),
             )
 
 

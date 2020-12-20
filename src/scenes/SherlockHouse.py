@@ -23,6 +23,18 @@ from storybuilder.builder.world import World
 #   [リビング][書斎]
 
 
+# alias
+HOME = "SherlockHouse"
+LIVING = "SherlockHouseLiving"
+KITCHEN = "SherlockHouseKitchen"
+BATHROOM = "SherlockHouseBathroom"
+DINING = "SherlockHouseDining"
+LABO = "SherlockHouseLabo"
+READING = "SherlockHouseReadingRoom"
+BEDROOM = "SherlockHouseBedroom"
+STORAGE = "SherlockHouseStorage"
+
+
 ## scenes
 def about_sherlock(w: World):
     return w.scene("$sherlockという男について",
@@ -374,34 +386,89 @@ def sadness_report(w: World):
             )
 
 
+## in Empty House
 def believed_his_alive(w: World):
+    mary, lime, wil = w.get("mary"), w.get("lime"), w.get("wilson")
     return w.scene("$sherlockの生存を信じて",
+            w.change_camera("mary"),
+            w.change_stage(KITCHEN),
+            w.change_time("morning"),
             w.plot_note("$maryたちは$sherlockが生きていると思って捜索を続けていた"),
             w.plot_note("しかし何の情報もなく、ただ時間だけが過ぎていく"),
             w.plot_note("家を失い、$wilsonの住まいに居候していた$maryたち"),
             w.plot_note("$wilsonは忙しそうに外に出ていることが増えた"),
             w.plot_note("$maryは$sherlockの手紙にヒントはないかと考えるが、何も見つからない"),
+            mary.be("皿洗いをしている$S"),
+            mary.think("もう一月も$sherlockは失踪を続けている"),
+            mary.think("完全に死んだものと思われていたが、$Sたちは捜索を続けていた"),
+            mary.do("棚には$sherlockのコップが残っている"),
+            mary.think("それを目にして涙が滲む"),
+            mary.think("でも$sherlockが送ってきたメッセージにはわざわざ自分が死んだと思ってくれと書かれていた"),
+            mary.think("何故そんなことを書いたのか、$Sは気になっていた"),
+            mary.talk("あっ"),
+            mary.do("$wilsonの湯呑が割れてしまう"),
+            mary.talk("$wilsonのだし、いいか"),
             )
 
 
 def news_of_sherlock_alive(w: World):
+    mary, lime, wil = w.get("mary"), w.get("lime"), w.get("wilson")
     return w.scene("$sherlock生存情報",
+            w.change_camera("mary"),
+            w.change_stage(LIVING),
+            w.change_time("noon"),
             w.plot_note("だが$limeはそこに$sherlockが生きているという証拠を見つけた"),
             w.plot_note("そこに$wilsonが戻ってくる"),
             w.plot_note("$wilsonは「$sherlockに似た人間を見かけた」という情報を聞いたと話した"),
+            mary.come("買い物を終えて帰ってきた$S"),
+            lime.be("$Sは家の片付けをしていた"),
+            wil.come("そこに$Sが興奮した様子で戻ってくる"),
+            mary.talk("何かあったん？"),
+            wil.talk("聞いてくれ", "いた", "$sherlockが、いたんだ"),
+            mary.do("驚きで声が出ない$S"),
+            lime.do("掃除の手が止まる$S"),
+            wil.talk("$meもまだ聞いたばかりの話で、本当かどうかの確認すらできていないんだが、それでもこれまで何の情報もなかったところにこれは大きいよ"),
+            wil.talk("$EastEndの空き家に夜な夜な明かりが灯る家があるそうなんだ",
+                "どうやらそこに$sherlockによく似た人間が入っていくのを見たって、ホームレスの目撃情報があった"),
+            mary.talk("でもどうしてそれが$sherlockなん？　別人の可能性はないん？"),
+            wil.talk("それが以前$sherlockが世話をしたホームレスで、彼のことをよく覚えていたんだよ",
+                "遠目にもあの特徴的な寝癖頭とそこに被ったハンチング、チェック柄のコートは$sherlockに間違いないって"),
+            mary.think("その話に興奮する$S"),
+            mary.talk("場所は？"),
+            mary.do("荷物を置くと、$wilsonに詰め寄った"),
             )
 
 
 def consideration_of_sherlock(w: World):
     return w.scene("容疑者$sherlockについての考察",
+            # NOTE: omit?
             w.plot_note("一旦家に戻り、犯人にされてしまった$sherlockについて考える"),
             w.plot_note("$wilsonは$sherlockが$moriano一味に騙されたというのだが"),
             w.plot_note("もう一度あの空き家を訪れる"),
             )
 
 
+def help_from_sherlock(w: World):
+    lime = w.get("lime")
+    wil = w.get("wilson")
+    ignes = w.get("ignes")
+    return w.scene("$sherlockからの救援情報",
+            w.change_camera("lime"),
+            w.change_stage(LIVING),
+            lime.be("一人で$sherlockの家に戻っている$S"),
+            lime.do("消えた$maryを探してくるとでかけた$wilson"),
+            lime.do("$Sはポストに入っていた宛名のない封書を見つける"),
+            lime.do("そこには$maryが$morianoの手の者に捕まり、監禁されていると書かれていた"),
+            ignes.come("$Sがやってきて"),
+            ignes.talk("$mary嬢ちゃんは？"),
+            ignes.do("事情を聞く$S"),
+            ignes.talk("すぐ手配して、場所を突き止める", "$limeさんは警察に行って事情を説明してきて"),
+            )
+
+
 def injured_wilson(w: World):
     return w.scene("負傷した$wilson",
+            # NOTE: omit／方針変更
             w.plot_note("家に戻ると$wilsonがいて、ひどい怪我を負っていたが、無事に逃げ出したと言う"),
             w.plot_note("$maryは自分たちを助けた男が$sherlockの生存を言っていたと伝える"),
             w.plot_note("$wilsonはそのホームレスのことを教えてくれと頼む"),
@@ -409,4 +476,35 @@ def injured_wilson(w: World):
             w.plot_note("そこに$wilsonが指名手配されたと$restradeがやってくる"),
             )
 
+
+def burned_shal_home(w: World):
+    shal = w.get("sherlock")
+    wil, lime = w.get("wilson"), w.get("lime")
+    ignes, pat = w.get("ignes"), w.get("patson")
+    lisa = w.get("lisa")
+    return w.scene("家が燃えて",
+            w.change_camera("sherlock"),
+            w.change_stage(HOME),
+            shal.come("$Sたちは$wilsonの車で火事で全焼してしまった住居前にやってくる"),
+            wil.come(),
+            lime.come(),
+            shal.do("みんな呆然としてその光景を見ている"),
+            shal.do("消防士たちが$magicポンプで水をかけている。少しずつ火勢は衰え、もう消火が近い"),
+            shal.do("近所の人も出て、野次馬が集まっている"),
+            lisa.come("大家の$Sがやってきて、びっくりして呆然"),
+            lisa.talk("な、何なんですか、これは！"),
+            shal.talk("ああ、$ln_lisaさん、どうもご無沙汰しています"),
+            lisa.talk("ねえ$sherlockさん、これは一体どういうことなのかしら"),
+            shal.talk("火事みたいですね。おそらく放火でしょう。迷惑なことです"),
+            lisa.talk("燃えたのは誰の家なの？"),
+            shal.talk("$meが借りていたあなたの家です"),
+            lisa.talk("ええ、そうよね。そうだと思ったわ"),
+            lisa.do("見る間に表情が変わっていく夫人"),
+            lisa.talk("この弁償、誰が支払ってくれるのかしら"),
+            shal.talk("契約上は$meに過失があった場合は$meですが、放火の責任を取れと言われても困りますから、おそらくオーナー夫人の方になるかと"),
+            lisa.talk("何ですって！"),
+            shal.talk("用事があったのを思い出したので失礼"),
+            shal.do("$wilsonの車に乗り込む$S"),
+            wil.do("仕方ない、といった感じで車に乗り込む$S"),
+            )
 
