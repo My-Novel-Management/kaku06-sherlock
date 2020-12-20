@@ -11,6 +11,14 @@ from config import TITLES
 
 
 # Episodes
+# NOTE
+#   .依頼＞$trainで目的地に
+#   .事件について＞$maryと面会可能になる
+#   .$maryとの面会＞$maryは$animal
+#   .家族の話＞$maryが連れてこられる
+#   .母と娘＞使用人$kailが本性を現して人質を取る
+#   .事件の顛末＞$maryが同居人に
+
 def sadness_case(w: World):
     return w.episode("悲しい事件",
             "$sherlockの家・リビング",

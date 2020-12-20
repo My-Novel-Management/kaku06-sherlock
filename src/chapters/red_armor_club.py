@@ -16,6 +16,11 @@ from scenes import Street
 
 
 # Episodes
+# NOTE
+#   .＞謎の鎧騎士を連れてくる
+#   .TODO
+#   .＞$limeが同居人となる
+
 def missing_persons(w: World):
     return w.episode("失踪者たち",
             SherlockHouse.housemate_mary(w),

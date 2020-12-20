@@ -20,6 +20,14 @@ from scenes import StSarpentain
 
 
 # Episodes
+# NOTE
+#   .皇太子の依頼＞書簡到着
+#   .謎の女＞遺体発見
+#   .密室殺人＞容疑者$aily
+#   .女と孤児院＞$ailyは死んでいた
+#   .怪盗$jack＞宝剣を取り戻した
+#   .皇太子の結婚式
+
 def visit_sherlock(w: World):
     return w.episode("訪問者",
             InCity.magic_and_tech_city(w),
@@ -81,7 +89,6 @@ def prince_wedding(w: World):
             Street.later_talk_of_aily(w),
             Street.prince_wedding(w),
             )
-
 
 
 # Chapter
