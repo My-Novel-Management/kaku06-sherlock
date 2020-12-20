@@ -113,15 +113,20 @@ def main(w: World):
             #   容疑者：$sherlock
             #   犯人：$jake（$sherlockに似た$ajin）
             #   依頼者：$wilson？
-            #   トリック：
-            #   結果：
-            #   ポイント：
-            # TODO
-            w.plot_setup("$sherlockが死んだことを信じられず、$maryたちは彼の捜索を続けていた"),
-            w.plot_setup("$morianoがいなくなったが同時に$sherlockも消えたことで、世間では犯罪が激増していた"),
-            w.plot_setup("新興宗教団体$cultXが勢力を増して、街の至るところで信者を見かけるようになった"),
-            w.plot_setup("地震があり、大聖堂が修繕工事をしている"),
-            w.plot_turnpoint("$wilsonが$sherlockを目撃したという情報を持ってくる"),
+            #   トリック：偽装トリック（争ったように見せかけて遺体を部屋に置いた）＆抜け道を使った密室
+            #   結果：$jakeを殺して事件解決
+            #   ポイント：連続失踪事件の犯人／$boss復活の儀式とその失敗
+            w.plot_setup("$sherlockが見つからないまま三ヶ月が過ぎた"),
+            w.plot_setup("$morianoの影も消え、世間では犯罪が減っているはずだったが、逆に増加傾向だった"),
+            w.plot_setup("$sherlockが解決していた事件の多くが野放しになることで、犯罪が増えていた"),
+            w.plot_setup("街の治安も悪化、経済も悪くなり、王室批判やデモも起こっていた"),
+            w.plot_setup("市場にでかけた$maryは石を投げられる。$animalなどの$ajinが恐れの対象になりつつあった"),
+            w.plot_setup("街角では宗教団体$cultXが目立つようになる"),
+            w.plot_setup("ちょうど$sherlockが消えてから数日後にあった地震で崩れた大聖堂は改装中"),
+            w.plot_turnpoint("$wilsonが$sherlockを見かけたという情報を持ってくる"),
+            w.plot_develop(""),# TODO
+            w.plot_resolve(""),
+            #
             w.plot_develop("$maryたちは$sherlockが入るのを見たという空き家を監視する"),
             w.plot_develop("空き家で二人が争う影を見る"),
             w.plot_develop("翌朝、失踪中だった大司祭の遺体が発見される"),
