@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.7.1] - 2020-12-20
 ### Changed
 - all plots
+### Added
+- config
 
 ## [1.6.0] - 2020-12-01
 ### Added
