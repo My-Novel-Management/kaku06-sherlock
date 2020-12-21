@@ -15,6 +15,14 @@ from scenes import Street
 
 
 # Episodes
+# NOTE
+#   .市場のガチョウ＞ガチョウからナイフと宝石が出てくる
+#   .凶器のない殺人＞市場の$nowlisや$jackが容疑者となる
+#   .ガチョウクラブ＞$maryが捕まる
+#   .事件捜査＞$jackが$maryを助ける
+#   .事件解決＞$sherlockが$jackとの交換条件を飲む
+#   .四つの$stone＞$jackから青$stoneを預かる
+
 def mary_and_market(w: World):
     return w.episode("$maryと市場",
             Street.lime_and_marys_talk(w),

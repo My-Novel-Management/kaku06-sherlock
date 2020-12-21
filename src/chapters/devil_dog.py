@@ -25,6 +25,14 @@ from scenes import Street
 
 
 # Episodes
+# NOTE
+#   .魔獣伝説＞パーティの招待状が届く
+#   .第一の殺人＞事件解決専門家が死体で発見される
+#   .第二の殺人＞$mochが失踪した
+#   .地下室＞地下室を発見した
+#   .魔犬＞$cherryが魔犬に殺された
+#   .儀式＞復活の儀式があることを知る
+
 def legend_of_darkdog(w: World):
     return w.episode("魔獣伝説",
             SherlockHouse.mysterious_case(w),

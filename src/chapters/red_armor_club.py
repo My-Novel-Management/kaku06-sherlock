@@ -17,9 +17,12 @@ from scenes import Street
 
 # Episodes
 # NOTE
-#   .＞謎の鎧騎士を連れてくる
-#   .TODO
-#   .＞$limeが同居人となる
+#   .沈黙の鎧騎士＞謎の鎧騎士を連れてくる
+#   .奇妙なバイト＞$sherlockはバイトを辞めるよう忠告
+#   .銀行強盗＞$limeが容疑者となる
+#   .事件の結末＞強盗団の死
+#   .鎧騎士の正体＞$limeは第二王女
+#   .事情あり、にて＞$limeが同居人となる
 
 def missing_persons(w: World):
     return w.episode("失踪者たち",
