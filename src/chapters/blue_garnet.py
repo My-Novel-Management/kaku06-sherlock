@@ -23,51 +23,34 @@ from scenes import Street
 #   .事件解決＞$sherlockが$jackとの交換条件を飲む
 #   .四つの$stone＞$jackから青$stoneを預かる
 
-def mary_and_market(w: World):
-    return w.episode("$maryと市場",
-            Street.lime_and_marys_talk(w),
-            Market.shopping_enjoy(w),
-            SherlockHouse.cooker_lime(w),
-            SherlockHouse.marys_market_talk(w),
+
+def market_and_goose(w: World):
+    return w.episode("市場とガチョウ",
             )
 
 
-def strange_goose(w: World):
-    return w.episode("奇妙なガチョウ",
-            SherlockHouse.knife_in_the_goose(w),
-            SherlockHouse.restrade_talk_about_goose_knife(w),
+def missing_murder_weapon(w: World):
+    return w.episode("凶器のない殺人",
             )
 
 
-def suspect_jack(w: World):
-    return w.episode("$jackが容疑者",
-            Market.wanted_jack(w),
-            SherlockHouse.backhome_mary_with_jack_wanted(w),
-            SherlockHouse.talk_about_goose_case(w),
-            SherlockHouse.jacks_letter(w),
+def goose_club(w: World):
+    return w.episode("ガチョウクラブ",
             )
 
 
-def whereabouts(w: World):
-    return w.episode("彼女の行方",
-            Street.lookfor_jack(w),
-            Market.goose_jewely_mystery(w),
-            Market.meatshop_talk(w),
-            Market.wholesaler_talk(w),
-            SherlockHouse.sherlocks_message_for_jack(w),
+def investigate_case(w: World):
+    return w.episode("事件捜査",
             )
 
 
-def reunion_her(w: World):
-    return w.episode("彼女との再会",
-            School.sherlocks_school(w),
-            School.ailys_confession(w),
+def case_end(w: World):
+    return w.episode("事件解決",
             )
 
 
-def her_message(w: World):
-    return w.episode("彼女からのメッセージ",
-            School.terms_of_exchange(w),
+def four_stones(w: World):
+    return w.episode("四つの$stone",
             )
 
 
@@ -120,12 +103,12 @@ def main(w: World):
             w.plot_resolve("兄は$sherlockを説得していたが、話し合いは不調に終わった"),
             w.plot_resolve("$sherlockは青$stoneを兄に預けた"),
             #
-            mary_and_market(w),
-            strange_goose(w),
-            suspect_jack(w),
-            whereabouts(w),
-            reunion_her(w),
-            her_message(w),
+            market_and_goose(w),
+            missing_murder_weapon(w),
+            goose_club(w),
+            investigate_case(w),
+            case_end(w),
+            four_stones(w),
             )
 
 

@@ -33,81 +33,34 @@ from scenes import Street
 #   .魔犬＞$cherryが魔犬に殺された
 #   .儀式＞復活の儀式があることを知る
 
-def legend_of_darkdog(w: World):
-    return w.episode("魔獣伝説",
-            SherlockHouse.mysterious_case(w),
-            SherlockHouse.legend_of_dark_dog(w),
-            SherlockHouse.invitation_from_dark_island(w),
+
+def legend_of_dark_dog(w: World):
+    return w.episode("魔犬の伝説",
             )
 
 
 def first_murder(w: World):
-    return w.episode("最初の犠牲者",
-            Station.goto_dark_island(w),
-            InTrain.talk_about_dark_island(w),
-            Port.goto_dark_island(w),
-            InShip.goto_dark_island(w),
-            Island.legendary_island(w),
-            Island.copse_of_murder(w),
-            Island.walk_slope_for_castle(w),
-            OldCastle.sight_of_total(w),
-            OldCastle.greeting_from_castle_owner(w),
-            LoungeInCastle.invited_guests(w),
-            BedroomInCastle.marys_enjoy(w),
-            OldCastle.murder_case_1st(w),
+    return w.episode("第一の殺人",
             )
 
 
 def second_murder(w: World):
-    return w.episode("第二の犠牲者",
-            LoungeInCastle.isolation_us(w),
-            OldCastle.investigation_in_castle(w),
-            OldCastle.about_kitchen(w),
-            OldCastle.about_hall(w),
-            OldCastle.about_backyard(w),
-            Island.research_first_murder_case(w),
-            BedroomInCastle.vanishing_moch(w),
+    return w.episode("第二の殺人",
             )
 
 
-def exist_darkdog(w: World):
-    return w.episode("魔獣は存在する",
-            OldCastle.lookfor_moch(w),
-            Island.second_dead(w),
-            LoungeInCastle.island_history(w),
+def trapped_in_castle(w: World):
+    return w.episode("城壁の虜囚",
             )
 
 
-def basement_room(w: World):
-    return w.episode("地下室",
-            Island.call_rescue(w),
-            OldCastle.re_investigation_castle(w),
-            LoungeInCastle.find_basement_room(w),
-            BasementInCastle.goto_basement_stairs(w),
-            BasementInCastle.torture_room(w),
+def dark_dogs_fang(w: World):
+    return w.episode("魔犬の牙",
             )
 
 
-def real_murder(w: World):
-    return w.episode("犯人",
-            BasementInCastle.confession_criminal(w),
-            )
-
-
-def sad_end(w: World):
-    return w.episode("悲しい結末",
-            BasementInCastle.runaway_cherry(w),
-            LoungeInCastle.truth_of_the_case(w),
-            )
-
-
-def rebirth_ritual(w: World):
-    return w.episode("蘇りの技法",
-            BasementInCastle.ritual_room(w),
-            Library.ancient_method(w),
-            Church.mystery_cult(w),
-            Street.back_street(w),
-            Bar.underground_informater(w),
+def dark_ritual(w: World):
+    return w.episode("暗黒の儀式",
             )
 
 
@@ -175,14 +128,12 @@ def main(w: World):
             w.plot_resolve("事件後、$sherlockは城の地下に儀式を行った跡を見つけた"),
             w.plot_resolve("その儀式を教えたのが$cultXの関係者と分かる"),
             #
-            legend_of_darkdog(w),
+            legend_of_dark_dog(w),
             first_murder(w),
             second_murder(w),
-            exist_darkdog(w),
-            basement_room(w),
-            real_murder(w),
-            sad_end(w),
-            rebirth_ritual(w),
+            trapped_in_castle(w),
+            dark_dogs_fang(w),
+            dark_ritual(w),
             )
 
 
