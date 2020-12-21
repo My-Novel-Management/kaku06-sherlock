@@ -18,6 +18,14 @@ from scenes import SteinHouse
 
 
 # Episode
+# NOTE
+#   .ある殺人事件＞$sherlockが$morianoの名を口に出す
+#   .犯罪学者$moriano＞老人は$morianoだった
+#   .$maryの不安＞$maryが姿を消した
+#   .$maryと$moriano＞$sherlockが救出にやってきた
+#   .$maryの不審＞$sherlockは姿を消した
+#   .$sherlockの消息＞$sherlockの帽子が見つかった
+
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
             SherlockHouse.commision_of_murder_case(w),

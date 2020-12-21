@@ -24,6 +24,14 @@ from scenes import WilsonHouse
 
 
 # Episode
+# NOTE
+#   .$sherlockを探して＞$sherlockを空き家で見たという情報が入る
+#   .空き家の冒険＞空き家の殺人事件の容疑者に$sherlock
+#   .$maryの探検＞$maryが捕らえられた
+#   .彼が戻ってきた＞$sherlockが戻ってきた
+#   .$boss復活＞祭壇は大爆発した
+#   .偽$wilsonの思惑＞偽$wilsonは山小屋で自殺しているのが見つかった
+
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             SherlockHouse.believed_his_alive(w),
