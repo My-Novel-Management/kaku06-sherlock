@@ -24,49 +24,34 @@ from scenes import Street
 #   .鎧騎士の正体＞$limeは第二王女
 #   .事情あり、にて＞$limeが同居人となる
 
-def missing_persons(w: World):
-    return w.episode("失踪者たち",
-            SherlockHouse.housemate_mary(w),
-            SherlockHouse.mary_has_worry(w),
-            SherlockHouse.about_missings(w),
-            SherlockHouse.strange_armor_knight(w),
+
+def silent_knight(w: World):
+    return w.episode("沈黙の騎士",
             )
 
 
-def strange_work(w: World):
-    return w.episode("不思議な仕事",
-            SherlockHouse.strange_work(w),
+def strange_part_time_job(w: World):
+    return w.episode("奇妙なアルバイト",
             )
 
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
-            Street.mary_walked_lime(w),
-            PawnShop.limes_job_place(w),
-            JakinsHouse.orners_home(w),
-            SherlockHouse.reason_for_lime_work(w),
             )
 
 
-def truth_of_club(w: World):
-    return w.episode("クラブの真相",
-            SherlockHouse.help_lime_please(w),
-            Street.meaning_for_his_advice(w),
-            Museum.alibi_proof(w),
+def the_end_of_case(w: World):
+    return w.episode("事件の顛末",
             )
 
 
-def what_was_stolen(w: World):
-    return w.episode("盗まれたもの",
-            JakinsHouse.orners_talk(w),
-            SherlockHouse.limes_talk_of_strange_case(w),
+def her_identity(w: World):
+    return w.episode("鎧騎士の正体",
             )
 
 
-def new_living(w: World):
-    return w.episode("新しい居候",
-            SherlockHouse.lime_was_royal_family(w),
-            SherlockHouse.newcommer_lime(w),
+def limes_reason(w: World):
+    return w.episode("$limeの事情",
             )
 
 
@@ -125,12 +110,12 @@ def main(w: World):
             w.plot_resolve("$limeは彼らが誰かからお金をもらって誘拐や強盗などを行っていたと語る"),
             w.plot_resolve("$maryのお願いで、$limeを居候させることになった"),
             #
-            missing_persons(w),
-            strange_work(w),
+            silent_knight(w),
+            strange_part_time_job(w),
             bank_robbery(w),
-            truth_of_club(w),
-            what_was_stolen(w),
-            new_living(w),
+            the_end_of_case(w),
+            her_identity(w),
+            limes_reason(w),
             )
 
 

@@ -26,6 +26,7 @@ from scenes import SteinHouse
 #   .$maryの不審＞$sherlockは姿を消した
 #   .$sherlockの消息＞$sherlockの帽子が見つかった
 
+
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
             SherlockHouse.commision_of_murder_case(w),

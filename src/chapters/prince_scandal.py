@@ -28,66 +28,34 @@ from scenes import StSarpentain
 #   .怪盗$jack＞宝剣を取り戻した
 #   .皇太子の結婚式
 
-def visit_sherlock(w: World):
-    return w.episode("訪問者",
-            InCity.magic_and_tech_city(w),
-            Street.baker_street(w),
-            Street.he_is_sherlock(w),
-            "$sherlockの家の中",
-            SherlockHouse.about_sherlock(w),
+
+def prince_matter(w: World):
+    return w.episode("皇太子の問題",
             )
 
 
-def prince_letter(w: World):
-    return w.episode("皇太子からの密書",
-            SherlockHouse.read_prince_letter(w),
+def mysterious_lady(w: World):
+    return w.episode("謎めいた女",
             )
 
 
-def that_lady(w: World):
-    return w.episode("その女",
-            InCar.goto_aily_house(w),
-            StSarpentain.rumor_of_aily(w),
-            AilyHouse.her_absence(w),
-            AilyHouse.found_corpse(w),
+def locked_room_murder(w: World):
+    return w.episode("密室殺人",
             )
 
 
-def murder_case(w: World):
-    return w.episode("殺人事件",
-            AilyHouse.hello_restrade(w),
-            AilyHouse.investigation_aily_room(w),
+def lady_of_orphanage(w: World):
+    return w.episode("孤児院の女",
             )
 
 
-def orphanage(w: World):
-    return w.episode("孤児院",
-            InCar.goto_orphanage(w),
-            Orphanage.a_orphanage(w),
-            Orphanage.teachers_talk(w),
-            Orphanage.secret_treasure(w),
-            )
-
-
-def she_is_not_exist(w: World):
-    return w.episode("彼女は存在しない",
-            CurioDealer.rumor_treasure_sword(w),
-            Market.mystery_of_aily_corpse(w),
-            SherlockHouse.important_than_sword(w),
-            )
-
-
-def her_the_identity(w: World):
-    return w.episode("彼女の正体",
-            Orphanage.investigation_her(w),
-            Orphanage.aily_confession(w),
+def phantom_thief_jack(w: World):
+    return w.episode("怪盗$jack",
             )
 
 
 def prince_wedding(w: World):
-    return w.episode("皇太子の結婚式",
-            Street.later_talk_of_aily(w),
-            Street.prince_wedding(w),
+    return w.episode("皇太子の結婚",
             )
 
 
@@ -132,12 +100,11 @@ def main(w: World):
             w.plot_resolve("しかし取り戻した宝剣には$stoneが付いていなかった"),
             w.plot_resolve("皇太子は偽物の$stoneをつけた宝剣を使って婚姻の儀式を行った"),
             #
-            visit_sherlock(w),
-            prince_letter(w),
-            that_lady(w),
-            orphanage(w),
-            she_is_not_exist(w),
-            her_the_identity(w),
+            prince_matter(w),
+            mysterious_lady(w),
+            locked_room_murder(w),
+            lady_of_orphanage(w),
+            phantom_thief_jack(w),
             prince_wedding(w),
             )
 

@@ -32,83 +32,34 @@ from scenes import WilsonHouse
 #   .$boss復活＞祭壇は大爆発した
 #   .偽$wilsonの思惑＞偽$wilsonは山小屋で自殺しているのが見つかった
 
+
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
-            SherlockHouse.believed_his_alive(w),
-            Market.shal_disappearance_talk(w),
-            Market.new_religions(w),
-            SherlockHouse.news_of_sherlock_alive(w),
             )
 
 
-def empty_house(w: World):
+def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
-            SlumTown.goto_empty_house(w),
-            EmptyHouse.strange_empty_house(w),
-            EmptyHouse.resident_of_empty_house(w),
-            EmptyHouse.night_and_light(w),
-            EmptyHouse.silent_house(w),
-            EmptyHouse.discover_dead(w),
             )
 
 
-def fake_reunion(w: World):
-    return w.episode("偽りの再会",
-            PoliceStation.interrogation(w),
-            PoliceStation.shal_is_suspect(w),
-            SherlockHouse.consideration_of_sherlock(w).omit(),
-            EmptyHouse.searching_house(w),
-            EmptyHouse.mystery_subway(w),
-            AbandonedFactory.many_dead(w),
-            AbandonedFactory.sherlocks_confession(w).omit(),
+def marys_investigation(w: World):
+    return w.episode("$maryの捜査",
             )
 
 
-def in_the_darkness(w: World):
-    return w.episode("暗闇の中で",
-            AbandonedFactory.in_the_darkness(w),
-            SherlockHouse.help_from_sherlock(w),
-            AbandonedFactory.desparete_escape(w),
-            SlumTown.rescue_mary(w),
-            AbandonedFactory.hero_appairs(w),
+def he_is_back(w: World):
+    return w.episode("英雄の帰還",
             )
 
 
-def his_alive(w: World):
-    return w.episode("$sherlockの帰還",
-            Hospital.shal_comes_back(w),
-            SherlockHouse.injured_wilson(w).omit(),
-            SherlockHouse.burned_shal_home(w),
-            InCar.goto_wilson_house(w),
-            WilsonHouse.this_is_wilson_house(w),
+def revive_boss(w: World):
+    return w.episode("$bossの復活",
             )
 
 
-def purpose_of_cases(w: World):
-    return w.episode("事件の本当の目的",
-            WilsonHouse.search_wilson_house(w),
-            WilsonHouse.secret_of_sherlock(w),
-            WilsonHouse.sherlocks_request(w),
-            InCar.about_this_cases(w),
-            )
-
-
-def truth(w: World):
-    return w.episode("真実",
-            Hideout.visit_hideout(w).omit(),
-            Hideout.sherlocks_talk(w).omit(),
-            Church.cult_facility(w),
-            Church.lookfor_ritual_place(w),
-            Church.goto_ritual_room(w),
-            Church.basement_hall(w),
-            )
-
-
-def strange_end(w: World):
-    return w.episode("奇妙な結末",
-            Church.betray_man(w),
-            MountCottage.his_dead(w),
-            WilsonHouse.strange_end(w),
+def fake_wilsons_thought(w: World):
+    return w.episode("偽$wilsonの思惑",
             )
 
 
@@ -189,12 +140,11 @@ def main(w: World):
             w.plot_resolve("ただ持ち逃げされたと思われる$bossのドクロは見つからなかった"),
             #
             lookfor_sherlock(w),
-            empty_house(w),
-            fake_reunion(w),
-            his_alive(w),
-            purpose_of_cases(w),
-            truth(w),
-            strange_end(w),
+            adventure_of_empty_house(w),
+            marys_investigation(w),
+            he_is_back(w),
+            revive_boss(w),
+            fake_wilsons_thought(w),
             )
 
 

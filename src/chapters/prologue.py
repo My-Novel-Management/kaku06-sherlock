@@ -13,21 +13,24 @@ from scenes import WilsonHouse
 
 
 # Episodes
+# NOTE
+#   .問題はいつも山積み＞便利屋$sherlock
+#   .便利屋$sherlock＞$sherlockの家の前までやってきた
+#   .注意書き
+
+
 def troublesome(w: World):
     return w.episode("厄介事",
-            WilsonHouse.prepare_something(w),
             )
 
 
 def handyman_sherlock(w: World):
     return w.episode("便利屋$sherlock",
-            WilsonHouse.rumor_sherlock(w),
             )
 
 
 def note_for_novel(w: World):
     return w.episode("作品のための注意書き",
-            ReadingRoom.note_for_thisnovel(w),
             )
 
 

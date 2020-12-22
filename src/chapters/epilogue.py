@@ -15,24 +15,24 @@ from scenes import WilsonHouse
 
 
 # Episode
-def true_wilson(w: World):
-    return w.episode("本物の$wilson",
-            "ここはまだ三人称のまま",
-            WilsonHouse.after_case(w),
-            Market.social_condition(w),
-            WilsonHouse.lost_home(w),
-            WilsonHouse.real_wilson(w),
-            WilsonHouse.know_all_things(w),
-            WilsonHouse.wilsons_proposal(w),
+# NOTE
+#   .全ての顛末＞本物の$wilsonが帰ってくる
+#   .探偵の誕生＞探偵社を設立
+#   .$wilsonの手記＞新しい仕事が舞い込んでくる
+
+
+def total_the_end(w: World):
+    return w.episode("全ての顛末",
             )
 
 
-def heros_office(w: World):
-    return w.episode("$hero探偵社",
-            "ここで$wilsonの一人称に変更",
-            "これからの物語",
-            ReadingRoom.allend_and_allstart(w),
-            WilsonHouse.last_scene(w),
+def detective_office(w: World):
+    return w.episode("探偵の誕生",
+            )
+
+
+def wilsons_papers(w: World):
+    return w.episode("$wilsonの手記",
             )
 
 
@@ -45,8 +45,9 @@ def main(w: World):
             w.plot_turnpoint("$wilsonが$sherlockの活躍を小説にして出版することになる"),
             w.plot_resolve("正式に$officeを設立し、情報を集めながら$bossを復活させようという勢力と闘うことになった"),
             #
-            true_wilson(w),
-            heros_office(w),
+            total_the_end(w),
+            detective_office(w),
+            wilsons_papers(w),
             w.symbol("（了）"),
             )
 
