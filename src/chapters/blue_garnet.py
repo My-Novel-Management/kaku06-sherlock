@@ -26,31 +26,37 @@ from scenes import Street
 
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",
+            w.plot_turnpoint("ガチョウの中から青い宝石と血のついたナイフが一緒に出てきた"),
             )
 
 
 def missing_murder_weapon(w: World):
     return w.episode("凶器のない殺人",
+            w.plot_turnpoint("$jackが殺人事件の容疑者に浮上した"),
             )
 
 
 def goose_club(w: World):
     return w.episode("ガチョウクラブ",
+            w.plot_turnpoint("$maryが帰ってこなかった"),
             )
 
 
 def investigate_case(w: World):
     return w.episode("事件捜査",
+            w.plot_turnpoint(""),
             )
 
 
 def case_end(w: World):
     return w.episode("事件解決",
+            w.plot_turnpoint("女警官は$jackだった"),
             )
 
 
 def four_stones(w: World):
     return w.episode("四つの$stone",
+            w.plot_resolve("$jackから青$stoneを託された"),
             )
 
 

@@ -22,31 +22,38 @@ from config import TITLES
 
 def defence_request(w: World):
     return w.episode("弁護依頼",
+            w.plot_setup("地方の事件記事に自分の父親を殺した容疑で娘が捕まったと掲載"),
+            w.plot_turnpoint("$keanが依頼にやってくる"),
             )
 
 
 def about_this_case(w: World):
     return w.episode("事件について",
+            w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
             )
 
 
 def interview_of_mary(w: World):
     return w.episode("$maryの面会",
+            w.plot_turnpoint("$maryは$animalだと$wilsonに語った"),
             )
 
 
 def family_circumstances(w: World):
     return w.episode("家族の事情",
+            w.plot_turnpoint("$maryが$patsonによって連れてこられた"),
             )
 
 
 def mother_and_daughter(w: World):
     return w.episode("母と娘",
+            w.plot_turnpoint("$kailが$jeanを人質に取る"),
             )
 
 
 def new_resident(w: World):
     reutrn w.episode("新しい住人",
+            w.plot_resolve("$maryが$sherlockの家に住み込むことになった"),
             )
 
 

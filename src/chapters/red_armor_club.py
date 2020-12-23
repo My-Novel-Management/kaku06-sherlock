@@ -27,31 +27,38 @@ from scenes import Street
 
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",
+            w.plot_turnpoint("$maryが謎の鎧騎士を連れて戻ってくる"),
             )
 
 
 def strange_part_time_job(w: World):
     return w.episode("奇妙なアルバイト",
+            w.plot_turnpoint("$sherlockは彼女にそのバイトをすぐ辞めるように、とだけアドバイスをした"),
+            w.plot_turnpoint("$maryは$limeから、突然赤鎧クラブが閉鎖になったと報告があったと聞いた"),
             )
 
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
+            w.plot_turnpoint("$limeが容疑者になった"),
             )
 
 
 def the_end_of_case(w: World):
     return w.episode("事件の顛末",
+            w.plot_turnpoint(""),
             )
 
 
 def her_identity(w: World):
     return w.episode("鎧騎士の正体",
+            w.plot_turnpoint("$limeは失踪中の第二王女だった"),
             )
 
 
 def limes_reason(w: World):
     return w.episode("$limeの事情",
+            w.plot_resolve("$limeも$sherlockの家でしばらく一緒に暮らすことになった"),
             )
 
 
