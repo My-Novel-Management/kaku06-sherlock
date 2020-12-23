@@ -35,31 +35,53 @@ from scenes import WilsonHouse
 
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
+            w.plot_setup("$sherlockが失踪してから三ヶ月が経ち、誰もが彼の死を考えていた"),
+            w.plot_turnpoint("$sherlockの目撃情報が、$wilsonによってもたらされる"),
             )
 
 
 def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
+            w.plot_setup("$wilsonと一緒に$maryたちは$sherlockを目撃したというホームレスに会う"),
+            w.plot_resolve("部屋には$sherlockの着ていた帽子が残されていた"),
+            w.plot_turnpoint("空き家の中で、殺されている$ronald教授を発見した"),
             )
 
 
 def marys_investigation(w: World):
     return w.episode("$maryの捜査",
+            w.plot_setup("（密室）殺人を警察に連絡した"),
+            w.plot_resolve("抜け穴は廃工場に繋がっていた"),
+            w.plot_turnpoint("多数の失踪者の遺体を目撃した$maryは何者か（$jake）により失神させられる"),
             )
 
 
 def he_is_back(w: World):
     return w.episode("英雄の帰還",
+            w.plot_setup("目覚めると$maryは縛られた状態"),
+            w.plot_resolve("$sherlockにより救出された"),
+            w.plot_turnpoint(""),
             )
 
 
 def revive_boss(w: World):
     return w.episode("$bossの復活",
+            # TODO
+            w.plot_setup("$boss復活を阻止するために改装中の大聖堂にやってくる"),
+            w.plot_turnpoint("地下に祭壇があり、血みどろの凄惨な光景（一度失敗した）が広がっていた"),
+            w.plot_develop("$sherlockにより$boss復活が失敗したことが語られる"),
+            w.plot_turnpoint("$wilsonが偽物で、全ての黒幕だった"),
+            w.plot_resolve("必要だった$heroの血（$sherlockのもの）が盃に捧げられ、儀式に必要なものが全て揃う"),
+            w.plot_turnpoint("$boss復活の儀式が始まった"),
             )
 
 
 def fake_wilsons_thought(w: World):
     return w.episode("偽$wilsonの思惑",
+            w.plot_setup(""),
+            w.plot_turnpoint("偽$wilsonは姿を消した"),
+            w.plot_resolve("$boss復活は阻止できたが、大切な四つの$stoneは全て姿を消し、各地に$bossの残り香がばらまかれた"),
+            w.plot_resolve("偽$wilson（$zeron）が山中の山小屋で自殺しているのが発見された、と報告があった"),
             )
 
 
