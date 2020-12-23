@@ -31,31 +31,42 @@ from scenes import StSarpentain
 
 def prince_matter(w: World):
     return w.episode("皇太子の問題",
+            "ここで$sherlockは自分の血液を研究していることを見せる",
+            w.plot_turnpoint("皇太子から書簡が届く"),
             )
 
 
 def mysterious_lady(w: World):
     return w.episode("謎めいた女",
+            w.plot_turnpoint("居間に謎の女性の遺体が転がっていた"),
             )
 
 
 def locked_room_murder(w: World):
     return w.episode("密室殺人",
+            w.plot_turnpoint("$ailyが寄付していた孤児院の場所を突き止めた"),
             )
 
 
 def lady_of_orphanage(w: World):
     return w.episode("孤児院の女",
+            w.plot_turnpoint("$ailyという女はもともと存在していないことが分かった"),
             )
 
 
 def phantom_thief_jack(w: World):
     return w.episode("怪盗$jack",
+            w.plot_setup(""),
+            w.plot_turnpoint("$jackは$sherlockに負けを認めて宝剣の隠し場所を教えた"),
             )
 
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚",
+            w.plot_setup(""),
+            w.plot_turnpoint("宝剣にハマっている$stoneが偽物だと判明した"),
+            w.plot_resolve("知り合いの宝石技師$casselにより、精巧なレプリカを作ってもらう"),
+            w.plot_resolve("皇太子は偽物の$stoneを使った宝剣で、無事に結婚式を済ませた"),
             )
 
 

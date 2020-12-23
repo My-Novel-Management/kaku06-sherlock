@@ -51,6 +51,8 @@ def adventure_of_empty_house(w: World):
 def marys_investigation(w: World):
     return w.episode("$maryの捜査",
             w.plot_setup("（密室）殺人を警察に連絡した"),
+            w.plot_turnpoint("$sherlockが重要参考人として手配される"),
+            w.plot_develop("$patsonが$sherlockの血液を調べたいと申し出て、彼が研究用に置いている自分の血液を貸し出す"),
             w.plot_resolve("抜け穴は廃工場に繋がっていた"),
             w.plot_turnpoint("多数の失踪者の遺体を目撃した$maryは何者か（$jake）により失神させられる"),
             )
@@ -60,17 +62,21 @@ def he_is_back(w: World):
     return w.episode("英雄の帰還",
             w.plot_setup("目覚めると$maryは縛られた状態"),
             w.plot_resolve("$sherlockにより救出された"),
-            w.plot_turnpoint(""),
+            w.plot_turnpoint("$sherlockは$boss復活の儀式を"),
             )
 
 
 def revive_boss(w: World):
     return w.episode("$bossの復活",
-            # TODO
             w.plot_setup("$boss復活を阻止するために改装中の大聖堂にやってくる"),
-            w.plot_turnpoint("地下に祭壇があり、血みどろの凄惨な光景（一度失敗した）が広がっていた"),
+            w.plot_turnpoint("大聖堂の地下に巨大な祭壇が隠されていた"),
+            w.plot_develop("地下に祭壇があり、血みどろの凄惨な光景（一度失敗した）が広がっていた"),
             w.plot_develop("$sherlockにより$boss復活が失敗したことが語られる"),
+            w.plot_develop("その失敗が三ヶ月前の大地震だった"),
+            w.plot_turnpoint("$sherlockこそが正当な$heroの血を引く後継者だった"),
             w.plot_turnpoint("$wilsonが偽物で、全ての黒幕だった"),
+            w.plot_turnpoint("$patsonが偽$wilsonの配下だった"),
+            w.plot_resolve("$patsonの$gunにより$sherlockは肩を撃ち抜かれ、血を出す"),
             w.plot_resolve("必要だった$heroの血（$sherlockのもの）が盃に捧げられ、儀式に必要なものが全て揃う"),
             w.plot_turnpoint("$boss復活の儀式が始まった"),
             )
@@ -78,7 +84,20 @@ def revive_boss(w: World):
 
 def fake_wilsons_thought(w: World):
     return w.episode("偽$wilsonの思惑",
-            w.plot_setup(""),
+            w.plot_setup("正当な$heroの血（$sherlockの）が捧げられ、$boss復活の儀式が始まる"),
+            w.plot_setup("$sherlockは負傷して動けない"),
+            w.plot_setup("$maryは$sherlockを人質に取られて動けない"),
+            w.plot_setup("入り口は閉じられている"),
+            w.plot_turnpoint(""),
+            w.plot_develop(""),
+            w.plot_turnpoint("$patsonは偽$wilsonを殺そうとして逆に殺される"),
+            w.plot_develop("偽$wilsonの$zeronは自分が何者でもないことを語る"),
+            w.plot_develop(""),
+            w.plot_develop("四つの$stoneから順番に封じ込められた$bossの力が$bossのドクロに集まっていく"),
+            w.plot_turnpoint("$limeの宝剣が$stoneを砕く"),
+            w.plot_develop("集約していた$bossの力は霧散し、祭壇が爆発した"),
+            w.plot_develop("$maryは獣化して$sherlockたちを柱の影に押し込めて守る"),
+            w.plot_develop("$boss復活の儀式は失敗に終わる"),
             w.plot_turnpoint("偽$wilsonは姿を消した"),
             w.plot_resolve("$boss復活は阻止できたが、大切な四つの$stoneは全て姿を消し、各地に$bossの残り香がばらまかれた"),
             w.plot_resolve("偽$wilson（$zeron）が山中の山小屋で自殺しているのが発見された、と報告があった"),
