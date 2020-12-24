@@ -62,7 +62,7 @@ def mother_and_daughter(w: World):
 
 
 def new_resident(w: World):
-    reutrn w.episode("新しい住人",
+    return w.episode("新しい住人",
             w.plot_resolve("$maryが$sherlockの家に住み込むことになった"),
             )
 
