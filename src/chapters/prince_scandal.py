@@ -31,6 +31,9 @@ from scenes import StSarpentain
 # NOTE
 #   ・$sherlockの家（初出。
 #   ・$sherlock（顔出しなど初めて。格好、特に帽子や姿勢を詳しく描写。ロリポップを咥えている
+#   ・$restrade
+#   ・$aily（$jack
+#   ・$adel（初出。$mikelの秘書だが中盤まで内緒。王室からの依頼に訪れる人
 #   ・皇太子（名前のみ。結婚式で遠くから姿は見える
 
 def prince_matter(w: World):

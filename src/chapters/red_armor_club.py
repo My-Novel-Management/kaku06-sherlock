@@ -25,8 +25,11 @@ from scenes import Street
 #   .事情あり、にて＞$limeが同居人となる
 
 # NOTE：初出
-#   ・市場
-#   ・$nowlis
+#   ・市場（$maryがよく行く場所になる。ここでしっかり描いておく
+#   ・$nowlis（本物の$wilsonだが、色々隠れて世界の動向を伺っている。元勇者の仲間。永遠の生命を持つ、外の世界から来た男
+#   ・$lime（初出。実は第二王女だが最後の方まで明かされない
+#   ・$jakins（ここのみ。質屋オーナー。$limeを拾ってくれた。孤児院に寄付をしている
+#   ・$jeena（ここのみ。質屋オーナーの妻。人を疑うことを知らない
 
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",

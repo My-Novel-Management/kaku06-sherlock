@@ -33,29 +33,36 @@ from scenes import Street
 #   .魔犬＞$cherryが魔犬に殺された
 #   .儀式＞復活の儀式があることを知る
 
+# NOTE
+#   ・
 
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
+            w.plot_turnpoint(""),
             )
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
+            w.plot_turnpoint(""),
             )
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
+            w.plot_turnpoint(""),
             )
 
 
 def trapped_in_castle(w: World):
     return w.episode("城壁の虜囚",
+            w.plot_turnpoint(""),
             )
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔犬の牙",
+            w.plot_turnpoint(""),
             )
 
 
