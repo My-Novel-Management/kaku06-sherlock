@@ -26,6 +26,9 @@ from scenes import SteinHouse
 #   .$maryの不審＞$sherlockは姿を消した
 #   .$sherlockの消息＞$sherlockの帽子が見つかった
 
+# NOTE
+#   ・$moriano（名前もここが初出。ほぼここのみ
+#   ・$stein教授（事件被害者。$morianoの知人。$boss復活研究家
 
 def the_fixer(w: World):
     return w.episode("事件の黒幕",

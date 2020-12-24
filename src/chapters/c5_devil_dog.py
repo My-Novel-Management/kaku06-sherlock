@@ -34,23 +34,26 @@ from scenes import Street
 #   .儀式＞復活の儀式があることを知る
 
 # NOTE
-#   ・
+#   ・地方（ダートムーア。ここのみ。原作とは異なり、南西部の海に浮かぶ孤島に設定
+#   ・$baskervilles家（ここのみ？
+#   ・$cherry（ここのみ。城主。真犯人
+#   ・$moch（ここにみ。観光協会の人間。共犯者
 
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
-            w.plot_turnpoint(""),
+            w.plot_turnpoint("$cherryから招待状がくる"),
             )
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
-            w.plot_turnpoint(""),
+            w.plot_turnpoint("第一の殺人（犯罪研究家が死亡）が発生"),
             )
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
-            w.plot_turnpoint(""),
+            w.plot_turnpoint("失踪した$mochが雑木林で遺体で発見される"),
             )
 
 
@@ -68,6 +71,7 @@ def dark_dogs_fang(w: World):
 
 def dark_ritual(w: World):
     return w.episode("暗黒の儀式",
+            w.plot_resolve(""),
             )
 
 
