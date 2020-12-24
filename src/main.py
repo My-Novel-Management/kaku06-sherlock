@@ -16,15 +16,15 @@ import stages
 import plots
 import settings
 # import chapters
-from chapters import blue_garnet
-from chapters import devil_dog
-from chapters import empty_house
-from chapters import epilogue
-from chapters import last_case
-from chapters import prince_scandal
-from chapters import prologue
-from chapters import red_armor_club
-from chapters import sadness_valley
+from chapters import c4_blue_garnet
+from chapters import c5_devil_dog
+from chapters import c7_empty_house
+from chapters import c8_epilogue
+from chapters import c6_last_case
+from chapters import c1_prince_scandal
+from chapters import c0_prologue
+from chapters import c3_red_armor_club
+from chapters import c2_sadness_valley
 
 
 ################################################################
@@ -103,15 +103,15 @@ def chapters(w: World):
             #   5. 古代$magic／
             #   6. 黒幕$morianoと改造$gun
             #   7. $boss復活の儀式と全ての伏線回収
-            prologue.main(w),
-            prince_scandal.main(w),
-            sadness_valley.main(w),
-            red_armor_club.main(w),
-            blue_garnet.main(w),
-            devil_dog.main(w),
-            last_case.main(w),
-            empty_house.main(w),
-            epilogue.main(w),
+            c0_prologue.main(w),
+            c1_prince_scandal.main(w),
+            c2_sadness_valley.main(w),
+            c3_red_armor_club.main(w),
+            c4_blue_garnet.main(w),
+            c5_devil_dog.main(w),
+            c6_last_case.main(w),
+            c7_empty_house.main(w),
+            c8_epilogue.main(w),
             )
 
 # Notes
