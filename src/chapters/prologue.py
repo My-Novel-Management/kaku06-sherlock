@@ -18,6 +18,12 @@ from scenes import WilsonHouse
 #   .便利屋$sherlock＞$sherlockの家の前までやってきた
 #   .注意書き
 
+# NOTE:初出
+#   ・$wilson家（かなり後で引っ越すが、それまではここしか触れられない）
+#   ・行きつけのバー
+#   ・$wilson（偽物。）
+#   ・$sherlock（$stanから話を聞くだけ。１話まで顔出しなし）
+#   ・$stan（$wilsonの知人。ここだけ？）
 
 def troublesome(w: World):
     return w.episode("厄介事",

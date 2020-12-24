@@ -26,6 +26,10 @@ from scenes import Street
 
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",
+            w.plot_setup("$limeが同居するようになり、$limeが料理や家事を担当するように変化する"),
+            w.plot_setup("$maryは自分の居場所が失われたような気持ちになる"),
+            w.plot_setup("$maryは市場への買い出し役しかなくなった"),
+            w.plot_develop("$maryは肉屋の$nowlisからガチョウをもらう"),
             w.plot_turnpoint("ガチョウの中から青い宝石と血のついたナイフが一緒に出てきた"),
             )
 
@@ -38,6 +42,9 @@ def missing_murder_weapon(w: World):
 
 def goose_club(w: World):
     return w.episode("ガチョウクラブ",
+            w.plot_setup("容疑者として$jackが陰で指名手配"),
+            w.plot_setup(""),
+            w.plot_turnpoint("$maryは市場の知人の容疑を晴らそうと独自に調査する"),
             w.plot_turnpoint("$maryが帰ってこなかった"),
             )
 
@@ -56,7 +63,7 @@ def case_end(w: World):
 
 def four_stones(w: World):
     return w.episode("四つの$stone",
-            w.plot_resolve("$jackから青$stoneを託された"),
+            w.plot_resolve("$jackから$blue_stoneを託された"),
             )
 
 

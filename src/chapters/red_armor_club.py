@@ -24,9 +24,24 @@ from scenes import Street
 #   .鎧騎士の正体＞$limeは第二王女
 #   .事情あり、にて＞$limeが同居人となる
 
+# NOTE：初出
+#   ・市場
+#   ・$nowlis
 
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",
+            w.plot_setup("$maryが$sherlockの家で同居するようになった"),
+            w.plot_setup("$maryは$sherlockを慕っているのに、いつも冷たい態度で憤慨"),
+            w.plot_setup("$sherlockは新聞記事から失踪事件に関係するものを集めていた"),
+            w.plot_setup("$wilsonは第二王女失踪についての情報を集めている"),
+            w.plot_turnpoint("$maryは市場に買い出しに行く"),
+            "ここで市場をしっかり描く",
+            w.plot_develop("市場に頻繁に顔を出している$maryは、知人が増えていた"),
+            w.plot_develop("少年探偵団の$ignesも普段は市場で働いている"),
+            w.plot_develop("$maryは$sherlockの愚痴を言うが、$ignesは憧れている"),
+            w.plot_develop("肉屋の$nowlisはいつもおまけしてくれる"),
+            w.plot_turnpoint("$maryは不審な鎧騎士を見つけた"),
+            w.plot_develop(""),
             w.plot_turnpoint("$maryが謎の鎧騎士を連れて戻ってくる"),
             )
 
