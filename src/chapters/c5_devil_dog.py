@@ -33,11 +33,16 @@ from scenes import Street
 #   .魔犬＞$cherryが魔犬に殺された
 #   .儀式＞復活の儀式があることを知る
 
-# NOTE
-#   ・地方（ダートムーア。ここのみ。原作とは異なり、南西部の海に浮かぶ孤島に設定
-#   ・$baskervilles家（ここのみ？
+# NOTE: charas
 #   ・$cherry（ここのみ。城主。真犯人
 #   ・$moch（ここにみ。観光協会の人間。共犯者
+
+# NOTE: stages
+#   ・地方（ダートムーア。ここのみ。原作とは異なり、南西部の海に浮かぶ孤島に設定
+#   ・$baskervilles家（ここのみ？
+
+# NOTE: items
+#   ・$black_stone（話だけ。$baskervilles家の所有物だったが闇オークションに出されて行方不明　→？
 
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",

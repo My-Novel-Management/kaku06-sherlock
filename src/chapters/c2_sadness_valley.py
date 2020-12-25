@@ -19,14 +19,18 @@ from config import TITLES
 #   .母と娘＞使用人$kailが本性を現して人質を取る
 #   .事件の顛末＞$maryが同居人に
 
-# NOTE
-#   ・西部の田舎町（原作のボスコム谷。ここでも沼地。ただ特殊な鉱石が採掘できるのでそれで一部が儲けていた
-#   ・魔導列車（初出？
+# NOTE: charas
 #   ・$mary（初出。最初は怯えて寡黙になっているただの少女。あとで印象変わる
 #   ・$jean（ここのみ。$mary母
 #   ・$kail（ここのみ。使用人。$keanの父
 #   ・$kean（ここのみ？使用人
 #   ・$patson（初出。地元の刑事。後に本庁に取り上げられる。もともと$cultX信者
+
+# NOTE: stages
+#   ・西部の田舎町（原作のボスコム谷。ここでも沼地。ただ特殊な鉱石が採掘できるのでそれで一部が儲けていた
+
+# NOTE: items
+#   ・魔導列車（初出？
 
 def defence_request(w: World):
     return w.episode("弁護依頼",

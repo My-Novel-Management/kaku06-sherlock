@@ -23,11 +23,17 @@ from scenes import Street
 #   .事件解決＞$sherlockが$jackとの交換条件を飲む
 #   .四つの$stone＞$jackから青$stoneを預かる
 
-# NOTE
-#   ・$moura（ここのみ。事件被害者
+# NOTE: charas
 #   ・（ここのみ。ガチョウクラブ会員
 #   ・$hornet（ここにみ。ガチョウ卸問屋。容疑者の一人
 #   ・$peter（ちょい出演役。ガードマン
+
+# NOTE: stages
+#   ・$moura（ここのみ。事件被害者
+
+# NOTE: items
+#   ・ナイフ（凶器
+#   ・$blue_stone（$jackが盗んだものだが、最終的に$jackから$sherlockに預けられる
 
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",

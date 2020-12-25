@@ -32,6 +32,22 @@ from scenes import WilsonHouse
 #   .$boss復活＞祭壇は大爆発した
 #   .偽$wilsonの思惑＞偽$wilsonは山小屋で自殺しているのが見つかった
 
+# NOTE: charas
+
+# NOTE: stages
+#   ・大聖堂（中は初出
+#   ・イーストエンド（スラム街。少し扱ってきたが本格的はここで
+#   ・空き家（事件に使われる場所。ここのみ
+#   ・抜け道（EE内に数多くある、地下道の一つ。ここのみ
+#   ・廃工場（EE内にいくつもある。ここのみ
+
+# NOTE: items
+#   ・$red_stone
+#   ・$blue_stone
+#   ・$white_stone
+#   ・$black_stone
+#   ・$bossの杯
+#   ・$bossのドクロ（大聖堂の地下に厳重に保管されていたはずのもの
 
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",

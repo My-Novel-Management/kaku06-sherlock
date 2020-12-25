@@ -28,13 +28,29 @@ from scenes import StSarpentain
 #   .怪盗$jack＞宝剣を取り戻した
 #   .皇太子の結婚式
 
-# NOTE
-#   ・$sherlockの家（初出。
+# NOTE: charas
 #   ・$sherlock（顔出しなど初めて。格好、特に帽子や姿勢を詳しく描写。ロリポップを咥えている
 #   ・$restrade
 #   ・$aily（$jack
 #   ・$adel（初出。$mikelの秘書だが中盤まで内緒。王室からの依頼に訪れる人
 #   ・皇太子（名前のみ。結婚式で遠くから姿は見える
+
+# NOTE: stages
+#   ・London（都市。説明はここで簡単にする
+#   ・Baker街（主要舞台。プロローグ初出。ここで結構書いておく
+#   ・$sherlockの家（初出。主要舞台になるのでしっかり描く
+#   ・サーペント通り（作中はStJhonsWood。ここのみ？$Baker街から北西の地域
+#   ・$aily家（殺人事件現場。ここのみ
+#   ・$EastEnd（スラム街。ちょろっとだけ出す
+#   ・孤児院（初出。ほぼここだけ
+
+# NOTE: items
+#   ・宝剣（ここのみ
+#   ・$red_stone（初出。$stoneの存在をちら見せ
+
+# NOTE: case
+#   1.皇太子の宝剣を取り戻す　→$jackから返してもらったが$stoneが付いてなかった
+#   2.密室殺人（$aily家で謎の女性の死体発見
 
 def prince_matter(w: World):
     return w.episode("皇太子の問題",

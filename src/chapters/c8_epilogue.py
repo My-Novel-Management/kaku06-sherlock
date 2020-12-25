@@ -20,6 +20,12 @@ from scenes import WilsonHouse
 #   .探偵の誕生＞探偵社を設立
 #   .$wilsonの手記＞新しい仕事が舞い込んでくる
 
+# NOTE: charas
+#   ・本物の$wilson（一応ここが初出。だが$nowlisとして市場で出てきた男でもある。勘のいい読者だけ分かるように
+
+# NOTE: stages
+
+# NOTE: items
 
 def total_the_end(w: World):
     return w.episode("全ての顛末",
