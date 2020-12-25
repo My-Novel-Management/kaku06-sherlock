@@ -37,6 +37,10 @@ from scenes import Street
 # NOTE: items
 #   ・$white_stone（銀行にあった
 
+# NOTE: case
+#   ・赤い鎧騎士だけ募集していた奇妙な仕事　→$limeを店から遠ざける為で、その間に国営銀行の大金庫へ繋がる抜け穴を掘っていた
+#   ・$jakins殺害事件　→仲間割れと口封じで殺された。その強盗団も港の船の事故？爆発によって死去
+
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",
             w.plot_setup("$maryが$sherlockの家で同居するようになった"),

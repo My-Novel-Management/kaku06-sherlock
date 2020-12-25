@@ -34,6 +34,8 @@ from scenes import SteinHouse
 
 # NOTE: items
 
+# NOTE: case
+#   ・
 
 def the_fixer(w: World):
     return w.episode("事件の黒幕",

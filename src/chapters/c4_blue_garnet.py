@@ -32,8 +32,12 @@ from scenes import Street
 #   ・$moura（ここのみ。事件被害者
 
 # NOTE: items
-#   ・ナイフ（凶器
+#   ・ナイフ（凶器凶
 #   ・$blue_stone（$jackが盗んだものだが、最終的に$jackから$sherlockに預けられる
+
+# NOTE: case
+#   ・ガチョウの中からナイフと$blue_stoneが出てくる　→$blue_stoneは$jackが逃げる最中に隠した／ナイフは殺人犯が凶器を慌てて隠した
+#   ・$moura夫人殺人事件（凶器が見つからない　→ガチョウの中のナイフで$jack容疑者　→ガチョウクラブの仲間割れで殺された。$jackは無関係
 
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",

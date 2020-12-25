@@ -44,6 +44,12 @@ from scenes import Street
 # NOTE: items
 #   ・$black_stone（話だけ。$baskervilles家の所有物だったが闇オークションに出されて行方不明　→？
 
+# NOTE: case
+#   ・魔犬伝説の猟奇殺人　→当時の魔術の失敗による自殺
+#   ・孤島事件第一の殺人（犯罪研究家）　→$moch。最初から観光を盛り上げるための事件と割り切り計画していた
+#   ・孤島事件第二の殺人（観光課の$moch）　→$cherry。仲間割れと口封じ（当初から殺す計画
+#   ・孤島事件第三の殺人（霊能者）　→$cherry。犯行現場を見られた
+
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
             w.plot_turnpoint("$cherryから招待状がくる"),

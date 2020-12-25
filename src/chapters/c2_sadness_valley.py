@@ -32,6 +32,9 @@ from config import TITLES
 # NOTE: items
 #   ・魔導列車（初出？
 
+# NOTE: case
+#   ・父親殺し事件　→偽装で、本当は遺産目当ての妻と、幼馴染の使用人の共犯
+
 def defence_request(w: World):
     return w.episode("弁護依頼",
             w.plot_setup("$wilsonは頻繁に通ってきて$sherlockに第二王女失踪事件の調査を依頼する"),

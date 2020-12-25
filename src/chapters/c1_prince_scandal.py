@@ -50,7 +50,7 @@ from scenes import StSarpentain
 
 # NOTE: case
 #   1.皇太子の宝剣を取り戻す　→$jackから返してもらったが$stoneが付いてなかった
-#   2.密室殺人（$aily家で謎の女性の死体発見
+#   2.密室殺人（$aily家で謎の女性の死体発見　→$ailyは自殺だった
 
 def prince_matter(w: World):
     return w.episode("皇太子の問題",
