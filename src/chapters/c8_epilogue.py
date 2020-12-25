@@ -27,18 +27,26 @@ from scenes import WilsonHouse
 
 # NOTE: items
 
+# NOTE: case
+#   ・$wilsonすり替わり事件　→本物の$wilsonに長旅をさせ、その間になりすました
+
 def total_the_end(w: World):
     return w.episode("全ての顛末",
+            w.plot_setup("偽$wilsonが自殺して、全ての幕が降ろされた"),
+            w.plot_turnpoint("本物の$wilsonが帰ってくる"),
             )
 
 
 def detective_office(w: World):
     return w.episode("探偵の誕生",
+            w.plot_setup("$wilsonは$sherlockたちから今までに何があったのか事情を聞く"),
+            w.plot_turnpoint(""),# TODO
             )
 
 
 def wilsons_papers(w: World):
     return w.episode("$wilsonの手記",
+            w.plot_resolve(""),
             )
 
 

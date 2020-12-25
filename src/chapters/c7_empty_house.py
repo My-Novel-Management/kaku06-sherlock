@@ -49,6 +49,9 @@ from scenes import WilsonHouse
 #   ・$bossの杯
 #   ・$bossのドクロ（大聖堂の地下に厳重に保管されていたはずのもの
 
+# NOTE: case
+#   ・空き家殺人事件　→失踪者の一人の遺体を放置し、$sherlockに容疑が向かうようにした。実行犯は$jake
+
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             w.plot_setup("$sherlockが失踪してから三ヶ月が経ち、誰もが彼の死を考えていた"),

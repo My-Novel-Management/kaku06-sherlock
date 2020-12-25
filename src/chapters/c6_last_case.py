@@ -31,11 +31,15 @@ from scenes import SteinHouse
 #   ・$stein教授（事件被害者。$morianoの知人。$boss復活研究家
 
 # NOTE: stages
+#   ・$steinの家
+#   ・$moriano研究所
+#   ・$morianoの別荘
+#   ・王立大学
 
 # NOTE: items
 
 # NOTE: case
-#   ・
+#   ・$stein元教授殺人事件　→$cultXの支援を受けて研究していたが、危険なことだと分かり、裏切ったために処分（$jakeによる
 
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
