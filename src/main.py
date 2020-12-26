@@ -199,12 +199,12 @@ def main(): # pragma: no cover
     return w.run(
             writer_note(w),
             *plots.main_notes(w),
-            title_note(w),
+            title_note(w).omit(),
             *persons.main_notes(w),
             *stages.main_notes(w),
             *settings.main_notes(w),
-            theme_note(w),
-            motif_note(w),
+            theme_note(w).omit(),
+            motif_note(w).omit(),
             *chapters(w),
             )
 
