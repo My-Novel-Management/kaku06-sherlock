@@ -28,6 +28,18 @@ from scenes import StSarpentain
 #   .怪盗$jack＞宝剣を取り戻した
 #   .皇太子の結婚式
 
+# NOTE: outlines
+OUTLINES = [
+        "$wilsonは便利屋$sherlockのもとを訪れ、仕事を依頼しようとする。しかし王室からの仕事と見抜き、彼は仕事を断る。だがそこに皇太子の書簡を持って$adelがやってくる",
+        "皇太子の依頼を受けて$sherlockは$wilsonとともに$ailyという女性を調べる。しかし彼女の家の中で見知らぬ女性の遺体を発見した",
+        "警察に連絡し、$sherlockは皇太子の依頼を放り出して密室殺人のことを調べ始める。一方、警察の$restrade警部は",
+        # TODO
+        # $ailyが容疑者に浮上
+        "",
+        "",
+        "",
+        ]
+
 # NOTE: charas
 #   ・$sherlock（顔出しなど初めて。格好、特に帽子や姿勢を詳しく描写。ロリポップを咥えている
 #   ・$restrade

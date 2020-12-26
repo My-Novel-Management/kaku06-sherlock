@@ -74,7 +74,7 @@ def handyman_sherlock(w: World):
             w.plot_develop("$wilsonは"),
             w.plot_turnpoint("何とか$sherlockの家のドアをノックした"),
             w.plot_resolve("$ignesたちを何とか追い払い、$sherlockの家のドアをノックした"),
-            outline=OUTLINES[1])
+            outline=OUTLINES[1]).omit()
 
 
 def note_for_novel(w: World):
