@@ -26,6 +26,17 @@ from scenes import SteinHouse
 #   .$maryの不審＞$sherlockは姿を消した
 #   .$sherlockの消息＞$sherlockの帽子が見つかった
 
+# NOTE: outlines
+OUTLINES = [
+        "元大学教授の謎の死を受けて$sherlockは調査に訪れていた。その人物は$boss復活の技法について研究をしていた。$sherlockはその男の書き残したものに$morianoの名を見つけた",
+        "$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。そこに$maryが連れてきた老人こそが、$morianoだった",
+        "",# TODO
+        # $morianoの甘言にのり、$maryが姿を消した
+        "",
+        "",
+        "",
+        ]
+
 # NOTE: charas
 #   ・$moriano（名前もここが初出。ほぼここのみ
 #   ・$stein教授（事件被害者。$morianoの知人。$boss復活研究家

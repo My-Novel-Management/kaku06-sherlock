@@ -33,6 +33,17 @@ from scenes import Street
 #   .魔犬＞$cherryが魔犬に殺された
 #   .儀式＞復活の儀式があることを知る
 
+# NOTE: outlines
+OUTLINES = [
+        "ある孤島には魔犬の伝説があった。その島にある古城の主からパーティの招待状が届き、$sherlock一行は島に渡る。そこには魔犬伝説を解明するための専門家が集められていた",
+        "パーティでは専門家たちが持論を語る。$sherlockは観光課の$mochから観光資源にしたいので協力してほしいと依頼される。しかし翌朝、犯罪専門家が遺体で発見された",
+        "警察を呼ぼうとしたが何者かに船が壊され、おまけに海は大時化でとても応援を呼べない。そんな中、招待客の一人を元刑事が殺人犯として捕まえる。おまけに$mochが失踪し、その後雑木林で無残な姿で発見された",
+        # 第二の殺人事件が発生した
+        "本当に魔犬がいると騒ぎになる。地元の研究家が連絡を取るために$science通信機を使い応援を呼ぶ。$sherlockは今一度城内を探索し、事件の調査を行う。その最中に新しい遺体を発見したが、更に地下室への入り口も見つかった",
+        "地下には拷問部屋があり、魔犬も存在していた。しかし魔犬を殺そうとしたところを城主$cherryに阻止され、挙げ句に部屋に閉じ込められる。事件の犯人は$cherryだった",
+        "何とか部屋を抜け出し、$cherryと魔犬の姿を探す。だがその姿は無残な遺体で発見され、魔犬は上陸した警察により射殺された。事件後に日記が発見され、$cherryは復活の技法により愛犬を復活させていたことが判明した。その魔犬に人肉を食わせるために殺人を犯していたのだ",
+        ]
+
 # NOTE: charas
 #   ・$cherry（ここのみ。城主。真犯人
 #   ・$moch（ここにみ。観光協会の人間。共犯者
@@ -53,37 +64,37 @@ from scenes import Street
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
             w.plot_turnpoint("$cherryから招待状がくる"),
-            )
+            outline=OUTLINES[0])
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
             w.plot_turnpoint("第一の殺人（犯罪研究家が死亡）が発生"),
-            )
+            outline=OUTLINES[1])
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
             w.plot_turnpoint("失踪した$mochが雑木林で遺体で発見される"),
-            )
+            outline=OUTLINES[2])
 
 
 def trapped_in_castle(w: World):
     return w.episode("城壁の虜囚",
             w.plot_turnpoint(""),
-            )
+            outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔犬の牙",
             w.plot_turnpoint(""),
-            )
+            outline=OUTLINES[4])
 
 
 def dark_ritual(w: World):
     return w.episode("暗黒の儀式",
             w.plot_resolve(""),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter

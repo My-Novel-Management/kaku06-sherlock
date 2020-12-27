@@ -27,11 +27,11 @@ from scenes import Street
 OUTLINES = [
         "$maryと$limeが一緒に暮らすようになり、料理や掃除は$limeが担当するようになる。$limeは手際がよく、$maryは自分の居場所を失った気になる。その$maryが市場で肉屋の$nowlisからもらったガチョウを捌くと、中からナイフと$blue_stoneが出てきた",
         "$sherlockが$restradeに連絡を取るとどうやらそのナイフが探してた殺人事件の凶器と判明。ガチョウを扱った$nowlisたちが容疑者候補に挙がり、$maryは容疑を晴らすために単独で調査を開始する",
-        "一方$blue_stoneは$jackにより盗まれたもので、警察は$jackの事件関与も疑っていた。$sherlockは",# TODO
-        #
-        "",
-        "",
-        "",
+        "一方$blue_stoneは$jackにより盗まれたもので警察は$jackの事件関与も疑っていた。$sherlockは$jackからのメッセージを見つけ、一人出かける。他方、$maryはガチョウクラブに潜入していたが、調査しているのがバレて捕まってしまう",
+        # $maryがガチョウクラブに捕まる
+        "$limeはいなくなった$maryを探す。$maryはなんとか自力で監禁部屋から脱出しようとするが、そこを謎の女性（$jack）に助け出される。$sherlockは$limeからガチョウクラブのことを聞き、事件の謎を解明した",
+        "助け出された$maryは$jackもまた$ajinだと知り、親近感を持つ。$sherlockは事件を解決し$jackの容疑を晴らした。全て解決し$maryと$limeは仲直りする。一方、$sherlockは話があると$jackに呼び出される",
+        "$sherlockは$jackから裏の世界で四つの$stoneを集めようとしている人物の存在を教わる。その目的解明と何かやろうとしていることの阻止を託され、$blue_stoneを預けられた",
         ]
 
 # NOTE: charas
@@ -57,13 +57,13 @@ def market_and_goose(w: World):
             w.plot_setup("$maryは市場への買い出し役しかなくなった"),
             w.plot_develop("$maryは肉屋の$nowlisからガチョウをもらう"),
             w.plot_turnpoint("ガチョウの中から青い宝石と血のついたナイフが一緒に出てきた"),
-            )
+            outline=OUTLINES[0])
 
 
 def missing_murder_weapon(w: World):
     return w.episode("凶器のない殺人",
             w.plot_turnpoint("$jackが殺人事件の容疑者に浮上した"),
-            )
+            outline=OUTLINES[1])
 
 
 def goose_club(w: World):
@@ -72,25 +72,25 @@ def goose_club(w: World):
             w.plot_setup(""),
             w.plot_turnpoint("$maryは市場の知人の容疑を晴らそうと独自に調査する"),
             w.plot_turnpoint("$maryが帰ってこなかった"),
-            )
+            outline=OUTLINES[2])
 
 
 def investigate_case(w: World):
     return w.episode("事件捜査",
             w.plot_turnpoint(""),
-            )
+            outline=OUTLINES[3])
 
 
 def case_end(w: World):
     return w.episode("事件解決",
             w.plot_turnpoint("女警官は$jackだった"),
-            )
+            outline=OUTLINES[4])
 
 
 def four_stones(w: World):
     return w.episode("四つの$stone",
             w.plot_resolve("$jackから$blue_stoneを託された"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter
