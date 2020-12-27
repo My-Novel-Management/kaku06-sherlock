@@ -32,12 +32,11 @@ from scenes import StSarpentain
 OUTLINES = [
         "$wilsonは便利屋$sherlockのもとを訪れ、仕事を依頼しようとする。しかし王室からの仕事と見抜き、彼は仕事を断る。だがそこに皇太子の書簡を持って$adelがやってくる",
         "皇太子の依頼を受けて$sherlockは$wilsonとともに$ailyという女性を調べる。しかし彼女の家の中で見知らぬ女性の遺体を発見した",
-        "警察に連絡し、$sherlockは皇太子の依頼を放り出して密室殺人のことを調べ始める。一方、警察の$restrade警部は",
-        # TODO
+        "警察に連絡し、$sherlockは皇太子の依頼を放り出して密室殺人のことを調べ始める。一方、警察の$restrade警部は$ailyを容疑者と考えて指名手配した",
         # $ailyが容疑者に浮上
-        "",
-        "",
-        "",
+        "$sherlockは殺人現場の奇妙な点に気づき、$ailyについて調べていく。彼女が寄付していた孤児院を突き止めた。そこで彼女についての話を聞く。そして亡くなっていたのが$ailyだと判明する",
+        "$sherlockは孤児院で話していた女性が探してた人物だと気づき、再度会いに行く。彼女の正体を$jackだと見抜いて容疑を晴らすのと引き換えに宝剣を返してもらった",
+        "だが宝剣についていたはずの$red_stoneがなく、宝石技師に頼んでダミーを作ってもらい、なんとか皇太子の結婚式を無事に迎えられた",
         ]
 
 # NOTE: charas
@@ -68,32 +67,32 @@ def prince_matter(w: World):
     return w.episode("皇太子の問題",
             "ここで$sherlockは自分の血液を研究していることを見せる",
             w.plot_turnpoint("皇太子から書簡が届く"),
-            )
+            outline=OUTLINES[0])
 
 
 def mysterious_lady(w: World):
     return w.episode("謎めいた女",
             w.plot_turnpoint("居間に謎の女性の遺体が転がっていた"),
-            )
+            outline=OUTLINES[1])
 
 
 def locked_room_murder(w: World):
     return w.episode("密室殺人",
             w.plot_turnpoint("$ailyが寄付していた孤児院の場所を突き止めた"),
-            )
+            outline=OUTLINES[2])
 
 
 def lady_of_orphanage(w: World):
     return w.episode("孤児院の女",
             w.plot_turnpoint("$ailyという女はもともと存在していないことが分かった"),
-            )
+            outline=OUTLINES[3])
 
 
 def phantom_thief_jack(w: World):
     return w.episode("怪盗$jack",
             w.plot_setup(""),
             w.plot_turnpoint("$jackは$sherlockに負けを認めて宝剣の隠し場所を教えた"),
-            )
+            outline=OUTLINES[4])
 
 
 def prince_wedding(w: World):
@@ -102,7 +101,7 @@ def prince_wedding(w: World):
             w.plot_turnpoint("宝剣にハマっている$stoneが偽物だと判明した"),
             w.plot_resolve("知り合いの宝石技師$casselにより、精巧なレプリカを作ってもらう"),
             w.plot_resolve("皇太子は偽物の$stoneを使った宝剣で、無事に結婚式を済ませた"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter
