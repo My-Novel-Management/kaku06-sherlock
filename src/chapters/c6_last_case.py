@@ -30,11 +30,11 @@ from scenes import SteinHouse
 OUTLINES = [
         "元大学教授の謎の死を受けて$sherlockは調査に訪れていた。その人物は$boss復活の技法について研究をしていた。$sherlockはその男の書き残したものに$morianoの名を見つけた",
         "$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。そこに$maryが連れてきた老人こそが、$morianoだった",
-        "",# TODO
+        "$morianoは$sherlockが人の気持ちより謎解きの方を大切にすると指摘し、$maryたちも捨てられると予言する。$morianoは$sherlockに犯罪をなくすことは不可能だと言い、これ以上自分を追うと余計な犠牲者が出ると脅した。後日、$maryが姿を消した",
         # $morianoの甘言にのり、$maryが姿を消した
-        "",
-        "",
-        "",
+        "$sherlockは責任を感じて$maryを探す。$morianoの別荘を突き止めたが、そこにはナイフを手にした$maryがいて$sherlockは襲われる。しかし$limeにより阻止される",
+        "$maryは$sherlockがやがて$ajinを迫害する世の中を復活させるときいて恐ろしくなったと告白する。それは$morianoによる言葉の洗脳だった。$sherlockは$morianoとの対決に単独で向かう",
+        "$sherlockが消息をたち数日後、彼からの手紙が届く。そこには$morianoとの決闘直前に書かれた遺書めいたメッセージがあった。警察とともに$sherlockを探すが、$morianoの宿泊先の滝で見つかったのは彼のトレードマークの帽子だった",
         ]
 
 # NOTE: charas
