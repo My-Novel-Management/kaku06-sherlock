@@ -225,9 +225,11 @@ ASSET = {
             ("enagy", "魔素"),
             ("magic", "魔法"),
             ("sorcery", "魔術"),
-            ("animal", "獣人"),
-            ("elf", "エルフ"),
+            ## 種族
             ("ajin", "亜人"),
+            ("animal", "獣人"),
+            ("transform", "獣化"),
+            ("elf", "エルフ"),
             ("werewolf", "人狼"),
             ("science", "魔導"),
             ("missing", "喪失知識"),

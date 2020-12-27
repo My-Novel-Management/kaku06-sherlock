@@ -26,8 +26,8 @@ OUTLINES = [
         "$sherlockは$maryと面会し、彼女の話を聞く。使用人たちの証言と異なっていたが彼女が嘘をついているように見えない。ただ彼女が何を隠していて沈黙を守っているのかを見抜く。$maryは$animalだった",
         # 容疑者の$maryは$animalだった
         "警察も$animalと分かり$maryの犯人色が強まるが、$sherlockは再度現場を訪れて調査し、彼女が犯人ではないと否定する。$jeanに話を聞く必要があると訪れたが会えないと突っぱねられるが、$maryが$animalだと告げ、強引に話を聞く",
-        "$jeanは後妻で夫が拾ってきた$maryが$animalだと分かり、酷く困惑したと告白する",# TODO
-        "",
+        "$jeanは後妻で夫が拾ってきた$maryが$animalだと分かり、酷く困惑したと告白する。そこに$sherlockが手配しておいた警官と$maryが到着し、母娘が対面する。二人は本音を告白しあう。その中で$jeanが犯人では？と疑いが出るが、$kailが自分が全てやったと言い、$jeanを人質に取った",
+        "$maryが$transformして$jeanを助け出すものの、$jeanは自分の罪を告白し「お前は娘じゃない」と言った。事件解決し、遺産は$mary一人に相続されるが、彼女はその権利を放棄して、$sherlockの家で世話になることにした",
         ]
 
 # NOTE: charas
@@ -52,37 +52,37 @@ def defence_request(w: World):
             w.plot_setup("$sherlockは常に新聞記事で事件を探している"),
             w.plot_setup("地方の事件記事に自分の父親を殺した容疑で娘が捕まったと掲載"),
             w.plot_turnpoint("$keanが依頼にやってくる"),
-            )
+            outline=OUTLINES[0])
 
 
 def about_this_case(w: World):
     return w.episode("事件について",
             w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
-            )
+            outline=OUTLINES[1])
 
 
 def interview_of_mary(w: World):
     return w.episode("$maryの面会",
             w.plot_turnpoint("$maryは$animalだと$wilsonに語った"),
-            )
+            outline=OUTLINES[2])
 
 
 def family_circumstances(w: World):
     return w.episode("家族の事情",
             w.plot_turnpoint("$maryが$patsonによって連れてこられた"),
-            )
+            outline=OUTLINES[3])
 
 
 def mother_and_daughter(w: World):
     return w.episode("母と娘",
             w.plot_turnpoint("$kailが$jeanを人質に取る"),
-            )
+            outline=OUTLINES[4])
 
 
 def new_resident(w: World):
     return w.episode("新しい住人",
             w.plot_resolve("$maryが$sherlockの家に住み込むことになった"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter

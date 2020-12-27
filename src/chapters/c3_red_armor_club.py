@@ -24,6 +24,17 @@ from scenes import Street
 #   .鎧騎士の正体＞$limeは第二王女
 #   .事情あり、にて＞$limeが同居人となる
 
+# NOTE: outlines
+OUTLINES = [
+        "$maryが同居人になり彼女が家事を買って出てくれたが上手ではなかった。$sherlockは$wilsonからの依頼も調査しつつ事件記事を探す。市場から帰ってきた$maryはそんな$sherlockに相談があると、謎の鎧騎士を連れてきた",
+        "$limeという名の鎧騎士は喋れなかった。筆談による説明で彼が質屋の守衛以外にも紹介された奇妙なバイトをしていると話す。それが赤鎧クラブだった。しかし$sherlockは彼にすぐそのバイトを辞めるよう忠告した",
+        "数日後、再び$limeが訪れる。突然赤鎧クラブが閉鎖され、バイトがなくなったという。$sherlockは一緒にいき、質屋の地下に掘られていた抜け穴を見つける。それは近所の国営銀行の大金庫に繋がっていた。その中で$limeの仕事仲間の$jakinsが死んでいた",
+        # $limeが容疑者となる
+        "$limeが殺人と宝石強盗の容疑者となり逮捕される。$sherlockは赤鎧クラブが$limeを店から遠ざけておくための口実で、本来の目的は銀行強盗だったと説明する。赤鎧クラブを作った男を調べていくと、強盗団に繋がる。その強盗団が爆発現場で死体で発見された",
+        "盗まれたものは見つからずに事件は解決を見る。$limeは世話になっていたオーナー夫婦を離れ、$sherlockのもとを訪れる。そこで彼女は自分が失踪中の第二王女だと告白した",
+        "$limeは失踪した訳ではなく自分で誘拐犯に捕まった。事情があって王室を離れたかったと語る。王室に帰ることもできず、$limeは$sherlockの家でしばらく世話になることになった",
+        ]
+
 # NOTE: charas
 #   ・$nowlis（本物の$wilsonだが、色々隠れて世界の動向を伺っている。元勇者の仲間。永遠の生命を持つ、外の世界から来た男
 #   ・$lime（初出。実は第二王女だが最後の方まで明かされない
@@ -56,38 +67,38 @@ def silent_knight(w: World):
             w.plot_turnpoint("$maryは不審な鎧騎士を見つけた"),
             w.plot_develop(""),
             w.plot_turnpoint("$maryが謎の鎧騎士を連れて戻ってくる"),
-            )
+            outline=OUTLINES[0])
 
 
 def strange_part_time_job(w: World):
     return w.episode("奇妙なアルバイト",
             w.plot_turnpoint("$sherlockは彼女にそのバイトをすぐ辞めるように、とだけアドバイスをした"),
             w.plot_turnpoint("$maryは$limeから、突然赤鎧クラブが閉鎖になったと報告があったと聞いた"),
-            )
+            outline=OUTLINES[1])
 
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
             w.plot_turnpoint("$limeが容疑者になった"),
-            )
+            outline=OUTLINES[2])
 
 
 def the_end_of_case(w: World):
     return w.episode("事件の顛末",
             w.plot_turnpoint(""),
-            )
+            outline=OUTLINES[3])
 
 
 def her_identity(w: World):
     return w.episode("鎧騎士の正体",
             w.plot_turnpoint("$limeは失踪中の第二王女だった"),
-            )
+            outline=OUTLINES[4])
 
 
 def limes_reason(w: World):
     return w.episode("$limeの事情",
             w.plot_resolve("$limeも$sherlockの家でしばらく一緒に暮らすことになった"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter

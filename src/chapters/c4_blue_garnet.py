@@ -23,6 +23,17 @@ from scenes import Street
 #   .事件解決＞$sherlockが$jackとの交換条件を飲む
 #   .四つの$stone＞$jackから青$stoneを預かる
 
+# NOTE: outlines
+OUTLINES = [
+        "$maryと$limeが一緒に暮らすようになり、料理や掃除は$limeが担当するようになる。$limeは手際がよく、$maryは自分の居場所を失った気になる。その$maryが市場で肉屋の$nowlisからもらったガチョウを捌くと、中からナイフと$blue_stoneが出てきた",
+        "$sherlockが$restradeに連絡を取るとどうやらそのナイフが探してた殺人事件の凶器と判明。ガチョウを扱った$nowlisたちが容疑者候補に挙がり、$maryは容疑を晴らすために単独で調査を開始する",
+        "一方$blue_stoneは$jackにより盗まれたもので、警察は$jackの事件関与も疑っていた。$sherlockは",# TODO
+        #
+        "",
+        "",
+        "",
+        ]
+
 # NOTE: charas
 #   ・（ここのみ。ガチョウクラブ会員
 #   ・$hornet（ここにみ。ガチョウ卸問屋。容疑者の一人
