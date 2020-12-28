@@ -108,9 +108,10 @@ def locked_room_murder(w: World):
             w.plot_develop("事情を説明し、後から$ailyに関する情報をもらうことにする$sherlock"),
             w.plot_develop("部屋は泥棒に荒らされているように見せかけられている"),
             w.plot_develop("警察は強盗の犯行と見ていたが、$sherlockは彼女の首筋の切られ方に疑念を抱く"),
+            #   ・$ailyについて調べる
             w.plot_develop("$ailyがよく出入りしていたというオペラハウスで彼女について話を聞く"),
             w.plot_develop("この一ヶ月ばかり彼女は姿を見せていないと言われた"),
-            w.plot_develop(""),# TODO
+            w.plot_develop("だが支配人から$ailyが貧しい出で自分が稼いだお金やパトロンの援助の大半を寄付していたと聞く"),
             w.plot_turnpoint("$ailyが寄付していた孤児院の場所を突き止めた"),
             outline=OUTLINES[2])
 
@@ -119,7 +120,18 @@ def lady_of_orphanage(w: World):
     return w.episode("孤児院の女",
             # NOTE
             #   ・孤児院での話
-            w.plot_turnpoint("$ailyという女はもともと存在していないことが分かった"),
+            w.plot_setup("$ailyが寄付をしていた孤児院にやってくる$sherlock"),
+            w.plot_setup("$EastEnd地区（貧民街）にあり、訳ありの子供を預かっている孤児院だった"),
+            w.plot_turnpoint("孤児院の女教師$yilaから$ailyがこの孤児院出身と聞く"),
+            w.plot_develop("$ailyは捨て子で、前の院長が拾ってきた娘だった"),
+            w.plot_develop("親からひどい虐待を受けたようで最初は口もきかなかったが、歌を歌うようになり明るくなった"),
+            w.plot_develop("大きくなり、ショウガールとしてスカウトされ、買われていった"),
+            w.plot_develop("歌っているときに男に見初められ、パトロンになり、今のオペラ座で歌うまでになった"),
+            w.plot_develop("この院では成功者の一人として有名だった"),
+            w.plot_develop("ここにやってきては子供たちの相手をしてくれていた"),
+            w.plot_turnpoint("$ailyによく懐いていた娘が、最近暗い顔をしていたと伝える"),
+            w.plot_resolve("$sherlockは孤児院で聞いた$ailyのイメージと皇太子や近隣住民の証言のイメージが異なると気づく"),
+            w.plot_turnpoint("検死を担当した医師から亡くなっていたのが$ailyだと報告があった"),
             outline=OUTLINES[3])
 
 
@@ -127,7 +139,22 @@ def phantom_thief_jack(w: World):
     return w.episode("怪盗$jack",
             # NOTE
             #   ・怪盗$jackとの会話
-            w.plot_setup(""),
+            w.plot_setup("警察は事件を$ailyの自殺ということで片付けた"),
+            w.plot_setup("しかし$sherlockは$ailyという女性が少なくとも二人いたことに言及する"),
+            w.plot_turnpoint("帰宅するとそこに一通の手紙が届いていた。差出人は$ailyだった"),
+            w.plot_develop("待ち合わせ場所に向かうと、そこで待っていたのは$yilaだった"),
+            w.plot_develop("$sherlockは彼女こそが皇太子から$royalswordをもらった$ailyで、オペラ座で歌っていた人物が亡くなった方の$ailyだったと"),
+            w.plot_develop("$yilaは説明する。二人で一人の女の人生を生きていたと"),
+            w.plot_develop("歌の才能こそあったが、社交界でうまく人付き合いできるタイプではなく、化粧でごまかして$yilaが代わりに行っていた"),
+            w.plot_develop("だがある日、彼女の突然の自殺により$ailyとして生きていくことができなくなった"),
+            w.plot_develop("そこで殺されたのは違う女で、更に$ailyに容疑が向かないように$sherlockを犯人に仕立てようとしたが失敗したと"),
+            w.plot_turnpoint("$sherlockは彼女の正体が巷で噂の怪盗$jackだと見抜いた"),
+            w.plot_resolve("$sherlockは$ailyと一緒に暮らしていたという話が全く嘘だと見抜く"),
+            w.plot_resolve("そもそも$ailyが暮らしていたのは違う場所だったのだ"),
+            w.plot_resolve("彼女は人を避けるようにして暮らしていた"),
+            w.plot_resolve("しかし住民の評判をきくとそうではない"),
+            w.plot_resolve("$jackが$royalswordを盗むために皇太子に近づいたのだ。だから返却を拒否したと"),
+            w.plot_resolve("既に警察まで手配していると告げると、$jackは負けを認めた"),
             w.plot_turnpoint("$jackは$sherlockに負けを認めて宝剣の隠し場所を教えた"),
             outline=OUTLINES[4])
 
