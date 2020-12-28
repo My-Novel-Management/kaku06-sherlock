@@ -70,13 +70,11 @@ def prince_matter(w: World):
             #   ＞$adelを出すことで「王室から度々依頼を受けている」ことを示す
             #   ＞宝石とレプリカを見比べている場面を出して技師の名前を出しておく
             "ここで$sherlockは自分の血液を研究していることを見せる",
-            # TODO
             w.plot_setup("$wilsonは便利屋$sherlockに会いにやってきた（高級$carで）"),
             w.plot_turnpoint("$sherlockは$wilsonが王室関係の人間だと分かり、追い返す"),
             w.plot_develop("$wilsonは$sherlockが家賃を滞納していることを調べていて、それを払うからと何とか入れてもらう"),
             w.plot_develop("$sherlockは自分が難事件にしか興味がないことを伝える"),
-            w.plot_develop(""),
-            w.plot_turnpoint("$adelがやってきて皇太子から書簡を置いて帰っていく"),
+            w.plot_turnpoint("$adelがやってきて皇太子から書簡を見せる"),
             outline=OUTLINES[0])
 
 
@@ -85,7 +83,17 @@ def mysterious_lady(w: World):
             # NOTE
             #   ・皇太子からの依頼内容
             #   ・女の家の調査
-            w.plot_turnpoint("居間に謎の女性の遺体が転がっていた"),
+            w.plot_setup("便利屋$sherlockは皇太子の書簡を受け取る"),
+            w.plot_setup("書簡には実に「個人的な」依頼が書かれていた"),
+            w.plot_turnpoint("$sherlockは王室からの依頼を受けないと言ったのに、その依頼を受けると返事をする"),
+            w.plot_develop("依頼内容は皇太子が付き合っていたある女性に預けてしまった$royalswordを取り戻して欲しいというもの"),
+            w.plot_develop("女性は社交界に突然あられた歌姫で、皇太子が見初めて引き上げた"),
+            w.plot_develop("$sherlockも名前は新聞で見たことがあった"),
+            w.plot_develop("その女性$ailyの調査に出かける"),
+            w.plot_develop("$ailyは近所の評判もよく、特に問題が見つからない女性だった"),
+            w.plot_turnpoint("しかし家を訪ねると、鍵が開いた状態で、応答がなかった"),
+            w.plot_resolve("$sherlockは泥棒が入ったのかもしれないと、中を調べる"),
+            w.plot_turnpoint("すると居間に謎の女性の遺体が転がっていた"),
             outline=OUTLINES[1])
 
 
@@ -93,6 +101,16 @@ def locked_room_murder(w: World):
     return w.episode("密室殺人",
             # NOTE
             #   ・密室殺人の調査
+            w.plot_setup("$ailyの家を調べていて謎の女性の遺体を発見した$sherlock"),
+            w.plot_setup("警察に連絡する"),
+            w.plot_setup("警察が来るまでに$sherlockは部屋を調べる"),
+            w.plot_turnpoint("やってきた$restradeは$sherlockとは顔見知りの仲だった"),
+            w.plot_develop("事情を説明し、後から$ailyに関する情報をもらうことにする$sherlock"),
+            w.plot_develop("部屋は泥棒に荒らされているように見せかけられている"),
+            w.plot_develop("警察は強盗の犯行と見ていたが、$sherlockは彼女の首筋の切られ方に疑念を抱く"),
+            w.plot_develop("$ailyがよく出入りしていたというオペラハウスで彼女について話を聞く"),
+            w.plot_develop("この一ヶ月ばかり彼女は姿を見せていないと言われた"),
+            w.plot_develop(""),# TODO
             w.plot_turnpoint("$ailyが寄付していた孤児院の場所を突き止めた"),
             outline=OUTLINES[2])
 
