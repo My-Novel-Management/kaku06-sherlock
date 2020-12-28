@@ -65,31 +65,50 @@ OUTLINES = [
 
 def prince_matter(w: World):
     return w.episode("皇太子の問題",
+            # NOTE
+            #   ・$sherlockの紹介
+            #   ＞$adelを出すことで「王室から度々依頼を受けている」ことを示す
+            #   ＞宝石とレプリカを見比べている場面を出して技師の名前を出しておく
             "ここで$sherlockは自分の血液を研究していることを見せる",
-            w.plot_turnpoint("皇太子から書簡が届く"),
+            # TODO
+            w.plot_setup("$wilsonは便利屋$sherlockに会いにやってきた（高級$carで）"),
+            w.plot_turnpoint("$sherlockは$wilsonが王室関係の人間だと分かり、追い返す"),
+            w.plot_develop("$wilsonは$sherlockが家賃を滞納していることを調べていて、それを払うからと何とか入れてもらう"),
+            w.plot_develop("$sherlockは自分が難事件にしか興味がないことを伝える"),
+            w.plot_develop(""),
+            w.plot_turnpoint("$adelがやってきて皇太子から書簡を置いて帰っていく"),
             outline=OUTLINES[0])
 
 
 def mysterious_lady(w: World):
     return w.episode("謎めいた女",
+            # NOTE
+            #   ・皇太子からの依頼内容
+            #   ・女の家の調査
             w.plot_turnpoint("居間に謎の女性の遺体が転がっていた"),
             outline=OUTLINES[1])
 
 
 def locked_room_murder(w: World):
     return w.episode("密室殺人",
+            # NOTE
+            #   ・密室殺人の調査
             w.plot_turnpoint("$ailyが寄付していた孤児院の場所を突き止めた"),
             outline=OUTLINES[2])
 
 
 def lady_of_orphanage(w: World):
     return w.episode("孤児院の女",
+            # NOTE
+            #   ・孤児院での話
             w.plot_turnpoint("$ailyという女はもともと存在していないことが分かった"),
             outline=OUTLINES[3])
 
 
 def phantom_thief_jack(w: World):
     return w.episode("怪盗$jack",
+            # NOTE
+            #   ・怪盗$jackとの会話
             w.plot_setup(""),
             w.plot_turnpoint("$jackは$sherlockに負けを認めて宝剣の隠し場所を教えた"),
             outline=OUTLINES[4])
@@ -97,9 +116,14 @@ def phantom_thief_jack(w: World):
 
 def prince_wedding(w: World):
     return w.episode("皇太子の結婚",
-            w.plot_setup(""),
+            # NOTE
+            #   ・宝剣について（返してもらったが$stoneがない）
+            #   ・皇太子の結婚式
+            w.plot_setup("$sherlockは$jackから$royalswordを返してもらった"),
             w.plot_turnpoint("宝剣にハマっている$stoneが偽物だと判明した"),
-            w.plot_resolve("知り合いの宝石技師$casselにより、精巧なレプリカを作ってもらう"),
+            w.plot_develop("既に$jackは高跳びをしてして国内にはいないし、連絡も取れなかった"),
+            w.plot_develop("$adelに事情を説明するが彼女は儀式にはどうしても$stoneのハマった$royalswordが必要だと言う"),
+            w.plot_turnpoint("$sherlockは知人の宝石技師$casselに精巧なレプリカを作ってもらう"),
             w.plot_resolve("皇太子は偽物の$stoneを使った宝剣で、無事に結婚式を済ませた"),
             outline=OUTLINES[5])
 

@@ -208,6 +208,8 @@ ASSET = {
             ("car", "魔導車"),
             ("telephone", "魔導通話"),
             ("compass", "魔導盤"),
+            ## 醜聞
+            ("royalsword", "宝剣"),
             ## 重要アイテム
             ("stone", "魔石"),
             ("red_stone", "紅魔石"),# ルビー
