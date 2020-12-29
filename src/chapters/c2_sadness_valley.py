@@ -46,17 +46,33 @@ OUTLINES = [
 # NOTE: case
 #   ・父親殺し事件　→偽装で、本当は遺産目当ての妻と、幼馴染の使用人の共犯
 
+# NOTE: tech
+#   ・凶器を使った人間を探すために最新技術の「指紋鑑定」を使う
+
 def defence_request(w: World):
     return w.episode("弁護依頼",
+            # NOTE
+            #   ・$wilsonと$sherlock
+            #   ・世間の情勢（予備知識もろもろ
+            w.plot_setup("皇太子の結婚があり、世間がそれなりに賑わいムードに包まれていた"),
             w.plot_setup("$wilsonは頻繁に通ってきて$sherlockに第二王女失踪事件の調査を依頼する"),
             w.plot_setup("$sherlockは常に新聞記事で事件を探している"),
             w.plot_setup("地方の事件記事に自分の父親を殺した容疑で娘が捕まったと掲載"),
             w.plot_turnpoint("$keanが依頼にやってくる"),
+            w.plot_develop("$keanは殺人が起こった家に務める使用人の息子だった"),
+            w.plot_develop("彼の話によれば事件は十日前に発生し、家からかなり離れた沼地で資産家の$roydが死んでいるのが発見された"),
+            w.plot_develop("殺害は改造$gunによるもの（現在最新の指紋鑑定技術というもので鑑定中）"),
+            w.plot_develop("その$gunが娘の$maryの部屋から見つかったことから、彼女を容疑者として逮捕した"),
+            w.plot_develop("しかし$keanは彼女と父親の仲は悪くなく、そんなことをする人間ではないと力説し、事件の解決をして欲しいと頼む"),
+            w.plot_turnpoint("$sherlockは$keanの依頼を引き受け、事件のあった場所に出かけることにした"),
             outline=OUTLINES[0])
 
 
 def about_this_case(w: World):
     return w.episode("事件について",
+            # NOTE
+            #   ・
+            # TODO
             w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
             outline=OUTLINES[1])
 

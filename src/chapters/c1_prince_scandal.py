@@ -63,6 +63,9 @@ OUTLINES = [
 #   1.皇太子の宝剣を取り戻す　→$jackから返してもらったが$stoneが付いてなかった
 #   2.密室殺人（$aily家で謎の女性の死体発見　→$ailyは自殺だった
 
+# NOTE: tech
+#   ・犯人探しのために「血液鑑定」を使う。これは冒頭で$sherlockが研究しているもの
+
 def prince_matter(w: World):
     return w.episode("皇太子の問題",
             # NOTE

@@ -61,6 +61,9 @@ OUTLINES = [
 #   ・孤島事件第二の殺人（観光課の$moch）　→$cherry。仲間割れと口封じ（当初から殺す計画
 #   ・孤島事件第三の殺人（霊能者）　→$cherry。犯行現場を見られた
 
+# NOTE: tech
+#   ・通信技術（モールス信号？）
+
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
             w.plot_turnpoint("$cherryから招待状がくる"),

@@ -50,6 +50,9 @@ OUTLINES = [
 #   ・ガチョウの中からナイフと$blue_stoneが出てくる　→$blue_stoneは$jackが逃げる最中に隠した／ナイフは殺人犯が凶器を慌てて隠した
 #   ・$moura夫人殺人事件（凶器が見つからない　→ガチョウの中のナイフで$jack容疑者　→ガチョウクラブの仲間割れで殺された。$jackは無関係
 
+# NOTE: tech
+#   ・
+
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",
             w.plot_setup("$limeが同居するようになり、$limeが料理や家事を担当するように変化する"),

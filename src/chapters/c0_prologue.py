@@ -40,6 +40,8 @@ OUTLINES = [
 # NOTE: case
 #   ・？
 
+# NOTE: tech
+#   ・照明（入り口はガス灯だが、中に$enagy式灯を使っている
 
 def troublesome(w: World):
     return w.episode("厄介事",

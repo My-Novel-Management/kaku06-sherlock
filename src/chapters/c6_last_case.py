@@ -52,6 +52,9 @@ OUTLINES = [
 # NOTE: case
 #   ・$stein元教授殺人事件　→$cultXの支援を受けて研究していたが、危険なことだと分かり、裏切ったために処分（$jakeによる
 
+# NOTE: tech
+#   ・
+
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
             SherlockHouse.commision_of_murder_case(w),
