@@ -48,6 +48,7 @@ OUTLINES = [
 
 # NOTE: tech
 #   ・凶器を使った人間を探すために最新技術の「指紋鑑定」を使う
+#   ・魔導列車
 
 def defence_request(w: World):
     return w.episode("弁護依頼",
@@ -71,8 +72,25 @@ def defence_request(w: World):
 def about_this_case(w: World):
     return w.episode("事件について",
             # NOTE
-            #   ・
-            w.plot_setup(""),
+            #   ・魔導列車で現場に向かう
+            #   ・事件現場調査
+            w.plot_setup("$keanに頼まれ、父親殺しの容疑をかけられた娘$maryの事件調査に訪れる$sherlockと$wilson"),
+            w.plot_setup("事件が起こった田舎町で亡くなった$royd氏は有名な資産家だった"),
+            w.plot_setup("彼の死で莫大な遺産が家族に残されると言われている"),
+            w.plot_setup("$sherlockは$keanに案内してもらい、事件現場を訪れる"),
+            w.plot_turnpoint("現場には若い刑事$patsonがいて、$sherlockを見て不審者扱いをする"),
+            w.plot_develop("$sherlockが$restradeの名前を出すと$patsonは協力すると言い出す"),
+            w.plot_develop("現場は湿地帯で、小さな女の子の足跡が検出できた"),
+            w.plot_develop("目撃者こそいないが、家族の証言から事件の日に$roydと$maryが会っていたのは確実視されている"),
+            w.plot_develop("何より殺害方法と凶器から、確実に$maryが犯人と警察は考えていて"),
+            w.plot_develop("しかし$maryは父親と会ったことは話したが、それ以外については黙秘を貫いている"),
+            #   ・家族の証言
+            w.plot_develop("$sherlockは$royd邸を訪れる"),
+            w.plot_develop("使用人の$kailに説明し、未亡人となった$jeanと話をさせてもらう"),
+            w.plot_develop("$jeanは憔悴していたが、事件前後の話をしてくれる"),
+            w.plot_develop("最近$maryと父親の仲がうまくいってなかったと証言する"),
+            w.plot_develop("使用人の$kailも同じように証言し、また互いのアリバイを証言する"),
+            # TODO
             w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
             outline=OUTLINES[1])
 

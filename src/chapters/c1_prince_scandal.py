@@ -65,6 +65,7 @@ OUTLINES = [
 
 # NOTE: tech
 #   ・犯人探しのために「血液鑑定」を使う。これは冒頭で$sherlockが研究しているもの
+#   ・魔導車
 
 def prince_matter(w: World):
     return w.episode("皇太子の問題",
