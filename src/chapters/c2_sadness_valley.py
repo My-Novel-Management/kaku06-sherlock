@@ -72,7 +72,7 @@ def about_this_case(w: World):
     return w.episode("事件について",
             # NOTE
             #   ・
-            # TODO
+            w.plot_setup(""),
             w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
             outline=OUTLINES[1])
 
