@@ -73,45 +73,99 @@ def silent_knight(w: World):
             w.plot_turnpoint("$maryは不審な鎧騎士を見つけた"),
             #   ・闇マーケット
             w.plot_develop("$sherlockは情報収集のために裏通りにやってくる"),
-            w.plot_develop(""),# TODO
+            w.plot_develop("$sherlockは待ち合わせていた情報屋$flenから今の動向を聞く"),
+            w.plot_develop("妙な動きがあるが、よくわからないと言われる"),
+            w.plot_develop("最近出回っている改造$gunについての情報を得る"),
             #   ・経過報告
             w.plot_develop("$sherlockは$wilsonに失踪人調査の経過報告をする"),
             w.plot_develop("ちょっと記事を調べただけでこの一年あまりの間に二十名以上が失踪している"),
             w.plot_develop("ただどれが事件の関係者で、そうでないのか分からない"),
             w.plot_develop("そもそも記事に載らない失踪者の方が多く、誰も気にしていないこと"),
-            w.plot_develop("少年探偵団や"),
-            w.plot_turnpoint("$maryが謎の鎧騎士を連れて戻ってくる"),
+            w.plot_develop("少年探偵団にも声をかけているが、まだ先は長そうだと"),
+            w.plot_turnpoint("そこに$maryが謎の鎧騎士を連れて戻ってくる"),
             outline=OUTLINES[0])
 
 
 def strange_part_time_job(w: World):
     return w.episode("奇妙なアルバイト",
+            # NOTE
+            #   ・謎のアルバイト
+            w.plot_setup("$maryが連れてきた鎧騎士は$limeと名乗った"),
+            w.plot_setup("$limeは口がきけず、筆談で話す"),
+            w.plot_setup("困っているところを助けたと$maryは言う"),
+            w.plot_develop("$limeは$sherlockに相談をした"),
+            w.plot_develop("$limeは呪いの鎧を着てしまい、それが外せなくなり、困っていたところを今の質屋夫婦に拾われた"),
+            w.plot_develop("今は質屋で守衛をやっている"),
+            w.plot_develop("一月ほど前に同僚の$jakinsからあるバイトを紹介された"),
+            w.plot_develop("それが奇妙なバイトで赤い鎧を着た人間だけを募集していた"),
+            w.plot_develop("面接で合格し、毎日三時間だけ通うことになった"),
+            w.plot_develop("その間、店番と守衛は$jakins一人でやってくれるという"),
+            w.plot_develop("$limeは拾ってもらったお礼をしたくて、小遣いが欲しかった"),
+            w.plot_develop("それでも黙ってやっていて悪いんじゃないかと、気になっているらしい"),
             w.plot_turnpoint("$sherlockは彼女にそのバイトをすぐ辞めるように、とだけアドバイスをした"),
-            w.plot_turnpoint("$maryは$limeから、突然赤鎧クラブが閉鎖になったと報告があったと聞いた"),
+            #   ・$limeと質屋夫婦
+            w.plot_develop("$maryは$limeを送っていく"),
+            w.plot_develop("$limeの質屋は雑居店街にあった"),
+            w.plot_develop("少し出ると大通りで改装中の国営銀行なども並ぶ"),
+            w.plot_develop("オーナー夫婦の家は近所で、$maryは顔合わせだけした"),
+            w.plot_develop("いい夫婦で$maryに遊びにくるように言ってくれた"),
+            #   ・事情説明
+            w.plot_develop("戻った$maryは$sherlockに何故あんなことを言ったのか問い詰める"),
+            w.plot_develop("$sherlockはそんな赤い鎧を着た人間だけを集めている仕事がある訳がないと"),
+            w.plot_develop("別の目的があって彼女をその場所に置いておきたいか、監視したいか、そういったものだと"),
+            w.plot_develop("彼女に何の特もないし、すぐにやめた方が安全だと"),
+            w.plot_turnpoint("後日、$maryは$limeから、突然赤鎧クラブが閉鎖になったと報告があったと聞いた"),
             outline=OUTLINES[1])
 
 
 def bank_robbery(w: World):
     return w.episode("銀行強盗",
-            w.plot_turnpoint("$limeが容疑者になった"),
+            # NOTE
+            #   ・バイト仲間失踪
+            w.plot_setup("$maryから$limeのバイトが突然なくなったと伝え聞いた"),
+            w.plot_setup("$sherlockは何か変化がなかったかと尋ねる"),
+            w.plot_setup("店にいったらこの前会った店員の$jakinsがいなかったと"),
+            w.plot_turnpoint("$limeがやってきて、$jakinsが失踪したと言ってきた"),
+            w.plot_develop("警察に届け出は出したものの、店はとりあえずオーナーに任せて、探して歩いていると言う"),
+            w.plot_develop("$sherlockは$ignesたちに指示をして、探してもらう"),
+            w.plot_develop("その間に気になるからと店に案内してもらった"),
+            #   ・店の調査
+            w.plot_develop("質屋にやってくる$sherlock"),
+            w.plot_develop("オーナーと出会い、$jakinsがどんな人物だったか話を聞く"),
+            w.plot_develop("$jakinsは好青年で、前働いていた夫人が産休で長く店を開けるからと、張り紙をしておいて、募集でやってきた"),
+            w.plot_develop("あまり給料は払えないが、それでも社会勉強になるからと働き始めた"),
+            w.plot_develop("物覚えも手際もよく、もっと他の仕事につけそうだった"),
+            w.plot_develop("やがて店を一人で任せられるまでになった"),
+            w.plot_develop("一月前に$limeを拾ってからは、彼女の宿泊代として守衛をやってもらった"),
+            w.plot_develop("少額ながら慈善事業もやっていたので、一人くらいなら寝食の世話もいとわなかった"),
+            w.plot_turnpoint("そこに$patsonがやってきて、オーナーを逮捕すると言い出した"),
             outline=OUTLINES[2])
 
 
 def the_end_of_case(w: World):
     return w.episode("事件の顛末",
+            # NOTE
+            #   ・銀行強盗
+            #   ・$limeの容疑を晴らす
             w.plot_turnpoint(""),
             outline=OUTLINES[3])
 
 
 def her_identity(w: World):
     return w.episode("鎧騎士の正体",
+            # NOTE
+            #   ・事件解決
+            #   ・$limeの事情
             w.plot_turnpoint("$limeは失踪中の第二王女だった"),
             outline=OUTLINES[4])
 
 
 def limes_reason(w: World):
     return w.episode("$limeの事情",
+            # NOTE
+            #   ・$limeの告白
             w.plot_resolve("$limeも$sherlockの家でしばらく一緒に暮らすことになった"),
+            #   ・$limeも一緒に暮らし始める
             outline=OUTLINES[5])
 
 
