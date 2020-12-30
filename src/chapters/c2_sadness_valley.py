@@ -90,14 +90,29 @@ def about_this_case(w: World):
             w.plot_develop("$jeanは憔悴していたが、事件前後の話をしてくれる"),
             w.plot_develop("最近$maryと父親の仲がうまくいってなかったと証言する"),
             w.plot_develop("使用人の$kailも同じように証言し、また互いのアリバイを証言する"),
-            # TODO
+            #   ・警察にて
+            w.plot_develop("$sherlockは警察にいき、$maryと話せるように交渉する"),
+            w.plot_develop("発見者である地元警官$mackingerに目撃状況を聞く"),
+            w.plot_develop("$patsonは$sherlockと$wilsonも阻止される"),
             w.plot_turnpoint("$restradeの計らいで$maryと面会許可が降りた"),
             outline=OUTLINES[1])
 
 
 def interview_of_mary(w: World):
     return w.episode("$maryの面会",
-            w.plot_turnpoint("$maryは$animalだと$wilsonに語った"),
+            # NOTE
+            #   ・$maryの証言
+            w.plot_setup("$sherlockは$maryと面会できることになった"),
+            w.plot_setup("$maryは黙秘を貫いているという話だったが、憔悴して、げっそりしていた"),
+            w.plot_setup("$sherlockは自分が$keanに頼まれたことを言う"),
+            w.plot_turnpoint("$keanに頼まれたと聞いて$maryは$sherlockに話す決断をする"),
+            w.plot_develop("$maryは事件の日の夜、父親に呼び出されて湿地の小屋に向かった"),
+            w.plot_develop("$roydは$maryにある打ち明け話をして、すぐに$maryは帰った"),
+            w.plot_develop("$maryはしばらく泣いてから、自分の部屋にこもって翌朝はずっと寝ていた"),
+            w.plot_develop("起こされたのは事件が発覚してから"),
+            w.plot_develop("$maryは自分は父親を絶対に殺していないと訴えた"),
+            w.plot_turnpoint("面会後、$maryは$animalだと$wilsonに語った"),
+            w.plot_develop(""),# TODO
             outline=OUTLINES[2])
 
 
