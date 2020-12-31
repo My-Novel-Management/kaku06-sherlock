@@ -147,7 +147,20 @@ def the_end_of_case(w: World):
             # NOTE
             #   ・銀行強盗
             #   ・$limeの容疑を晴らす
-            w.plot_turnpoint(""),
+            w.plot_setup("失踪した$jakinsを探して店に調べにやってきた$sherlock"),
+            w.plot_setup("オーナーを逮捕しに$patsonが現れた"),
+            w.plot_setup("$patsonは銀行強盗の容疑で逮捕すると言う"),
+            w.plot_setup("改装中の国営銀行の大金庫に穴があいていて、そこを辿るとこの店の地下に繋がっていた"),
+            w.plot_turnpoint("更にその地下道で$jakinsの遺体が発見される"),
+            #   ・殺人事件
+            w.plot_develop("$jakins殺害の容疑者として$limeが逮捕される"),
+            w.plot_develop("オーナー夫婦も参考人として聴取される"),
+            w.plot_develop("$sherlockは$limeが店を離れている間に穴を掘っていたと言う"),
+            w.plot_develop("それを仕組んだのは$jakinsだが、仲間に口封じで殺されたんだろうと"),
+            w.plot_develop("殺害手口は弾の残らない改造$gunだった"),
+            w.plot_develop("一連のつながりを感じつつ、$limeたちの無実を証明するためにアリバイを探す"),
+            w.plot_develop("オーナー夫婦は地元の商工会の会合にでかけていてアリバイがあった"),
+            w.plot_turnpoint("$limeは$maryと一緒にオーナー夫婦へのプレゼントを選びに出かけていたのが証明された"),
             outline=OUTLINES[3])
 
 
@@ -155,8 +168,23 @@ def her_identity(w: World):
     return w.episode("鎧騎士の正体",
             # NOTE
             #   ・事件解決
+            w.plot_setup("$limeたちの容疑が晴れた"),
+            w.plot_setup("しかし質屋は閉店することが決まった"),
+            w.plot_turnpoint("後日、銀行強盗の一団と見られる集団が、火事になった空き家で死んでいるのが発見された"),
+            w.plot_develop("事件は盗まれたものが見つからないまま解決になった"),
+            #   ・盗まれたもの
+            w.plot_develop("$sherlockは改装が終わった銀行を訪れる"),
+            w.plot_develop("そこにいたのは兄の$mikelだった"),
+            w.plot_develop("$mikelは$sherlockに自分が斡旋する仕事につけと命じる"),
+            w.plot_develop("$sherlockは無視して、役員から盗まれたものを聞き出す"),
+            w.plot_develop("盗まれたのは宝石以外に$white_stoneも含まれていた"),
             #   ・$limeの事情
-            w.plot_turnpoint("$limeは失踪中の第二王女だった"),
+            w.plot_turnpoint("$limeを$maryが連れてくる"),
+            w.plot_resolve("家を出た$limeは、行き場を失って困っていた"),
+            w.plot_resolve("そこを再び$maryが拾ったらしい"),
+            w.plot_resolve("$sherlockは知人の神官に頼み、$limeの呪いを解いてもらった"),
+            w.plot_resolve("話せるようになった$lime"),
+            w.plot_turnpoint("$limeは失踪中の第二王女だと告白した"),
             outline=OUTLINES[4])
 
 
