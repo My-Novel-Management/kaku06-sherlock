@@ -192,8 +192,21 @@ def limes_reason(w: World):
     return w.episode("$limeの事情",
             # NOTE
             #   ・$limeの告白
-            w.plot_resolve("$limeも$sherlockの家でしばらく一緒に暮らすことになった"),
+            w.plot_setup("口がきけるようになった$limeは失踪中の第二王女と告白する"),
+            w.plot_setup("$limeは$sherlockたちに事情を話し始めた"),
+            w.plot_develop("$limeは正室の子ではなく、王が遊女に産ませた存在だった"),
+            w.plot_develop("そのことを隠しつつ育てられたが周囲はなんとなく知れ渡り、扱いがぞんざいだった"),
+            w.plot_develop("政略結婚の道具としてしか存在価値がなく、そんな自分が嫌だった"),
+            w.plot_develop("そんな$limeの部屋にある日誘拐犯が現れる"),
+            w.plot_develop("$limeは頼み込んでその泥棒に誘拐してもらう"),
+            w.plot_develop("泥棒は$limeを売り飛ばすつもりだったが、彼女はそこにあった鎧を着て逃げ出す"),
+            w.plot_develop("その鎧が呪いの鎧だったためにしゃべれなくなり、現在に至る"),
             #   ・$limeも一緒に暮らし始める
+            w.plot_turnpoint("$limeはここにしばらく置いてもらえないかとお願いする"),
+            w.plot_develop("$sherlockはこれ以上住人が増えるとどうしようもないと言い、断る"),
+            w.plot_develop("$maryが$limeのぶんも働いてなんとかすると言い出す"),
+            w.plot_develop("$sherlock一人が反対となり、孤立する"),
+            w.plot_resolve("仕方なく承諾し、$limeも$sherlockの家でしばらく一緒に暮らすことになった"),
             outline=OUTLINES[5])
 
 

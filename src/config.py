@@ -214,6 +214,7 @@ ASSET = {
             ("car", "魔導車"),
             ("telephone", "魔導通話"),
             ("compass", "魔導盤"),
+            ("drag", "魔導ドラッグ"),
             ## 醜聞
             ("royalsword", "宝剣"),
             ## 重要アイテム
@@ -244,6 +245,8 @@ ASSET = {
             ("cultX", "教団Ｘ"),
             ("Xeno", "聖ゼノ教"),# Xenoは異物の意味。正式には「ゼノ・カトル教」。カトルは普遍的。カトリックとも
             ("festival", "勇者生誕祭"),
+            ## 団体
+            ("foundation", "パーシヴァル財団"),
             ),
         "RUBIS": (
             # (origin / rubi / exclusions / always)
