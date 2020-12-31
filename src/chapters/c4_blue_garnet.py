@@ -116,14 +116,40 @@ def investigate_case(w: World):
     return w.episode("事件捜査",
             # NOTE
             #   ・$sherlockの動き（$jake関連）
+            w.plot_setup("$sherlockは$moura夫人の家を調べにきていた"),
+            w.plot_setup("一方$limeは帰ってこない$maryを心配していた"),
+            w.plot_turnpoint("$ignesが$maryが捕まったと伝えてきた"),
+            w.plot_develop("$sherlockは$moura夫人がガチョウクラブの会員だったことを知る"),
+            w.plot_develop("$mouraの殺され方を検死を担当した医者から聞く"),
+            w.plot_develop("殺害方法がこれまでと少し違っていることに気づく"),
+            w.plot_develop("ガチョウクラブのことも調べに向かう$sherlock"),
+            w.plot_turnpoint("市場で$ignesの友人から、$maryが捕まったと伝言される"),
             #   ・$mary救出と事件解決
-            w.plot_turnpoint(""),
+            w.plot_develop("ガチョウクラブの本部にやってくるが、すでに解散した後"),
+            w.plot_develop("$sherlockは以前の銀行強盗のことを思い出して、警察に協力を頼む"),
+            w.plot_develop("市場で$nowlisからガチョウの卸業者を聞く"),
+            w.plot_turnpoint("$sherlockが卸業者の$hornetが犯人だと、本人を前に尋ねた"),
             outline=OUTLINES[3])
 
 
 def case_end(w: World):
     return w.episode("事件解決",
-            w.plot_turnpoint("女警官は$jackだった"),
+            # NOTE
+            #   ・$maryと$jack
+            w.plot_setup("$maryはガチョウクラブに捕まっていた"),
+            w.plot_setup("事件の犯人はガチョウクラブの人間だと考える$mary"),
+            w.plot_setup("男たちは$maryが珍しい$ajinだと分かり、売り飛ばそうとしていた"),
+            w.plot_turnpoint("そこに突然女警官が入ってきて、行方不明の少女を探していると言う"),
+            w.plot_develop("男たちは嘘をつくが、$maryが騒いだことで発覚"),
+            w.plot_develop("女警官を殺してしまおうとしたが返り討ちにあう"),
+            w.plot_develop("男たちを縛り上げ、警察を呼ぶ"),
+            w.plot_turnpoint("彼女は$maryに$sherlockの知り合いだと、説明した"),
+            #   ・$jackの説明
+            w.plot_develop("$maryは$sherlockがどんな人なのか尋ねた"),
+            w.plot_develop("$jackは彼を頭はいいが女心はわからないつまらない男と笑う"),
+            w.plot_develop("それでも結果的に助けられ、恩があったので、$maryを助けたと"),
+            w.plot_develop("$jackは$maryを$sherlockのもとに送っていく"),
+            w.plot_turnpoint("$sherlockは$jackを見て全てを察した"),
             outline=OUTLINES[4])
 
 
@@ -131,7 +157,27 @@ def four_stones(w: World):
     return w.episode("四つの$stone",
             # NOTE
             #   ・$jackの話
+            w.plot_setup("事件は結局$hornertによるガチョウクラブがやったと思わせる偽装だった"),
+            w.plot_setup("$jackの仕業に見せかけたもので、鑑定結果から$jackの指紋は検出されなかった"),
+            w.plot_setup("ガチョウクラブの方はマルチによる集金と違法$dragの売買ルートになっていた"),
+            w.plot_setup("$maryは$jackにより助けられた"),
+            w.plot_turnpoint("$jackは$sherlockに話があると言った"),
+            w.plot_develop("二人きりで話す$jackと$sherlock"),
+            w.plot_develop("しばらく別の国に潜伏していたのに何故戻ってきたのか、理由を伝える$jack"),
+            w.plot_develop("裏世界の動向に敏感な$jackは、最近妙な動きがあることに気づいた"),
+            w.plot_develop("ガチョウクラブによる$dragの件もそうだった"),
+            w.plot_develop("大きなお金が一つのところに集められつつある。そこがどこかはまだ分からない"),
+            w.plot_develop("何の目的かも不明だが、どうもよくないことを考えている連中がいると"),
+            w.plot_turnpoint("$blue_stoneは$jackが盗み出したものだが、知らない男に奪われそうになり、ガチョウに食べさせたと"),
             #   ・四つの$stone
+            w.plot_develop("取り戻す予定がまぎれて見つけられなくなった"),
+            w.plot_develop("それで新聞に記事を出していたが、それを見つけたのが$sherlockだった"),
+            w.plot_develop("$jackは四つの$stoneの話をする"),
+            w.plot_develop("$sherlockも知識は持っていた"),
+            w.plot_develop("$stoneはかつて$bossを封じ込めた四人の英雄が持っていた聖なる武具の力の源"),
+            w.plot_develop("現在$Arthur、$Percival、$Galahad、$Borsの四つの絶対王家が存在している"),
+            w.plot_develop("この国は$Arthurが治めている"),
+            w.plot_develop("$jackはその一つを預けるから、謎を解いて、阻止してほしいと依頼する"),
             w.plot_resolve("$jackから$blue_stoneを託された"),
             outline=OUTLINES[5])
 
