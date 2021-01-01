@@ -66,7 +66,19 @@ OUTLINES = [
 
 def legend_of_dark_dog(w: World):
     return w.episode("魔犬の伝説",
-            w.plot_turnpoint("$cherryから招待状がくる"),
+            # NOTE
+            #   ・それぞれの近況
+            w.plot_setup("$maryと$limeが一緒に暮らすようになり、一月が経過していた"),
+            w.plot_setup("寡黙な$limeが$maryとだけはこそこそ話して時折笑うようになっていた"),
+            w.plot_setup("$sherlockは$jackに言われたアンダーグラウンドの動きを調べていた"),
+            w.plot_setup("かつて存在した$magicの研究者である$stein氏の論文から、亡くなった人を復活させる儀式があったと知る"),
+            w.plot_turnpoint("$sherlockはあまりオカルトを信用しないと語る"),
+            #   ・魔獣伝説
+            w.plot_develop("$sherlockは新聞記事にのったある特集を教える"),
+            w.plot_develop("孤島の話。そこでは一人の城主が村の住民を奴隷のようにこきつかっていた"),
+            w.plot_develop("気に入った村の娘を城に呼んでは自分の好きなように遊んだ"),
+            w.plot_develop(""),# TODO
+            w.plot_turnpoint("その孤島の城主$cherryから招待状がくる"),
             outline=OUTLINES[0])
 
 
