@@ -128,8 +128,17 @@ def second_murder(w: World):
             w.plot_develop("元刑事は殺害されたと断定する"),
             w.plot_develop("元刑事主導で全員のアリバイを確かめる"),
             #   ・それぞれのアリバイ
+            w.plot_develop("元刑事$hugarは$sherlockに協力させ、全員のアリバイを調査する"),
+            w.plot_develop("まず亡くなった社会学者$reuiについて、$sherlockが最後に談話室で会話した後、一人で飲んでいた。誰も自室に戻ったのは見ていない"),
+            w.plot_develop("心霊研究家$karlは明日のプレゼンに備えて、資料を読み込んでいたと"),
+            w.plot_develop("新聞記者$milkは他の記事の下書きを作っていたが、途中で$maryたちの部屋にいって、$sherlockの話を聞いてから寝た"),
+            w.plot_develop("$maryと$limeは$milkがきて、三人で楽しく話したと証言"),
+            w.plot_develop("$jamosはなかなか寝付けず、シェフに頼んで眠り用のアルコール入りのパン粥を作ってもらって食べた"),
+            w.plot_develop("使用人の$bettyは明け方からの準備に備えて早めに就寝。自室に入ったのはシェフの$doldが見ている"),
+            w.plot_develop("$hugarは城主の$cherryと少し話してから、ラウンジに残っていた$reuiと酒を飲みながら会話し（$sherlockより前）、自室に入って眠った"),
+            w.plot_develop("城主の$cherryは$hugarが出てから、寝室にいき、すぐに寝たと"),
             #   ・失踪者発生
-            w.plot_turnpoint("$mochが失踪した"),
+            w.plot_turnpoint("観光課の$mochに聴取しようとしたところで、彼がいないことが判明した"),
             outline=OUTLINES[2])
 
 
@@ -137,6 +146,8 @@ def trapped_in_castle(w: World):
     return w.episode("城壁の虜囚",
             # NOTE
             #   ・第二の殺人
+            w.plot_setup("いなくなった$mochを、手分けして探す"),
+            w.plot_setup(""),
             #   ・閉じ込められた
             w.plot_turnpoint(""),
             outline=OUTLINES[3])
