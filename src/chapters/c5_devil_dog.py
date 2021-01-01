@@ -77,37 +77,85 @@ def legend_of_dark_dog(w: World):
             w.plot_develop("$sherlockは新聞記事にのったある特集を教える"),
             w.plot_develop("孤島の話。そこでは一人の城主が村の住民を奴隷のようにこきつかっていた"),
             w.plot_develop("気に入った村の娘を城に呼んでは自分の好きなように遊んだ"),
-            w.plot_develop(""),# TODO
-            w.plot_turnpoint("その孤島の城主$cherryから招待状がくる"),
+            w.plot_develop("その娘が意を決して城から逃げ出した"),
+            w.plot_develop("城主は飼っていた猟犬をけしかけた"),
+            w.plot_develop("だが探しにいった城主が見つけたのは惨殺された多くの猟犬と血まみれの少女、そして生き残った知らない真っ黒な巨大な犬"),
+            w.plot_develop("城主は呪いにうなされて病死した"),
+            w.plot_develop("それはただ酷いことをした城主が病死しただけの話が人の伝聞で都市伝説になっただけだと、$sherlock"),
+            w.plot_turnpoint("そこに、その孤島の現在の城主$cherryから招待状がくる"),
             outline=OUTLINES[0])
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
-            w.plot_turnpoint("第一の殺人（犯罪研究家が死亡）が発生"),
+            # NOTE
+            #   ・孤島上陸
+            w.plot_setup("島からの招待を受けて島に渡る港までやってきた$sherlockたち"),
+            w.plot_setup("港で地元の観光課の$mochと合流し、船で島に渡る"),
+            w.plot_setup("$mochから魔獣伝説を観光資源にしたいから、そのためのイベントとして各方面の専門家を集めたと説明される"),
+            w.plot_turnpoint("島は絶海の孤島だった"),
+            w.plot_develop("$sherlockは城に行く前に、伝説の場所となっている雑木林を見せてもらう"),
+            w.plot_develop("立て札や囲いがされて、観光地になっていた"),
+            w.plot_develop("かつて島民がいたが、今は一人もいなくなったと説明される"),
+            w.plot_turnpoint("城に入ると、既に招待客が揃っていた"),
+            #   ・招待客
+            w.plot_develop("パーティに招待されたのは$sherlock以外に、元刑事、犯罪研究家、心霊学者、地元の歴史研究家が集まっていた"),
+            w.plot_develop("城主の$cherryは未亡人で、数年前に城主である夫をうしない、それ以来一人でここに暮らしてきた"),
+            w.plot_develop("今回のパーティのために特別に料理や使用人を雇っていた"),
+            w.plot_turnpoint("パーティが始まる"),
+            w.plot_develop("$sherlockはその間に城内を歩き回り、調査する"),
+            w.plot_develop("$maryと$limeは食べるのに懸命で、会場に残された"),
+            w.plot_develop("$maryは自称犯罪研究家に、$limeは心霊学者にそれぞれ話しかけられる"),
+            w.plot_develop("$wilsonは歴史研究家と地域の情報交換をしていた"),
+            w.plot_develop("パーティは何事もなく終わり、明日はイベントが開催予定だった"),
+            w.plot_develop("部屋はそれぞれ個室が当てられていたが、部屋割りで$maryが文句を言う"),
+            w.plot_develop("それでも$sherlockと$wilson、$maryと$limeになり、それぞれ就寝する"),
+            w.plot_turnpoint("明け方、使用人の$bettyの悲鳴が上がり、最初の犠牲者（犯罪研究家）が発見された"),
             outline=OUTLINES[1])
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
-            w.plot_turnpoint("失踪した$mochが雑木林で遺体で発見される"),
+            # NOTE
+            #   ・事件発生
+            w.plot_setup("招待客の中から被害者が出る"),
+            w.plot_setup("犯罪研究家が談話室で無残な姿で倒れていた"),
+            w.plot_setup("元刑事によって現場は保存され、遺体は空き部屋に収められた"),
+            w.plot_turnpoint("現場を見た元刑事がいう。犯人は$sherlockだと"),
+            w.plot_develop("$sherlockが談話室で会話した最後の人間だった"),
+            w.plot_develop("しかし$sherlockにはアリバイがあった"),
+            w.plot_develop("心霊学者は伝説の魔獣が現れたと騒ぐ"),
+            w.plot_develop("元刑事は殺害されたと断定する"),
+            w.plot_develop("元刑事主導で全員のアリバイを確かめる"),
+            #   ・それぞれのアリバイ
+            #   ・失踪者発生
+            w.plot_turnpoint("$mochが失踪した"),
             outline=OUTLINES[2])
 
 
 def trapped_in_castle(w: World):
     return w.episode("城壁の虜囚",
+            # NOTE
+            #   ・第二の殺人
+            #   ・閉じ込められた
             w.plot_turnpoint(""),
             outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔犬の牙",
+            # NOTE
+            #   ・第三の被害者
+            #   ・地下室
             w.plot_turnpoint(""),
             outline=OUTLINES[4])
 
 
 def dark_ritual(w: World):
     return w.episode("暗黒の儀式",
+            # NOTE
+            #   ・真犯人
+            #   ・儀式のあと
             w.plot_resolve(""),
             outline=OUTLINES[5])
 
