@@ -57,57 +57,81 @@ OUTLINES = [
 
 def the_fixer(w: World):
     return w.episode("事件の黒幕",
-            SherlockHouse.commision_of_murder_case(w),
-            InCar.goto_incident_scene(w),
-            SteinHouse.case_of_house(w),
+            # NOTE
+            #   ・闇の儀式（前回のラストから引き続きで
+            w.plot_setup("$sherlockは孤島の事件の後、頻繁に図書館に通っていた"),
+            w.plot_setup("$wilsonも忙しそうにあちこち出かけていた"),
+            w.plot_setup("$maryと$limeは仲良くしていた。家事を分担し、落ち着いていた"),
+            w.plot_turnpoint("大家$lisaがやってきて、家賃が半年ばかり振り込まれていないと告げる"),
+            w.plot_develop("$maryは$sherlockに相談するが、彼は気にしない。今までも大丈夫だったからと"),
+            w.plot_develop("$wilsonに相談したかったが、姿を見せない"),
+            w.plot_develop("市場で$ignesや$nowlisに相談すると、何か仕事を探すかという話に"),
+            w.plot_develop("就職情報誌をもらって帰って$limeと二人で相談する"),
+            w.plot_turnpoint("$patsonがやってきて、$sherlockに事件のことでアリバイを聞きたいと言ってきた。殺人事件が発生したらしい"),
+            #   ・元大学教授の殺人
+            w.plot_develop("殺されたのは古代の技術を研究していた元大学教授の$stein"),
+            w.plot_develop("$steinは最近$sherlockが口にしていた名前で、図書館以外にも何度か話を聞きに訪れたらしい"),
+            w.plot_develop("戻ってきた$sherlockはそこで$steinが亡くなったことを知る"),
+            w.plot_develop("ずっと闇の儀式のことを調べていたと証言する$sherlock"),
+            w.plot_turnpoint("$steinは$morianoの旧友で、今回の件でついに黒幕が動き出したと言った"),
             )
 
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
-            SteinHouse.restrade_meets(w),
-            SteinHouse.about_moriano(w),
+            # NOTE
+            #   ・$morianoとは
+            w.plot_setup("元大学教授$stein殺害容疑が$sherlockにかかっていた"),
+            w.plot_setup("$sherlockは$steinが$morianoの知人と言う"),
+            w.plot_setup("$morianoについて、$sherlockはついに語り始めた"),
+            w.plot_turnpoint("$morianoは今起こっている多くの犯罪の裏側で糸を引く黒幕だと語る"),
+            w.plot_develop("$morianoは幼少期から神童と呼ばれ、十代にして国立大学で博士号を取得する"),
+            w.plot_develop("文学、言語学はもちろん、社会学、心理学、数学に長け、特に研究熱心だったのは$scienceだった"),
+            w.plot_develop("現在の技術革新があるのも$morianoのお陰だと語る"),
+            w.plot_develop("その$morianoはある日突然大学を去り、独自の研究所を開設した"),
+            w.plot_develop("それが犯罪研究所だ"),
+            w.plot_develop("表向きは犯罪に関する研究を行うが、裏では犯罪者の助けとなる仕組みや道具を横流ししていた"),
+            #   ・市場の変化
+            w.plot_develop("一方$maryは買い出しに市場にきていた"),
+            w.plot_develop("続いている$jackの連続殺人事件もあって、市場にも警備の兵士が立ち、物々しい雰囲気"),
+            w.plot_develop("最近宗教の宣伝も増えていて、男が憲兵に取り締まられていた"),
+            w.plot_develop("$maryはうずくまっていた老人を助ける"),
+            w.plot_turnpoint("$maryが連れて帰ってきた老人こそが、$morianoだった"),
             )
 
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
-            SherlockHouse.moriano_is_here(w),
+            # NOTE
+            #   ・$morianoの警告
+            w.plot_setup("$maryが助けた老人が$morianoだった"),
+            w.plot_setup("$sherlockは$maryに$morianoが犯罪の黒幕と説明する"),
+            w.plot_turnpoint("$morianoは$maryにあげた飴に毒が入っていたと言う"),
+            w.plot_develop("解毒剤を見せ、$morianoは$sherlockに警告する"),
+            w.plot_develop(""),# TODO
+            #   ・事件調査
+            #   ・$maryの異変
             )
 
 
 def lookfor_mary(w: World):
     return w.episode("$maryの捜索",
-            SherlockHouse.marys_strange(w),
-            Market.strange_letter(w),
-            SherlockHouse.where_is_mary(w),
-            InCity.goto_moriano(w),
-            MorianoHouse.broken_fire(w),
-            SherlockHouse.alive_moriano(w),
+            # NOTE
+            #   ・
             )
 
 
 def rescue_mary(w: World):
     return w.episode("$mary救出劇",
-            SherlockHouse.morianos_whereabouts(w),
-            AbandonedHouse.awaking_mary(w),
-            AbandonedHouse.escape_from_danger(w),
-            SherlockHouse.vanished_sherlock(w),
+            # NOTE
+            #   ・
             )
 
 
 def his_letter(w: World):
     return w.episode("$sherlockからの手紙",
-            SherlockHouse.sherlocks_information(w),
-            SherlockHouse.no_sherlock_life(w),
-            SherlockHouse.serching_sherlock(w),
-            SherlockHouse.arrived_his_message(w),
-            )
-
-
-def sad_news(w: World):
-    return w.episode("悲しいお知らせ",
-            SherlockHouse.sadness_report(w),
+            # NOTE
+            #   ・$sherlockからの手紙が届いた
             )
 
 
@@ -187,7 +211,6 @@ def main(w: World):
             lookfor_mary(w),
             rescue_mary(w),
             his_letter(w),
-            sad_news(w),
             )
 
 
