@@ -147,27 +147,75 @@ def trapped_in_castle(w: World):
             # NOTE
             #   ・第二の殺人
             w.plot_setup("いなくなった$mochを、手分けして探す"),
-            w.plot_setup(""),
+            w.plot_setup("外は嵐で海に繋いでいた船は沖に流されてなくなっていた"),
+            w.plot_turnpoint("雑木林で$mochが惨殺されているのが発見された"),
+            w.plot_develop("一旦城に戻って情報を整理する$sherlock"),
+            w.plot_develop("$hugarは犯人探しを勝手に始めた"),
+            w.plot_turnpoint("$karlが行方をくらました"),
             #   ・閉じ込められた
-            w.plot_turnpoint(""),
+            w.plot_develop("失踪者だらけになり、$sherlockは$jamosに頼んで通信機を準備してもらう"),
+            w.plot_develop("改めて情報を整理する"),
+            w.plot_develop("社会学者の$reuiが死に、失踪した$mochは遺体で発見"),
+            w.plot_develop("犯人を探しにいった$hugarは失踪し、心霊学者の$karlは姿を消した"),
+            w.plot_develop("城主の$cherryの部屋は鍵がかかったまま"),
+            w.plot_develop("外から戻ってきたシェフの$doldは孤島に閉じ込められたと話す"),
+            w.plot_turnpoint("$bettyの死体を見つけたと、$hugarが戻ってきた"),
             outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔犬の牙",
             # NOTE
-            #   ・第三の被害者
+            #   ・犯人は心霊学者？
+            w.plot_setup("$hugarは心霊学者$karlが怪しいと言い出す"),
+            w.plot_setup("$sherlockは全員が固まっていた方がいいと言う"),
+            w.plot_setup("城主$cherryの部屋の鍵を壊して中に入る"),
+            w.plot_turnpoint("部屋の中が荒らされて、$cherryの服と血液が散乱していた"),
             #   ・地下室
-            w.plot_turnpoint(""),
+            w.plot_develop("本当に魔獣がいるんじゃないかという話が持ち上がる"),
+            w.plot_develop("$cherryもどこかで死んでいるという話に"),
+            w.plot_develop("$sherlockは一連の事件が人間の仕業によるものだと言うが"),
+            w.plot_develop("$maryが城主の寝室から抜け道があるのを見つけた"),
+            w.plot_develop("抜け道はホール脇に繋がっていることが分かり、これを使って誰かが殺したと"),
+            w.plot_develop("$doldの姿が見えないことから、今度は彼を疑う$hugar"),
+            w.plot_develop("$sherlockは最初の事件の現場を確認する"),
+            w.plot_turnpoint("談話室で地下への階段を発見した"),
+            #   ・拷問部屋
+            w.plot_develop("階段を降りていくとそれは地下の一室に繋がっていた"),
+            w.plot_develop("部屋は拷問器具が沢山置かれていた"),
+            w.plot_develop("そこに消えた$karlの遺体があった"),
+            w.plot_develop("$sherlockはそれを見て事件の謎が解けたというが"),
+            w.plot_develop("そこに城主$cherryが現れる"),
+            w.plot_develop("$sherlockたちを部屋に閉じ込める$cherry"),
+            w.plot_develop("$cherryが真犯人だという$sherlock"),
+            w.plot_turnpoint("だが部屋に現れたのは黒い大きな犬だった"),
             outline=OUTLINES[4])
 
 
 def dark_ritual(w: World):
     return w.episode("暗黒の儀式",
             # NOTE
-            #   ・真犯人
-            #   ・儀式のあと
-            w.plot_resolve(""),
+            #   ・魔犬
+            w.plot_setup("地下の拷問部屋に閉じ込められた$sherlockたち"),
+            w.plot_setup("黒い大きな犬が部屋に入れられた"),
+            w.plot_setup("元刑事の$hugarは$gunを取り出す"),
+            w.plot_setup("獣を撃つ"),
+            w.plot_turnpoint("獣は部屋の外に逃げ出した"),
+            w.plot_develop("$cherryもそれを追って出ていく"),
+            w.plot_develop("部屋に閉じ込められた$sherlockたち"),
+            w.plot_develop("$maryにより、なんとか扉を壊して部屋から脱出する"),
+            w.plot_develop("外にいた$doldと$wilsonは警察に連絡がついたという"),
+            w.plot_develop("地元の警察がかけつけるというが、それより前に外に飛び出した$cherryを探しに出る"),
+            w.plot_turnpoint("$hugarが殺されていた"),
+            #   ・事件の真相
+            w.plot_develop("$sherlockは$cherryを説得する"),
+            w.plot_develop("$cherryが餌のために人殺しをしていることを見抜いていた"),
+            w.plot_develop("魔獣は弱っていて、さっきの傷が致命傷になり、衰弱していく"),
+            w.plot_develop("$cherryは自分の体を与えたが、魔獣は生き返らなかった"),
+            w.plot_turnpoint("そこに、警察の船が到着した"),
+            #   ・後日談
+            w.plot_resolve("後日、$cherryの城の地下から、儀式のあとが発見される"),
+            w.plot_resolve("$sherlockは$steinの論文を参照し、復活しても維持するために人肉が必要だったと語る"),
             outline=OUTLINES[5])
 
 
