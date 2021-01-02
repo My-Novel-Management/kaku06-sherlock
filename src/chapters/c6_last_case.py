@@ -108,23 +108,40 @@ def his_warning(w: World):
             w.plot_setup("$sherlockは$maryに$morianoが犯罪の黒幕と説明する"),
             w.plot_turnpoint("$morianoは$maryにあげた飴に毒が入っていたと言う"),
             w.plot_develop("解毒剤を見せ、$morianoは$sherlockに警告する"),
-            w.plot_develop(""),# TODO
+            w.plot_develop("$moriano側も$sherlockの動向は把握していて、今までの行動の全てが記録されていた"),
+            "ここで記述者が$morianoかも知れないと勘違いさせること",
+            w.plot_develop("$morianoは$sherlockの活躍を新聞小説のように楽しんでいると"),
+            w.plot_develop("ただ今までの事件でもっと早くに手が打てれば傷つく人が少なかったと"),
+            w.plot_develop("いつも犠牲者が出てから動くのは弱者の行動だと笑う"),
+            w.plot_develop("$morianoは$maryに解毒剤といってソーダ水を渡し、去っていく"),
+            w.plot_develop("$sherlockは$morianoからもらった飴をなめて、ただの砂糖菓子だと苦笑する"),
             #   ・事件調査
+            w.plot_develop("$sherlockは亡くなった$stein教授の調査に向かう"),
+            w.plot_develop("$patsonと遭遇し、また疑われる"),
+            w.plot_develop("殺害方法は$gunだったが、部屋はロックされた状態で密室だった"),
+            w.plot_develop("凶器も見つからず、捜査は難航していた"),
+            w.plot_turnpoint("$sherlockは部屋で$boss復活に関する資料を見つけた"),
             #   ・$maryの異変
+            w.plot_develop("一方$maryは$morianoに言われてから、不安定だった"),
+            w.plot_develop("市場に買い出しにでかけた$maryは、$morianoと再会する"),
             )
 
 
 def lookfor_mary(w: World):
     return w.episode("$maryの捜索",
             # NOTE
-            #   ・
+            #   ・$mary失踪
+            w.plot_setup("$maryが買い物に行ったまま帰ってこない"),
+            w.plot_setup(""),# TODO
+            #   ・$maryを探せ
             )
 
 
 def rescue_mary(w: World):
     return w.episode("$mary救出劇",
             # NOTE
-            #   ・
+            #   ・$maryの本心は
+            #   ・最終決戦
             )
 
 
