@@ -159,15 +159,49 @@ def rescue_mary(w: World):
             w.plot_setup("$morianoの研究所を訪れた$lime"),
             w.plot_setup("$maryは$morianoとともに戻ってきた"),
             w.plot_turnpoint("$maryは帰らないと$limeに告げる"),
-            w.plot_develop(""),# TODO
-            #   ・最終決戦
+            w.plot_develop("$maryは$morianoの考えを聞き、$sherlockがやっていることは本当は良くないことじゃないかと思い始めていた"),
+            w.plot_develop("人が幸せを掴むために仕方なく犯した罪を、全く関係のない$sherlockが裁き、警察に突き出す"),
+            w.plot_develop("真実が明るみにならなかった方が幸せだったケースもある"),
+            w.plot_develop("特に孤島事件の時は巻き込まれたとはいえ、事件の裏側にあったのは$cherryの寂しさとどうしようもなさだった"),
+            w.plot_develop("社会を変えるのは$morianoの考えだと思い、今勉強していると言う"),
+            w.plot_develop("$limeはそれでも犯罪は悪いことだと言う"),
+            w.plot_develop("貧しい人を助けられないのは王室や議員たちの怠慢だと認めつつも、全てを助けることはできないと"),
+            w.plot_develop("$limeは$maryが帰ってくると信じていると、言い残して、後にする"),
+            #   ・$sherlockの気持ちは
+            w.plot_develop("$limeは帰って$sherlockに$maryのことを伝えた"),
+            w.plot_develop("$sherlockはほとんど寝ずに何か実験を繰り返していた"),
+            w.plot_turnpoint("$sherlockは色の変わった小瓶を見て、やっと$morianoを追い詰められると言った"),
+            #   ・世直しの為に
+            w.plot_develop("$maryは$morianoの世話をしながら、考えていた"),
+            w.plot_develop("彼が言うように$sherlockが悪いとは考えていなかったが$limeを近づけたくはなかった"),
+            w.plot_develop("自分が$limeに嫉妬していたのは分かった"),
+            w.plot_develop("$muranは$maryにそれでいいと言う"),
+            w.plot_develop("ここでは様々なことが肯定された。居心地がよかった"),
+            w.plot_develop("$morianoがやってきて世界のシステムを変えるための儀式に必要なものが揃ったという"),
+            w.plot_develop("$maryは$sherlockからの預かりものである$blue_stoneを渡す"),
+            w.plot_turnpoint("しかし、そこに$sherlockが殺人の証拠品を持って現れた"),
             )
 
 
 def his_letter(w: World):
     return w.episode("$sherlockからの手紙",
             # NOTE
+            #   ・対決
+            w.plot_setup("$sherlockは$morianoの殺人の証拠を手に、やってきた"),
+            w.plot_setup("$maryは預かっていた$blue_stoneを$morianoに渡す"),
+            w.plot_setup("$sherlockは$morianoに自主するように言う"),
+            w.plot_turnpoint("$transformした$maryは$sherlockを貫いてしまう"),
+            w.plot_develop("$sherlockを殺してしまったと思った$mary"),
+            w.plot_develop("感情が制御できず$morianoにも襲いかかる"),
+            w.plot_turnpoint("$muranにより阻止され、$maryは意識を失う"),
             #   ・$sherlockからの手紙が届いた
+            w.plot_resolve("$maryが気づくと$sherlockの家にいた"),
+            w.plot_resolve("$limeからその後の事情を聞く$mary"),
+            w.plot_resolve("$sherlockは家を爆破して逃げ出した$morianoを追いかけて出ていった"),
+            w.plot_resolve("$limeは家に$maryを運び込み、手当をした"),
+            w.plot_turnpoint("$sherlockから手紙がきた"),
+            w.plot_resolve("手紙は$sherlockが$morianoを追い詰めたところで書かれていた"),
+            w.plot_turnpoint("滝で$sherlockの遺品が見つかった"),
             )
 
 
