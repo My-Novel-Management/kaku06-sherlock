@@ -69,21 +69,44 @@ OUTLINES = [
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             # NOTE
-            #   ・$sherlockを探す
+            #   ・それぞれの事情
             w.plot_setup("$sherlockは$morianoとともに滝に落ちて行方不明になった"),
-            w.plot_setup("$sherlockを亡くなったと警察は見ている（$potson談）"),
+            w.plot_setup("$sherlockを亡くなったと警察は見ている（$patson談）"),
             w.plot_setup("$maryは自分のせいで$sherlockがいなくなったと後悔している"),
             w.plot_setup("少年探偵団などに$sherlockを探してもらっている"),
-            # TODO
-            w.plot_develop(""),
-            #   ・
+            w.plot_develop("$maryが家事も買い出しもしなくなり、$limeが一人で担っていた"),
+            w.plot_develop("$limeに王室の執事が会いに来て、戻ってほしいと頼む"),
+            w.plot_develop("$wilsonは新聞社などを当たって情報を集めていた"),
+            w.plot_develop("その中で、記者$milkからホームレスが$sherlockに似た人を見たという目撃情報を仕入れる"),
+            w.plot_turnpoint("$wilsonが$sherlock目撃情報を持ってくる"),
+            #   ・空き家の冒険
+            w.plot_develop("$sherlockらしい人影を見たというホームレスの情報で、スラム街の空き家にやってくる"),
+            w.plot_develop("$maryたちは遠くから空き家を監視する"),
+            w.plot_turnpoint("$shelrockらしき人影が、空き家に入っていった"),
             )
 
 
 def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
             # NOTE
-            #   ・
+            #   ・空き家の殺人
+            w.plot_setup("$sherlock目撃情報があり、その空き家を見張っていた$maryたち"),
+            w.plot_setup("夜になり、そこに明かりがともり、$sherlockに似た人物が入っていった"),
+            w.plot_turnpoint("人影は$sherlockに見えたが、そこに男（$ronald）が入っていく"),
+            w.plot_develop("監視していると、男二人が争っている姿がシルエット越しに見えた"),
+            w.plot_develop("静まり返った中、ずっと監視していた"),
+            w.plot_develop("何事も起こらないので$maryたちは注意して空き家に近づく"),
+            w.plot_turnpoint("家の中を捜索すると、そこに男の死体があった"),
+            #   ・殺人事件
+            w.plot_develop("警察に連絡する"),
+            w.plot_develop("警察に事情聴取を受ける$maryたち"),
+            w.plot_develop("$patsonは状況から$sherlockを容疑者として考えていた"),
+            w.plot_turnpoint("$sherlockの容疑を晴らすために$maryは独自で調査し始めた"),
+            #   ・家の調査
+            w.plot_develop("$maryは一人で家の調査をする"),
+            w.plot_develop("抜け穴を見つけて、そこを進むと、先は廃工場だった"),
+            w.plot_develop("今までの失踪者が殺されて転がっていた"),
+            w.plot_turnpoint("目撃した$maryは誰か（$jake）の手により意識を失った"),
             )
 
 
@@ -91,6 +114,7 @@ def marys_investigation(w: World):
     return w.episode("$maryの捜査",
             # NOTE
             #   ・
+            # TODO
             )
 
 
