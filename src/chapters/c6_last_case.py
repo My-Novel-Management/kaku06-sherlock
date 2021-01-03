@@ -132,8 +132,23 @@ def lookfor_mary(w: World):
             # NOTE
             #   ・$mary失踪
             w.plot_setup("$maryが買い物に行ったまま帰ってこない"),
-            w.plot_setup(""),# TODO
+            w.plot_setup("$limeが探しに出かけていたが見つからない"),
+            w.plot_setup("$limeが最近様子が変だったと言う"),
+            w.plot_turnpoint("$ignesがやってきて、変なじいさんについていくのを見たと証言した"),
+            w.plot_develop("$morianoに連れ去られたと言う"),
+            w.plot_develop("$sherlockは目撃証言から、自分でついていったんじゃないかと推測する"),
+            w.plot_develop("$sherlockは$maryなんてほっとけばいいとすら"),
+            w.plot_develop("$limeと$wilsonはそれでも探しに行く"),
+            w.plot_develop("$sherlockは自分の研究に必死だった"),
             #   ・$maryを探せ
+            w.plot_develop("$limeと$ignesと協力して$morianoがどこにいるか調べる"),
+            w.plot_develop("$morianoの犯罪研究所を訪れる$lime"),
+            w.plot_develop("助手の$muranだけがいて研究所の仕事と$morianoについて語ってくれる"),
+            w.plot_develop("$morianoは$sherlockが語ったような人物とは異なっていた"),
+            w.plot_develop("現在多くの人が苦しんでいる。その社会構造を変えるためには多少の犯罪を助けてでも、弱者の味方が必要だと"),
+            w.plot_develop("人殺しはいけないことなのに、弱者を飢えや病で殺すことは犯罪じゃないのかと"),
+            w.plot_develop("$limeはわからなくなる"),
+            w.plot_turnpoint("そこに$maryとともに$morianoが現れた"),
             )
 
 
@@ -141,6 +156,10 @@ def rescue_mary(w: World):
     return w.episode("$mary救出劇",
             # NOTE
             #   ・$maryの本心は
+            w.plot_setup("$morianoの研究所を訪れた$lime"),
+            w.plot_setup("$maryは$morianoとともに戻ってきた"),
+            w.plot_turnpoint("$maryは帰らないと$limeに告げる"),
+            w.plot_develop(""),# TODO
             #   ・最終決戦
             )
 
