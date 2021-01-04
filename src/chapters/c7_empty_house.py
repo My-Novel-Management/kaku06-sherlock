@@ -203,7 +203,14 @@ def fake_wilsons_thought(w: World):
             w.plot_develop("これで全てが終わったと言うが、$sherlockは許さない"),
             w.plot_develop("$wilsonの嘘を$sherlockが暴いていく"),
             #   ・全ての顛末
-            w.plot_develop("そもそも$wilsonの家を一度見たときに"),# TODO
+            w.plot_develop("そもそも$wilsonの家を一度見たときにそこにあった違和感に気づいた"),
+            w.plot_develop("いつも帰っているはずなのに、全然住んでいる雰囲気がない"),
+            w.plot_develop("$maryはずぼらだと笑ったけれど、自分の家で置いているものが把握できていなかった"),
+            w.plot_develop("それから注意深く調べると$wilsonという男は確かに王室の案件をこなしていたが、今はある件で遠出中だったのだ"),
+            w.plot_develop("$wilsonは$zeronと名乗った"),
+            w.plot_develop("自分が闇の世界で生まれ、ただ$boss復活をするためだけにこちら側に遣わされた存在だと語る"),
+            w.plot_develop("計画は失敗に終わり、嘘も見抜かれた"),
+            w.plot_develop("観念したかに見えた$zeron"),
             w.plot_turnpoint("闇の翼をはやした$wilson（$zeron）は隙きを見て開いた穴から外へと逃げてしまった"),
             #   ・最後
             w.plot_turnpoint("山小屋で自殺している$wilsonが発見されたと、報告があった"),
