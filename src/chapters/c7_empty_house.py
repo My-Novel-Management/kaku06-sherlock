@@ -111,31 +111,102 @@ def adventure_of_empty_house(w: World):
 
 
 def marys_investigation(w: World):
-    return w.episode("$maryの捜査",
+    return w.episode("英雄の帰還",
             # NOTE
-            #   ・
-            # TODO
+            #   ・$jakeの告白
+            w.plot_setup("$maryは抜け道から廃工場に捨てられた死体を見つけた"),
+            w.plot_setup("そこで$maryは誰かに殴られて気を失った"),
+            w.plot_setup("目覚めるとどこかの廃墟の中"),
+            w.plot_turnpoint("そこに現れたのは$sherlockによく似た男（$jake）だった"),
+            w.plot_develop("$jakeは訳のわからないことを話す"),
+            w.plot_develop("連続猟奇殺人は$jakeがやったことだった"),
+            w.plot_develop("普通に生きていると自分の内側の何かが衝動を突き動かし、やってしまう"),
+            w.plot_develop("自分もまた、闇の住人の血が流れているのだと告白する"),
+            w.plot_develop("$maryは$morianoが言っていた「$sherlockの本性に気づいてない」というから勘違いする"),
+            w.plot_turnpoint("$jakeは$maryも殺そうとナイフを構える"),
+            #   ・$maryを探して
+            w.plot_develop("一方、$limeと$wilsonはいなくなった$maryを探していた"),
+            w.plot_develop("警察は$maryが$sherlockの逃亡を幇助していると考えていた"),
+            w.plot_develop("$limeは$ignesから廃工場の方で見たという話を手に入れる"),
+            w.plot_develop("廃工場に向かい、$maryを探す"),
+            w.plot_turnpoint("その時、$maryの悲鳴が聞こえた"),
             )
 
 
 def he_is_back(w: World):
     return w.episode("英雄の帰還",
             # NOTE
-            #   ・
+            #   ・英雄の帰還
+            w.plot_setup("$maryを探して廃工場へとやってきた$limeたち"),
+            w.plot_setup("そこで$maryの悲鳴を聞く"),
+            w.plot_turnpoint("悲鳴の場所にかけつけると、$maryが血まみれの男の前で立っていた"),
+            w.plot_develop("$maryは茫然自失で、立ち尽くしていた"),
+            w.plot_develop("そこに一人の男が警官を連れて戻ってくる"),
+            w.plot_turnpoint("現れたのはホームレスに扮した$sherlockだった"),
+            #   ・全ての真相
+            w.plot_develop("$maryは一旦病院に運ばれた"),
+            w.plot_develop("家に戻った$sherlockは$limeたちに自分がどうやって生き残ったかを話した"),
+            w.plot_develop("逃げた$morianoを追いかけて滝に追い詰めた後、$morianoは$sherlockを犠牲にするように崖から飛び降りた"),
+            w.plot_develop("$sherlockも死を覚悟したが$maryが繕ってくれた袖が途中でひっかかり、落下の衝撃がゆるくなった"),
+            w.plot_develop("それでも大怪我を負った$sherlockだったが、彼を救ったのは$jackだった"),
+            w.plot_develop("しばらく彼女の下で休養しながら、各国の情報を集めていた"),
+            w.plot_develop("空き家の噂は$sherlockを追う勢力をあぶり出すために彼自身が巻いた嘘だったが、それを利用して殺人を犯したのが$jakeだった"),
+            w.plot_develop("$jakeは連続猟奇殺人犯で、失踪事件の大半も彼の仕業だった"),
+            w.plot_develop("彼は闇の血が入った混血で、陽の光の下では長く生きられない"),
+            w.plot_develop("殺人も失踪も常に夜か明け方だったため、そういう推理を立てていた"),
+            w.plot_develop("廃工場で$maryが捕虜になったのを知り、助けるために計画し、すんでのところで鏡を使って光を集めた"),
+            w.plot_develop("血まみれだったのは、日光を浴びて肉体が破裂したからだった"),
+            w.plot_turnpoint("$sherlockは$maryに預けていた$blue_stoneの場所を聞く。それが必要になったと"),
             )
 
 
 def revive_boss(w: World):
     return w.episode("$bossの復活",
             # NOTE
-            #   ・
+            #   ・$mary誘拐
+            w.plot_setup("$shserlockは儀式を阻止するために戻ってきた"),
+            w.plot_setup("儀式に必要な$blue_stoneを預けた$maryは、病院に入院中"),
+            w.plot_turnpoint("$maryに$blue_stoneを返してもらいにくると、彼女の姿が消えていた。看護師の話では刑事（$patson）が連れて行ったと"),
+            w.plot_develop("改装中の大聖堂に向かう"),
+            w.plot_develop("実は半年前の大地震、あれは地震ではなかったと語る"),
+            w.plot_develop("大聖堂の修理中になっている部屋の中で、地下に繋がる穴を見つける"),
+            w.plot_develop("地下に向かうと、その道は巨大なホールに続いていた"),
+            w.plot_develop("地下のホールは酷い有様で、惨殺が行われた後のよう"),
+            w.plot_develop("$sherlockはここにかつて$bossの居城があったと語る"),
+            w.plot_develop("その跡地に封印目的で建てられたのが大聖堂だったのだ"),
+            w.plot_develop("儀式は地震の日に一度行われたが、そこでは必要なものが足りずに失敗した。それが大地震を引き起こした"),
+            w.plot_develop("$steinの研究から必要な四つの$stoneを集め、それに加えて$heroの血を探した"),
+            w.plot_turnpoint("そこに$maryを人質とした$patsonが現れる"),
+            #   ・$boss復活の儀式
+            w.plot_develop("$patsonは$sherlockこそがその$heroだと語る"),
+            w.plot_develop("$gunにより負傷させる$patson"),
+            w.plot_develop("$boss復活の儀式を行う"),
+            w.plot_develop("手伝っているのは$cultXの信者たちだった"),
+            w.plot_develop("ある人物が$boss復活のために作った宗教だったらしい"),
+            w.plot_develop("$morianoが最後に語った「あの方」だ"),
+            w.plot_develop("四つの$stoneと血を入れた盃により、儀式が始まる"),
+            w.plot_turnpoint("しかし儀式は途中で失敗し、大ホールで爆発が起こる"),
             )
 
 
 def fake_wilsons_thought(w: World):
     return w.episode("偽$wilsonの思惑",
             # NOTE
-            #   ・
+            #   ・偽物の$wilson
+            w.plot_setup("$patsonにより$boss復活の儀式が行われた"),
+            w.plot_setup("しかしそれは何故か失敗に終わり、爆発が発生する"),
+            w.plot_turnpoint("見れば$blue_stoneが割れていた"),
+            w.plot_develop("$sherlockは$maryに預けたものが偽物だったと理解する"),
+            w.plot_develop("$jackに諮られたのだが、それを知っていて黙っていたのだ"),
+            w.plot_turnpoint("$patsonは$wilsonに何故失敗したのかと詰め寄る。彼こそが「あの方」だった"),
+            w.plot_develop("$wilsonは$patsonを殺してしまう"),
+            w.plot_develop("これで全てが終わったと言うが、$sherlockは許さない"),
+            w.plot_develop("$wilsonの嘘を$sherlockが暴いていく"),
+            #   ・全ての顛末
+            w.plot_develop("そもそも$wilsonの家を一度見たときに"),# TODO
+            w.plot_turnpoint("闇の翼をはやした$wilson（$zeron）は隙きを見て開いた穴から外へと逃げてしまった"),
+            #   ・最後
+            w.plot_turnpoint("山小屋で自殺している$wilsonが発見されたと、報告があった"),
             )
 
 
