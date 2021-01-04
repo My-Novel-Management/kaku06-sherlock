@@ -12,16 +12,16 @@ from storybuilder.builder.world import World
 # world settings
 def main_notes(w: World):
     return (
-            characters_note(w),
-            chara_sherlock(w),
-            chara_mary(w),
-            chara_lime(w),
-            chara_wilson(w),
-            chara_wilson2(w),
-            chara_aily(w),
-            chara_jack(w),
-            chara_moriano(w),
-            sub_chara_note(w),
+            characters_note(w).omit(),
+            chara_sherlock(w).omit(),
+            chara_mary(w).omit(),
+            chara_lime(w).omit(),
+            chara_wilson(w).omit(),
+            chara_wilson2(w).omit(),
+            chara_aily(w).omit(),
+            chara_jack(w).omit(),
+            chara_moriano(w).omit(),
+            sub_chara_note(w).omit(),
             )
 
 

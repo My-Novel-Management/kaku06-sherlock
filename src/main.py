@@ -16,15 +16,15 @@ import stages
 import plots
 import settings
 # import chapters
-from chapters import blue_garnet
-from chapters import devil_dog
-from chapters import empty_house
-from chapters import epilogue
-from chapters import last_case
-from chapters import prince_scandal
-from chapters import prologue
-from chapters import red_armor_club
-from chapters import sadness_valley
+from chapters import c4_blue_garnet
+from chapters import c5_devil_dog
+from chapters import c7_empty_house
+from chapters import c8_epilogue
+from chapters import c6_last_case
+from chapters import c1_prince_scandal
+from chapters import c0_prologue
+from chapters import c3_red_armor_club
+from chapters import c2_sadness_valley
 
 
 ################################################################
@@ -42,11 +42,11 @@ from chapters import sadness_valley
 ################################################################
 
 # Constant
-TITLE = "勇者シャーロックは冒険しない"
+TITLE = "勇者シャーロックは冒険しない　闇色の研究"
 MAJOR, MINOR, MICRO = 1, 7, 1
-COPY = "勇者は冒険よりも事件解決を選んだ"
-ONELINE = "冒険嫌いな勇者は旅の仲間と共に今日も謎を解いては冒険せずにいる。そんな彼は今日も謎を見つけてそちらに吸い寄せられる"
-OUTLINE = "冒険嫌いな勇者は魔王を倒すことよりも謎解きに執心していた"
+COPY = "本格ファンタジィ・ミステリ爆誕！　魔王も勇者も消えた世界で、彼は知恵により平穏を取り戻す"
+ONELINE = "$scienceによって古い知識が上書きされ、産業革命が起こる混乱期にある都市で、難解な事件が次々に発生する。便利屋$sherlockは持ち込まれたそれらの依頼を抜群の推理で解決していく。一方、世間で頻発する謎の失踪事件。その裏にはある人物のある企みが隠されていた。やがて$sherlockはその謎にぶちあたり、否応なく事件に巻き込まれていく"
+OUTLINE = "何よりも難事件が好物な青年$sherlockは今日も持ち込まれた奇妙な事件や謎を解決する。だがそれらはもっと大きな事件のピースでしかなかった"
 THEME = "謎解きで世界を救う"
 GENRE = "謎解きファンタジィ"
 TARGET = "10-30years"
@@ -103,15 +103,15 @@ def chapters(w: World):
             #   5. 古代$magic／
             #   6. 黒幕$morianoと改造$gun
             #   7. $boss復活の儀式と全ての伏線回収
-            prologue.main(w),
-            prince_scandal.main(w),
-            sadness_valley.main(w),
-            red_armor_club.main(w),
-            blue_garnet.main(w),
-            devil_dog.main(w),
-            last_case.main(w),
-            empty_house.main(w),
-            epilogue.main(w),
+            c0_prologue.main(w),
+            c1_prince_scandal.main(w),
+            c2_sadness_valley.main(w),
+            c3_red_armor_club.main(w),
+            c4_blue_garnet.main(w),
+            c5_devil_dog.main(w),
+            c6_last_case.main(w),
+            c7_empty_house.main(w),
+            c8_epilogue.main(w),
             )
 
 # Notes
@@ -199,12 +199,12 @@ def main(): # pragma: no cover
     return w.run(
             writer_note(w),
             *plots.main_notes(w),
-            title_note(w),
+            title_note(w).omit(),
             *persons.main_notes(w),
             *stages.main_notes(w),
             *settings.main_notes(w),
-            theme_note(w),
-            motif_note(w),
+            theme_note(w).omit(),
+            motif_note(w).omit(),
             *chapters(w),
             )
 

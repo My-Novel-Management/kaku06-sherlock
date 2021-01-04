@@ -11,12 +11,12 @@ from storybuilder.builder.world import World
 
 def main_notes(w: World):
     return (
-            base_plot(w),
-            chapter_plot(w),
-            story_lines(w),
-            plot_note(w),
+            base_plot(w).omit(),
+            chapter_plot(w).omit(),
+            story_lines(w).omit(),
+            plot_note(w).omit(),
             *mystery_note(w),
-            fantasy_note(w),
+            fantasy_note(w).omit(),
             )
 
 
@@ -203,7 +203,7 @@ def plot_note(w: World):
 
 def mystery_note(w: World):
     return (mystery_main(w),
-            mystery_of_empty_house(w),
+            mystery_of_empty_house(w).omit(),
             )
 
 
