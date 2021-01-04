@@ -101,15 +101,9 @@ def note_for_novel(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[0],
-            w.plot_setup("$wilsonは王室からいろいろな厄介事を頼まれる存在"),
-            w.plot_turnpoint("最近続いている謎の失踪事件の調査を頼まれる"),
-            w.plot_develop("新聞を見ながら趣味でやっている日記を書き始める"),
-            w.plot_turnpoint("$sherlockという男が街の便利屋という噂を知ったところから物語は始まる"),
-            w.plot_resolve("$sherlockの家を訪問する$wilson"),
-            #
             troublesome(w),
             handyman_sherlock(w),
             note_for_novel(w),
-            )
+            outline="$wilsonは酒場で昔の知人から便利屋$sherlockの話を聞く。世間では謎の連続失踪事件が発生していて$wilsonはある人物からある失踪者の捜索依頼を受けていた。それを$sherlockに頼む為に出かける。※その後、この物語は事件が片付いた後に情報を再構成し、読みやすく並べ、原則三人称で書かれていることが注記される")
 
 
