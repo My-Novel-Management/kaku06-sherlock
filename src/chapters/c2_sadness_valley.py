@@ -20,6 +20,16 @@ from config import TITLES
 #   .事件の顛末＞$maryが同居人に
 
 # NOTE: outlines
+ABSTRACT = """
+$wilsonは聞いてもらえなかった依頼をしようと再び$sherlock宅を訪れる。$sherlockは相変わらず$wilsonの話に聞く耳を持たず、新聞記事にあった父親殺しの悲しい事件について感想を述べる。
+そこにちょうどその事件の関係者である使用人の$keanがやってきて、$sherlockに事件の容疑者になってしまった娘$maryの容疑を晴らして欲しいと依頼した。
+$sherlockは現場に赴いて調査を行う。
+$maryと面会し、$sherlockは証言だけでなく彼女が$animalであることが容疑を決定付けていると語る。
+しかし更に調査を進めると$jeanと$kailの関係が$jeanが$royd氏と結婚するより遥か以前にあり、莫大な遺産の相続権が娘の$mary一人になりそうだったという事情が判明する。
+$sherlockは最新の指紋検出技術を用いて凶器となった$gunから$jeanと$kailの指紋のみが検出されたことで、二人を追い詰める。
+$kailが自分一人だけでやったと$jeanを人質に取るが、$transformした$maryにより阻止され、事件は解決した。
+後日、遺産相続権を放棄し、邸宅も地元に寄付をした$maryが、荷物を持って$sherlock宅に押しかけた。
+"""
 OUTLINES = [
         "$wilsonは$sherlockに第二王女失踪事件の調査を依頼しようとしたが、彼は新聞記事の父親を娘が$gunで殺害した事件に興味があった。と、その容疑者の知人（使用人$kean）が無実を晴らしてほしいと依頼してきた",
         "$keanから事情を聞き、$sherlockと$wilsonは現場に向かう。事件現場を調べ、被害者の妻$jeanや使用人$kailから話を聞き、事件を整理する。警察に勾留されている容疑者の$maryと面会許可が降りた",
@@ -212,47 +222,12 @@ def main(w: World):
             #   トリック：アリバイ偽装（偽証と指紋偽装）
             #   結果：共犯として母親が逮捕され、$maryが遺産を独り占めすることになった
             #   ポイント：$animalの存在示唆／改造$gun
-            w.plot_setup("$wilsonは改めて$sherlockに第二王女失踪の調査を依頼しにやってくる"),
-            w.plot_setup("$sherlockは常に世の中の難事件を探して新聞や記事の切り抜きを集めている"),
-            w.plot_setup("世間では$jackの動きが沈静化していた"),
-            w.plot_setup("最近改造$gunを使ったと思われる事件が起こっていた"),
-            w.plot_setup("$gun事件の中でつい最近起こったある地方の悲劇（娘が父親を殺した）に触れる"),
-            w.plot_turnpoint("使用人の息子の$keanが依頼に訪れる"),
-            w.plot_develop("$keanは容疑者である娘の$maryが絶対に殺人をしていないから、無実を証明してほしいと依頼した"),
-            w.plot_develop("$sherlockと$wilsonは$keanと一緒に現場に向かう"),
-            w.plot_develop("$sherlockは先に事件現場を見に行く"),
-            w.plot_develop("残された夫人$jeanに話を聞く"),
-            w.plot_turnpoint("$maryが拾われた子で、父親と確執があったと聞く"),
-            w.plot_develop("$sherlockは本当にそうなのか確かめるため$maryとの面会許可をもらう"),
-            w.plot_develop("$maryと出会い、話す$sherlock"),
-            w.plot_develop("$maryは自分は父親に重要な話があると呼び出されて、それを聞いてすぐにその場から消えたと語った"),
-            w.plot_turnpoint("$sherlockは$maryが$animalだと$wilsonに語る"),
-            w.plot_develop("警察は$sherlockが現場で見つけた体毛と$maryの$animal情報から、いよいよ彼女を犯人と断定する"),
-            w.plot_develop("$sherlockは$roydの古い友人から、彼が拾ってきた自分の娘にいつそれを打ち明けるか悩んでいたと聞く"),
-            w.plot_develop("また、$jeanが後妻で、遺産相続について娘の存在を邪魔に感じていたと知る"),
-            w.plot_develop("$sherlockは今一度$jeanから事情を聞くために屋敷を訪れる"),
-            w.plot_turnpoint("使用人の$kailが$jeanが寝込んだと追い返す"),
-            w.plot_develop("$sherlockは$keanに頼んで当日の$kailのアリバイを知る"),
-            w.plot_develop("警察とともに再度訪れ、$maryと話してほしいと$jeanに伝えるよう$kailに告げる"),
-            w.plot_develop("$jeanと$maryがいる前で、$sherlockは説明を始める"),
-            w.plot_develop("実行犯は使用人の$kailで、$jeanと共謀し、口裏を合わせたと"),
-            w.plot_develop("$kailと$jeanは同じ街の出で、かつてから面識があり、彼女の力になるためにここの使用人になった"),
-            w.plot_develop("恋愛関係があったかどうかは分からないが、二人の証言に微妙な違いがあり、それが偽証を見破るもとになった"),
-            w.plot_develop("$kailは自分一人で考えたもので、$jeanは無関係だと突っぱねる"),
-            w.plot_turnpoint("$kailが$jeanを人質にして、逃亡を謀ろうとする"),
-            w.plot_resolve("しかし$maryが獣化し、$jeanを取り戻す"),
-            w.plot_resolve("$kailが逮捕され、事件は終焉を迎える"),
-            w.plot_resolve("事件後、$kailが酒場で改造$gunを手に入れたことを知る"),
-            w.plot_resolve("共犯者として逮捕された$jean"),
-            w.plot_resolve("母親が逮捕され、全財産を相続した$maryが権利を放棄し、屋敷を地元に寄付したと聞いた"),
-            w.plot_resolve("$maryは$sherlockに一緒に住まわせてほしいと依頼した"),
-            #
             defence_request(w),
             about_this_case(w),
             interview_of_mary(w),
             family_circumstances(w),
             mother_and_daughter(w),
             new_resident(w),
-            )
+            outline=ABSTRACT)
 
 

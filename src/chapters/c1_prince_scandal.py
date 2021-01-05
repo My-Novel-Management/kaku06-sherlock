@@ -29,6 +29,15 @@ from scenes import StSarpentain
 #   .皇太子の結婚式
 
 # NOTE: outlines
+ABSTRACT = """
+$wilsonは便利屋$sherlockを訪ねてある依頼をしようとする。しかし$sherlockは$wilsonが話をする前に全てを推理で言い当て、挙げ句に「王室からの依頼は受けない」と断ってしまう。
+だがそこに王室付きの秘書$adelがやってきて王子からの依頼の書簡を渡すと、その依頼は引き受けてしまった。
+王子の依頼は結婚式に必要なので、オペラ歌手$ailyにプレゼントしてしまった$royalswordを取り戻して欲しいというものだ。$sherlockと$wilsonは$ailyの家に向かうが、そこで謎の女性の死体を発見する。
+$aily宅で起こった密室殺人に興味を持った$sherlockは事件を調べていくが、それはやがて巷で噂になっている怪盗$jackへと繋がっていた。
+$jackから、$ailyが自殺だったことを聞き、彼女を利用して$royalswordを盗んだが、$sherlockに全てバレてしまったので素直に返却すると申し出があった。
+無事に$royalswordを取り戻したはずだったが、そこには肝心の$red_stoneが付いておらず、$jackに出し抜かれた$sherlock。
+王子の結婚式は宝石技師$casselの手による偽物の$stoneを使って何とか無事に終わらせた。
+"""
 OUTLINES = [
         "$wilsonは便利屋$sherlockのもとを訪れ、仕事を依頼しようとする。しかし王室からの仕事と見抜き、彼は仕事を断る。だがそこに皇太子の書簡を持って$adelがやってくる",
         "皇太子の依頼を受けて$sherlockは$wilsonとともに$ailyという女性を調べる。しかし彼女の家の中で見知らぬ女性の遺体を発見した",
@@ -195,6 +204,4 @@ def main(w: World):
             lady_of_orphanage(w),
             phantom_thief_jack(w),
             prince_wedding(w),
-            outline="$wilsonはあることを依頼する為に$sherlockを訪ねるが、彼は$wilsonが話す前から全てを推理で言い当て、挙げ句に「王室からの依頼は受けない」と断ってしまう。だがそこに王室の大臣秘書が現れ、王子からの書簡を渡した。王子の依頼はオペラ歌手$ailyにプレゼントしてしまった王室の$royalswordを取り戻して欲しいというもの。しかし$ailyの家に調査に訪れるとそこで知らない女性の遺体を発見する。密室殺人として$sherlockは興味を持ち、事件の調査を始めるが")
-
-
+            outline=ABSTRACT)
