@@ -19,9 +19,12 @@ from scenes import WilsonHouse
 #   .注意書き
 
 # NOTE: outlines
+ABSTRACT = """
+ある長旅から戻った$wilsonは行きつけの酒場で昔の知人$stanと出会う。戦争から戻ってきた軍医で、$wilsonが抱えているある案件で困っていると話すと、偏屈だが難解な事件解決を得意としている便利屋$sherlockを紹介された。$wilsonは翌朝、準備をしてその男が住むという$Baker街に向かう。
+※作品本編に入る前に、この物語が全て三人称で記述され、一連の事件が終焉を迎えた後に情報を補完し、読みやすく小説として書き直したものだ、と注意書きがなされる
+"""
 OUTLINES = [
         "行きつけのバーにきていた$wilsonは旧知の$stanと出会う。厄介事を抱えて悩んでいた$wilsonに彼は便利屋$sherlockという男を紹介する",
-        "この半年ばかりで発生している謎の失踪事件。その中のある人物について調査を依頼しようと、$wilsonは$sherlock宅を訪れた",
         "※記述者視点になり。本書が全てが終わった後で情報を伝聞により補完し書かれたことと、全て三人称で書かれていることを提示",
         ]
 
@@ -45,7 +48,7 @@ OUTLINES = [
 #   ・魔導車（次も
 
 def troublesome(w: World):
-    return w.episode("厄介事",
+    return w.episode("厄介事と便利屋",
             # NOTE
             #   ・数日前の大地震で、大聖堂の一部が破損し、改修中になっている
             #   ・魔導冷蔵庫により$scienceによる技術革命が起こっている世界と提示（1850年頃に商業用冷蔵庫があったが一部のみだった
@@ -64,24 +67,8 @@ def troublesome(w: World):
             outline=OUTLINES[0])
 
 
-def handyman_sherlock(w: World):
-    return w.episode("便利屋$sherlock",
-            # NOTE
-            #   ・ここいらないかも？
-            w.plot_setup("翌朝、$sherlockの家に向かう$wilson"),
-            w.plot_setup("$sherlockの家は$Baker街にある"),
-            w.plot_develop("$carを準備して、$sherlockの家に向かう"),
-            w.plot_develop("産業革命が起こり、街は急成長している"),
-            w.plot_develop("ただところどころに旧時代の名残がある"),
-            w.plot_turnpoint("$carから降りると子供たち（$ignes）に囲まれる"),
-            w.plot_develop("$wilsonは"),
-            w.plot_turnpoint("何とか$sherlockの家のドアをノックした"),
-            w.plot_resolve("$ignesたちを何とか追い払い、$sherlockの家のドアをノックした"),
-            outline=OUTLINES[1]).omit()
-
-
 def note_for_novel(w: World):
-    return w.episode("作品のための注意書き",
+    return w.episode("読者のための諸注意",
             # NOTE
             #   ・事件が全て終わっている
             #   ・三人称で記述する（作中人物の記述者がいる
@@ -102,8 +89,6 @@ def note_for_novel(w: World):
 def main(w: World):
     return w.chapter(TITLES[0],
             troublesome(w),
-            handyman_sherlock(w),
             note_for_novel(w),
-            outline="$wilsonは酒場で昔の知人から便利屋$sherlockの話を聞く。世間では謎の連続失踪事件が発生していて$wilsonはある人物からある失踪者の捜索依頼を受けていた。それを$sherlockに頼む為に出かける。※その後、この物語は事件が片付いた後に情報を再構成し、読みやすく並べ、原則三人称で書かれていることが注記される")
-
+            outline=ABSTRACT)
 
