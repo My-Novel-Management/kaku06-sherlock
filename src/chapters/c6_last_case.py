@@ -27,6 +27,22 @@ from scenes import SteinHouse
 #   .$sherlockの消息＞$sherlockの帽子が見つかった
 
 # NOTE: outlines
+ABSTRACT = """
+孤島の事件の後で$sherlockは頻繁に王立図書館に出かけて調べ物をしていた。
+元大学教授$steinが自宅で謎の死を遂げる。その関係者の一人として$sherlockが浮上し、容疑者として事情聴取される。
+$maryは$limeから編み物を習ったりして良好な関係を築いていたが、孤島から戻ってきて以来、少し考え事をしている時間が増えた。
+その$maryは市場からの帰り、ふさぎ込んでいる老人を助ける。
+一方自分と$stein教授の関係を話して容疑を晴らす$sherlock。その話から$morianoの名前を出し、彼こそが全ての元凶だと語る。そこに$maryが老人を連れて戻ってきたが、その老人こそが$morianoだった。
+$morianoは$maryに毒入りの飴を与えたと言い、$sherlockに自分の件から手を引くように脅す。$morianoは$boss復活を考えていて、人間同士による戦争でやがて人間が滅びると予想していた。
+$morianoが去った後、$sherlockは彼の言葉が全て嘘で、世界を混乱に陥れたいだけだと語るが、$maryの心には今の$ajin差別がかつてはなかったという言葉が引っかかっていた。
+後日、$maryが姿を消す。$sherlockは放っておけというが$limeは探しに歩く。
+$morianoの犯罪研究所を訪れると助手の$muranから彼の研究が世界を良くすることに貢献していると知る。また$maryが現在$morianoの研究を手伝っていることも知った。
+何とか説得し、戻ってくるようにと伝えたが、$maryは戻ってこなかった。
+ずっと$morianoが犯罪に関わった証拠を探していた$sherlockは$steinの家でやっとその痕跡を発見し、$morianoを追い詰める為に彼の研究所に赴く。
+だが洗脳された$maryによりその行為は阻止され、$morianoの逃亡を許す。その上、$maryは$sherlockを傷つけてしまったショックから意識を失う。
+目覚めた$maryは$limeから$sherlockが$morianoを追いかけて、滝に落ちたことを知る。
+後日届いた手紙には、$sherlockから$morianoの犯罪に関する証拠を警察に送ったことと、$maryへの謝罪が書かれていた。
+"""
 OUTLINES = [
         "元大学教授の謎の死を受けて$sherlockは調査に訪れていた。その人物は$boss復活の技法について研究をしていた。$sherlockはその男の書き残したものに$morianoの名を見つけた",
         "$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。そこに$maryが連れてきた老人こそが、$morianoだった",
@@ -217,70 +233,12 @@ def main(w: World):
             #   トリック：改造$gunにより外から遠隔操作で毒薬を打ち込み、死亡
             #   結果：$morianoが死に、姿を消した$sherlockがその重要参考人として手配された
             #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
-            w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
-            w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
-            w.plot_setup("他にも四つの$stoneについて調べたり、ブラックマーケットの情報を漁ったりしていた"),
-            w.plot_setup("$maryと$limeは料理を教わったり、仲良くなっていた"),
-            w.plot_setup("世間では$festivalを前にして、賑わいの空気に満ちていた"),
-            w.plot_setup("元研究者の謎の密室殺人事件が発生する"),
-            w.plot_turnpoint("$restradeがやってきて、殺人事件の解決を依頼する"),
-            w.plot_develop("$restradeから事件の概要を詳しく聞く"),
-            w.plot_develop("$sherlockは研究者の家を訪れて調査する"),
-            w.plot_develop("一方$maryは市場にでかけて、$sherlockに言われた言葉が気になっていた"),
-            w.plot_develop("いつかは自分の将来のことを決めなければいけない、ということに悩んでいた"),
-            w.plot_develop("その$maryは不思議な老人と出会う"),
-            w.plot_develop("家に戻った$sherlockは$wilsonに興奮気味に$morianoについて語る"),
-            w.plot_develop("$morianoは$sherlockがやっと突き止めた様々な犯罪の裏側にいる大きな黒幕だった"),
-            w.plot_develop("$morianoの経歴は大学教授になり最初の論文を発表するまではすさまじい"),
-            w.plot_develop("幼少期から神童と呼ばれ、十代で博士号を取得した"),
-            w.plot_develop("特に数学的見地に長け、論理的に人間を動かす方法に長けていた"),
-            w.plot_develop("しかしある時を境に表舞台から姿を消し、自分の研究所を作ってひっそりと暮らす"),
-            w.plot_develop("そこからこの街の犯罪は複雑性をましたと$sherlockは語る"),
-            w.plot_turnpoint("$maryが連れてきた老人は$morianoだった"),
-            w.plot_develop("$morianoは挨拶をして、$maryに与えた飴が毒薬だと語る"),
-            w.plot_develop("解毒剤は準備してあるが、$sherlockが自分について調べるのをやめるのと引き換えだと脅す"),
-            w.plot_develop("$sherlockはそれでも$morianoを排除することを諦めないと抵抗する"),
-            w.plot_develop("$sherlockはその毒薬入の飴を食べて、ブラフだと見抜いた"),
-            w.plot_develop("$morianoは$sherlockが自分の理想のためには大切な人ですら犠牲にすると言って、立ち去る"),
-            w.plot_develop("$maryは$sherlockに不信感を抱くようになる"),
-            w.plot_turnpoint("$sherlockの家が火事にあう"),
-            w.plot_develop("住む場所を失った$sherlockたち"),
-            w.plot_develop("いったん$wilsonの家で世話になる"),
-            w.plot_develop("$sherlockは変わらない生活を続けるが、$wilsonは調べものなどの仕事でよく出かけるようになる"),
-            w.plot_develop("$maryは自分のせいかもしれないと悩んでいた"),
-            w.plot_turnpoint("$maryが失踪する"),
-            w.plot_develop("$sherlockはそのうち戻ってくると言うが、$limeは探しに向かう"),
-            w.plot_develop("市場で$maryが黒服にシルクハットの老人と歩いているのを目撃したと知る"),
-            w.plot_develop("その老人は$morianoだと判明する"),
-            w.plot_develop("$maryが誘拐されたのではなく、自分の意志で$morianoの許に向かったと知る"),
-            w.plot_develop("$sherlockは少年探偵団などに指示をし、$morianoの別荘を調べる"),
-            w.plot_turnpoint("$sherlock単独で$morianoの別荘に向かう"),
-            w.plot_develop("$maryは自身が$animalなことで悩んでいた"),
-            w.plot_develop("$boss復活した際には人とは違う側に立つことになり、また差別されると教わった"),
-            w.plot_develop("そうならないように$boss復活を阻止するのを手伝ってほしいと頼まれた"),
-            w.plot_turnpoint("$sherlockが$maryを助けにやってくる"),
-            w.plot_develop("$maryは$sherlockが$boss復活を考えてるんじゃないかと恐れている"),
-            w.plot_develop("$sherlockは$morianoの居場所を聞く"),
-            w.plot_develop("$sherlockは$maryが騙されていると説くが、$maryは彼の言葉を信じられない"),
-            w.plot_develop("$sherlockはその場に残された本から場所を推定し、出ていく"),
-            w.plot_develop("$maryを助けに$limeがやってきたが、彼女は泣いていた"),
-            w.plot_turnpoint("それから$sherlockは消息を絶つ"),
-            w.plot_develop("街では$festivalが行われ、賑わいの雰囲気"),
-            w.plot_develop("何事も起こらず、$sherlockの言ったことが正しかったのだと$maryは知る"),
-            w.plot_develop("$maryは$shserlockと$moriano二人の行方を追う"),
-            w.plot_turnpoint("$sherlockが書き残しておいた手紙が見つかった"),
-            w.plot_resolve("手紙には$sherlockが$morianoの悪事の情報をまとめた資料が同封されていた"),
-            w.plot_resolve("また$maryを救出にいった先でどうなるかの予測が書かれていて、それによれば一緒に死ぬ可能性が最も高いとあった"),
-            w.plot_turnpoint("警察から$morianoたちの消息がわかったと連絡が入る"),
-            w.plot_resolve("$maryは$wilsonたちとともに$sherlockが向かったという$morianoの別荘に向かう"),
-            w.plot_resolve("しかしそこで警察の捜索隊により$sherlockの帽子が事故現場から発見された"),
-            #
             the_fixer(w),
             about_moriano(w),
             his_warning(w),
             lookfor_mary(w),
             rescue_mary(w),
             his_letter(w),
-            )
+            outline=ABSTRACT)
 
 

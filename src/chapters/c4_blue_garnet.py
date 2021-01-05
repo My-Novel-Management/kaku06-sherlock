@@ -24,6 +24,16 @@ from scenes import Street
 #   .四つの$stone＞$jackから青$stoneを預かる
 
 # NOTE: outlines
+ABSTRACT = """
+$limeも同居するようになり$sherlockの周囲に賑やかな日常がやってきた。ただ$limeは$maryとは異なり、家事全般器用にこなし、$sherlockとしては非常に助かる存在になっていた。そのことが$maryには気がかりで、自分の無力さに情けなくなり、市場で仲良くなった肉屋の$nowlisに愚痴っていた。$nowlisはそんな$maryに沢山貰ったからとガチョウを一羽プレゼントしてくれる。
+だが家に戻り、$maryはそのガチョウを$limeに捌いてもらったところ、中からナイフと$blue_stoneが出てきた。
+警察に届けるとそのナイフに付着していた血液が、凶器が発見されていない殺人事件の被害者のものと一致するということが判明し、ガチョウを渡した$nowlisが容疑者の一人になってしまった。
+$maryは容疑を晴らすために一人で事件の調査を開始する。調査の過程でガチョウクラブが浮上し、被害者がガチョウクラブ会員だったことが分かる。
+しかしそのクラブが実は$drag密売の為の組織で、取引現場を目撃してしまった為に$maryは捕まってしまう。
+$limeは$maryが戻ってこないことを妙に思い、探しに出る。$sherlockは$ignesたちに指示して$maryがどこにいったか探してもらう。その一方で自分は事件調査に乗り出した。
+$ignesたちの情報で$maryがガチョウクラブに捕まったことが分かり、$limeは単身、彼女を助けに乗り込む。危うく二人とも殺されそうになるが、そこに警察が突入し、事なきを得た。$sherlockが指示したものだった。
+一方、$sherlockは$blue_stoneが$jackによって隠されたものだと分かり、それを取り戻しにきた$jackと出会う。彼女から四つの$stoneが存在することを知らされ、何者かにより企まれていることを阻止して欲しいという依頼をされ、$blue_stoneを預かった。
+"""
 OUTLINES = [
         "$maryと$limeが一緒に暮らすようになり、料理や掃除は$limeが担当するようになる。$limeは手際がよく、$maryは自分の居場所を失った気になる。その$maryが市場で肉屋の$nowlisからもらったガチョウを捌くと、中からナイフと$blue_stoneが出てきた",
         "$sherlockが$restradeに連絡を取るとどうやらそのナイフが探してた殺人事件の凶器と判明。ガチョウを扱った$nowlisたちが容疑者候補に挙がり、$maryは容疑を晴らすために単独で調査を開始する",
@@ -195,48 +205,12 @@ def main(w: World):
             #   結果：痴情のもつれから夫人の間男（ガチョウクラブ主催）が行ったもので、$jackの偽装は闇オークションに出回っていたものを利用
             #   ポイント：$stone青／$jackへの恩（最後の事件後匿ってもらう）
             #   サブ：$maryと$limeの仲が深まる（二人で探索＆調査）
-            w.plot_setup("$limeが新しい同居人になり、料理は彼女の担当となっていた"),
-            w.plot_setup("自分の居場所が危うくなったと感じた$maryは空回りしては失敗してしまう"),
-            w.plot_setup("落ち込んで買い物にでかけた$maryを見て、肉屋の$nowlisがもらったガチョウを安く売ってくれる"),
-            w.plot_setup("$sherlockは第二王女を発見し$wilsonからの依頼を達成したものの、まだ失踪事件について調べていた"),
-            w.plot_setup("$hornet夫人殺害事件が発生していたが、その凶器が発見されていないと謎になっていた"),
-            w.plot_turnpoint("ガチョウの中から袋に入った血付き小型のナイフと青い宝石が出てくる"),
-            w.plot_develop("$sherlockはナイフを世話になっている鑑識官$edoに見せて調べてもらう"),
-            w.plot_develop("そのナイフが$hornet夫人殺害の凶器と判明"),
-            w.plot_develop("また同時に付いていた血が$jackと同一だと分かる"),
-            w.plot_develop("$jackが極秘に警察の指名手配になる"),
-            w.plot_turnpoint("$maryは自分がガチョウをもらったことで肉屋の$nowlisが重要参考人になっていると知り、独自に調査を開始する"),
-            w.plot_develop("卸業者を当たる$mary。そこでガチョウクラブの存在を知る"),
-            w.plot_develop("ガチョウクラブは毎月定額でガチョウを届けてくれる集まりだったが、友人紹介システムなど怪しいところがあった"),
-            w.plot_develop("$maryはガチョウクラブの勧誘に会い、抜け出せなくなる"),
-            w.plot_develop("そこを通りかかった$limeに助けられる"),
-            w.plot_turnpoint("もらったガチョウの中から盗まれた宝石が出てくる"),
-            w.plot_develop("一方$sherlockは青$stoneについて図書館に調べにきていた"),
-            w.plot_develop("$stoneはかつて活躍した$heroたちの持っていた武器についていたものだと分かる"),
-            w.plot_develop("四つの$stoneは次に$bossが復活した時に必ず必要になるとされ、厳重に保管されているはずだった"),
-            w.plot_develop("$sherlockに近づいてきた女司書から、その$stoneが権力の象徴となり、多くの人間の手を渡って今に至ることを説明される"),
-            w.plot_turnpoint("$sherlockの前に$jackが現れる"),
-            w.plot_develop("$jackは自分が何も関係していないことを証明して、無実を晴らしてほしいと頼む"),
-            w.plot_develop("こうなったのも自分が青$stoneを持っていたためで、それを預けるとも"),
-            w.plot_develop("もし依頼を達成したら、本当に困った時に必ず助けになると約束した"),
-            w.plot_develop("また$jackは最近アンダーグラウンドで不穏な動きがあり、大きな勢力が動いていると忠告する"),
-            w.plot_turnpoint("$maryが失踪したと$limeから連絡が入る"),
-            w.plot_develop("$sherlockは$limeから事情を聞き、すぐに犯人の目星をつける"),
-            w.plot_develop("手配して、ガチョウクラブに警察を向かわせる"),
-            w.plot_develop("$hornet夫人もガチョウクラブの会員だと分かり、事件の証拠を掴んだ$maryが殺される恐れがあると"),
-            w.plot_develop("犯人が逃げていた家に侵入し、$maryを助け出す"),
-            w.plot_develop("$limeが襲われそうになったところを$maryが獣化して助けた"),
-            w.plot_turnpoint("$hornet夫人がガチョウクラブというネズミ講のチームの一員で、殺人は仲間割れだったことが判明した"),
-            w.plot_resolve("$sherlockの兄がやってきて、ガチョウクラブの会員だったがそれが突如閉会になり、いわくつきのガチョウを持って訪れた"),
-            w.plot_resolve("兄は$sherlockを説得していたが、話し合いは不調に終わった"),
-            w.plot_resolve("$sherlockは青$stoneを兄に預けた"),
-            #
             market_and_goose(w),
             missing_murder_weapon(w),
             goose_club(w),
             investigate_case(w),
             case_end(w),
             four_stones(w),
-            )
+            outline=ABSTRACT)
 
 

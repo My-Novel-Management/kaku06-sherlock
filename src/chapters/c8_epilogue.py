@@ -21,6 +21,14 @@ from scenes import WilsonHouse
 #   .$wilsonの手記＞新しい仕事が舞い込んでくる
 
 # NOTE: outlines
+ABSTRACT = """
+偽$wilsonの死去により全ての事件は幕を下ろしたかに思えた。
+家を失った$sherlockはひとまず$wilsonの家を借りることにする。
+だがそこに$wilsonの家の大家がきて、家賃が半年滞納されていると催促してくる。
+お金がなくどうしようもできない$sherlockたちだったが、そこに本物の$wilsonが帰ってきた。
+事情を話すと$wilsonは自分が$sherlockの活躍を小説にして、それを新聞小説として掲載してもらおうと提案した。
+こうしてこの作品は書かれたのだ、というネタばらしがある。
+"""
 OUTLINES = [
         "偽$wilsonが自殺し、彼が全ての黒幕だったことで一連の事件に決着がついた。しかしいくつか謎は残った。おまけに大家が家賃の催促をしてきてピンチになる$sherlock。そこに本物の$wilsonが戻ってきた",
         "記述者は本物の$wilsonだった。$sherlockの活躍を小説にしてそれで資金を稼ぐことになり、書き上げたところだった。そこにまた新しい依頼が持ち込まれる",
@@ -79,15 +87,10 @@ def wilsons_papers(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[-1],
-            w.plot_setup("莫大な弁護士費用などで借りていた住居を追い出されそうになる"),
-            w.plot_turnpoint("本物の$wilsonが帰ってくる"),
-            w.plot_develop("$wilsonは$sherlockたちから全ての事情を聞く"),
-            w.plot_turnpoint("$wilsonが$sherlockの活躍を小説にして出版することになる"),
-            w.plot_resolve("正式に$officeを設立し、情報を集めながら$bossを復活させようという勢力と闘うことになった"),
             #
             total_the_end(w),
             wilsons_papers(w),
             w.symbol("（了）"),
-            )
+            outline=ABSTRACT)
 
 

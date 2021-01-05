@@ -33,6 +33,29 @@ from scenes import WilsonHouse
 #   .偽$wilsonの思惑＞偽$wilsonは山小屋で自殺しているのが見つかった
 
 # NOTE: outlines
+ABSTRACT = """
+$sherlockが滝に落ちて行方不明になってから三ヶ月、未だに生存の証拠は見つからなかった。
+$maryも$limeもそれぞれアルバイトを探し、$maryは市場で手伝いを、$limeは守衛のアルバイトをしつつ、$sherlockの情報を集めていた。
+ある日、$wilsonが$sherlockを見かけたという情報を持ってくる。
+$maryたちは$sherlockに似た男が暮らしているというその空き家を監視する。夜になり、後ろ姿が$sherlockに似た男がその空き家に入り、明かりが灯る。本を読む様は確かに$sherlockを思わせたが、そこに来客があり、しばらく後に揉めている様子が伝わり、明かりが消えた。
+そこから何も音がしなくなったので、$maryたちが空き家を調べに行くと、そこで知らない男が亡くなっていた。
+$sherlockが容疑者として浮上し、警察は$maryたちに事情聴取する。
+$maryは$sherlockの容疑を晴らすために空き家を調べる。抜け道を見つけ、それを辿っていくと廃工場に出た。そこで今までに失踪した多くの人の遺体が転がっているのを目撃する。
+だが何者かによって意識を失った。
+気づいた$maryが見たのは$sherlockで、彼は今までの事件は全て自分がやったと告白する。衝動が押さえられなくなり犯行に及んでしまう、一種の病気だった。
+$maryは$sherlockを信じて庇おうとするが、彼は$maryを殺そうとする。
+そこをホームレスの男が助ける。彼こそが本物の$sherlockだった。警察がかけつけ、偽物の$sherlockこと連続猟奇殺人事件の犯人$jakeを捕まえる。
+負傷した$maryは入院する。
+これで全て解決かと思ったが、$sherlockは$limeたちにまだ解決していないと言う。
+病院の$maryから$blue_stoneを返してもらう必要があると言い、病院に向かったが、$maryは$patsonにより連れ出された後だった。
+改装中の大聖堂の地下、そこでは$patsonが$boss復活の儀式の準備をしていた。
+$sherlockは$maryを助け出すためにやってきたが、$patsonは$sherlockの血と交換だと言う。何故ならずっと探していた$heroこそが$sherlockだったからだ。その血が儀式に必要だった。
+$sherlockは$maryを助けるために血を盃に注ぐ。それにより四つの$stoneと$heroの血が揃い、儀式が始まる。
+だが$blue_stoneが偽物だった為に儀式は失敗し、地下のホールは大爆発した。$jackが渡した$stoneが偽物だったのだ。
+そこで$patsonは$wilsonに泣きつくが、$wilsonは$patsonを撃ち殺した。彼こそが本当の黒幕、闇の世界から$boss復活のためにやってきた$zeronだった。
+$sherlockはそのことに気づいていて、$wilsonの計画が失敗するように敢えて偽物だと分かって儀式を行わせた。
+逃げ出した偽$wilsonは、後日、山中の山小屋で自殺しているのが発見された。$zeronの死により、全ての関連が断たれ、$boss復活にかかわる一連の事件は終焉を迎えた。
+"""
 OUTLINES = [
         "$sherlockが消えてから半年、$maryは市場の手伝いをし、$limeは護衛のアルバイトしながら、彼を探し続けていた。そんな中、$wilsonが$sherlockを見たという情報を掴む",
         "スラム街の空き家に$sherlockが出没すると言われ、そこを監視する$maryたち。確かによく似た風貌の男がそこに出入りしていた。だが監視している中で、殺人事件が発生する。その容疑者になったのは$sherlockだった",
@@ -229,76 +252,12 @@ def main(w: World):
             #   トリック：偽装トリック（争ったように見せかけて遺体を部屋に置いた）＆抜け道を使った密室
             #   結果：$jakeを殺して事件解決
             #   ポイント：連続失踪事件の犯人／$boss復活の儀式とその失敗
-            w.plot_setup("$sherlockが見つからないまま三ヶ月が過ぎた"),
-            w.plot_setup("$morianoの影も消え、世間では犯罪が減っているはずだったが、逆に増加傾向だった"),
-            w.plot_setup("$sherlockが解決していた事件の多くが野放しになることで、犯罪が増えていた"),
-            w.plot_setup("街の治安も悪化、経済も悪くなり、王室批判やデモも起こっていた"),
-            w.plot_setup("市場にでかけた$maryは石を投げられる。$animalなどの$ajinが恐れの対象になりつつあった"),
-            w.plot_setup("街角では宗教団体$cultXが目立つようになる"),
-            w.plot_setup("ちょうど$sherlockが消えてから数日後にあった地震で崩れた大聖堂は改装中"),
-            w.plot_turnpoint("$wilsonが$sherlockを見かけたという情報を持ってくる"),
-            w.plot_develop("$wilsonについて$sherlockが入るのを見たという空き家を監視する"),
-            w.plot_develop("夜になり、$sherlockに似た男が入っていくのを見る。明かりが灯るとたしかによく$sherlockがしていた格好"),
-            w.plot_develop("$wilsonが見張りを交代し、$maryは少し眠る"),
-            w.plot_develop("$wilsonに言われ、明け方、見ると影が二つ争っている"),
-            w.plot_develop("部屋の明かりが消える"),
-            w.plot_develop("じっと待っていたが誰も出てこない"),
-            w.plot_turnpoint("翌朝調べると、部屋に一人の男の遺体があった"),
-            w.plot_develop("警察に連絡し、調べてもらう"),
-            w.plot_develop("事情聴取を受ける$maryたち"),
-            w.plot_develop("その中で顔なじみになった刑事の$patsonから被害者が$ronaldだと教わる"),
-            w.plot_develop("$ronaldは$sherlockに一度ある頼みごとをしてきた教授だと思い出す"),
-            w.plot_turnpoint("警察は$sherlockを重要参考人と見ていると知る"),
-            w.plot_develop("$maryは$sherlockが犯人でない証拠を探そうとする"),
-            w.plot_develop("一人で空き家を調べる"),
-            w.plot_turnpoint("$maryは空き家で抜け道を見つける"),
-            w.plot_develop("抜け道は廃工場に繋がっていた"),
-            w.plot_develop("廃工場には今までに失踪したとされる人らしき遺体が転がっていた"),
-            w.plot_develop("誰もが何かの目的で血を抜かれ、殺されていた"),
-            w.plot_turnpoint("$maryは何者かに捕まってしまう"),
-            w.plot_develop("$limeと$wilsonはいなくなった$maryを探す"),
-            w.plot_develop("警察は$maryが$sherlock逃亡を手伝っている可能性を考えて、重要参考人として探し始めた"),
-            w.plot_develop("$ignesたちが$maryによく似た女の子を見かけたという証言を手に入れる"),
-            w.plot_develop("廃工場に$maryがいることを突き止める"),
-            w.plot_turnpoint("$maryの前に$sherlock（$jake）が現れる"),
-            w.plot_develop("$jakeは$maryを無視して、自分がいかに卑屈な生き物で、血反吐をすすっていきてきたかを語る"),
-            w.plot_develop("そのうちに$maryは彼が$sherlockによく似た偽物だと気づき、今までにあった$sherlockが関与したと思われる事件が全て彼の仕業だと思う"),
-            w.plot_develop("$maryはなんとかして脱出し、警察にこの事実を持ち込みたい"),
-            w.plot_develop("$morianoの名前を出したが、全く知らないようだった"),
-            w.plot_develop("$maryは隙きを見て縄をほどき、逃げ出す"),
-            w.plot_develop("しかしそれがばれて捕まり、再度、今度は鎖でしばられて動けなくされ、証拠隠滅として廃工場に火をつけられた"),
-            w.plot_develop("火事場から逃げ出そうと獣化するが、火の周りが早く、絶体絶命"),
-            w.plot_turnpoint("そこを本物の$sherlockがきて助け出す"),
-            w.plot_develop("気づくと$limeたちに介抱されていた$mary"),
-            w.plot_develop("警察が$jakeを追っていると聞いた"),
-            w.plot_develop("$sherlockは何故か身内に気をつけるように注意して、姿を消した"),
-            w.plot_develop("空き家事件は$jakeが犯人ということで収まりそうだったが、依然$sherlockは行方不明のまま"),
-            w.plot_turnpoint("$wilsonは$sherlockが残したメッセージを見つける"),
-            w.plot_develop("$maryは$wilsonと一緒に$sherlockがいるという大聖堂に向かう"),
-            w.plot_develop("大聖堂の地下に巨大な空間を見つける"),
-            w.plot_develop("そこでかつて何かの儀式が行われたが失敗したことが分かる"),
-            w.plot_turnpoint("$wilsonが$maryを人質にとり、$sherlockを呼び出す"),
-            w.plot_develop("$sherlockは警官に紛れていて、姿を見せる"),
-            w.plot_develop("$sherlockは$wilsonが全てを仕組んでいたことを話す"),
-            w.plot_develop("そのうえで、$boss復活の儀式に必要だった四つの$stoneのほかに$heroの血が必要だったと語る"),
-            w.plot_turnpoint("$sherlockは$heroの血を引くものだった"),
-            w.plot_develop("$patsonが$sherlockに切りかかり、血を流させる"),
-            w.plot_develop("$patsonを撃ち殺す$restrade"),
-            w.plot_develop("しかし$heroの血液が注がれた盃により、儀式が始まってしまう"),
-            w.plot_turnpoint("$boss復活する間際、四つの$stoneの一つが$limeの剣で割られてしまう"),
-            w.plot_develop("$bossの力が弾け飛び、大爆発する"),
-            w.plot_develop("なんとか助かった$sherlockたちだが、$wilsonの姿は消え去っていた"),
-            w.plot_resolve("$sherlockはずっと$wilsonが本物でないことに気づいていた"),
-            w.plot_resolve("決定的だったのは$wilsonの家に行った時で、そこで彼が本物ではないと気づいた"),
-            w.plot_resolve("後日、$wilsonは山小屋で自殺しているのが発見された"),
-            w.plot_resolve("ただ持ち逃げされたと思われる$bossのドクロは見つからなかった"),
-            #
             lookfor_sherlock(w),
             adventure_of_empty_house(w),
             marys_investigation(w),
             he_is_back(w),
             revive_boss(w),
             fake_wilsons_thought(w),
-            )
+            outline=ABSTRACT)
 
 
