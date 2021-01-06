@@ -30,8 +30,18 @@ ABSTRACT = """
 こうしてこの作品は書かれたのだ、というネタばらしがある。
 """
 OUTLINES = [
-        "偽$wilsonが自殺し、彼が全ての黒幕だったことで一連の事件に決着がついた。しかしいくつか謎は残った。おまけに大家が家賃の催促をしてきてピンチになる$sherlock。そこに本物の$wilsonが戻ってきた",
-        "記述者は本物の$wilsonだった。$sherlockの活躍を小説にしてそれで資金を稼ぐことになり、書き上げたところだった。そこにまた新しい依頼が持ち込まれる",
+"""
+偽$wilsonである$zeronの自殺により$boss復活の儀式にかかわる一連の事件に一応の決着がついた。
+だが$sherlockと$mary、$limeは住む場所を失い、仕方なく$wilsonの家でしばらく暮らすことになる。しかし大家が家賃滞納を理由に家から出ていけと言ってきた。
+そこに本物の$wilsonが帰ってきて、$sherlockたちは彼に一連の事件と自分たちがここにいる事情を語った。
+$wilsonは$sherlockの活躍を小説として新聞に掲載することで家賃分を何とかしようと提案する。
+これを承諾し、ここに$sherlock探偵社が誕生した。
+""",
+"""
+※という訳で、記述者は本物の$wilsonだった。
+作品の締めくくりに当たるエピローグを書き終えたところで$maryたちに呼ばれる。$maryが初めて焼いたというケーキなるお菓子を食べようというのだ。
+$wilsonはそれを口にして昔暮らしていた世界を懐かしく思うが、そこに新たな問題を抱えた依頼人がやってきた。だがまたそれは次の物語。
+""",
         ]
 
 # NOTE: charas
@@ -48,6 +58,14 @@ def total_the_end(w: World):
     return w.episode("全ての顛末",
             # NOTE
             #   ・全てが終わり
+            w.plot_setup("ひとまず$wilsonの家で生活を送っていた$sherlockたちだが、そこに大家がやってきて家賃が滞納されている事実を伝える"),
+            w.plot_note("偽$wilsonの自殺により、一連の事件は終わりを告げた"),
+            w.plot_note("住む場所を失い、とりあえず$wilsonの家を間借りして暮らすことにした$sherlockたち"),
+            w.plot_turnpoint("本物の$wilsonが帰ってくる"),
+            w.plot_develop(""),
+            w.plot_turnpoint(""),
+            w.plot_resolve(""),
+            # TODO
             w.plot_setup("偽$wilsonが自殺して、全ての幕が降ろされた"),
             w.plot_setup("$maryは精神的なショック以外に大きな怪我はなく、しばらく入院したのちに退院した"),
             w.plot_turnpoint("退院した$maryが$limeとともに帰ってくる"),
@@ -87,7 +105,6 @@ def wilsons_papers(w: World):
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[-1],
-            #
             total_the_end(w),
             wilsons_papers(w),
             w.symbol("（了）"),
