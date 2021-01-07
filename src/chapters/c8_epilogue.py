@@ -110,7 +110,9 @@ def wilsons_papers(w: World):
             w.plot_note("まず$wilsonが味見することになっていた"),
             w.plot_turnpoint("$maryのケーキを食べた時に過去の記憶を思い出す$wilson"),
             w.plot_resolve("かつて$jackとして活動していた頃があるが、いずれそれについても語ることがあるだろうと締める"),
-            w.plot_note(""),# TODO
+            w.plot_note("$wilsonは表のエージェントとして、あるいはライターとしての顔以外も持っていた"),
+            w.plot_note("書斎で$jackから預かった本物の$blue_stoneを見る$wilson"),
+            w.plot_note("いずれ役立つ時がくるまで隠しておこうと、隠し棚にしまった"),
             w.plot_note("そこに新たな依頼者が訪れる"),
             w.plot_note("これがまた新しい$sherlockの事件の始まりだった"),
             outline=OUTLINES[-1])
