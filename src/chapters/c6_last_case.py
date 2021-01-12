@@ -27,14 +27,72 @@ from scenes import SteinHouse
 #   .$sherlockの消息＞$sherlockの帽子が見つかった
 
 # NOTE: outlines
+ABSTRACT = """
+孤島の事件の後で$sherlockは頻繁に王立図書館に出かけて調べ物をしていた。
+元大学教授$steinが自宅で謎の死を遂げる。その関係者の一人として$sherlockが浮上し、容疑者として事情聴取される。
+$maryは$limeから編み物を習ったりして良好な関係を築いていたが、孤島から戻ってきて以来、少し考え事をしている時間が増えた。
+その$maryは市場からの帰り、ふさぎ込んでいる老人を助ける。
+一方自分と$stein教授の関係を話して容疑を晴らす$sherlock。その話から$morianoの名前を出し、彼こそが全ての元凶だと語る。そこに$maryが老人を連れて戻ってきたが、その老人こそが$morianoだった。
+$morianoは$maryに毒入りの飴を与えたと言い、$sherlockに自分の件から手を引くように脅す。$morianoは$boss復活を考えていて、人間同士による戦争でやがて人間が滅びると予想していた。
+$morianoが去った後、$sherlockは彼の言葉が全て嘘で、世界を混乱に陥れたいだけだと語るが、$maryの心には今の$ajin差別がかつてはなかったという言葉が引っかかっていた。
+後日、$maryが姿を消す。$sherlockは放っておけというが$limeは探しに歩く。
+$morianoの犯罪研究所を訪れると助手の$muranから彼の研究が世界を良くすることに貢献していると知る。また$maryが現在$morianoの研究を手伝っていることも知った。
+何とか説得し、戻ってくるようにと伝えたが、$maryは戻ってこなかった。
+ずっと$morianoが犯罪に関わった証拠を探していた$sherlockは$steinの家でやっとその痕跡を発見し、$morianoを追い詰める為に彼の研究所に赴く。
+だが洗脳された$maryによりその行為は阻止され、$morianoの逃亡を許す。その上、$maryは$sherlockを傷つけてしまったショックから意識を失う。
+目覚めた$maryは$limeから$sherlockが$morianoを追いかけて、滝に落ちたことを知る。
+後日届いた手紙には、$sherlockから$morianoの犯罪に関する証拠を警察に送ったことと、$maryへの謝罪が書かれていた。
+"""
 OUTLINES = [
-        "元大学教授の謎の死を受けて$sherlockは調査に訪れていた。その人物は$boss復活の技法について研究をしていた。$sherlockはその男の書き残したものに$morianoの名を見つけた",
-        "$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。そこに$maryが連れてきた老人こそが、$morianoだった",
-        "$morianoは$sherlockが人の気持ちより謎解きの方を大切にすると指摘し、$maryたちも捨てられると予言する。$morianoは$sherlockに犯罪をなくすことは不可能だと言い、これ以上自分を追うと余計な犠牲者が出ると脅した。後日、$maryが姿を消した",
+"""
+孤島事件後から$sherlockは頻繁に外に出かけるようになっていた。
+$maryたちは少し退屈さを感じつつも、自分の今後の身の振り方について考える時間を持つ良い機会だった。
+一方、元大学教授が謎の死を遂げた。その容疑者の一人として$sherlockが浮上する。
+$maryは市場への買い物の帰り道で、ふさぎ込んでいる老紳士と遭遇し、彼を助ける。
+やってきた$patsonは何かの資料を調べるのに必死になっている$sherlockに、$stein元教授殺人事件について事情をきかせろと迫る。
+""",
+"""
+$sherlockはすぐにアリバイを語り、自分の容疑を晴らす。
+そもそも$stein教授とは王立図書館で出会った。彼の論文は$sherlockもよく目を通していて、教授から古代の知識について色々と教わっていたと話す。
+そして$steinは$morianoの友人だと言い出す。
+$morianoについて誰も知らなかった。
+$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。
+そこに$maryが連れてきた老人こそが$morianoだった
+""",
+"""
+$morianoは$sherlockに対して自分は$steinの死とは無関係だと言う。証拠がないだろうと。
+$sherlockは$morianoがどんな犯罪も自分で直接手をくださず、故に現在の司法では立件できず罪に問えないと言う。
+だがそこを何とか見つけ出し、必ず罪を償わせると豪語する$sherlock。
+その$sherlockに対し、$morianoは$maryに毒入りの飴を与えたことで脅し、これ以上は深入りしないようにと警告した。
+その上で、$morianoは$sherlockが人の気持ちより謎解きの方を大切にすると指摘し、$maryたちも捨てられると予言する。$morianoは$sherlockに犯罪をなくすことは不可能だと言い、これ以上自分を追うと余計な犠牲者が出ると脅した。
+その翌日、全員が出払っていた間に$sherlockの家は放火されてしまう。全焼こそ免れたが、中も荒らされていて、しばらく使えないという判断から、少しの間$wilson宅で暮らすことにした。
+後日、$maryが市場に買い出しに出かけたまま帰ってこなかった。彼女は失踪した。
+""",
         # $morianoの甘言にのり、$maryが姿を消した
-        "$sherlockは責任を感じて$maryを探す。$morianoの別荘を突き止めたが、そこにはナイフを手にした$maryがいて$sherlockは襲われる。しかし$limeにより阻止される",
-        "$maryは$sherlockがやがて$ajinを迫害する世の中を復活させるときいて恐ろしくなったと告白する。それは$morianoによる言葉の洗脳だった。$sherlockは$morianoとの対決に単独で向かう",
-        "$sherlockが消息をたち数日後、彼からの手紙が届く。そこには$morianoとの決闘直前に書かれた遺書めいたメッセージがあった。警察とともに$sherlockを探すが、$morianoの宿泊先の滝で見つかったのは彼のトレードマークの帽子だった",
+"""
+$maryがいなくなり、$limeはどこにいったのか探さないといけないと主張するが、$sherlockは放っておけばいいと聞かない。
+$limeは$ignesたちに協力してもらい、$maryの行方を探す。
+一方$sherlockは$steinの家の再調査に訪れていた。$morianoが関与した証拠を探すためだ。しかし痕跡が綺麗に消されている。だが$steinの日記のページの間に一本の毛髪を見つけた。毛髪を証拠にできないかと考える$sherlock。
+$limeは$morianoの研究所に入るのを見たという情報を得て、単身研究所に向かう。研究所では助手の$muranだけがいて、$morianoがどんな人物なのか、何をしようとしているのか、その本当の姿を語った。
+そこに$maryを連れて$morianoが戻ってくる。彼女は誘拐された訳でも監禁された訳でも何か弱みを握られている訳でもなく、自分の考えでここにいると言った。
+$maryは戻らないと$limeに言った。
+""",
+"""
+$maryが$morianoと一緒にいると知り、どうにかしないといけないと$sherlockに言う$limeだったが、$sherlockは何もしない。彼女の考えに任せればいいと言う。
+$wilsonたちにも相談したが、$mary自身の考えはどうしようもないとだけ。
+$sherlockは何かに夢中になり、頻繁に外出を繰り返し、頼りない状態だった。
+そんな$limeに王室の執務官$mikelがやってきて、王室に戻るように言う。王の病気が悪化したというのだ。$limeは$maryを放っておいたままではいけないと悩む。
+一方$sherlockは頼んでおいた毛髪鑑定により、人毛で$morianoと同一の血液型ということまで判明した。しかし決定的証拠にはならない。そこを騙ることでボロを出させようと、研究所に向かう。
+だがそこで待ち構えていたのは$transformした$maryだった。$morianoは逃げ出したのだ。
+$sherlockの説得むなしく、彼女により$sherlockは酷い傷を追う。それで正気に戻り、$maryは気絶した。
+""",
+"""
+$maryが病院で目覚めると$limeから$sherlockが国外逃亡した$morianoを追っていることを聞かされる。
+$maryが自分が$sherlockを傷つけてしまったことを後悔していた。
+後日、$sherlockから手紙が届く。そこには$morianoを道連れにしてでも滅ぼす決意と、彼の犯罪関与の証拠とそれについて書いた書類が既に警察に発送されていると記されていた。
+最後に$maryについての謝罪が書かれていた。
+警察の捜査で$sherlockと$morianoが滝から落下したことが判明。現場に残されていた彼の帽子と血液から、二人は死亡したものと見られた。
+""",
         ]
 
 # NOTE: charas
@@ -74,7 +132,7 @@ def the_fixer(w: World):
             w.plot_develop("戻ってきた$sherlockはそこで$steinが亡くなったことを知る"),
             w.plot_develop("ずっと闇の儀式のことを調べていたと証言する$sherlock"),
             w.plot_turnpoint("$steinは$morianoの旧友で、今回の件でついに黒幕が動き出したと言った"),
-            )
+            outline=OUTLINES[0])
 
 
 def about_moriano(w: World):
@@ -97,7 +155,7 @@ def about_moriano(w: World):
             w.plot_develop("最近宗教の宣伝も増えていて、男が憲兵に取り締まられていた"),
             w.plot_develop("$maryはうずくまっていた老人を助ける"),
             w.plot_turnpoint("$maryが連れて帰ってきた老人こそが、$morianoだった"),
-            )
+            outline=OUTLINES[1])
 
 
 def his_warning(w: World):
@@ -124,7 +182,7 @@ def his_warning(w: World):
             #   ・$maryの異変
             w.plot_develop("一方$maryは$morianoに言われてから、不安定だった"),
             w.plot_develop("市場に買い出しにでかけた$maryは、$morianoと再会する"),
-            )
+            outline=OUTLINES[2])
 
 
 def lookfor_mary(w: World):
@@ -149,7 +207,7 @@ def lookfor_mary(w: World):
             w.plot_develop("人殺しはいけないことなのに、弱者を飢えや病で殺すことは犯罪じゃないのかと"),
             w.plot_develop("$limeはわからなくなる"),
             w.plot_turnpoint("そこに$maryとともに$morianoが現れた"),
-            )
+            outline=OUTLINES[3])
 
 
 def rescue_mary(w: World):
@@ -180,7 +238,7 @@ def rescue_mary(w: World):
             w.plot_develop("$morianoがやってきて世界のシステムを変えるための儀式に必要なものが揃ったという"),
             w.plot_develop("$maryは$sherlockからの預かりものである$blue_stoneを渡す"),
             w.plot_turnpoint("しかし、そこに$sherlockが殺人の証拠品を持って現れた"),
-            )
+            outline=OUTLINES[4])
 
 
 def his_letter(w: World):
@@ -202,7 +260,7 @@ def his_letter(w: World):
             w.plot_turnpoint("$sherlockから手紙がきた"),
             w.plot_resolve("手紙は$sherlockが$morianoを追い詰めたところで書かれていた"),
             w.plot_turnpoint("滝で$sherlockの遺品が見つかった"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter
@@ -217,70 +275,12 @@ def main(w: World):
             #   トリック：改造$gunにより外から遠隔操作で毒薬を打ち込み、死亡
             #   結果：$morianoが死に、姿を消した$sherlockがその重要参考人として手配された
             #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
-            w.plot_setup("孤島の事件の後、$sherlockはやたらと図書館にでかけていた"),
-            w.plot_setup("事件の陰で暗躍した$cultXについては小規模の新興宗教団体として以上の情報なかった"),
-            w.plot_setup("他にも四つの$stoneについて調べたり、ブラックマーケットの情報を漁ったりしていた"),
-            w.plot_setup("$maryと$limeは料理を教わったり、仲良くなっていた"),
-            w.plot_setup("世間では$festivalを前にして、賑わいの空気に満ちていた"),
-            w.plot_setup("元研究者の謎の密室殺人事件が発生する"),
-            w.plot_turnpoint("$restradeがやってきて、殺人事件の解決を依頼する"),
-            w.plot_develop("$restradeから事件の概要を詳しく聞く"),
-            w.plot_develop("$sherlockは研究者の家を訪れて調査する"),
-            w.plot_develop("一方$maryは市場にでかけて、$sherlockに言われた言葉が気になっていた"),
-            w.plot_develop("いつかは自分の将来のことを決めなければいけない、ということに悩んでいた"),
-            w.plot_develop("その$maryは不思議な老人と出会う"),
-            w.plot_develop("家に戻った$sherlockは$wilsonに興奮気味に$morianoについて語る"),
-            w.plot_develop("$morianoは$sherlockがやっと突き止めた様々な犯罪の裏側にいる大きな黒幕だった"),
-            w.plot_develop("$morianoの経歴は大学教授になり最初の論文を発表するまではすさまじい"),
-            w.plot_develop("幼少期から神童と呼ばれ、十代で博士号を取得した"),
-            w.plot_develop("特に数学的見地に長け、論理的に人間を動かす方法に長けていた"),
-            w.plot_develop("しかしある時を境に表舞台から姿を消し、自分の研究所を作ってひっそりと暮らす"),
-            w.plot_develop("そこからこの街の犯罪は複雑性をましたと$sherlockは語る"),
-            w.plot_turnpoint("$maryが連れてきた老人は$morianoだった"),
-            w.plot_develop("$morianoは挨拶をして、$maryに与えた飴が毒薬だと語る"),
-            w.plot_develop("解毒剤は準備してあるが、$sherlockが自分について調べるのをやめるのと引き換えだと脅す"),
-            w.plot_develop("$sherlockはそれでも$morianoを排除することを諦めないと抵抗する"),
-            w.plot_develop("$sherlockはその毒薬入の飴を食べて、ブラフだと見抜いた"),
-            w.plot_develop("$morianoは$sherlockが自分の理想のためには大切な人ですら犠牲にすると言って、立ち去る"),
-            w.plot_develop("$maryは$sherlockに不信感を抱くようになる"),
-            w.plot_turnpoint("$sherlockの家が火事にあう"),
-            w.plot_develop("住む場所を失った$sherlockたち"),
-            w.plot_develop("いったん$wilsonの家で世話になる"),
-            w.plot_develop("$sherlockは変わらない生活を続けるが、$wilsonは調べものなどの仕事でよく出かけるようになる"),
-            w.plot_develop("$maryは自分のせいかもしれないと悩んでいた"),
-            w.plot_turnpoint("$maryが失踪する"),
-            w.plot_develop("$sherlockはそのうち戻ってくると言うが、$limeは探しに向かう"),
-            w.plot_develop("市場で$maryが黒服にシルクハットの老人と歩いているのを目撃したと知る"),
-            w.plot_develop("その老人は$morianoだと判明する"),
-            w.plot_develop("$maryが誘拐されたのではなく、自分の意志で$morianoの許に向かったと知る"),
-            w.plot_develop("$sherlockは少年探偵団などに指示をし、$morianoの別荘を調べる"),
-            w.plot_turnpoint("$sherlock単独で$morianoの別荘に向かう"),
-            w.plot_develop("$maryは自身が$animalなことで悩んでいた"),
-            w.plot_develop("$boss復活した際には人とは違う側に立つことになり、また差別されると教わった"),
-            w.plot_develop("そうならないように$boss復活を阻止するのを手伝ってほしいと頼まれた"),
-            w.plot_turnpoint("$sherlockが$maryを助けにやってくる"),
-            w.plot_develop("$maryは$sherlockが$boss復活を考えてるんじゃないかと恐れている"),
-            w.plot_develop("$sherlockは$morianoの居場所を聞く"),
-            w.plot_develop("$sherlockは$maryが騙されていると説くが、$maryは彼の言葉を信じられない"),
-            w.plot_develop("$sherlockはその場に残された本から場所を推定し、出ていく"),
-            w.plot_develop("$maryを助けに$limeがやってきたが、彼女は泣いていた"),
-            w.plot_turnpoint("それから$sherlockは消息を絶つ"),
-            w.plot_develop("街では$festivalが行われ、賑わいの雰囲気"),
-            w.plot_develop("何事も起こらず、$sherlockの言ったことが正しかったのだと$maryは知る"),
-            w.plot_develop("$maryは$shserlockと$moriano二人の行方を追う"),
-            w.plot_turnpoint("$sherlockが書き残しておいた手紙が見つかった"),
-            w.plot_resolve("手紙には$sherlockが$morianoの悪事の情報をまとめた資料が同封されていた"),
-            w.plot_resolve("また$maryを救出にいった先でどうなるかの予測が書かれていて、それによれば一緒に死ぬ可能性が最も高いとあった"),
-            w.plot_turnpoint("警察から$morianoたちの消息がわかったと連絡が入る"),
-            w.plot_resolve("$maryは$wilsonたちとともに$sherlockが向かったという$morianoの別荘に向かう"),
-            w.plot_resolve("しかしそこで警察の捜索隊により$sherlockの帽子が事故現場から発見された"),
-            #
             the_fixer(w),
             about_moriano(w),
             his_warning(w),
             lookfor_mary(w),
             rescue_mary(w),
             his_letter(w),
-            )
+            outline=ABSTRACT)
 
 
