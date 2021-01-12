@@ -151,8 +151,8 @@ def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             # NOTE
             w.plot_setup("$sherlockが滝壺に落ちてから半年が過ぎたが、未だに彼の生存に関する情報が見つからなかった"),
-            w.plot_develop(""),
-            w.plot_resolve("$wilsonが、ホームレスによる$sherlockによく似た人物の目撃情報を掴んでくる"),
+            w.plot_develop("$wilsonがホームレスによる$sherlock目撃情報を入手し、$maryたちは$sherlockに似た男が現れるという空き家を監視する"),
+            w.plot_resolve("夜になり、$sherlockらしき男がいる空き家に別の男が入っていって、争いごとがあり、明かりが消えた"),
             outline=OUTLINES[0])
 
 
