@@ -113,36 +113,54 @@ $jackは何者かが$stoneを集めようとしていると警告する。四つ
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
 def missing_murder_weapon(w: World):
     return w.episode("凶器のない殺人",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
 
 
 def goose_club(w: World):
     return w.episode("ガチョウクラブ",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[2])
 
 
 def investigate_case(w: World):
     return w.episode("事件捜査",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
 def case_end(w: World):
     return w.episode("事件解決",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
 def four_stones(w: World):
     return w.episode("四つの$stone",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 

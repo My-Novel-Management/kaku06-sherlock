@@ -114,39 +114,57 @@ $maryが自分が$sherlockを傷つけてしまったことを後悔していた
 #   ・
 
 
-def the_fixer(w: World):
-    return w.episode("事件の黒幕",
+def researcher_of_ancient(w: World):
+    return w.episode("古代の研究者",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
 
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[2])
 
 
-def lookfor_mary(w: World):
-    return w.episode("$maryの捜索",
+def disturbance_of_mary(w: World):
+    return w.episode("$maryの乱心",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
-def rescue_mary(w: World):
-    return w.episode("$mary救出劇",
+def sherlocks_obsession(w: World):
+    return w.episode("$sherlockの執念",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
-def his_letter(w: World):
+def letter_from_him(w: World):
     return w.episode("$sherlockからの手紙",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 
@@ -162,12 +180,12 @@ def main(w: World):
             #   トリック：改造$gunにより外から遠隔操作で毒薬を打ち込み、死亡
             #   結果：$morianoが死に、姿を消した$sherlockがその重要参考人として手配された
             #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
-            the_fixer(w),
+            researcher_of_ancient(w),
             about_moriano(w),
             his_warning(w),
-            lookfor_mary(w),
-            rescue_mary(w),
-            his_letter(w),
+            disturbance_of_mary(w),
+            sherlocks_obsession(w),
+            letter_from_him(w),
             outline=ABSTRACT)
 
 

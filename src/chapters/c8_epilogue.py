@@ -58,12 +58,18 @@ $wilsonはそれを口にして昔暮らしていた世界を懐かしく思う�
 def total_the_end(w: World):
     return w.episode("全ての顛末",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
 def wilsons_papers(w: World):
     return w.episode("$wilsonの手記",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[-1])
 
 

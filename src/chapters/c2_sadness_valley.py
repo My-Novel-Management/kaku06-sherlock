@@ -131,39 +131,57 @@ $maryは$sherlockの家で暮らすと言った。
 #   ・魔導列車
 
 
-def defence_request(w: World):
-    return w.episode("弁護依頼",
+def sad_case(w: World):
+    return w.episode("悲しい事件",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
-def about_this_case(w: World):
-    return w.episode("事件について",
+def valley_town(w: World):
+    return w.episode("谷の田舎町",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
 
 
-def interview_of_mary(w: World):
-    return w.episode("$maryの面会",
+def suspect_mary(w: World):
+    return w.episode("容疑者$mary",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[2])
 
 
 def family_circumstances(w: World):
     return w.episode("家族の事情",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
-def mother_and_daughter(w: World):
-    return w.episode("母と娘",
+def marys_confession(w: World):
+    return w.episode("$maryの告白",
             #   NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
-def new_resident(w: World):
-    return w.episode("新しい住人",
+def real_mind(w: World):
+    return w.episode("本当の気持ち",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 
@@ -179,12 +197,12 @@ def main(w: World):
             #   トリック：アリバイ偽装（偽証と指紋偽装）
             #   結果：共犯として母親が逮捕され、$maryが遺産を独り占めすることになった
             #   ポイント：$animalの存在示唆／改造$gun
-            defence_request(w),
-            about_this_case(w),
-            interview_of_mary(w),
+            sad_case(w),
+            valley_town(w),
+            suspect_mary(w),
             family_circumstances(w),
-            mother_and_daughter(w),
-            new_resident(w),
+            marys_confession(w),
+            real_mind(w),
             outline=ABSTRACT)
 
 

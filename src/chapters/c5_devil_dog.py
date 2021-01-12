@@ -137,38 +137,56 @@ $sherlockは$cherryが魔犬の餌にするために人殺しを行っていた�
 
 
 def legend_of_dark_dog(w: World):
-    return w.episode("魔犬の伝説",
+    return w.episode("魔獣の伝説",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
+
+
+def missing_person(w: World):
+    return w.episode("失踪者",
+            # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
+            outline=OUTLINES[2])
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
             # NOTE
-            outline=OUTLINES[2])
-
-
-def trapped_in_castle(w: World):
-    return w.episode("城壁の虜囚",
-            # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
-    return w.episode("魔犬の牙",
+    return w.episode("魔獣の牙",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
-def dark_ritual(w: World):
-    return w.episode("暗黒の儀式",
+def sorrow_end(w: World):
+    return w.episode("悲しみの結末",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 
@@ -186,10 +204,10 @@ def main(w: World):
             #   ポイント：蘇りの$sorcery／$stone黒の行方情報（闇オークションに出回った）
             legend_of_dark_dog(w),
             first_murder(w),
+            missing_person(w),
             second_murder(w),
-            trapped_in_castle(w),
             dark_dogs_fang(w),
-            dark_ritual(w),
+            sorrow_end(w),
             outline=ABSTRACT)
 
 

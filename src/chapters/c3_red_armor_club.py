@@ -115,36 +115,54 @@ $limeは事情を語った上で、$sherlockに王室に戻らなくて済むよ
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",
             #   NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
 def strange_part_time_job(w: World):
     return w.episode("奇妙なアルバイト",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
 
 
-def bank_robbery(w: World):
-    return w.episode("銀行強盗",
+def closed_red_armor_club(w: World):
+    return w.episode("閉じた赤鎧クラブ",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[2])
 
 
 def the_end_of_case(w: World):
     return w.episode("事件の顛末",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
 def her_identity(w: World):
     return w.episode("鎧騎士の正体",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
 def limes_reason(w: World):
     return w.episode("$limeの事情",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 
@@ -163,7 +181,7 @@ def main(w: World):
             #
             silent_knight(w),
             strange_part_time_job(w),
-            bank_robbery(w),
+            closed_red_armor_club(w),
             the_end_of_case(w),
             her_identity(w),
             limes_reason(w),

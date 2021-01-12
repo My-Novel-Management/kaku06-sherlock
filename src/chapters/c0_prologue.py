@@ -56,18 +56,18 @@ OUTLINES = [
 def troublesome(w: World):
     return w.episode("厄介事と便利屋",
             # NOTE
-            #   ・数日前の大地震で、大聖堂の一部が破損し、改修中になっている
-            #   ・魔導冷蔵庫により$scienceによる技術革命が起こっている世界と提示（1850年頃に商業用冷蔵庫があったが一部のみだった
-            #   ・一部で戦争があること提示（米南北戦争など
-            #   ・$cultXの男が世界平和を訴えている
+            w.plot_setup("王室の厄介事を片付けるエージェントの$wilsonは第二王女が失踪した件についての調査と捜査をすることになっていた"),
+            w.plot_develop("パブで旧知の元軍医$stanと再会し、そこで便利屋$sherlockの話を教わる"),
+            w.plot_resolve("後日、その便利屋$sherlockに仕事を依頼する為に彼の家を訪れた"),
             outline=OUTLINES[0])
 
 
 def note_for_novel(w: World):
     return w.episode("読者のための諸注意",
             # NOTE
-            #   ・事件が全て終わっている
-            #   ・三人称で記述する（作中人物の記述者がいる
+            w.plot_setup("ある記述者がこの物語を執筆している"),
+            w.plot_develop("自分も含めた登場人物の全てが三人称で記述され、全ての事件があらかた片付いた後で情報を伝聞により補完し書いている"),
+            w.plot_resolve("記述者は$sherlockに出会ったことで人生が大きく変わった"),
             outline=OUTLINES[-1])
 
 

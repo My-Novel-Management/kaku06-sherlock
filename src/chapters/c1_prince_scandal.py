@@ -135,43 +135,57 @@ $jackの表の顔がオペラ歌手$ailyだった。
 #   ・魔導車
 
 
-def prince_matter(w: World):
-    return w.episode("皇太子の問題",
+def handyman_sherlock(w: World):
+    return w.episode("便利屋$sherlock",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[0])
 
 
-def mysterious_lady(w: World):
-    return w.episode("謎めいた女",
+def prince_matter(w: World):
+    return w.episode("王子の問題",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[1])
 
 
-def locked_room_murder(w: World):
-    return w.episode("密室殺人",
+def murder_case(w: World):
+    return w.episode("殺人事件",
             # NOTE
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[2])
 
 
-def lady_of_orphanage(w: World):
-    return w.episode("孤児院の女",
+def about_aily(w: World):
+    return w.episode("$ailyという女",
             # NOTE
-            #   ・孤児院での話
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[3])
 
 
-def phantom_thief_jack(w: World):
-    return w.episode("怪盗$jack",
+def orphanages_lady(w: World):
+    return w.episode("孤児院の女",
             # NOTE
-            #   ・怪盗$jackとの会話
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[4])
 
 
 def prince_wedding(w: World):
-    return w.episode("皇太子の結婚",
+    return w.episode("王子の結婚",
             # NOTE
-            #   ・宝剣について（返してもらったが$stoneがない）
-            #   ・皇太子の結婚式
+            w.plot_setup(""),
+            w.plot_develop(""),
+            w.plot_resolve(""),
             outline=OUTLINES[5])
 
 
@@ -187,10 +201,10 @@ def main(w: World):
             #   依頼人：皇太子
             #   結果：宝剣を取り戻したが肝心の$stoneは付いていなかった
             #   ポイント：$science技術／毒薬／$jack／$stone赤／王室
+            handyman_sherlock(w),
             prince_matter(w),
-            mysterious_lady(w),
-            locked_room_murder(w),
-            lady_of_orphanage(w),
+            murder_case(w),
+            about_aily(w),
             phantom_thief_jack(w),
             prince_wedding(w),
             outline=ABSTRACT)
