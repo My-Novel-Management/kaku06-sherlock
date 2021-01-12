@@ -58,18 +58,18 @@ $wilsonはそれを口にして昔暮らしていた世界を懐かしく思う�
 def total_the_end(w: World):
     return w.episode("全ての顛末",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("偽$wilsonである$zeronの死により一連の事件に決着がついた"),
+            w.plot_develop("本物の$wilsonに事件のことや何故$wilsonの家で暮らしているのか等、事情を話した"),
+            w.plot_resolve("$wilsonが$sherlockの活躍を小説にすることで家賃に当てようということで解決した"),
             outline=OUTLINES[0])
 
 
 def wilsons_papers(w: World):
     return w.episode("$wilsonの手記",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("小説の記述者は本物の$wilsonだった"),
+            w.plot_develop("今回の$sherlockの活躍を書き終えた$wilsonは$maryに呼ばれてケーキ試食会に参加する。そこで$wilsonは自身に関わる大切な記憶を思い出す"),
+            w.plot_resolve("$wilsonの許に$mikelから別の調査案件が舞い込むが、それはまた別の事件と書き加えて物語を終わる"),
             outline=OUTLINES[-1])
 
 

@@ -150,54 +150,54 @@ $zeronは闇の力により脱出し、その場から逃げていった
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$sherlockが滝壺に落ちてから半年が過ぎたが、未だに彼の生存に関する情報が見つからなかった"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$wilsonが、ホームレスによる$sherlockによく似た人物の目撃情報を掴んでくる"),
             outline=OUTLINES[0])
 
 
 def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("ホームレスからスラム街の空き家に$sherlockによく似た男が入るのを目撃したと聞く"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("空き家を調べていた$maryは抜け道を発見した。それは廃工場に繋がっていた"),
             outline=OUTLINES[1])
 
 
 def one_mans_confess(w: World):
     return w.episode("ある男の告白",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$maryは廃工場で失踪者の遺体を発見する"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$maryを助けたホームレスの正体は、本物の$sherlockだった"),
             outline=OUTLINES[2])
 
 
 def he_is_back(w: World):
     return w.episode("英雄の帰還",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("連続殺人犯$jakeと対決する$sherlock"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("病院にいたはずの$maryは$patsonによりどこかに連れ出されてしまった"),
             outline=OUTLINES[3])
 
 
 def revive_boss(w: World):
     return w.episode("$bossの復活",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$patsonが裏切り者だった。$boss復活の儀式を行うために$maryを誘拐し、改装中の大聖堂の地下に向かった"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("道具が揃った$patosonは$boss復活の儀式を開始した"),
             outline=OUTLINES[4])
 
 
 def total_the_end(w: World):
     return w.episode("すべての終わり",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$patsonが$boss復活の儀式を行ったが、偽物の$blue_stoneにより儀式は失敗に終わる"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("偽$wilsonこと$zeronは逃亡したが、後日山中の小屋で自殺しているのが発見された"),
             outline=OUTLINES[-1])
 
 

@@ -205,6 +205,6 @@ def main(w: World):
             prince_matter(w),
             murder_case(w),
             about_aily(w),
-            phantom_thief_jack(w),
+            orphanages_lady(w),
             prince_wedding(w),
             outline=ABSTRACT)
