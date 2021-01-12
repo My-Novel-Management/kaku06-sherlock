@@ -132,7 +132,7 @@ def the_fixer(w: World):
             w.plot_develop("戻ってきた$sherlockはそこで$steinが亡くなったことを知る"),
             w.plot_develop("ずっと闇の儀式のことを調べていたと証言する$sherlock"),
             w.plot_turnpoint("$steinは$morianoの旧友で、今回の件でついに黒幕が動き出したと言った"),
-            )
+            outline=OUTLINES[0])
 
 
 def about_moriano(w: World):
@@ -155,7 +155,7 @@ def about_moriano(w: World):
             w.plot_develop("最近宗教の宣伝も増えていて、男が憲兵に取り締まられていた"),
             w.plot_develop("$maryはうずくまっていた老人を助ける"),
             w.plot_turnpoint("$maryが連れて帰ってきた老人こそが、$morianoだった"),
-            )
+            outline=OUTLINES[1])
 
 
 def his_warning(w: World):
@@ -182,7 +182,7 @@ def his_warning(w: World):
             #   ・$maryの異変
             w.plot_develop("一方$maryは$morianoに言われてから、不安定だった"),
             w.plot_develop("市場に買い出しにでかけた$maryは、$morianoと再会する"),
-            )
+            outline=OUTLINES[2])
 
 
 def lookfor_mary(w: World):
@@ -207,7 +207,7 @@ def lookfor_mary(w: World):
             w.plot_develop("人殺しはいけないことなのに、弱者を飢えや病で殺すことは犯罪じゃないのかと"),
             w.plot_develop("$limeはわからなくなる"),
             w.plot_turnpoint("そこに$maryとともに$morianoが現れた"),
-            )
+            outline=OUTLINES[3])
 
 
 def rescue_mary(w: World):
@@ -238,7 +238,7 @@ def rescue_mary(w: World):
             w.plot_develop("$morianoがやってきて世界のシステムを変えるための儀式に必要なものが揃ったという"),
             w.plot_develop("$maryは$sherlockからの預かりものである$blue_stoneを渡す"),
             w.plot_turnpoint("しかし、そこに$sherlockが殺人の証拠品を持って現れた"),
-            )
+            outline=OUTLINES[4])
 
 
 def his_letter(w: World):
@@ -260,7 +260,7 @@ def his_letter(w: World):
             w.plot_turnpoint("$sherlockから手紙がきた"),
             w.plot_resolve("手紙は$sherlockが$morianoを追い詰めたところで書かれていた"),
             w.plot_turnpoint("滝で$sherlockの遺品が見つかった"),
-            )
+            outline=OUTLINES[5])
 
 
 # Chapter
