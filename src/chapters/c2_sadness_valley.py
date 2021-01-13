@@ -134,18 +134,18 @@ $maryは$sherlockの家で暮らすと言った。
 def sad_case(w: World):
     return w.episode("悲しい事件",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$wilsonは毎日のようにやってきて$sherlockに仕事を依頼しようとするが$sherlockは無視して新聞から興味深い事件を探す"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("父親殺し事件の容疑者となった娘の家に勤める使用人$keanが、娘の無実を証明してほしいと依頼に訪れた"),
             outline=OUTLINES[0])
 
 
 def valley_town(w: World):
     return w.episode("谷の田舎町",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("事件のあった田舎町にやってくる$sherlockと$wilsonは$keanの案内で事件の調査を行う"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve(""),# TODO
             outline=OUTLINES[1])
 
 
