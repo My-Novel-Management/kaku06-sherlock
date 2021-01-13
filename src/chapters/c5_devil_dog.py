@@ -139,54 +139,54 @@ $sherlockは$cherryが魔犬の餌にするために人殺しを行っていた�
 def legend_of_dark_dog(w: World):
     return w.episode("魔獣の伝説",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("ある孤島で猟奇的殺人事件が発生したが、それは魔獣によるものだという伝説があった"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("孤島の城の主からパーティの招待状が届いたが、$sherlockは用事で行けないというので$maryたちが行くことになった"),
             outline=OUTLINES[0])
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("パーティに参加する為に島にやってきた$maryと$lime、$wilsonだったが城に集められていたのは曲者の面々だった"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("しかし翌朝、社会学者$reuiが遺体となって発見された"),
             outline=OUTLINES[1])
 
 
 def missing_person(w: World):
     return w.episode("失踪者",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("殺人事件が発生したが外は荒れていて船も何者かに壊され、孤島に閉じ込められることになった"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("頼りにしていた観光課の$mochが失踪してしまった"),
             outline=OUTLINES[2])
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("元刑事の$hugarは姿が消えた人間を次々と容疑者にして、現場は混乱する"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$sherlockから島に向かっていると連絡が入った"),
             outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔獣の牙",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("失踪者が多く出て城主の$cherryの姿もなくなり困り果てたところに$sherlockが現れる"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("地下には拷問部屋があり、そこでは黒い巨大な犬が待ち構えていた"),
             outline=OUTLINES[4])
 
 
 def sorrow_end(w: World):
     return w.episode("悲しみの結末",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("本当に魔獣の仕業だったと騒ぎ立てるが$sherlockは殺人が犬の仕業ではないことを伝えて、隠れていた$cherryを呼び出した"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("事件は$cherryの死により結末を迎えた。後日城の地下で儀式の跡が見つかった"),
             outline=OUTLINES[5])
 
 
