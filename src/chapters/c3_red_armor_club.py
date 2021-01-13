@@ -115,54 +115,54 @@ $limeは事情を語った上で、$sherlockに王室に戻らなくて済むよ
 def silent_knight(w: World):
     return w.episode("沈黙の騎士",
             #   NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$maryが一緒に暮らすようになり家事全般を担当してくれるようになったが彼女は壊滅的に下手だった"),
+            w.plot_develop("$sherlockは$wilsonからの依頼に興味を示さなかったが、それでも失踪事件についてはそれとなく調べていた"),
+            w.plot_resolve("$maryが真っ赤な鎧を来た謎の騎士を連れてくるが、その騎士は喋ることができなかった"),
             outline=OUTLINES[0])
 
 
 def strange_part_time_job(w: World):
     return w.episode("奇妙なアルバイト",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("筆談で$limeと名乗った喋れない鎧騎士は$sherlockに相談したいことがあると言った"),
+            w.plot_develop("$limeは自分がしている奇妙なアルバイトについて語り、このまま続けていいものだろうかと相談した"),
+            w.plot_resolve("後日、再度訪れた$limeは赤鎧クラブが突如閉会された上に、同僚の$jakinsが失踪したと語った"),
             outline=OUTLINES[1])
 
 
 def closed_red_armor_club(w: World):
     return w.episode("閉じた赤鎧クラブ",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは$limeから話を聞き、赤鎧クラブのことを確かめる"),
+            w.plot_develop("$limeの言う通り赤鎧クラブは存在そのものが消え去っていた。続いて質屋を調べると奥に地下道を発見する"),
+            w.plot_resolve("地下通路の途中で$jakinsが殺されていて、その容疑者として$limeが浮上した"),
             outline=OUTLINES[2])
 
 
 def the_end_of_case(w: World):
     return w.episode("事件の顛末",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは赤鎧クラブは$limeを遠ざける罠だったと語る"),
+            w.plot_develop("質屋オーナー夫婦から聞き取りをして$jakinsがそもそも銀行の大金庫から宝石を盗み出す目的で近づいたこと等を突き止める"),
+            w.plot_resolve("$jakinsを殺したと見られる強盗団が火災現場から遺体となって発見された"),
             outline=OUTLINES[3])
 
 
 def her_identity(w: World):
     return w.episode("鎧騎士の正体",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("強盗団が全員死んだことと$sherlockの調査により$limeの疑いが晴れた"),
+            w.plot_develop("無実となった$limeだったが迷惑をかけたとオーナー夫婦の許を去った。だが路上でどうしようと困っていて、再び$maryに拾われる"),
+            w.plot_resolve("$limeは$shelrockたちに自分は失踪中の第二王女だと語った"),
             outline=OUTLINES[4])
 
 
 def limes_reason(w: World):
     return w.episode("$limeの事情",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("第二王女だと語った$limeは自分がどうしてこうなっているのかという事情を$sherlockたちに話した"),
+            w.plot_develop("まず$sherlockは知り合いの神官に頼んで鎧の呪いを解いてもらい、喋れるようにしてから、$limeから改めて事情を聞く"),
+            w.plot_resolve("$limeは王室に戻りたくないのでしばらくここで置いてもらえないかと頼み込んだ"),
             outline=OUTLINES[5])
 
 
