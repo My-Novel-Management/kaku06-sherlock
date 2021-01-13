@@ -159,17 +159,17 @@ def lookfor_sherlock(w: World):
 def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
             # NOTE
-            w.plot_setup("ホームレスからスラム街の空き家に$sherlockによく似た男が入るのを目撃したと聞く"),
-            w.plot_develop(""),
-            w.plot_resolve("空き家を調べていた$maryは抜け道を発見した。それは廃工場に繋がっていた"),
+            w.plot_setup("空き家を監視していると$sherlockらしき男と誰かが争っていて、明かりが消えた。その空き家を調べる$maryたち"),
+            w.plot_develop("警察で空き家の遺体について事情聴取を受ける$maryたち。警察は$sherlockを容疑者にしていることを知り、$maryは単独で事件捜査を行う"),
+            w.plot_resolve("廃工場で失踪者の遺体を発見した$maryは、そこで$sherlockによく似た男と遭遇する"),
             outline=OUTLINES[1])
 
 
 def one_mans_confess(w: World):
     return w.episode("ある男の告白",
             # NOTE
-            w.plot_setup("$maryは廃工場で失踪者の遺体を発見する"),
-            w.plot_develop(""),
+            w.plot_setup("$maryは廃工場で$sherlock（に似た男）と出会う"),
+            w.plot_develop("$sherlockに似た男$jakeは自分が連続猟奇殺人犯だと告白する"),
             w.plot_resolve("$maryを助けたホームレスの正体は、本物の$sherlockだった"),
             outline=OUTLINES[2])
 
@@ -178,7 +178,7 @@ def he_is_back(w: World):
     return w.episode("英雄の帰還",
             # NOTE
             w.plot_setup("連続殺人犯$jakeと対決する$sherlock"),
-            w.plot_develop(""),
+            w.plot_develop("$sherlockは$jakeがどんな人生を歩んできたかを全て言い当て$jakeの牙を無力化しようとする"),
             w.plot_resolve("病院にいたはずの$maryは$patsonによりどこかに連れ出されてしまった"),
             outline=OUTLINES[3])
 
@@ -187,7 +187,7 @@ def revive_boss(w: World):
     return w.episode("$bossの復活",
             # NOTE
             w.plot_setup("$patsonが裏切り者だった。$boss復活の儀式を行うために$maryを誘拐し、改装中の大聖堂の地下に向かった"),
-            w.plot_develop(""),
+            w.plot_develop("$patsonは儀式を行うために$maryを人質にして$sherlockを脅し、必要な$heroの血を手に入れようとする"),
             w.plot_resolve("道具が揃った$patosonは$boss復活の儀式を開始した"),
             outline=OUTLINES[4])
 
@@ -196,7 +196,7 @@ def total_the_end(w: World):
     return w.episode("すべての終わり",
             # NOTE
             w.plot_setup("$patsonが$boss復活の儀式を行ったが、偽物の$blue_stoneにより儀式は失敗に終わる"),
-            w.plot_develop(""),
+            w.plot_develop("$wilsonは偽物で、彼こそが$boss復活の主導者だった。偽$wilsonの$zeronは$sherlockに本物の$blue_stoneを持ってくるよう要求する"),
             w.plot_resolve("偽$wilsonこと$zeronは逃亡したが、後日山中の小屋で自殺しているのが発見された"),
             outline=OUTLINES[-1])
 

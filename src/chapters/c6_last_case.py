@@ -117,54 +117,54 @@ $maryが自分が$sherlockを傷つけてしまったことを後悔していた
 def researcher_of_ancient(w: World):
     return w.episode("古代の研究者",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("孤島事件後、$sherlockは頻繁に外出し何かを調べていて$maryは少し寂しい思いをしていた"),
+            w.plot_develop("$maryは自分が$ajinであることに悩み、市場の知り合いなどに相談していた。そんな時ふさぎ込んでいる老紳士を助ける"),
+            w.plot_resolve("$patsonは元大学教授殺人事件の容疑者として$sherlockに事情聴取をする"),
             outline=OUTLINES[0])
 
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("殺人事件の関係を疑われた$sherlockは自分が$stein教授から古代の技術について教わっていたことを語る"),
+            w.plot_develop("$sherlockは$stein教授の研究で$boss復活の儀式という闇の技法が存在し、それを実際に行おうという集まりがあると示唆する。その中心的存在が$morianoだった"),
+            w.plot_resolve("$maryが拾ってきた老紳士が、$morianoだった"),
             outline=OUTLINES[1])
 
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは$morianoが全ての元凶で今回の事件の犯人でもあると言う"),
+            w.plot_develop(""),# TODO
+            w.plot_resolve("$morianoが立ち去った後から$maryの様子が妙で、後日失踪してしまう"),
             outline=OUTLINES[2])
 
 
 def disturbance_of_mary(w: World):
     return w.episode("$maryの乱心",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("いなくなった$maryを$limeは探す"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$morianoの研究所で彼の助手となった$maryは$limeに戻らないと言った"),
             outline=OUTLINES[3])
 
 
 def sherlocks_obsession(w: World):
     return w.episode("$sherlockの執念",
             # NOTE
-            w.plot_setup(""),
+            w.plot_setup("$sherlockは$morianoを追い詰める証拠を必死に探す"),
             w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_resolve("$maryは$sherlockを傷つけてしまい、結果、$morianoの逃亡を手伝ってしまった"),
             outline=OUTLINES[4])
 
 
 def letter_from_him(w: World):
     return w.episode("$sherlockからの手紙",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("負傷した$sherlockは病院から姿を消す"),
+            w.plot_develop("$maryたちは$sherlockの行方を探したが、後日$sherlockから手紙が来て$morianoを道連れに死ぬだろうと書かれていた"),
+            w.plot_resolve("警察の捜索により滝壺から$morianoと$sherlock両名の遺品と思われるものが見つかった"),
             outline=OUTLINES[5])
 
 
