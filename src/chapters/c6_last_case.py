@@ -136,7 +136,7 @@ def his_warning(w: World):
     return w.episode("$morianoの警告",
             # NOTE
             w.plot_setup("$sherlockは$morianoが全ての元凶で今回の事件の犯人でもあると言う"),
-            w.plot_develop(""),# TODO
+            w.plot_develop("$morianoにより今までの$shelrockの事件解決が全て自己満足の茶番で、犯罪を阻止するという本来の目的から逸脱していると説き伏せられる"),
             w.plot_resolve("$morianoが立ち去った後から$maryの様子が妙で、後日失踪してしまう"),
             outline=OUTLINES[2])
 
@@ -145,7 +145,7 @@ def disturbance_of_mary(w: World):
     return w.episode("$maryの乱心",
             # NOTE
             w.plot_setup("いなくなった$maryを$limeは探す"),
-            w.plot_develop(""),
+            w.plot_develop("$sherlockは$maryを放っておけばいいと言うが$limeは$ignesたちに協力してもらい、$maryが$morianoの犯罪研究所にいることを突き止め、引き戻しに行く"),
             w.plot_resolve("$morianoの研究所で彼の助手となった$maryは$limeに戻らないと言った"),
             outline=OUTLINES[3])
 
@@ -154,7 +154,7 @@ def sherlocks_obsession(w: World):
     return w.episode("$sherlockの執念",
             # NOTE
             w.plot_setup("$sherlockは$morianoを追い詰める証拠を必死に探す"),
-            w.plot_develop(""),
+            w.plot_develop("何とか$morianoの事件関与の証拠を掴み、$sherlockは$morianoを捕まえに彼の研究所に向かう"),
             w.plot_resolve("$maryは$sherlockを傷つけてしまい、結果、$morianoの逃亡を手伝ってしまった"),
             outline=OUTLINES[4])
 
