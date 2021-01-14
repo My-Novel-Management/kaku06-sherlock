@@ -135,8 +135,12 @@ def sad_case(w: World):
     return w.episode("悲しい事件",
             # NOTE
             w.plot_setup("$wilsonは毎日のようにやってきて$sherlockに仕事を依頼しようとするが$sherlockは無視して新聞から興味深い事件を探す"),
-            w.plot_develop("新聞からある地方の悲しい父親殺しの事件をピックアップし、それについて$sherlockは少ない中から情報を推理して見せる"),
+            w.plot_turnpoint("$sherlockは犯罪解決のための開発に忙しいと外出してしまう"),
+            w.plot_develop("翌日も訪れた$wilsonは$sherlockが興味を持ちそうな事件を探す。田舎町の悲しい父親殺しの事件をピックアップし、それについて$sherlockに尋ねる"),
+            w.plot_turnpoint("そこに一人の少年（$kean）が仕事を依頼したいと訪れる"),
+            "地元の新聞社の仲良い人の紹介",
             w.plot_resolve("父親殺し事件の容疑者となった娘の家に勤める使用人$keanが、娘の無実を証明してほしいと依頼に訪れた"),
+            w.plot_turnpoint("なけなしの小遣いで依頼する$keanに、$sherlockは二つ返事で受け付けた"),
             outline=OUTLINES[0])
 
 
@@ -144,8 +148,11 @@ def valley_town(w: World):
     return w.episode("谷の田舎町",
             # NOTE
             w.plot_setup("事件のあった田舎町にやってくる$sherlockと$wilsonは$keanの案内で事件の調査を行う"),
+            w.plot_turnpoint("地元新聞社の記者$milkから事件に関する記事や情報をもらう"),
             w.plot_develop("事件現場を確認した後に$royd氏の邸宅で$jean夫人と使用人$kailから話を聞く"),
-            w.plot_resolve("$restradeのコネにより何とか$maryと面会する許可が降りた"),
+            w.plot_turnpoint("$maryは警察に勾留され、面会できないと聞く"),
+            w.plot_resolve("警察にやってきた$sherlockは$restradeの名前を出して交渉する"),
+            w.plot_turnpoint("$restradeのコネで$maryとの面会許可が降りた"),
             outline=OUTLINES[1])
 
 
@@ -153,8 +160,11 @@ def suspect_mary(w: World):
     return w.episode("容疑者$mary",
             # NOTE
             w.plot_setup("警察にやってきた$sherlockはそこで容疑者の$maryと面会をする"),
-            w.plot_develop("$maryに$keanから依頼されたと話し、彼女の事件前後の行動について教えてもらう"),
-            w.plot_resolve("$sherlockは$maryが$animalで現場に彼女のものと思われる獣の毛が落ちていたことが証拠になっていると言った"),
+            w.plot_turnpoint("$maryは沈黙を守っていたが$keanの名前に安心して話し始めた"),
+            w.plot_develop("$maryから事件前後の話を聞く。彼女は父親に呼び出されてある話をされたと語った"),
+            w.plot_turnpoint("$maryは家に帰った時に使用人の$kailと顔をあわせたと言った"),
+            w.plot_resolve("地元刑事の$patsonは警察は確かな証拠を掴んでいるからこのまま証拠と証言を固めて裁判所に送ると言う"),
+            w.plot_turnpoint("$sherlockは$maryが$animalであると言った"),
             outline=OUTLINES[2])
 
 
@@ -162,25 +172,33 @@ def family_circumstances(w: World):
     return w.episode("家族の事情",
             # NOTE
             w.plot_setup("$sherlockは$wilsonにお使いを頼み、その間に街で$royd氏に関する情報を集める"),
+            w.plot_turnpoint("パブで$jeanがかつて通っていた学校の生徒から、彼女が玉の輿に乗れたと喜んでいた話を聞く"),
             w.plot_develop("$sherlockは$jeanの育った学校に行き、彼女の小さい頃の話などを聞く。またそこで$kailに関する話も入手する"),
-            w.plot_resolve("指紋検出と照合の結果、$gunからは$maryの指紋は検出されなかった"),
+            w.plot_turnpoint("学校に飾られた$jeanの絵に$kailのサインを発見する"),
+            w.plot_resolve("戻ってきた$wilsonから$edoの結果を聞く$sherlock"),
+            w.plot_turnpoint("指紋検出と照合の結果、$gunから$maryのものではない指紋が検出されたと$wilsonから聞いた"),
             outline=OUTLINES[3])
 
 
 def marys_confession(w: World):
     return w.episode("$maryの告白",
             #   NOTE
-            w.plot_setup("$sherlockは再度$jeanと$kailに話を聞く"),
+            w.plot_setup("$sherlockは再度$jeanと$kailに話を聞きに邸宅を訪れる"),
+            w.plot_turnpoint("$kailから$jeanが体調を崩していて会えないと断られる"),
             w.plot_develop("$jeanは$maryが拾われ子であり$animalだということを知っていたのを隠していたことを告白する"),
-            w.plot_resolve("$maryが$transformした"),
+            w.plot_turnpoint("そこに警察が$maryを連れてくる"),
+            w.plot_resolve("$kailと$jeanは$maryが父親を憎んでいてそれで殺したと罪をなすりつけようとするが、$sherlockにより証言の齟齬が突かれてボロが出る"),
+            w.plot_turnpoint("$maryは$kailたちが父親を殺したことに激怒し、$transformした"),
             outline=OUTLINES[4])
 
 
 def real_mind(w: World):
     return w.episode("本当の気持ち",
             # NOTE
-            w.plot_setup("$transformした$maryを$kailが殺そうとする"),
-            w.plot_develop("$maryにより$jeanが守られたが、彼女は最後まで$maryに対して感謝も愛しているの言葉もかけられないままだった"),
+            w.plot_setup("$transformした$maryを$kailが$gunで殺そうとする"),
+            w.plot_turnpoint("しかし$jeanによりそれが阻止される"),
+            w.plot_develop("実行犯は$kailだった。$jeanも加担したが心の底からは賛成していなかった。逃げ出した$kailが逮捕され、事件は解決に向かう"),
+            w.plot_turnpoint("$jeanは$maryに対して「愛せなくてごめん」と謝罪した"),
             w.plot_resolve("遺産相続を放棄した$maryは荷物を持って$sherlockの家に押しかけた"),
             outline=OUTLINES[5])
 

@@ -57,7 +57,9 @@ def troublesome(w: World):
     return w.episode("厄介事と便利屋",
             # NOTE
             w.plot_setup("王室の厄介事を片付けるエージェントの$wilsonは第二王女が失踪した件についての調査と捜査をすることになっていた"),
-            w.plot_develop("パブで旧知の元軍医$stanと再会し、そこで便利屋$sherlockの話を教わる"),
+            w.plot_turnpoint("情報を集める為に訪れたパブで旧知の元軍医$stanと再会する"),
+            w.plot_develop("$stanとは王立学校時代の同期生で彼は医師を目指し、$wilsonは弁護士を目指した仲だった。互いの近況を語り合う"),
+            w.plot_turnpoint("$stanから便利屋$sherlockについて教わる"),
             w.plot_resolve("後日、その便利屋$sherlockに仕事を依頼する為に彼の家を訪れた"),
             outline=OUTLINES[0])
 
@@ -66,8 +68,10 @@ def note_for_novel(w: World):
     return w.episode("読者のための諸注意",
             # NOTE
             w.plot_setup("ある記述者がこの物語を執筆している"),
-            w.plot_develop("自分も含めた登場人物の全てが三人称で記述され、全ての事件があらかた片付いた後で情報を伝聞により補完し書いている"),
-            w.plot_resolve("記述者は$sherlockに出会ったことで人生が大きく変わった"),
+            w.plot_turnpoint("$sherlockに出会ったことが全てのきっかけだと書いている"),
+            w.plot_develop("どういう規則に従って書かれているか等の注意事項について説明する記述者"),
+            w.plot_turnpoint("部屋に誰か（$mary）が入室してきて、記述者に早く来いと呼び出しをする"),
+            w.plot_resolve("記述者は振り返り、こういったこともかつてはなかったと感慨深く思いながら、物語の続きを書き始める"),
             outline=OUTLINES[-1])
 
 
