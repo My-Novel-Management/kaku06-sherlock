@@ -113,27 +113,36 @@ $jackは何者かが$stoneを集めようとしていると警告する。四つ
 def market_and_goose(w: World):
     return w.episode("市場とガチョウ",
             # NOTE
-            w.plot_setup("$limeが一緒に暮らすようになり、$maryは自分の役割を取られたような気分になり、市場の知人に愚痴っていた"),
+            w.plot_setup("$limeが一緒に暮らすようになり、$maryは自分の役割を取られたような気分になっていた"),
+            w.plot_turnpoint("$maryは逃げるように市場に買い出しに行く"),
             w.plot_develop("$sherlockは$wilsonの依頼を終えても失踪事件について調査を続けていた。あまり構ってくれないと憤慨する$maryは市場で仲良くなった肉屋の$nowlisに相談する"),
-            w.plot_resolve("もらったガチョウを$limeに捌いてもらうと、中からナイフと$blue_stoneが出てきた"),
+            w.plot_turnpoint("$nowlisからガチョウをもらう"),
+            w.plot_resolve("$maryは自分も役に立つとガチョウを自慢する"),
+            w.plot_turnpoint("だが$limeに捌いてもらったガチョウからはナイフと$blue_stoneが出てきた"),
             outline=OUTLINES[0])
 
 
 def missing_murder_weapon(w: World):
     return w.episode("凶器のない殺人",
             # NOTE
-            w.plot_setup("ナイフは何らかの事件に関係があると$sherlockにより届けられ、警察から$restradeがやってくる"),
+            w.plot_setup("$sherlockはナイフと$blue_stoneについて警察に届けると共に情報を調べる"),
+            w.plot_turnpoint("$restradeがやってきてナイフがある事件に関係している可能性があると言った"),
             w.plot_develop("資産家の夫人が謎の死を遂げ、その凶器が見つからなかったが、ガチョウから出てきたナイフに付着していた血液が一致した。$sherlockは知人に$blue_stoneについての鑑定を依頼する"),
-            w.plot_resolve("$maryは市場の知人の容疑を晴らすために卸先を調査していたら、ガチョウクラブというものに突き当たった"),
+            w.plot_turnpoint("$maryが単独で事件捜査していると$limeから聞く"),
+            w.plot_resolve("$maryは市場の知人のツテを使ってガチョウの行方を追いかけた"),
+            w.plot_turnpoint("$maryは卸先の男からガチョウクラブについて教わる"),
             outline=OUTLINES[1])
 
 
 def goose_club(w: World):
     return w.episode("ガチョウクラブ",
             # NOTE
-            w.plot_setup("$sherlockは$jackの指紋が検出されたことから独自に捜査をしていて、$maryの相談には乗ってくれない"),
+            w.plot_setup("$maryはガチョウクラブの情報を仕入れて$sherlockに相談しようとする"),
+            w.plot_turnpoint("$sherlockは$jackが国内に入っているという情報を得て、出ていってしまう"),
             w.plot_develop("$maryは$limeと$ignesに頼んでガチョウクラブについて潜入捜査を試みる"),
+            w.plot_turnpoint(""),# TODO
             w.plot_resolve("$maryは潜入したガチョウクラブで$dragと$gunの取引が行われているのを目撃してしまう"),
+            w.plot_turnpoint("$maryは$dragと$gunの取引現場を目撃してしまう"),
             outline=OUTLINES[2])
 
 
@@ -141,8 +150,11 @@ def investigate_case(w: World):
     return w.episode("事件捜査",
             # NOTE
             w.plot_setup("$sherlockは$jackが国内に戻っているとの情報を得て、殺人事件について本格的に捜査を開始する"),
+            w.plot_turnpoint(""),
             w.plot_develop("殺人現場の住宅を調査し、そこの出入りの業者等も洗う。調べていくうちに殺された$moura夫人がガチョウクラブ会員だったと判明する"),
+            w.plot_turnpoint(""),
             w.plot_resolve("売り飛ばされそうになっている$maryの前に、ガチョウクラブで出会った謎の女性（$jack）が現れた"),
+            w.plot_turnpoint(""),
             outline=OUTLINES[3])
 
 
@@ -150,8 +162,11 @@ def case_end(w: World):
     return w.episode("事件解決",
             # NOTE
             w.plot_setup("姿を消した$maryが残してくれたヒントから$sherlockはガチョウクラブの関係に目をつける"),
+            w.plot_turnpoint(""),
             w.plot_develop("$sherlockがガチョウクラブに向かうと既にもぬけの殻で、調べるとどうやら$dragなどの取引に使っていたと判明する。警察に連絡する一方、$sherlockは別の犯人がいることに気づいた"),
+            w.plot_turnpoint(""),
             w.plot_resolve("$sherlockにより夫人の愛人がガチョウクラブの犯行に見せかけようとした事件だったと判明し、逮捕される"),
+            w.plot_turnpoint(""),
             outline=OUTLINES[4])
 
 
@@ -159,7 +174,9 @@ def four_stones(w: World):
     return w.episode("四つの$stone",
             # NOTE
             w.plot_setup("事件が解決し、ガチョウクラブにも捜査の手が入った"),
+            w.plot_turnpoint(""),
             w.plot_develop("$maryは$jackにより助け出され、$sherlockの前に無事返された。$jackは$sherlockに話があると呼び出す"),
+            w.plot_turnpoint(""),
             w.plot_resolve("$jackは$sherlockに$blue_stoneを託し、裏世界で動いている何者かの企みを阻止してほしいと依頼した"),
             outline=OUTLINES[5])
 
