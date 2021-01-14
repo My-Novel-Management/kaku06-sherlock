@@ -138,54 +138,54 @@ $jackの表の顔がオペラ歌手$ailyだった。
 def handyman_sherlock(w: World):
     return w.episode("便利屋$sherlock",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$wilsonは便利屋$sherlockに仕事を依頼に訪れる"),
+            w.plot_develop("だが$sherlockは$wilsonが話す前から全てを言い当て、挙げ句に「王室からの依頼は受けない」と言い出す。$wilsonは何とか$sherlockに仕事を受けてもらおうとするが"),
+            w.plot_resolve("そこに王室執務官秘書$adelがやってきて王子からの依頼の書簡を置いていった"),
             outline=OUTLINES[0])
 
 
 def prince_matter(w: World):
     return w.episode("王子の問題",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("王子からの書簡にはある女から$royalswordを取り戻して欲しいと書かれていた"),
+            w.plot_develop("王子に何かしら弱みを握られているらしい$sherlockは仕方なく仕事を受け、$ailyという女を調査に向かう"),
+            w.plot_resolve("玄関の家の鍵が開いているのを不審に思った$sherlockは中に入った"),
             outline=OUTLINES[1])
 
 
 def murder_case(w: World):
     return w.episode("殺人事件",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("家の中には鍵がかかった寝室があり、その中に知らない女の遺体が転がっていた"),
+            w.plot_develop("事件として警察に届け出た後$sherlockは彼女が働いていたオペラハウスに向かう。そこで歌手$ailyのことを聞き込みした"),
+            w.plot_resolve("警察は$ailyを指名手配することにした"),
             outline=OUTLINES[2])
 
 
 def about_aily(w: World):
     return w.episode("$ailyという女",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$ailyが寄付していたという孤児院を訪ね、彼女の情報を集める"),
+            w.plot_develop("$ailyが孤児院出身で貧しいところから成功したと知るが、孤児院の$ailyとオペラハウスや近隣住民の$aily評の差に違和感を覚える"),
+            w.plot_resolve("殺害されていた女こそが$ailyだった"),
             outline=OUTLINES[3])
 
 
 def orphanages_lady(w: World):
     return w.episode("孤児院の女",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは$ailyについて聞く為に王子と出会う"),
+            w.plot_develop("王子から情報を得て$sherlockは$ailyの家を再度訪ねて調査する"),
+            w.plot_resolve("$sherlockは再度孤児院を訪ねて女教師に「あなたが$ailyですね」と言った"),
             outline=OUTLINES[4])
 
 
 def prince_wedding(w: World):
     return w.episode("王子の結婚",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$ailyは$sherlockに全て見抜かれていたことで本性を現す"),
+            w.plot_develop("$ailyの正体が巷を賑わせている怪盗$jackと判明し、彼女はすんなりと$sherlockに$royalswordの返却を約束する"),
+            w.plot_resolve("$stoneのレプリカを作ってもらい、何とか無事に王子の結婚式は行われた"),
             outline=OUTLINES[5])
 
 
