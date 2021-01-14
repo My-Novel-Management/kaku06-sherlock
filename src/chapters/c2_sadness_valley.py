@@ -135,7 +135,7 @@ def sad_case(w: World):
     return w.episode("悲しい事件",
             # NOTE
             w.plot_setup("$wilsonは毎日のようにやってきて$sherlockに仕事を依頼しようとするが$sherlockは無視して新聞から興味深い事件を探す"),
-            w.plot_develop(""),
+            w.plot_develop("新聞からある地方の悲しい父親殺しの事件をピックアップし、それについて$sherlockは少ない中から情報を推理して見せる"),
             w.plot_resolve("父親殺し事件の容疑者となった娘の家に勤める使用人$keanが、娘の無実を証明してほしいと依頼に訪れた"),
             outline=OUTLINES[0])
 
@@ -144,44 +144,44 @@ def valley_town(w: World):
     return w.episode("谷の田舎町",
             # NOTE
             w.plot_setup("事件のあった田舎町にやってくる$sherlockと$wilsonは$keanの案内で事件の調査を行う"),
-            w.plot_develop(""),
-            w.plot_resolve(""),# TODO
+            w.plot_develop("事件現場を確認した後に$royd氏の邸宅で$jean夫人と使用人$kailから話を聞く"),
+            w.plot_resolve("$restradeのコネにより何とか$maryと面会する許可が降りた"),
             outline=OUTLINES[1])
 
 
 def suspect_mary(w: World):
     return w.episode("容疑者$mary",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("警察にやってきた$sherlockはそこで容疑者の$maryと面会をする"),
+            w.plot_develop("$maryに$keanから依頼されたと話し、彼女の事件前後の行動について教えてもらう"),
+            w.plot_resolve("$sherlockは$maryが$animalで現場に彼女のものと思われる獣の毛が落ちていたことが証拠になっていると言った"),
             outline=OUTLINES[2])
 
 
 def family_circumstances(w: World):
     return w.episode("家族の事情",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは$wilsonにお使いを頼み、その間に街で$royd氏に関する情報を集める"),
+            w.plot_develop("$sherlockは$jeanの育った学校に行き、彼女の小さい頃の話などを聞く。またそこで$kailに関する話も入手する"),
+            w.plot_resolve("指紋検出と照合の結果、$gunからは$maryの指紋は検出されなかった"),
             outline=OUTLINES[3])
 
 
 def marys_confession(w: World):
     return w.episode("$maryの告白",
             #   NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$sherlockは再度$jeanと$kailに話を聞く"),
+            w.plot_develop("$jeanは$maryが拾われ子であり$animalだということを知っていたのを隠していたことを告白する"),
+            w.plot_resolve("$maryが$transformした"),
             outline=OUTLINES[4])
 
 
 def real_mind(w: World):
     return w.episode("本当の気持ち",
             # NOTE
-            w.plot_setup(""),
-            w.plot_develop(""),
-            w.plot_resolve(""),
+            w.plot_setup("$transformした$maryを$kailが殺そうとする"),
+            w.plot_develop("$maryにより$jeanが守られたが、彼女は最後まで$maryに対して感謝も愛しているの言葉もかけられないままだった"),
+            w.plot_resolve("遺産相続を放棄した$maryは荷物を持って$sherlockの家に押しかけた"),
             outline=OUTLINES[5])
 
 
