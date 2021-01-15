@@ -189,7 +189,7 @@ def dark_dogs_fang(w: World):
             # NOTE
             w.plot_setup("$maryたちは$sherlockの指示で調べておいてほしいと言われたところを調査する"),
             w.plot_turnpoint("$cherryの寝室に入るが、彼女の姿も消えていた"),
-            w.plot_develop(""),# TODO
+            w.plot_develop("$limeが抜け道に気づいて寝室から談話室に抜けられることを発見する。それが$hugarに見つかり、$limeたちが犯人にされてしまう"),
             w.plot_turnpoint("$sherlockがやってきて$maryたちと合流する"),
             w.plot_resolve("$sherlockは$maryたちから情報を聞き、談話室を調べ始める。そこで地下への階段を見つけた"),
             w.plot_turnpoint("地下に拷問部屋があり、そこで黒い巨大な犬が待ち構えていた"),
