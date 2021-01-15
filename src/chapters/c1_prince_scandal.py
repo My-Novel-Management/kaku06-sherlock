@@ -8,15 +8,12 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
-from scenes import AilyHouse
-from scenes import CurioDealer
-from scenes import InCar
-from scenes import InCity
-from scenes import Market
-from scenes import Orphanage
-from scenes import SherlockHouse
-from scenes import Street
-from scenes import StSarpentain
+from episode1 import about_aily
+from episode1 import handyman_sherlock
+from episode1 import murder_case
+from episode1 import orphanages_lady
+from episode1 import prince_matter
+from episode1 import prince_wedding
 
 
 # Episodes
@@ -38,73 +35,6 @@ $jackから、$ailyが自殺だったことを聞き、彼女を利用して$roy
 無事に$royalswordを取り戻したはずだったが、そこには肝心の$red_stoneが付いておらず、$jackに出し抜かれた$sherlock。
 王子の結婚式は宝石技師$casselの手による偽物の$stoneを使って何とか無事に終わらせた。
 """
-OUTLINES = [
-"""
-$wilsonはある依頼をする為に便利屋$sherlockの許を訪れる。
-しかし$sherlockは$wilsonが説明する前から、彼がどういう人物で何を依頼しようとしているのかまで言い当て、挙げ句に「王室からの依頼は受けない」と断ってしまう。
-$wilsonは諦めて立ち去ろうとするが、自分の$carに子供たちが群がっているのを見て追い払おうとしてからまれる。そこを通りかかりの少年$ignesに助けられた。
-だが$sherlockが出てきて$ignesにすった財布を返すように言われて、少年は返して立ち去った。
-$wilsonはこうして$sherlockとまともに話すことに。
-家の中に入ると$sherlockは自分が色々な難事件や面倒なことを解決してきたが、その大半が王室経由の厄介事だったと吐露する。
-だからもう二度と受けないと決めたと。
-と、そこに王子の書簡を持った秘書の$adelがやってくる。
-""",
-"""
-書簡には王子が結婚をすることになったが、その儀式に必要な宝具の一つ$royalswordをある女性にあげてしまったので、何をしてもいいから取り戻して欲しいというお願いが書かれていた。
-この国の王子というのは$heroたちの血筋を色濃く引いている四家系の一つ$Arthur家の長男で、次期国王だったが、どうしようもない駄目男で有名だった。
-あちこちで子種をばらばいては問題を起こしているらしいとも。
-その王子の尻拭いは$sherlockが受けたくない依頼の中でもワースト１だった。
-しかしある恩義があり、断れないので、$sherlockは仕方なくその女性について調査を行う。
-$sherlockはいつも入念に調査する。資料もそうだが、何より現地調査を重要視していた。
-$wilsonの$carでその女の暮らす高級住宅街に向かう。
-現地に到着すると、周囲で$ailyについて聞き込みを行う。近所の評判はよく、ちゃんと言えば返してくれそうな雰囲気はある。
-家を訪れると、誰も出ない。だが鍵が開いていた。
-""",
-"""
-家の中に入る$sherlock。そこで謎の女性の遺体を発見する。
-すぐ警察に連絡する。警察が到着するまでに$sherlockは部屋を調査する。
-強盗に荒らされた部屋。寝室。だが台所は綺麗だった。まるで新品のよう。
-一人暮らしと聞いていたが、食器もない。色々と奇妙だった。
-やってきた警察は$restradeで$sherlockもよく知る人物だった。
-凶器は落ちていたナイフで、亡くなっていた女性が$ailyかどうか、オペラ座の座長にきてもらい確かめてもらったが、$ailyではなかった。
-警察は家主の$ailyを参考人として指名手配する。
-""",
-        # $ailyが容疑者に浮上
-"""
-$sherlockは$ailyが活動していたオペラ座に足を運ぶ。
-そこで座長から改めて$ailyの人物像を聞く。
-$ailyに出会ったのは街角のパブで歌っていた時だった。その歌声は素晴らしく、すぐにスカウトしたが、歌うこと以外は何もできず、人付き合いも全然だった。
-それがある日を境に陽気になり、役者としても素晴らしい才能を見せつけた。そこからはずっと看板女優だと語る。
-ただ私生活は謎に包まれていて、家に行ったのも今回が初めてだと。
-また慈善事業に熱心で、ある程度稼げるようになる前から孤児院に寄付をしていたと。
-その孤児院を教えてもらう。
-孤児院で教師に会い、そこで$ailyがこの孤児院出身だと教わる。
-$ailyの印象が変わる。小さい頃から他人を信じずに歌だけを信じて生きてきた。その彼女が舞台で変わったんだ、と言っていたがどこか違和感だった。
-すると、殺されていた女性が$ailyだったと$restradeから連絡が入った
-""",
-"""
-警察はそのことにより$ailyが何者かにより他殺されたのではないかという話になった。
-$sherlockは再度孤児院を訪れる。そこで$ailyと当時仲良かった女性の存在を知る。
-彼女は孤児院を抜けてから何をしているか分からない。
-事件は容疑者が見つからないまま迷宮入りになりそうだった。
-$sherlockは彼女にプレゼントしたという$royalswordの所在について考えていた。
-$adel経由で王子と出会い、そこで再度$ailyについての情報を聞く。完全に別人だと判断した$sherlock。
-再度孤児院を訪れ、教師に尋ねる。「あなたがオペラ歌手の$ailyですね」と。
-""",
-"""
-$ailyは$sherlockが見抜いたことに驚く。
-$sherlockは警察を連れてきていると脅し、$royalswordを取り戻そうとする。
-しかも$ailyが$jackだと見抜いていた。
-$jackの表の顔がオペラ歌手$ailyだった。
-亡くなっていたのは最初にスカウトされた$ailyで、ただ彼女は歌以外は駄目だった。
-そこで提案し、$jackが$ailyに成り代わったのだ。
-亡くなっていたのは本物の$ailyで、自殺だった。彼女を他殺に見せかけ、オペラ歌手$ailyの最後が自殺という風にならないように仕組んだ。ついでに$royalswordを返さなくて済むようにした。
-だが全てバレて、$jackはおとなしく$sherlockに返却すると約束する。
-後日、孤児院で子供から$royalswordを返してもらった。
-だがそこには$red_stoneがついておらず、考えた$sherlockは宝石技師に頼みレプリカを作ってもらった。
-こうしてなんとか無事に王子の結婚式が迎えられた
-""",
-        ]
 
 # NOTE: charas
 #   ・$sherlock（顔出しなど初めて。格好、特に帽子や姿勢を詳しく描写。ロリポップを咥えている
@@ -135,77 +65,6 @@ $jackの表の顔がオペラ歌手$ailyだった。
 #   ・魔導車
 
 
-def handyman_sherlock(w: World):
-    return w.episode("便利屋$sherlock",
-            # NOTE
-            w.plot_setup("$wilsonは便利屋$sherlockに仕事を依頼に訪れる"),
-            w.plot_turnpoint("$sherlockは$wilsonが話す前から彼の素性までを全て推理して言い当てる"),
-            w.plot_develop("だが$sherlockは$wilsonが話す前から全てを言い当て、挙げ句に「王室からの依頼は受けない」と言い出す。$wilsonは何とか$sherlockに仕事を受けてもらおうとするが"),
-            w.plot_turnpoint("$ignesに財布をすられたお陰で、$sherlockは家の中に入れてくれた"),
-            w.plot_resolve("そこに王室執務官秘書$adelがやってきて王子からの依頼の書簡を置いていった"),
-            w.plot_turnpoint("書簡には王室の印がされていた"),
-            outline=OUTLINES[0])
-
-
-def prince_matter(w: World):
-    return w.episode("王子の問題",
-            # NOTE
-            w.plot_setup("王子からの書簡にはある女から$royalswordを取り戻して欲しいと書かれていた"),
-            w.plot_turnpoint("王室からの依頼は受けないはずの$sherlockが、王子からの依頼は受けると言った"),
-            w.plot_develop("王子に何かしら弱みを握られているらしい$sherlockは仕方なく仕事を受け、$ailyという女を調査に向かう"),
-            w.plot_turnpoint("$ailyの近所の評判は王子の書いていたものと異なっていて、良いものだった"),
-            w.plot_resolve("$sherlockと$wilsonは$ailyの自宅を訪ねるが、応答はない"),
-            w.plot_turnpoint("しかし玄関の鍵は開いていた"),
-            outline=OUTLINES[1])
-
-
-def murder_case(w: World):
-    return w.episode("殺人事件",
-            # NOTE
-            w.plot_setup("$ailyの家の中を調べる$sherlockと$wilson"),
-            w.plot_turnpoint("寝室のドアを破壊して中を見ると知らない女の遺体が転がっていた"),
-            w.plot_develop("事件として警察に届け出た後$sherlockは彼女が働いていたオペラハウスに向かう。そこで歌手$ailyのことを聞き込みした"),
-            w.plot_turnpoint("$ailyが寄付していた孤児院の存在を知る"),
-            w.plot_resolve("$sherlockは王子の言う性悪女$ailyと周囲の評判のいい$ailyのギャップに違和感を覚える"),
-            w.plot_turnpoint("警察が$ailyを指名手配にしたことを知った"),
-            outline=OUTLINES[2])
-
-
-def about_aily(w: World):
-    return w.episode("$ailyという女",
-            # NOTE
-            w.plot_setup("$ailyが寄付していたという孤児院を訪ね、彼女の情報を集める"),
-            w.plot_turnpoint("$ailyはその孤児院出身だった"),
-            w.plot_develop("$ailyが孤児院出身で貧しいところから成功したと知る。しかし教師の語る$aily像はやはり王子のものと違和感があった"),
-            w.plot_turnpoint("$ailyには唯一といっていい友人がいたことを知る"),
-            w.plot_resolve("最初に$ailyが働いていたパブを訪ね、そこでよくその友人の女が来ていたことを知った"),
-            w.plot_turnpoint("殺害されていたのが$ailyだと、警察の調べで分かった"),
-            outline=OUTLINES[3])
-
-
-def orphanages_lady(w: World):
-    return w.episode("孤児院の女",
-            # NOTE
-            w.plot_setup("$sherlockは$ailyについて聞く為に王子と出会う"),
-            w.plot_turnpoint("王子は一度だけ$ailyの自宅を訪ねたが、その時は無視されたと語る"),
-            w.plot_develop("一旦$sherlockは$ailyについての情報を整理し、知人の鑑識からも情報を得る"),
-            w.plot_turnpoint("$ailyが二人いたことが判明する"),
-            w.plot_resolve("$sherlockは再度孤児院を訪ねて女教師に「あなたが$ailyですね」と言った"),
-            w.plot_turnpoint("更に$ailyが巷で噂になっている怪盗$jackだと言った"),
-            outline=OUTLINES[4])
-
-
-def prince_wedding(w: World):
-    return w.episode("王子の結婚",
-            # NOTE
-            w.plot_setup("$ailyこと怪盗$jackは$sherlockに全て見抜かれていたことで本性を現す"),
-            w.plot_turnpoint("$jackは最初から$royalswordが目的で王子に近づいたと告白する"),
-            w.plot_develop("$sherlockは$jackが本物の$ailyの自殺を偽装するために、強盗を装ったこと等を推理で当てた。彼女はすんなりと$sherlockに$royalswordの返却を約束する"),
-            w.plot_turnpoint("しかし後日届けられた$royalswordには肝心の$red_stoneが付いていなかった"),
-            w.plot_resolve("$stoneのレプリカを作ってもらい、何とか無事に王子の結婚式は行われた"),
-            outline=OUTLINES[5])
-
-
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[1],
@@ -218,10 +77,10 @@ def main(w: World):
             #   依頼人：皇太子
             #   結果：宝剣を取り戻したが肝心の$stoneは付いていなかった
             #   ポイント：$science技術／毒薬／$jack／$stone赤／王室
-            handyman_sherlock(w),
-            prince_matter(w),
-            murder_case(w),
-            about_aily(w),
-            orphanages_lady(w),
-            prince_wedding(w),
+            handyman_sherlock.main(w),
+            prince_matter.main(w),
+            murder_case.main(w),
+            about_aily.main(w),
+            orphanages_lady.main(w),
+            prince_wedding.main(w),
             outline=ABSTRACT)
