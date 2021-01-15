@@ -59,8 +59,11 @@ def total_the_end(w: World):
     return w.episode("全ての顛末",
             # NOTE
             w.plot_setup("偽$wilsonである$zeronの死により一連の事件に決着がついた"),
-            w.plot_develop("本物の$wilsonに事件のことや何故$wilsonの家で暮らしているのか等、事情を話した"),
-            w.plot_resolve("$wilsonが$sherlockの活躍を小説にすることで家賃に当てようということで解決した"),
+            w.plot_turnpoint("$sherlockは$wilsonが偽物だと気づいていた、と告白する"),
+            w.plot_develop("$sherlockは最初の時点でおかしいと思い、更に$wilsonの家に行って気づいたと語る。全ての事件に巧妙に$zeronが関わり、更に$boss復活の儀式の祭具を揃える動きを行っていたと語る"),
+            w.plot_turnpoint("本物の$wilsonが帰ってくる"),
+            w.plot_resolve("$sherlockたちは$wilsonに全ての事情を説明する"),
+            w.plot_turnpoint("$wilsonは$sherlockの活躍を小説にして稼ぐことを提案した"),
             outline=OUTLINES[0])
 
 
@@ -68,8 +71,10 @@ def wilsons_papers(w: World):
     return w.episode("$wilsonの手記",
             # NOTE
             w.plot_setup("小説の記述者は本物の$wilsonだった"),
-            w.plot_develop("今回の$sherlockの活躍を書き終えた$wilsonは$maryに呼ばれてケーキ試食会に参加する。そこで$wilsonは自身に関わる大切な記憶を思い出す"),
-            w.plot_resolve("$wilsonの許に$mikelから別の調査案件が舞い込むが、それはまた別の事件と書き加えて物語を終わる"),
+            w.plot_turnpoint("実は偽物の$wilsonが自宅を使っていることに気づいていた、と告白する"),
+            w.plot_develop("肉屋$nowlisとして市場で働きつつ、動向を監視していた。その間に$sherlockという人物についてもある程度調べていたことも語る"),
+            w.plot_turnpoint("$maryがケーキを焼いたと呼びに来る"),
+            w.plot_resolve("実は$wilsonはずっと本物の$heroの血を持つ人物を探していた。こんな形で見つかるとは思わなかったと書き加え、ケーキを食べに合流する"),
             outline=OUTLINES[-1])
 
 
