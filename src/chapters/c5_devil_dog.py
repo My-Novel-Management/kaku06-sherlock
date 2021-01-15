@@ -140,44 +140,59 @@ def legend_of_dark_dog(w: World):
     return w.episode("魔獣の伝説",
             # NOTE
             w.plot_setup("ある孤島で猟奇的殺人事件が発生したが、それは魔獣によるものだという伝説があった"),
-            w.plot_develop("$sherlockはオカルトを信じない。$maryたちのようにこういった都市伝説には興味はないと自分の研究に必死だった"),
-            w.plot_resolve("孤島の城の主からパーティの招待状が届いたが、$sherlockは用事で行けないというので$maryたちが行くことになった"),
+            w.plot_turnpoint("$sherlockはオカルトは信じないと$maryたちに言う"),
+            w.plot_develop("$sherlockはオカルトや幽霊といったものに対して持論をぶち、不機嫌になって研究室にこもってしまう"),
+            w.plot_turnpoint("そこに話題にしていた孤島の城の主からパーティの招待状が届く"),
+            w.plot_resolve("招待状の内容は各方面の専門家を招いて魔獣伝説について議論してもらおうというイベントだった"),
+            w.plot_turnpoint("$sherlockは用事があるから行けないと言った"),
             outline=OUTLINES[0])
 
 
 def first_murder(w: World):
     return w.episode("第一の殺人",
             # NOTE
-            w.plot_setup("パーティに参加する為に島にやってきた$maryと$lime、$wilsonだったが城に集められていたのは曲者の面々だった"),
-            w.plot_develop("イベントでは島に伝わる魔獣伝説が地元の歴史研究家$jamosにより語られ、それについて元刑事$hugarなどが持論を展開する"),
-            w.plot_resolve("しかし翌朝、社会学者$reuiが遺体となって発見された"),
+            w.plot_setup("$sherlockの代役として$maryと$lime、$wilsonが行くことになり、島に向かう"),
+            w.plot_turnpoint("案内の観光課職員$mochは$wilsonを$sherlockだと勘違いする"),
+            w.plot_develop("城に到着するとそこでは元刑事$hugarや社会学者$reui、心霊学者$karlなどの癖の強い面々が待ち構えていて、やってきた$wilsonたちに持論を語る"),
+            w.plot_turnpoint("$maryが犬の鳴き声を聞いた、と言った"),
+            w.plot_resolve("翌日のパーティの余興として地元の歴史学者$jamosより魔獣伝説の講義があった"),
+            w.plot_turnpoint("しかし翌朝、社会学者$reuiが遺体で発見された"),
             outline=OUTLINES[1])
 
 
 def missing_person(w: World):
     return w.episode("失踪者",
             # NOTE
-            w.plot_setup("殺人事件が発生したが外は荒れていて船も何者かに壊され、孤島に閉じ込められることになった"),
-            w.plot_develop("心霊研究家$karlは魔獣の仕業だと騒ぎ出すが、元刑事$hugarはそれを無視して主導権を握り、$maryたちに手伝わせて全員の事情聴取を行う"),
-            w.plot_resolve("頼りにしていた観光課の$mochが失踪してしまった"),
+            w.plot_setup("$reuiが殺されたことで元刑事$hugarが主導権を取り、殺人事件の捜査が行われることになった"),
+            w.plot_turnpoint("警察を呼ぼうと船を見ると、船が壊されていた"),
+            w.plot_develop("$hugarが$maryたちを助手に使い、全員の取り調べを行うが心霊学者$karlは魔獣の仕業と騒ぎ立てたり、城主$cherryは部屋にこもってしまったりとうまくいかない"),
+            w.plot_turnpoint("$sherlockに通信機で連絡を取るが応答がなかった"),
+            w.plot_resolve("$hugarは容疑者として地元学者$jamosを部屋に監禁するが、$maryたちにはどうも犯人とは思えなかった"),
+            w.plot_turnpoint("その夜、観光課の$mochが失踪した"),
             outline=OUTLINES[2])
 
 
 def second_murder(w: World):
     return w.episode("第二の殺人",
             # NOTE
-            w.plot_setup("元刑事の$hugarは$mochを容疑者とみて全員に捜索させる"),
-            w.plot_develop("失踪した$mochが雑木林で発見され、その間に$reui遺体の第一発見者の使用人$bettyが失踪し、城主の$cherryは自室に籠もったまま出てこない。現場は混乱してしまう"),
-            w.plot_resolve("$sherlockから島に向かっていると連絡が入った"),
+            w.plot_setup("元刑事の$hugarは$mochを容疑者とみて捜索させる"),
+            w.plot_turnpoint("心霊学者$karlも姿を消す"),
+            w.plot_develop("多くの失踪者が出て$hugarは混乱し、現場は統制が取れなくなっていた。$maryは新聞記者$milkとともに改めて情報を整理する"),
+            w.plot_turnpoint("失踪した$mochが雑木林で遺体で発見される"),
+            w.plot_resolve("連続殺人事件となり、容疑が一旦晴れた$jamosが出され、みんなで固まっている方が安全だという提案がなされるが、$hugarは汚名挽回とばかりに一人で出ていってしまう"),
+            w.plot_turnpoint("$sherlockから島に向かっていると連絡が入った"),
             outline=OUTLINES[3])
 
 
 def dark_dogs_fang(w: World):
     return w.episode("魔獣の牙",
             # NOTE
-            w.plot_setup("失踪者が多く出て城主の$cherryの姿もなくなり困り果てたところに$sherlockが現れる"),
-            w.plot_develop("$sherlockは最初の事件が起こった談話室から、改めて調査を行う。$hugarには文句をつけられつつも、事件が人為的に行われた情報を集めていく"),
-            w.plot_resolve("地下には拷問部屋があり、そこでは黒い巨大な犬が待ち構えていた"),
+            w.plot_setup("$maryたちは$sherlockの指示で調べておいてほしいと言われたところを調査する"),
+            w.plot_turnpoint("$cherryの寝室に入るが、彼女の姿も消えていた"),
+            w.plot_develop(""),# TODO
+            w.plot_turnpoint("$sherlockがやってきて$maryたちと合流する"),
+            w.plot_resolve("$sherlockは$maryたちから情報を聞き、談話室を調べ始める。そこで地下への階段を見つけた"),
+            w.plot_turnpoint("地下に拷問部屋があり、そこで黒い巨大な犬が待ち構えていた"),
             outline=OUTLINES[4])
 
 
@@ -185,7 +200,9 @@ def sorrow_end(w: World):
     return w.episode("悲しみの結末",
             # NOTE
             w.plot_setup("本当に魔獣の仕業だったと騒ぎ立てるが$sherlockは殺人が犬の仕業ではないことを伝えて、隠れていた$cherryを呼び出した"),
+            w.plot_turnpoint("$cherryは自分が犬にやるために人を殺したと告白する"),
             w.plot_develop("$cherryは自分の罪を告白しながらも部屋に毒ガスをまこうとするが、犬が共倒れになりそうになって中止し、犬とともに逃亡する"),
+            w.plot_turnpoint("$cherryが犬に食い殺されているのが発見された"),
             w.plot_resolve("事件は$cherryの死により結末を迎えた。後日城の地下で儀式の跡が見つかった"),
             outline=OUTLINES[5])
 
