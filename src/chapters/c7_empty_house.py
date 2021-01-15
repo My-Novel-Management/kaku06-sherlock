@@ -146,132 +146,75 @@ $zeronは闇の力により脱出し、その場から逃げていった
 # NOTE: tech
 #   ・
 
+
 def lookfor_sherlock(w: World):
     return w.episode("$sherlockを探して",
             # NOTE
-            w.plot_setup("$sherlockが$morianoとともに滝壺に落ち、行方不明のまま三ヶ月が過ぎていた"),
-            w.plot_note("$sherlock失踪から三ヶ月が経っていたが、彼に関する情報は一切入ってこなかった"),
-            w.plot_note("$maryは市場で花屋の手伝いをし、$limeは守衛のアルバイトを始めた"),
-            w.plot_note("彼が帰ってくると信じて家の掃除をし、空いた時間に街を歩き回り、情報を集めていた"),
-            w.plot_note("$ignesたちも情報網を使って調べていたが、何も引っかからないと嘆いていた"),
-            w.plot_note("$wilsonは本業の方が忙しいと最近あまり顔を出していない"),
-            w.plot_note("$sherlockが消えたことで街では治安が悪くなっていた"),
-            w.plot_note("街角に警察が立つようになり、息苦しい社会になっていた"),
-            w.plot_note("連続殺人事件はたまに起こるが、頻度は減っていた"),
-            w.plot_note("何度か$patsonが訪れ、$sherlockのことを調べたいと家の中を調査していた"),
-            w.plot_turnpoint("$wilsonがスラム街の空き家で$sherlockを見かけたというホームレスの情報を掴んだ"),
-            w.plot_develop("$maryたちはホームレスの情報をもとに、その空き家を監視する"),
-            w.plot_note("$maryと$limeは$wilsonについて、見たというホームレスにまず話を聞く"),
-            w.plot_note("スラム街にある空き家の一つで、最近夜になると明かりが灯る家があり、そこに入っていくのを見た。以前に世話になっているから覚えていたと"),
-            w.plot_note("$maryたちは近くの空き家にこもり、その空き家を監視する"),
-            w.plot_note("$wilsonは一旦用事で離れる"),
-            w.plot_note("$maryは$sherlockに謝りたいと$limeに語る"),
-            w.plot_note("何も起こらないまま、$wilsonが戻ってくる"),
-            w.plot_note("夜に備えて仮眠を取る$mary"),
-            w.plot_note("$limeは一旦家に帰り、夜食を作って戻ってくる"),
-            w.plot_turnpoint("夜になり、そこに$sherlockによく似た男が入っていく"),
-            w.plot_resolve("明かりに映るシルエットは$sherlockに見えた。そこに誰かが入っていき、その人物と争っていて物音とともに明かりが消えた"),
-            w.plot_note("空き家に明かりが灯り、部屋に$sherlockらしいシルエットが映る"),
-            w.plot_note("いつも彼が着ていた帽子と外套が分かる"),
-            w.plot_note("$maryは$sherlockだと言うが"),
-            w.plot_note("そこに男（$ronald）が入っていく。一度$sherlockと出会っているところを見かけた紳士だ"),
-            w.payoff("一度$sherlockとこっそり会っているのを見た紳士", flagname="$sherlockの知人"),
-            w.plot_note("しばらくすると物音がして、明かりが消える"),
-            w.plot_note("待ってみたが何も起こらない"),
-            w.plot_note("$maryたちは中を調べてみることにする"),
-            w.plot_note("暗がりの空き家を探索する$maryたち"),
-            w.plot_turnpoint("家の中を調査に訪れると、そこで男の死体を発見した"),
+            w.plot_setup("$sherlockが滝壺に落ちてから三ヶ月が経つが何も生存情報が見つからず、$maryたちは新しい生活に馴染み始めていた"),
+            w.plot_turnpoint("$wilsonが$sherlockに似た男を目撃したという情報を持ってくる"),
+            w.plot_develop("ホームレスから情報を得て、$maryたちは$sherlockに似た男が現れるという空き家を監視する"),
+            w.plot_turnpoint("夜になり$sherlockに似た男が空き家に入っていく"),
+            w.plot_resolve("シルエットは$sherlockを思わせたが、その空き家に別の男性が入っていくのを目撃する"),
+            w.plot_turnpoint("争う音がして、明かりが消えた"),
             outline=OUTLINES[0])
 
 
 def adventure_of_empty_house(w: World):
     return w.episode("空き家の冒険",
             # NOTE
-            w.plot_setup("$sherlockが出入りしているという空き家を監視していた$maryたちは、そこで死体を発見した"),
-            w.plot_note("空き家の中で遺体を発見する"),
-            w.plot_note("その遺体が$sherlockと会っていた$ronaldと分かる"),
-            w.plot_note("殺害は一連の猟奇殺人と同じくナイフにより行われていた"),
-            w.plot_note("他に誰もいないことを確認する"),
-            w.plot_note("$limeが警察を呼び、見回り中だった$patsonが警官を連れてかけつけた"),
-            w.plot_note("$maryたちは警察に事情聴取を受けることになる"),
-            w.plot_turnpoint("$maryは警察が$sherlockを容疑者として考えていることを知る"),
-            w.plot_develop("$maryは$sherlockの容疑を晴らすために空き家を調べていて、廃工場への抜け道を発見する"),
-            w.plot_note("警察署で、各自警察から事情聴取を受ける"),
-            w.plot_note("$maryは$sherlockがいる情報を掴んで監視していた、と正直に語る"),
-            w.plot_note("聴取担当の$patsonは現場が密室状態に近く、ドアを$wilsonが破ったことで出入り口ができたと言う"),
-            w.plot_note("見張っていたことで密室になっていた"),
-            w.plot_note("$patsonは$maryの証言から、状況からは$sherlockの容疑が硬いと言い出す"),
-            w.plot_note("聴取後、$maryは$limeたちを待たずに単独で空き家を調べに向かう。$sherlockの容疑を晴らすため"),
-            w.plot_note("空き家は警察が見張りをしていたが、$cultXの信者とホームレスが争いを始めたのを止めに入り、持ち場を離れた"),
-            w.plot_note("$maryはその隙きに空き家を調査する"),
-            w.plot_note("以前は暗くて分からなかったが、空き家にしては窓もしっかりして、扉にも鍵が掛かるような作りだった"),
-            w.plot_note("$patsonから現場は密室に近い状態だったと語られていた"),
-            w.plot_note("リビングに当たる部屋はドアが閉め切られ、鍵、あるいは細工により密室に見せかけられていた"),
-            w.plot_note("$maryは鍵がないのに衝立棒でドアが開かないようにしてあったキッチンを調べる"),
-            w.plot_note("古い絨毯の後と合致しないことが分かり、はがしてみると地下への入り口を見つける"),
-            w.plot_note("地下道は昔に掘られた下水用路で、ずっと進んでいくと突き当たりだった"),
-            w.plot_turnpoint("$maryは廃工場で今までの失踪者の遺体を発見する"),
-            w.plot_resolve("転がっている遺体は切り刻まれ、血が抜かれていたが、$shserlockの記事にまとめてあった失踪者リストの特徴と合致することが分かった"),
-            w.plot_note("古い下水用路を進むと、突き当たりで梯子を登る"),
-            w.plot_note("暗くてよく分からないが、転がっている部品や規模の大きさから廃工場と分かる"),
-            w.plot_note("腐った臭いと、黒い水"),
-            w.plot_note("$maryは夜目をきかせて周囲を見る"),
-            w.plot_note("沢山の腕を切られた遺体が転がっている"),
-            w.plot_note("猟奇殺人と同じような手口だが、こっちはもっと乱雑だった"),
-            w.plot_note("その遺体の中に、失踪者リストにあった特徴と合致する人間を何人か見つける"),
-            w.plot_note("ここの遺体は失踪者だと分かる"),
-            w.plot_turnpoint("$maryの目の前に$sherlock（によく似た男$jake）が出現する"),
+            w.plot_setup("$sherlockが現れるという空き家を監視していた$maryたちは、そこで争いがあるのを目撃して、中を調査する"),
+            w.plot_turnpoint("空き家で男の遺体を発見する"),
+            w.plot_develop("警察に連絡し、$maryたちは事情聴取を受ける。そこで$sherlock生存情報を得たことなどを話す$mary"),
+            w.plot_turnpoint("$maryは$patsonから$sherlockを容疑者に考えていることを教わる"),
+            w.plot_resolve("$maryは単独で空き家を調査に向かう"),
+            w.plot_turnpoint("$maryは抜け道を見つけた"),
             outline=OUTLINES[1])
 
 
 def one_mans_confess(w: World):
     return w.episode("ある男の告白",
             # NOTE
-            w.plot_setup("警察の事情聴取後に、単独行動で姿を消した$mary"),
-            w.plot_note("事情聴取後に警察から姿を消した$mary"),
-            w.plot_note("$limeと$wilsonは聴取を終えて$mary不在に気づく"),
-            w.plot_note("$wilsonは別の用事があると$limeに任せる"),
-            w.plot_note("$limeは"),# TODO
-            w.plot_turnpoint("$limeは警察が$maryが$sherlockの逃亡に協力しているとして参考人として捜査していることを知る"),
-            w.plot_develop("$limeたちは$maryと、空き家で見た$sherlockに似た男を探す"),
-            w.plot_turnpoint("$maryの前に現れた$sherlockは、失踪事件、連続猟奇殺人事件それら全てが自分の仕業だと告白する"),
-            w.plot_resolve("$maryは$sherlock（$jake）による告白を信じられず、観察しているうちに彼が偽物だと見抜いた"),
-            w.plot_turnpoint("偽$sherlockは$maryを殺そうとナイフを取り出した"),
+            w.plot_setup("$maryは空き家からの抜け道を進み、それが廃工場に繋がっていることを知る"),
+            w.plot_turnpoint("廃工場で沢山の遺体を発見する"),
+            w.plot_develop("遺体が行方不明者だと分かったが、手口がどれも猟奇殺人のそれに似ていた"),
+            w.plot_turnpoint("そこに$sherlockに似た男が現れる"),
+            w.plot_resolve("$sherlock（に似た男$jake）は自分が失踪事件、猟奇殺人事件の犯人であると告白し、幼少期から鬱屈した歪んだ感情を抱えていたことを語る"),
+            w.plot_turnpoint("$maryはその男が偽物であることを見抜いた"),
             outline=OUTLINES[2])
 
 
 def he_is_back(w: World):
     return w.episode("英雄の帰還",
             # NOTE
-            w.plot_setup("$maryが失踪して$limeたちは彼女を必死に探す"),
-            w.plot_turnpoint("$maryを廃工場で見たという目撃情報が入った"),
-            w.plot_develop("目覚めた$maryは$sherlock（$jake）から、失踪事件、連続猟奇殺人事件を全て彼が行ったという告白をされた"),
-            w.plot_turnpoint("$maryは$jakeが偽物の$sherlockだと見破った"),
-            w.plot_resolve("$transformした$maryは$jakeと戦うが追い詰められる。そこにホームレス（本物の$sherlock）が助けに入る"),
-            w.plot_turnpoint("入院していた$maryの姿が消えていた"),
+            w.plot_setup("連続殺人犯$jakeは$maryを殺そうとする"),
+            w.plot_turnpoint("そこにホームレスが助けに入る"),
+            w.plot_develop("$sherlockは$jakeがどんな人生を歩んできたかを全て言い当て$jakeの牙を無力化しようとする"),
+            w.plot_turnpoint("$transformした$maryにより$sherlockが守られるが、彼女が負傷する"),
+            w.plot_resolve("$sherlockが呼んでおいた警察により$jakeは捕らえられた。$maryは入院し、$sherlockも治療を受ける"),
+            w.plot_turnpoint("入院している$maryから$blue_stoneを貰おうと思ったが$patosonにより連れ出された後だった"),
             outline=OUTLINES[3])
 
 
 def revive_boss(w: World):
     return w.episode("$bossの復活",
             # NOTE
-            w.plot_setup("$sherlockが$maryに預けた$blue_stoneを取りに行くと彼女の姿が消えていた"),
-            w.plot_turnpoint("改装中の大聖堂内の小部屋で地下への階段を発見する"),
-            w.plot_develop("地下の祭壇では$patsonが$maryを人質にして待ち構えていた"),
-            w.plot_turnpoint("$sherlockこそが探していた$heroだった"),
-            w.plot_resolve("$patsonは$maryを撃って脅し、$sherlockの血を盃に入れさせえた"),
-            w.plot_turnpoint("$patsonにより$boss復活の儀式が始まった"),
+            w.plot_setup("$patsonが裏切り者だった。$boss復活の儀式を行うために$maryを誘拐し、改装中の大聖堂に向かう"),
+            w.plot_turnpoint("改装中の大聖堂に、地下に繋がる階段が見つかった"),
+            w.plot_develop("$patsonは儀式を行うために$maryを盾にして脅す。必要な祭具の残り一つが分からなかったが$sherlockによりそれが$heroの血であることを教えられる"),
+            w.plot_turnpoint("$sherlockは真の$heroだった"),
+            w.plot_resolve("道具が揃った$patosonは$boss復活の儀式を開始した"),
+            w.plot_turnpoint("だが儀式は途中で失敗する"),
             outline=OUTLINES[4])
 
 
 def total_the_end(w: World):
     return w.episode("すべての終わり",
             # NOTE
-            w.plot_setup("$patsonの手により$boss復活の儀式が行われる"),
-            w.plot_turnpoint("しかし$blue_stoneが壊れ、儀式が失敗する"),
-            w.plot_develop("失敗した$patsonを$wilsonが殺して処分する。実は$wilsonは偽物で一連の事件の裏側で動いていた真の黒幕だった"),
-            w.plot_turnpoint("$zeronは$sherlockの奇策により負傷し、逃亡した"),
-            w.plot_resolve("後日、逃亡していた偽$wilsonこと$zeronが山中の小屋で自殺しているのが発見された"),
+            w.plot_setup("$patsonが$boss復活の儀式を行ったが、偽物の$blue_stoneにより儀式は失敗に終わる"),
+            w.plot_turnpoint("$wilsonが$patsonを始末する"),
+            w.plot_develop("$wilsonは偽物で、彼こそが$boss復活の主導者だった。偽$wilsonの$zeronは$sherlockに本物の$blue_stoneを持ってくるよう要求する"),
+            w.plot_turnpoint("$limeが目の前で$stoneを砕いた"),
+            w.plot_resolve("儀式が不可能になり偽$wilsonこと$zeronは逃亡する。後日山中の小屋で自殺しているのが発見された"),
             outline=OUTLINES[-1])
 
 
