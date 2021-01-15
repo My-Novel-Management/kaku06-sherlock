@@ -118,52 +118,69 @@ def researcher_of_ancient(w: World):
     return w.episode("古代の研究者",
             # NOTE
             w.plot_setup("孤島事件後、$sherlockは頻繁に外出し何かを調べていて$maryは少し寂しい思いをしていた"),
-            w.plot_develop("$maryは自分が$ajinであることに悩み、市場の知り合いなどに相談していた。そんな時ふさぎ込んでいる老紳士を助ける"),
-            w.plot_resolve("$patsonは元大学教授殺人事件の容疑者として$sherlockに事情聴取をする"),
+            w.plot_turnpoint("$maryは市場で$moriano犯罪研究所のチラシを拾う"),
+            w.plot_develop("$maryは自分が$ajinであることに悩み、市場の知り合いなどに相談するがなかなかすっきりとはしない"),
+            w.plot_turnpoint("$maryは道端でふさぎ込んでいた老人を助ける"),
+            w.plot_resolve("$sherlockは$wilsonに犯罪研究所の$morianoという男を知っているか尋ね、その男について語っていた"),
+            w.plot_turnpoint("$patsonが現れて$sherlockを容疑者として事情聴取すると言い出した"),
             outline=OUTLINES[0])
 
 
 def about_moriano(w: World):
     return w.episode("$morianoについて",
             # NOTE
-            w.plot_setup("殺人事件の関係を疑われた$sherlockは自分が$stein教授から古代の技術について教わっていたことを語る"),
+            w.plot_setup("$patsonから$stein元教授が自宅で密室状態で殺されていたことを知らされる"),
+            w.plot_turnpoint("$sherlockは自分と$stein教授の付き合いについて告白する"),
             w.plot_develop("$sherlockは$stein教授の研究で$boss復活の儀式という闇の技法が存在し、それを実際に行おうという集まりがあると示唆する。その中心的存在が$morianoだった"),
-            w.plot_resolve("$maryが拾ってきた老紳士が、$morianoだった"),
+            w.plot_turnpoint("$sherlockは$morianoこそが今までの全ての事件の裏で糸を引いていた存在だと断言する"),
+            w.plot_resolve("$sherlockは情報を集めて$morianoを何としても刑務所送りにしなければならないと、いつもにはない雰囲気で言う"),
+            w.plot_turnpoint("$maryが連れてきた老紳士こそが$morianoだった"),
             outline=OUTLINES[1])
 
 
 def his_warning(w: World):
     return w.episode("$morianoの警告",
             # NOTE
-            w.plot_setup("$sherlockは$morianoが全ての元凶で今回の事件の犯人でもあると言う"),
-            w.plot_develop("$morianoにより今までの$shelrockの事件解決が全て自己満足の茶番で、犯罪を阻止するという本来の目的から逸脱していると説き伏せられる"),
-            w.plot_resolve("$morianoが立ち去った後から$maryの様子が妙で、後日失踪してしまう"),
+            w.plot_setup("$maryが連れてきた老人は$morianoで、$sherlockはすぐに逮捕すべきだと言う"),
+            w.plot_turnpoint("$morianoは$maryに毒を飲ませたと言った"),
+            w.plot_develop("$morianoによって$sherlockが今までやってきたことが全て無駄で単なる自己満足だったことが暴露される"),
+            w.plot_turnpoint("$morianoは$maryに解毒剤を渡して立ち去った"),
+            w.plot_resolve("$sherlockは$morianoによる脅しに屈しないと言うが、$maryの様子は変だった"),
+            w.plot_turnpoint("後日、$maryが失踪した"),
             outline=OUTLINES[2])
 
 
 def disturbance_of_mary(w: World):
     return w.episode("$maryの乱心",
             # NOTE
-            w.plot_setup("いなくなった$maryを$limeは探す"),
-            w.plot_develop("$sherlockは$maryを放っておけばいいと言うが$limeは$ignesたちに協力してもらい、$maryが$morianoの犯罪研究所にいることを突き止め、引き戻しに行く"),
-            w.plot_resolve("$morianoの研究所で彼の助手となった$maryは$limeに戻らないと言った"),
+            w.plot_setup("いなくなった$maryを$limeは探そうとするが$sherlockは放っておけばいいと言って取り合わない"),
+            w.plot_turnpoint("$limeはしばらく別のところで暮らすと出ていく"),
+            w.plot_develop("$limeは市場の人間や今までの知人、また王室関係の力を使って$maryを探す。すると$maryが$moriano犯罪研究所に入るのを見たという情報が入った"),
+            w.plot_turnpoint("$moriano犯罪研究所で$maryと出会う"),
+            w.plot_resolve("$limeは$maryに戻ってくるよう説得を試みたが$maryの決意は固く、$morianoの手伝いをすると言って、帰された"),
+            w.plot_turnpoint("$sherlockの火の不始末により自宅が燃えてしまう"),
             outline=OUTLINES[3])
 
 
 def sherlocks_obsession(w: World):
     return w.episode("$sherlockの執念",
             # NOTE
-            w.plot_setup("$sherlockは$morianoを追い詰める証拠を必死に探す"),
-            w.plot_develop("何とか$morianoの事件関与の証拠を掴み、$sherlockは$morianoを捕まえに彼の研究所に向かう"),
-            w.plot_resolve("$maryは$sherlockを傷つけてしまい、結果、$morianoの逃亡を手伝ってしまった"),
+            w.plot_setup("家が燃えた$sherlockは$wilsonの家で世話になることにした"),
+            w.plot_turnpoint("戻ってきた$limeから$maryが$morianoの助手になったと聞いた"),
+            w.plot_develop("$sherlockは$morianoが危険だと語り、今まで以上に彼の証拠集めに必死になる。一方$limeは王室に戻るかどうかの決断を迫られていた"),
+            w.plot_turnpoint("$sherlockは$morianoを追い詰める証拠を見つける"),
+            w.plot_resolve("$moriano研究所を訪れる$sherlock。そこで彼を追い詰めようと手を打つが、$maryによって阻止される"),
+            w.plot_turnpoint("$transformした$maryにより$sherlockは負傷し、$morianoを取り逃がしてしまう"),
             outline=OUTLINES[4])
 
 
 def letter_from_him(w: World):
     return w.episode("$sherlockからの手紙",
             # NOTE
-            w.plot_setup("負傷した$sherlockは病院から姿を消す"),
-            w.plot_develop("$maryたちは$sherlockの行方を探したが、後日$sherlockから手紙が来て$morianoを道連れに死ぬだろうと書かれていた"),
+            w.plot_setup("負傷した$sherlockは入院し、精神的ショックを受けた$maryも入院する"),
+            w.plot_turnpoint("見舞いに訪れた$limeの前から$sherlockは姿を消してしまう"),
+            w.plot_develop("$maryたちは$sherlockの行方を探したが見つからない。$moriano犯罪研究所も閉じられ、手がかりが完全に失われた"),
+            w.plot_turnpoint("後日$sherlockから手紙がくる"),
             w.plot_resolve("警察の捜索により滝壺から$morianoと$sherlock両名の遺品と思われるものが見つかった"),
             outline=OUTLINES[5])
 
