@@ -8,13 +8,12 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
-from scenes import AbandonedHouse
-from scenes import InCar
-from scenes import InCity
-from scenes import Market
-from scenes import MorianoHouse
-from scenes import SherlockHouse
-from scenes import SteinHouse
+from episode6 import about_moriano
+from episode6 import disturbance_of_mary
+from episode6 import his_warning
+from episode6 import letter_from_him
+from episode6 import researcher_of_ancient
+from episode6 import sherlocks_obsession
 
 
 # Episode
@@ -43,57 +42,7 @@ $morianoの犯罪研究所を訪れると助手の$muranから彼の研究が世
 目覚めた$maryは$limeから$sherlockが$morianoを追いかけて、滝に落ちたことを知る。
 後日届いた手紙には、$sherlockから$morianoの犯罪に関する証拠を警察に送ったことと、$maryへの謝罪が書かれていた。
 """
-OUTLINES = [
-"""
-孤島事件後から$sherlockは頻繁に外に出かけるようになっていた。
-$maryたちは少し退屈さを感じつつも、自分の今後の身の振り方について考える時間を持つ良い機会だった。
-一方、元大学教授が謎の死を遂げた。その容疑者の一人として$sherlockが浮上する。
-$maryは市場への買い物の帰り道で、ふさぎ込んでいる老紳士と遭遇し、彼を助ける。
-やってきた$patsonは何かの資料を調べるのに必死になっている$sherlockに、$stein元教授殺人事件について事情をきかせろと迫る。
-""",
-"""
-$sherlockはすぐにアリバイを語り、自分の容疑を晴らす。
-そもそも$stein教授とは王立図書館で出会った。彼の論文は$sherlockもよく目を通していて、教授から古代の知識について色々と教わっていたと話す。
-そして$steinは$morianoの友人だと言い出す。
-$morianoについて誰も知らなかった。
-$sherlockは$morianoについて語る。この都市の多くの犯罪の糸が$morianoに繋がっていた。$sherlockは珍しく自分の命に代えても$morianoを倒すと言う。
-そこに$maryが連れてきた老人こそが$morianoだった
-""",
-"""
-$morianoは$sherlockに対して自分は$steinの死とは無関係だと言う。証拠がないだろうと。
-$sherlockは$morianoがどんな犯罪も自分で直接手をくださず、故に現在の司法では立件できず罪に問えないと言う。
-だがそこを何とか見つけ出し、必ず罪を償わせると豪語する$sherlock。
-その$sherlockに対し、$morianoは$maryに毒入りの飴を与えたことで脅し、これ以上は深入りしないようにと警告した。
-その上で、$morianoは$sherlockが人の気持ちより謎解きの方を大切にすると指摘し、$maryたちも捨てられると予言する。$morianoは$sherlockに犯罪をなくすことは不可能だと言い、これ以上自分を追うと余計な犠牲者が出ると脅した。
-その翌日、全員が出払っていた間に$sherlockの家は放火されてしまう。全焼こそ免れたが、中も荒らされていて、しばらく使えないという判断から、少しの間$wilson宅で暮らすことにした。
-後日、$maryが市場に買い出しに出かけたまま帰ってこなかった。彼女は失踪した。
-""",
-        # $morianoの甘言にのり、$maryが姿を消した
-"""
-$maryがいなくなり、$limeはどこにいったのか探さないといけないと主張するが、$sherlockは放っておけばいいと聞かない。
-$limeは$ignesたちに協力してもらい、$maryの行方を探す。
-一方$sherlockは$steinの家の再調査に訪れていた。$morianoが関与した証拠を探すためだ。しかし痕跡が綺麗に消されている。だが$steinの日記のページの間に一本の毛髪を見つけた。毛髪を証拠にできないかと考える$sherlock。
-$limeは$morianoの研究所に入るのを見たという情報を得て、単身研究所に向かう。研究所では助手の$muranだけがいて、$morianoがどんな人物なのか、何をしようとしているのか、その本当の姿を語った。
-そこに$maryを連れて$morianoが戻ってくる。彼女は誘拐された訳でも監禁された訳でも何か弱みを握られている訳でもなく、自分の考えでここにいると言った。
-$maryは戻らないと$limeに言った。
-""",
-"""
-$maryが$morianoと一緒にいると知り、どうにかしないといけないと$sherlockに言う$limeだったが、$sherlockは何もしない。彼女の考えに任せればいいと言う。
-$wilsonたちにも相談したが、$mary自身の考えはどうしようもないとだけ。
-$sherlockは何かに夢中になり、頻繁に外出を繰り返し、頼りない状態だった。
-そんな$limeに王室の執務官$mikelがやってきて、王室に戻るように言う。王の病気が悪化したというのだ。$limeは$maryを放っておいたままではいけないと悩む。
-一方$sherlockは頼んでおいた毛髪鑑定により、人毛で$morianoと同一の血液型ということまで判明した。しかし決定的証拠にはならない。そこを騙ることでボロを出させようと、研究所に向かう。
-だがそこで待ち構えていたのは$transformした$maryだった。$morianoは逃げ出したのだ。
-$sherlockの説得むなしく、彼女により$sherlockは酷い傷を追う。それで正気に戻り、$maryは気絶した。
-""",
-"""
-$maryが病院で目覚めると$limeから$sherlockが国外逃亡した$morianoを追っていることを聞かされる。
-$maryが自分が$sherlockを傷つけてしまったことを後悔していた。
-後日、$sherlockから手紙が届く。そこには$morianoを道連れにしてでも滅ぼす決意と、彼の犯罪関与の証拠とそれについて書いた書類が既に警察に発送されていると記されていた。
-最後に$maryについての謝罪が書かれていた。
-警察の捜査で$sherlockと$morianoが滝から落下したことが判明。現場に残されていた彼の帽子と血液から、二人は死亡したものと見られた。
-""",
-        ]
+
 
 # NOTE: charas
 #   ・$moriano（名前もここが初出。ほぼここのみ
@@ -114,77 +63,6 @@ $maryが自分が$sherlockを傷つけてしまったことを後悔していた
 #   ・
 
 
-def researcher_of_ancient(w: World):
-    return w.episode("古代の研究者",
-            # NOTE
-            w.plot_setup("孤島事件後、$sherlockは頻繁に外出し何かを調べていて$maryは少し寂しい思いをしていた"),
-            w.plot_turnpoint("$maryは市場で$moriano犯罪研究所のチラシを拾う"),
-            w.plot_develop("$maryは自分が$ajinであることに悩み、市場の知り合いなどに相談するがなかなかすっきりとはしない"),
-            w.plot_turnpoint("$maryは道端でふさぎ込んでいた老人を助ける"),
-            w.plot_resolve("$sherlockは$wilsonに犯罪研究所の$morianoという男を知っているか尋ね、その男について語っていた"),
-            w.plot_turnpoint("$patsonが現れて$sherlockを容疑者として事情聴取すると言い出した"),
-            outline=OUTLINES[0])
-
-
-def about_moriano(w: World):
-    return w.episode("$morianoについて",
-            # NOTE
-            w.plot_setup("$patsonから$stein元教授が自宅で密室状態で殺されていたことを知らされる"),
-            w.plot_turnpoint("$sherlockは自分と$stein教授の付き合いについて告白する"),
-            w.plot_develop("$sherlockは$stein教授の研究で$boss復活の儀式という闇の技法が存在し、それを実際に行おうという集まりがあると示唆する。その中心的存在が$morianoだった"),
-            w.plot_turnpoint("$sherlockは$morianoこそが今までの全ての事件の裏で糸を引いていた存在だと断言する"),
-            w.plot_resolve("$sherlockは情報を集めて$morianoを何としても刑務所送りにしなければならないと、いつもにはない雰囲気で言う"),
-            w.plot_turnpoint("$maryが連れてきた老紳士こそが$morianoだった"),
-            outline=OUTLINES[1])
-
-
-def his_warning(w: World):
-    return w.episode("$morianoの警告",
-            # NOTE
-            w.plot_setup("$maryが連れてきた老人は$morianoで、$sherlockはすぐに逮捕すべきだと言う"),
-            w.plot_turnpoint("$morianoは$maryに毒を飲ませたと言った"),
-            w.plot_develop("$morianoによって$sherlockが今までやってきたことが全て無駄で単なる自己満足だったことが暴露される"),
-            w.plot_turnpoint("$morianoは$maryに解毒剤を渡して立ち去った"),
-            w.plot_resolve("$sherlockは$morianoによる脅しに屈しないと言うが、$maryの様子は変だった"),
-            w.plot_turnpoint("後日、$maryが失踪した"),
-            outline=OUTLINES[2])
-
-
-def disturbance_of_mary(w: World):
-    return w.episode("$maryの乱心",
-            # NOTE
-            w.plot_setup("いなくなった$maryを$limeは探そうとするが$sherlockは放っておけばいいと言って取り合わない"),
-            w.plot_turnpoint("$limeはしばらく別のところで暮らすと出ていく"),
-            w.plot_develop("$limeは市場の人間や今までの知人、また王室関係の力を使って$maryを探す。すると$maryが$moriano犯罪研究所に入るのを見たという情報が入った"),
-            w.plot_turnpoint("$moriano犯罪研究所で$maryと出会う"),
-            w.plot_resolve("$limeは$maryに戻ってくるよう説得を試みたが$maryの決意は固く、$morianoの手伝いをすると言って、帰された"),
-            w.plot_turnpoint("$sherlockの火の不始末により自宅が燃えてしまう"),
-            outline=OUTLINES[3])
-
-
-def sherlocks_obsession(w: World):
-    return w.episode("$sherlockの執念",
-            # NOTE
-            w.plot_setup("家が燃えた$sherlockは$wilsonの家で世話になることにした"),
-            w.plot_turnpoint("戻ってきた$limeから$maryが$morianoの助手になったと聞いた"),
-            w.plot_develop("$sherlockは$morianoが危険だと語り、今まで以上に彼の証拠集めに必死になる。一方$limeは王室に戻るかどうかの決断を迫られていた"),
-            w.plot_turnpoint("$sherlockは$morianoを追い詰める証拠を見つける"),
-            w.plot_resolve("$moriano研究所を訪れる$sherlock。そこで彼を追い詰めようと手を打つが、$maryによって阻止される"),
-            w.plot_turnpoint("$transformした$maryにより$sherlockは負傷し、$morianoを取り逃がしてしまう"),
-            outline=OUTLINES[4])
-
-
-def letter_from_him(w: World):
-    return w.episode("$sherlockからの手紙",
-            # NOTE
-            w.plot_setup("負傷した$sherlockは入院し、精神的ショックを受けた$maryも入院する"),
-            w.plot_turnpoint("見舞いに訪れた$limeの前から$sherlockは姿を消してしまう"),
-            w.plot_develop("$maryたちは$sherlockの行方を探したが見つからない。$moriano犯罪研究所も閉じられ、手がかりが完全に失われた"),
-            w.plot_turnpoint("後日$sherlockから手紙がくる"),
-            w.plot_resolve("警察の捜索により滝壺から$morianoと$sherlock両名の遺品と思われるものが見つかった"),
-            outline=OUTLINES[5])
-
-
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[6],
@@ -197,12 +75,12 @@ def main(w: World):
             #   トリック：改造$gunにより外から遠隔操作で毒薬を打ち込み、死亡
             #   結果：$morianoが死に、姿を消した$sherlockがその重要参考人として手配された
             #   ポイント：$stone黒（$sherlockの手紙と一緒に届く）／目的は$boss復活
-            researcher_of_ancient(w),
-            about_moriano(w),
-            his_warning(w),
-            disturbance_of_mary(w),
-            sherlocks_obsession(w),
-            letter_from_him(w),
+            researcher_of_ancient.main(w),
+            about_moriano.main(w),
+            his_warning.main(w),
+            disturbance_of_mary.main(w),
+            sherlocks_obsession.main(w),
+            letter_from_him.main(w),
             outline=ABSTRACT)
 
 
