@@ -58,6 +58,23 @@ def main(w: World):
             w.plot_note("$sherlockは他の人からも話をと思い、$yilaに声をかける"),
             w.plot_note("$yilaは時々手伝いにきているらしい"),
             w.plot_note("$yilaから$ailyには一人だけ女性の友達がいたと教わる"),
-            w.plot_note(""),# TODO
+            w.plot_note("その親友は歌うことしかできなかった$ailyに食事を運んだり、一緒に遊んだりしてあげた"),
+            w.plot_note("ここを出てからも親交があり、パブに勤めていた頃は毎日のように応援にかけつけた"),
+            w.plot_note("オペラで歌うようになり、少し親交が薄くなった"),
+            w.plot_note("その友達の女性は孤児院にも現れないし、どこで何をしているのかも分からないと"),
+            w.plot_note("名前は$reddleyと言った"),
+            #
+            w.plot_note("$sherlockは次に$ailyが働いていたパブに向かう"),
+            w.plot_note("パブは小さいところで店長は歌だけが上手かったが他にも沢山いるような目立たない存在だったと"),
+            w.plot_note("$ailyの友人の女性について尋ねたが、そんな女見た記憶がないと"),
+            #
+            w.plot_note("$sherlockは王子からの書簡にあった$ailyが性悪女だという文言がどうも気になると言う"),
+            w.plot_note("$wilsonに頼んで王宮前に立ち寄ってもらう"),
+            w.plot_note("そこで門番をしている守衛の$fredに手紙を握らせた"),
+            w.plot_note("一旦自宅へと送ってもらう"),
+            w.plot_note("また翌日調査しようということで、別れた"),
+            #
+            w.plot_note("翌朝$sherlock宅を訪れると「大変なことになった」と$sherlock"),
+            w.plot_note("警察からの連絡で殺されていたのが当の$aily本人だと判明した、と"),
             outline=ABSTRACT)
 
