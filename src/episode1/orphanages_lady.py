@@ -53,6 +53,34 @@ def main(w: World):
             w.plot_note("本当に彼女がこんな家に住んでいたのかと疑問符"),
             w.plot_note("$sherlockはドアについていた白い粉を見つける。これは化粧の粉だった"),
             #
-            w.plot_note(""),# TODO
+            w.plot_note("$sherlockは$wilsonの$carで移動する"),
+            w.plot_note("指定されたのは王立図書館だった"),
+            w.plot_note("古文書まで収められた国随一の図書館は$sherlockもよく利用している"),
+            w.plot_note("学会誌の棚を見ている$sherlock"),
+            w.plot_note("棚の中には古代$magic史なども"),
+            w.plot_note("王子$gramが現れる"),
+            w.plot_note("王子はすらりと長身で美男子。独特の香りが漂う"),
+            w.plot_note("$sherlockは王子に$ailyについて尋ねる。どこが性悪なのか。最初はどんな出会いだったのか"),
+            w.plot_note("一番最初は知人の紹介だった"),
+            w.plot_note("特別な印象はなく美人だな、という程度。その後オペラハウスで歌っているのを見て、気に入った"),
+            w.plot_note("何度か酒をともに飲んだ"),
+            w.plot_note("彼女は話も上手く、また王子のこと、悩みなどもよく聞いてくれた"),
+            w.plot_note("他の女とは違うと感じて、色々と貢いだ。彼女はそんなものいらないといってくれたが"),
+            w.plot_note("何度目だったか。記憶が曖昧だが、一度見せてほしいと言われていた$royalswordをホテルに持っていき、その時にどうやらあげてしまったらしい"),
+            w.plot_note("王子にとってはいくつもある宝石等の一つだった"),
+            w.plot_note("$sherlockは王子に一つ質問する"),
+            w.plot_note("「王子が出会った$ailyは常に化粧をしていましたね？」"),
+            w.plot_note("女性だから化粧するのは当たり前だろう、という王子"),
+            w.plot_note("しかし舞台女優は舞台化粧があり、舞台のある前後には化粧をしないことが多い。肌を休めるためだ。肌を酷く痛めるのが舞台化粧だった"),
+            w.plot_note("「そうだろう、$adelさん」と"),
+            w.plot_note("$adelは遠巻きに監視していたが、出てきて「ええ」と"),
+            w.plot_note("王子はとにかく$royalswordを取り戻してくれたら$ailyのことはどうでもいいと"),
+            #
+            w.plot_note("$carに戻った$sherlockは$wilsonに「$ailyは二人いた」と"),
+            w.plot_note("そして孤児院に向かってもらう"),
+            #
+            w.plot_note("孤児院で$yilaを探す"),
+            w.plot_note("ちょうど庭に出て子供たちの相手をしていた"),
+            w.plot_note("$sherlockは彼女に声をかける「あなたが$ailyさんですね」と"),
             outline=ABSTRACT)
 
