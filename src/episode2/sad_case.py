@@ -7,11 +7,11 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
-from config import TITLES
 
 
-# Scenes
-# NOTE
+# DEFINE
+TITLE = "悲しい事件"
+
 
 # NOTE: outlines
 ABSTRACT = """
@@ -29,7 +29,7 @@ $wilsonの依頼は受けないが、警察や他の依頼者の依頼は色々�
 
 # Episode
 def main(w: World):
-    return w.episode("悲しい事件",
+    return w.episode(TITLE,
             # NOTE
             w.plot_setup("$wilsonは毎日のようにやってきて$sherlockに仕事を依頼しようとするが$sherlockは無視して新聞から興味深い事件を探す"),
             w.plot_turnpoint("$sherlockは犯罪解決のための開発に忙しいと外出してしまう"),
@@ -38,5 +38,51 @@ def main(w: World):
             "地元の新聞社の仲良い人の紹介",
             w.plot_resolve("父親殺し事件の容疑者となった娘の家に勤める使用人$keanが、娘の無実を証明してほしいと依頼に訪れた"),
             w.plot_turnpoint("なけなしの小遣いで依頼する$keanに、$sherlockは二つ返事で受け付けた"),
+            w.plot_note("$wilsonはあれから毎日のように$sherlockの家にやってきていた"),
+            w.plot_note("$sherlockは今日も新聞を見ていて、挨拶すらない"),
+            w.plot_note("「そろそろ聞いてくれないかな」"),
+            w.plot_note("「それだけの労力があれば、君の依頼は半分ほど解決できているんじゃないか？」"),
+            w.plot_note("「それで解決できればこんなところに来ないんじゃないのか、誰も」"),
+            w.plot_note("$sherlockは言う「問題解決の一番の問題は、それをやるかどうかだ。大抵の人はできないと思う。あるいは分からないと思う。考えることの放棄が、一番の問題なんだよ」"),
+            w.plot_note("$sherlockは見ている記事からこんな事件を紹介する"),
+            w.plot_note("それはある田舎町で起こった事件だった"),
+            w.plot_note("その地元で有名な資産家の男が死んでいるのが発見された"),
+            w.plot_note("最近出回っている$gunによる殺害で、発見者は学校に向かう途中の老教師"),
+            w.plot_note("調べたところ、娘の部屋から$gunが見つかり、それで容疑者になった"),
+            w.plot_note("父親を娘が殺したといういたましい事件として地元の新聞は報じている"),
+            w.plot_note("$wilsonにどう思う？　と尋ねる"),
+            w.plot_note("家庭内でどんな事情を抱えていたか分からないので、特に言えることはないけれど、と断り"),
+            w.plot_note("それで娘が父親を殺したというのなら、それはそうなんだろうと"),
+            w.plot_note("だが$sherlockは新聞に書かれている事件の多くは、記者による決めつけで犯人として書かれているが、実際には証拠を集めて犯人かどうか精査する必要があるものばかりで、信用ならないと"),
+            w.plot_note("そもそも$gunをどうやって十三歳の娘が手に入れられるのか、と"),
+            #
+            w.plot_note("翌日、$wilsonは用事を済ませてから$sherlockの家を訪ねる"),
+            w.plot_note("返事がなく、ただ鍵は開いていた"),
+            w.plot_note("中に入って声をかけるが返答がない"),
+            w.plot_note("$wilsonはテーブルの上に放置された資料を覗き見る。全く何をやっているのか分からない"),
+            w.plot_note("と、ドアが開いて一室から出てくる。研究中だったらしい"),
+            w.plot_note("$sherlockは新しい血液鑑定の研究をしていた"),
+            w.plot_note("$sherlockは犯罪者を追い詰めるためには色々な証拠を集める必要があると語る"),
+            w.plot_note("現在はまだまだ血液についての知識も足りない"),
+            w.plot_note("医学の進歩も必要と語る"),
+            w.plot_note("現在取り組んでいるのは体液や肉体の分泌物から何か得られないかということ"),
+            w.plot_note("そのあたりの研究はこれに詳しいと、論文をいくつか見せてくれるが、$wilsonにはさっぱりだった"),
+            w.plot_note("そこに訪問客がある"),
+            w.plot_note("知らない子供だった"),
+            w.plot_note("$keanと名乗った"),
+            w.plot_note("彼は昨日話した新聞の事件の被害者宅に勤める使用人で、ある依頼のためにここを訪れた"),
+            w.plot_note("「$maryは絶対に父親殺しなんてしてないんだ！　お願いです！　助けてください！」"),
+            w.plot_note("事情を聞くと$maryというのは亡くなった$royd氏の一人娘で、それが犯人扱いされてしまっているという"),
+            w.plot_note("警察で勾留されて取り調べ中らしいが、ずっと沈黙を守り、このまま裁判にいきそうだと"),
+            w.plot_note("$keanは$maryがやっていないという確信があるらしい"),
+            w.plot_note("$maryは父親のことが好きで色々と感謝もしていて、殺すようなことは考えていない"),
+            w.plot_note("そもそも$gunすら見たのは初めてだと"),
+            w.plot_note("$sherlockは今いったことを警察に言って話せばいいという"),
+            w.plot_note("警察だってバカの集まりじゃないと"),
+            w.plot_note("更に依頼するということはそれ相応の金額もかかると"),
+            w.plot_note("$keanは$maryにかけられた容疑を晴らしてほしいと頼む。依頼金はわずか五千$Gだった"),
+            w.plot_note("それでも$sherlockは受けると言った"),
+            w.plot_note("妙に思った$wilsonに対して「絶対にやっていないと言うんだ。しかし記事には既に犯人とされている。この矛盾が面白いと思わないかい？」と"),
+            w.plot_note("こうして準備して翌日、向かうことになった"),
             outline=ABSTRACT)
 
