@@ -60,5 +60,6 @@ def main(w: World):
             w.plot_note("近所の駐車場まで歩き、そこで$carに乗る"),
             w.plot_note("$scienceにより動く乗り物"),
             w.plot_note("ガードマンに礼をしつつ、出ていく$car"),
+            "どこかに「時計」と「時間」の概念を書いておく",
             outline=ABSTRACT)
 

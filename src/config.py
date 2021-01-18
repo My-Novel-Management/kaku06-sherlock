@@ -184,6 +184,9 @@ ASSET = {
             ("StJhonsWood", "サーペント", "London"),# セントジョンズウッド（作中のサーペンタイン通り）。リージェンツパークの北西。アイリーンの家がある
             ("EdgewareRoad", "エッジロード", "London"),# エッジウェアロード
             ("Temple", "エンプル", "London"),# テンプル
+            ## 悲劇の谷
+            ("Hereford", "ハーフォード", "England"),# ウェストミッドランズにある都市。英国中央西端。
+            ("Boscombe", "バスコン", "Hereford"),
             ## 赤鎧クラブ
             ("SaxeCoburgSquare", "サコバーズスクエア", "London"),# ザクセン・コーブルク・スクエア
             ("StPaul", "サンポール", "London"),# セントポール
