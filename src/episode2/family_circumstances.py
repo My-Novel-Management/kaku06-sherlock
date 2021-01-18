@@ -7,11 +7,11 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
-from config import TITLES
 
 
-# Scenes
-# NOTE
+# DEFINE
+TITLE = "家族の事情"
+
 
 # NOTE: outlines
 ABSTRACT = """
@@ -30,7 +30,7 @@ $sherlockは$jeanが育ったという学校にやってくる。そこで若い
 
 # Episode
 def main(w: World):
-    return w.episode("家族の事情",
+    return w.episode(TITLE,
             # NOTE
             w.plot_setup("$sherlockは$wilsonにお使いを頼み、その間に街で$royd氏に関する情報を集める"),
             w.plot_turnpoint("パブで$jeanがかつて通っていた学校の生徒から、彼女が玉の輿に乗れたと喜んでいた話を聞く"),
@@ -38,5 +38,18 @@ def main(w: World):
             w.plot_turnpoint("学校に飾られた$jeanの絵に$kailのサインを発見する"),
             w.plot_resolve("戻ってきた$wilsonから$edoの結果を聞く$sherlock"),
             w.plot_turnpoint("指紋検出と照合の結果、$gunから$maryのものではない指紋が検出されたと$wilsonから聞いた"),
+            w.plot_note("警察を後にした$sherlockと$wilson、付添の新聞記者$milkは一度街で聞き込みをする"),
+            w.plot_note("それぞれ手分けして$milkはツテの記者や$royd氏関連の会社を、$wilsonは駅前から繁華街を、$sherlockは飲み屋街を担当した"),
+            w.plot_note("まだ早い時間だったが開いているパブもあった"),
+            w.plot_note("$sherlockはそこで元教師の$mackingerと出会う"),
+            w.plot_note("教師は第一発見者として出ていた"),
+            w.plot_note("その教師はバラ園が楽しみでよく帰りに寄り道をしていたと語る"),
+            w.plot_note("もともと学校も$royd氏が整備してよくなった"),
+            w.plot_note("今は後妻$jeanだが、彼女もその学校卒業で、学校の学費は貧しい家の子たちは援助が出ていた"),
+            w.plot_note("$sherlockは$jeanについてどんな人物なのか聞くが、老人はあまり知らないと。噂では金遣いが荒くて、そこは若い後妻だから仕方ないと愚痴っていたと"),
+            w.plot_note("$sherlockは学校に行ってみることにする"),
+            #
+            w.plot_note("学校は丘に建てられていた"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
