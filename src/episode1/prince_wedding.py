@@ -75,6 +75,27 @@ def main(w: World):
             w.plot_note("犯人にされている$jackは逃亡し、この事件は終わるはずだった"),
             w.plot_note("$jackは$sherlockの推理に一つだけ違っているところがあると語る"),
             w.plot_note("$ailyが自力でオペラ歌手を射止めた。スカウトされた。$jackは何もする余裕がなかったと"),
-            w.plot_note(""),# TODO
+            w.plot_note("全ての手の内がバレた$jackは$sherlockに「完敗だ」と言う"),
+            w.plot_note("「それでも何故$jackだと思ったの？」"),
+            w.plot_note("本物の$ailyには$royalswordを返さない理由が見つからないことと、逆にそれが欲しい人物"),
+            w.plot_note("更に事前に$sherlockに王子が依頼をしてくる情報を得られた人物。それは$adelしかない。そしてあの日の$adelはわざわざ制服姿だった"),
+            w.plot_note("故に彼女に成り代わっていた人物、そんなことをするのは$jackだろうと"),
+            w.plot_note("そしてブラフをかけた"),
+            w.plot_note("素直に告白するとは思っていなかったが、そのときの表情から読み取れると思った"),
+            w.plot_note("自分が変装していたことまでバレていて驚く$jack"),
+            w.plot_note("$jackは$royalswordを返すと約束し、見逃してもらうことにした"),
+            #
+            w.plot_note("$royalswordは孤児院に預けられていた"),
+            w.plot_note("それを$adelに取りに来てもらう"),
+            w.plot_note("$sherlockの言ったように彼女は制服姿ではなく、完全に配達人のそれ"),
+            w.plot_note("$sherlockは言う「彼女はいつも何かしら別の人間を装ってやってくる」"),
+            w.plot_note("しかしそこで中身を確かめた$adelは言う「これには大事なものが足りません。$red_stoneです」と"),
+            w.plot_note("$sherlockは本当の狙いは$red_stoneだったと言う。「やられた」と"),
+            w.plot_note("考えた$sherlockは$red_stoneの形状などを教えてもらい、数日預けてもらうことに"),
+            #
+            w.plot_note("後日、王子の結婚式は行われた"),
+            w.plot_note("大聖堂の中で行われたそれには多くの著名な人物が招かれた"),
+            w.plot_note("$wilsonは$sherlockに尋ねる「大丈夫かね。あれで」"),
+            w.plot_note("「レプリカだろうと構わないのさ。ただ彼らがそれを本物だと思えばいい。本物なんてその程度の価値しかない」と"),
             outline=ABSTRACT)
 
