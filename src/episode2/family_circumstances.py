@@ -50,6 +50,33 @@ def main(w: World):
             w.plot_note("$sherlockは学校に行ってみることにする"),
             #
             w.plot_note("学校は丘に建てられていた"),
-            w.plot_note(""),# TODO
+            w.plot_note("学校にやってきた$sherlockは、そこに$royd氏の記念碑が建てられているのを見る"),
+            w.plot_note("応対してくれたのは理事長で、弁護士をやっている$coneryだった"),
+            w.plot_note("$coneryは$royd氏の後輩らしい"),
+            w.plot_note("$royd氏は地元が発展して、貧しい子が一人でも減るようにと常に考えていたという"),
+            w.plot_note("自分で孤児院も作っている"),
+            w.plot_note("ただ昔はそうではなく野心家だったと。子供が生まれてから変わったんだと言った"),
+            w.plot_note("$jeanもここの生徒と聞いたが、その件は古株の教師に教わることに"),
+            #
+            w.plot_note("老教師$natalyが待っている"),
+            w.plot_note("授業の合間に出てきた"),
+            w.plot_note("中庭で遊ぶ子供たちを見ながら話す"),
+            w.plot_note("$jeanのことはよく覚えているという"),
+            w.plot_note("可愛らしい子だったが家が貧しく、着るものも満足になくていつも繕ったツギハギだった"),
+            w.plot_note("それをからかわれてよく泣いていた。絶対将来金持ちになると言っていた"),
+            w.plot_note("彼女が学校を出てから$royd氏と結婚したと聞いて驚いた"),
+            w.plot_note("教室に飾られてた古い肖像画の一つに、$jeanがあった"),
+            w.plot_note("そこのサインに$kailとある"),
+            w.plot_note("「ああ、これはこの学校の生徒が描いたものですよ。絵が好きだったけど結局諦めたんじゃないかしら」"),
+            #
+            w.plot_note("その後、ホテルに戻る$sherlock"),
+            w.plot_note("$wilsonにはあることを頼んでおいた。早ければ二、三日のうちに結果が分かるだろうと"),
+            w.plot_note("一人で寝ながら考えを整理する"),
+            #
+            w.plot_note("一方$wilsonは一人で$London市内に戻っていた"),
+            w.plot_note("ある頼まれ事をしたのだ"),
+            w.plot_note("その研究所を訪れ、ドアをノックする"),
+            w.plot_note("現れたのは白衣姿の老人$edoだった"),
+            w.plot_note("$wilsonの手には袋に包まれた$gunがあった"),
             outline=ABSTRACT)
 
