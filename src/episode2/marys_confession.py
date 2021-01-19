@@ -7,11 +7,11 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
-from config import TITLES
 
 
-# Scenes
-# NOTE
+# DEFINE
+TITLE = "$maryの告白"
+
 
 # NOTE: outlines
 ABSTRACT = """
@@ -31,7 +31,7 @@ $jeanは遺産を$maryにあげたくなくて、$roydを殺して$maryを犯罪
 
 # Episode
 def main(w: World):
-    return w.episode("$maryの告白",
+    return w.episode(TITLE,
             #   NOTE
             w.plot_setup("$sherlockは再度$jeanと$kailに話を聞きに邸宅を訪れる"),
             w.plot_turnpoint("$kailから$jeanが体調を崩していて会えないと断られる"),
@@ -39,5 +39,12 @@ def main(w: World):
             w.plot_turnpoint("そこに警察が$maryを連れてくる"),
             w.plot_resolve("$kailと$jeanは$maryが父親を憎んでいてそれで殺したと罪をなすりつけようとするが、$sherlockにより証言の齟齬が突かれてボロが出る"),
             w.plot_turnpoint("$maryは$kailたちが父親を殺したことに激怒し、$transformした"),
+            w.plot_note("翌日$sherlockは$royd邸を訪れた"),
+            w.plot_note("$jeanへの面会を求めたがやはり使用人$kailにより体調が悪いからと断られる"),
+            #
+            w.plot_note("$sherlockは$keanにバラ園を見せてもらう"),
+            w.plot_note("遺体発見現場となった小屋は氏のプライベートルームになっていたようで、頼まれた時以外は$keanも入らないようにしていると"),
+            w.plot_note("鍵を開けてもらい、中に入る"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
