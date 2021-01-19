@@ -53,6 +53,23 @@ def main(w: World):
             w.plot_note("謎の失踪事件については、普通の失踪事件と見分けがつかないから判断しようがないが、記事にはいくつも見つかる"),
             w.plot_note("記事に掲載されるものの発生はばらばらで、頻度もよく分からない"),
             w.plot_note("それとは別に女性の猟奇殺人が二件、近く発生している。このうちの一人が半月前に失踪していた"),
+            w.plot_note("第二王女については$adelにも実は聞いていたが$wilsonには黙っていた"),
+            w.plot_note("$maryは洗濯物に取り掛かる"),
+            w.plot_note("「ずいぶんと馴染んだな」と苦笑する$wilson"),
+            w.plot_note("「馴染んでもらうのも困るんだが」と$sherlock"),
+            #
+            w.plot_note("一段落し買い物に出かける$mary"),
+            w.plot_note("$sherlockは研究室にこもって何かやっていた"),
+            w.plot_note("$Boscombeとは違い、どこも人が多く、まだまだ慣れない"),
+            w.plot_note("馬車がいきかい、たまに$carと呼ばれる不思議な乗り物が走っていく"),
+            w.plot_note("街は$maryにとって目新しいものばかりだった"),
+            #
+            w.plot_note("市場にやってくる$mary"),
+            w.plot_note("最初は恐る恐るだったが$sherlockのところに出入りしている$ignesなど顔見知りが少しできて、話せるようになっていた"),
+            w.plot_note("「おう$mary。買い物か？」と$ignes"),
+            w.plot_note("$ignesは配達の途中だった"),
+            w.plot_note("「うん。$ignesさんはお仕事？」"),
+            w.plot_note("$maryは$sherlockがどんな人なのか、思い切って聞いてみる"),
             w.plot_note(""),# TODO
             outline=ABSTRACT)
 
