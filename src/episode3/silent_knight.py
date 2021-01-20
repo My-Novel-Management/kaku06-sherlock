@@ -70,6 +70,28 @@ def main(w: World):
             w.plot_note("$ignesは配達の途中だった"),
             w.plot_note("「うん。$ignesさんはお仕事？」"),
             w.plot_note("$maryは$sherlockがどんな人なのか、思い切って聞いてみる"),
-            w.plot_note(""),# TODO
+            w.plot_note("$ignesは確かに変わっているが盗みで生計を立てるしかなかった自分みたいな子供に仕事を紹介してくれたりして、助かっていると"),
+            w.plot_note("本人は謎や不思議を解明するのが好きだと言っているが、本心は人助けをすることに何かしら価値を見出しているんじゃないかと"),
+            w.plot_note("「お前、好きなのか？」と笑う$ignes"),
+            w.plot_note("$maryは「$ignesは嫌い」と言って先に行く"),
+            w.plot_note("市場は$Boscombeとは違い、かなり賑わっていて人も多いし、露店も沢山開かれている"),
+            w.plot_note("花屋の手伝いをしている$refiに出会う"),
+            w.plot_note("$refiとは気が合った"),
+            w.plot_note("$refiも捨て子で、スラムの集団の中で育った"),
+            w.plot_note("$ignesたちに助けられながら育ち、今は$sherlockのツテで花屋の手伝いなんかをしながら暮らしている"),
+            w.plot_note("$refiは$sherlockが好きと語る"),
+            w.plot_note("他の人は見た目や金銭の有無で人を差別するけれど、$sherlockにとってそれは意味がないと"),
+            #
+            w.plot_note("買い物を済ませた$maryは途中で真っ赤な鎧を着た騎士を見つける"),
+            w.plot_note("$maryは彼に声をかけた"),
+            #
+            w.plot_note("$sherlockは$wilsonと$maryについて話し合っていた"),
+            w.plot_note("今後ずっとこのまま置いておくという訳にもいかないだろう、と"),
+            w.plot_note("$sherlockもいつ危険なことに巻き込まれて命を落とすとも限らない"),
+            w.plot_note("そういう時に備えて大家の$lisaなんかに話しておこうと思っていると"),
+            w.plot_note("そこに$maryが戻ってくる"),
+            w.plot_note("彼女は真っ赤な鎧騎士を連れていた"),
+            w.plot_note("「あの、この騎士さんが困ってはったから、拾ってきたんやけど」"),
+            w.plot_note("鎧騎士は頭を下げた"),
             outline=ABSTRACT)
 
