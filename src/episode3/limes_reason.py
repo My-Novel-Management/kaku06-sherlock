@@ -32,5 +32,13 @@ def main(w: World):
             w.plot_develop("$limeは誘拐された先で売り飛ばされる計画を聞いて、逃げ出す時に物置にあったこの呪いの鎧を着てしまい、困っていたところを質屋オーナー夫婦に拾われたと語る"),
             w.plot_turnpoint("$sherlockは$limeの呪いを知人の神官に解いてもらう"),
             w.plot_resolve("$limeは王室に戻りたくないのでしばらくここで置いてもらえないかと頼み込んだ"),
+            w.plot_note("$shelrockの前に現れた$limeは、なんと女性だった"),
+            w.plot_note("$limeはまず「ありがとうございます」と丁寧な口調で言う"),
+            w.plot_note("$maryは「驚いたでしょ」と何故かうれしげ"),
+            w.plot_note("$limeは先にオーナー夫婦宅にいき、これ以上は世話になれないことを説明し、家を出る約束をしてきたという"),
+            w.plot_note("そこで$sherlockにしばらく置いてもらいたい、と"),
+            w.plot_note("赤鎧クラブのお金はオーナー夫婦に受け取ってもらえなかったので、それを元手にしてどこか住み込みで働ける場所を見つけると言う"),
+            w.plot_note("だが$sherlockは$limeに、その前にどういう事情でこうなったのか話してほしいと言う"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
