@@ -36,5 +36,16 @@ def main(w: World):
             w.plot_turnpoint("会員名簿の中に殺された$moura夫人の夫の名前を見つける"),
             w.plot_resolve("もらったガチョウから$dragを発見する"),
             w.plot_turnpoint("$maryは$dragと$gunの取引現場を目撃してしまう"),
+            w.plot_note("$maryは肉の卸問屋$hornetにガチョウクラブが何か尋ねる"),
+            w.plot_note("ガチョウクラブは会員制のガチョウ投資団体で、決まった月額でガチョウを飼育し、それを安く購入できるようにするもの"),
+            w.plot_note("また販売した利益から何割かは戻ってきて、会員が増えるほど儲けも大きくなるという"),
+            w.plot_note("最近よく取り扱っていると言われた"),
+            w.plot_note("$maryはガチョウクラブの本部を教えてもらう"),
+            w.plot_note("ただ当日仕入れたガチョウがどのガチョウだったのかはよく分からないと"),
+            w.plot_note("ガチョウクラブからのものもあったが、他にもいくつかの農家から分けてもらったので"),
+            w.plot_note("$maryはお礼を言ってガチョウクラブに向かうことにする"),
+            #
+            w.plot_note("$sherlockは単身、$moura夫人の家にやってきていた"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
