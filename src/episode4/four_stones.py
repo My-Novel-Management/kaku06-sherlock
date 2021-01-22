@@ -34,5 +34,22 @@ def main(w: World):
             w.plot_develop("$jackは$stoneと裏社会の動きについて$sherlockに教える"),
             w.plot_turnpoint("自分が盗んだ$red_stoneは何者かに盗まれたと告白した"),
             w.plot_resolve("$jackは$sherlockに$blue_stoneを託し、裏世界で動いている何者かの企みを阻止してほしいと依頼した"),
+            w.plot_note("薄っすらと日が登り、$sherlockが$wilsonのところにやってくる"),
+            w.plot_note("$sherlockは野暮用が片付いたと言う"),
+            w.plot_note("$wilsonの方は何の変化もなく、おそらくここではないどこかに監禁されているのではないか、と"),
+            w.plot_note("と、建物の前に誰か現れる。$adelだった"),
+            w.plot_note("彼女はこっそりと建物に忍び込む。明らかに不法侵入だった"),
+            w.plot_note("$wilsonは$sherlockに彼女が一体何者なのか尋ねる"),
+            w.plot_note("よくは知らないが$wilsonの同業者だろうと"),
+            w.plot_note("しばらくすると建物から出てくる$adel。その手に何か資料を持っていた"),
+            w.plot_note("そこに出ていって声をかける$sherlock"),
+            w.plot_note("$adelは無視して行ってしまおうとしたが、$sherlockが自分の知人がここの連中に捕まっている可能性を言うと"),
+            w.plot_note("$adelは自分もそういう内容の指示を受けて、改めて調査に訪れたと語る"),
+            w.plot_note("ただ監禁されているならここではなく、ハーバーの方だろうと"),
+            w.plot_note("幹部が保持している船が密会の会場になっていると告げた"),
+            #
+            w.plot_note("$maryは謎の女性と話していた"),
+            w.plot_note("彼女は$ailyと名乗り、自分は忘れ物を取りに来たら捕まってしまったと語る"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
