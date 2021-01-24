@@ -93,6 +93,7 @@ def main(w: World):
             w.plot_note("事情を説明し、$bettyも呼んでもらうことに"),
             w.plot_note("だが$bettyは部屋に不在。鍵は開いていた"),
             w.plot_note("$jamosは$karlもいなくなったと言っている"),
-            w.plot_note(""),# TODO
+            w.plot_note("残っているのは$limeと$wilson、$jamosと$doldだけになってしまった"),
+            w.plot_note("そこに$maryが戻ってきて$cherryが部屋から消えてしまった、と言った"),
             outline=ABSTRACT)
 
