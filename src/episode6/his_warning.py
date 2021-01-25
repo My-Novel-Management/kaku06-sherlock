@@ -58,5 +58,26 @@ def main(w: World):
             w.plot_note("気になるのは一冊だけ、以前確認した雑誌が消えていたということ"),
             w.plot_note("$wilsonが何を調べていたのか、と尋ねた"),
             w.plot_note("$sherlockは「闇の技法の中でももっとも忌まわしいものだよ。$boss復活の儀式だ」と答えた"),
+            #
+            w.plot_note("$maryは$moriano犯罪研究所にいた"),
+            w.plot_note("助手の$muranに色々と教授のことを教わる"),
+            w.plot_note("$morianoは広い目で物事を見ることの大切さを説く"),
+            w.plot_note("この世界は人間だけのものではなく、他の生き物、人型にしても$ajinなども同居している"),
+            w.plot_note("$muranも実際$ajinで、外見ではわからないが魔女の血を引いていて、多少心得があるという"),
+            w.plot_note("小さい頃から魔女というだけでいじめられ、酷い目に何度もあった。死にそうになったこともある"),
+            w.plot_note("$morianoの知人によって助けられ、$morianoを紹介された"),
+            w.plot_note("$morianoの違うところは、自分自身では何もしないということ"),
+            w.plot_note("人を駒のように動かして、自分のやりたいことを達成する"),
+            w.plot_note("一人では力がなくても、何人か合わせればいいし、適材適所でやれる人がやればいいという"),
+            w.plot_note("それは逆に誰にでも仕事がある、やるべきことがある世界観だった"),
+            w.plot_note("また$morianoは今後、より人間の力が強まり、色々なものが迫害される世界が近づいていると予見している"),
+            w.plot_note("そこで$ajinたちを中心に、彼らを救うべく組織を作っているという"),
+            w.plot_note("「こんなわたしでも力になれますか？」"),
+            w.plot_note("$maryに対して、戻ってきた$morianoが「君の本当のすばらしさに気づけないのが、あの男の弱さだ」と言う"),
+            #
+            w.plot_note("$maryが帰ってこないまま、すでに五日が過ぎていた"),
+            w.plot_note("$ignesたちに探させているが情報がない"),
+            w.plot_note("$limeも心配で探しに出ていたが、戻ってきて「駄目」と"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
