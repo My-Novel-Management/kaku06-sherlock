@@ -78,6 +78,22 @@ def main(w: World):
             w.plot_note("$maryが帰ってこないまま、すでに五日が過ぎていた"),
             w.plot_note("$ignesたちに探させているが情報がない"),
             w.plot_note("$limeも心配で探しに出ていたが、戻ってきて「駄目」と"),
-            w.plot_note(""),# TODO
+            w.plot_note("$sherlockは子供じゃないんだし放っておけばいいと言うが、$limeはまだ子供だ、と反論する"),
+            w.plot_note("$sherlockは研究室に閉じこもり、何かを調べていた"),
+            w.plot_note("$wilsonも忙しいと出ていってしまう"),
+            w.plot_note("$limeは自分の悩みも相談できないまま、キッチンに立ち、考え事をする"),
+            #
+            w.plot_note("翌日$limeもしばらく一人になりたいからと外に出ていってしまう"),
+            w.plot_note("$sherlockはまた一人に戻っていた"),
+            w.plot_note("お茶を頼んでも誰もいない"),
+            w.plot_note("かつての自分の暮らしに戻っただけだ、と"),
+            w.plot_note("そこに大家の$lisaがやってきて、家賃の支払いが滞っているという"),
+            w.plot_note("あと、最近放火犯が出ていて気をつけてくださいとも"),
+            w.plot_note("邪険に追い払い、研究室にこもる"),
+            w.plot_note("今取り組んでいるのは体液や毛髪から個人を特定できないか、というものだった"),
+            w.plot_note("しかし成分検出しても、それがその個人特有のものかまでは特定できず、証拠としては全く使えない代物だった"),
+            w.plot_note("明け方、焦げ臭い臭いで目覚める"),
+            w.plot_note("家が燃えていた"),
+            w.plot_note("$sherlockの火の不始末だった"),
             outline=ABSTRACT)
 
