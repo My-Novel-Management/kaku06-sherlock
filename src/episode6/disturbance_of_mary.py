@@ -34,5 +34,20 @@ def main(w: World):
             w.plot_turnpoint("$moriano犯罪研究所で$maryと出会う"),
             w.plot_resolve("$limeは$maryに戻ってくるよう説得を試みたが$maryの決意は固く、$morianoの手伝いをすると言って、帰された"),
             w.plot_turnpoint("$sherlockの火の不始末により自宅が燃えてしまう"),
+            w.plot_note("$sherlockの家が燃えてしまい、なんとか助け出されたものの、大家の$lisaから説教をくらっていた"),
+            w.plot_note("やってきた$limeと$wilsonは、どうするのかと尋ねる"),
+            w.plot_note("$sherlockは野宿でもして暮らすと言う"),
+            w.plot_note("以前はホームレスだった頃もあり、慣れていて平気だと"),
+            w.plot_note("$wilsonはそれなら修繕が済むまで自分の家で寝泊まりすればいいと提案する"),
+            w.plot_note("$lisaは修理費用も請求すると言い残した"),
+            #
+            w.plot_note("$carで$wilsonの家に向かう"),
+            w.plot_note("道中、$maryの姿を$limeが見つける"),
+            w.plot_note("$maryは新興宗教団体$cultXの手伝いをしていた"),
+            w.plot_note("$cultXは代表は違うが、もともとは$morianoが立ち上げた宗教団体だという。特にマイノリティに人気があり、現在勢力を伸ばしていると聞いた"),
+            w.plot_note("$maryが$morianoの手伝いをしていると知り、$sherlockは不機嫌になる"),
+            w.plot_note("$limeは心配していた"),
+            #
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
