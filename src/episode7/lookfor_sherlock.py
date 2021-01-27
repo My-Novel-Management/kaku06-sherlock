@@ -77,6 +77,10 @@ def main(w: World):
             w.plot_note("以前のような軽薄さはなくなり、徐々に刑事が身についてきていた"),
             w.plot_note("みんな変わっていくのを感じていた"),
             #
-            w.plot_note(""),# TODO
+            w.plot_note("$maryが花屋の仕事もだいぶ慣れて、やっと元通りの生活になってきたころ"),
+            w.plot_note("$wilsonが興奮気味に戻ってくる"),
+            w.plot_note("「聞いてくれ。$sherlockに似た男の目撃情報があった」と"),
+            w.plot_note("ちょうどお茶を飲みに来ていた$limeと$maryは揃って驚きつつも「どこで？」と"),
+            w.plot_note("$wilsonはある空き家に出没する、と言った"),
             outline=ABSTRACT)
 
