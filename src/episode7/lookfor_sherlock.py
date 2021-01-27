@@ -82,5 +82,24 @@ def main(w: World):
             w.plot_note("「聞いてくれ。$sherlockに似た男の目撃情報があった」と"),
             w.plot_note("ちょうどお茶を飲みに来ていた$limeと$maryは揃って驚きつつも「どこで？」と"),
             w.plot_note("$wilsonはある空き家に出没する、と言った"),
+            w.plot_note("すぐにそこを見に行こうという話になり、出かける"),
+            #
+            w.plot_note("$wilsonの案内でスラム街の空き家にやってくる"),
+            w.plot_note("空き家の中に誰かいる気配はなく、中に入って調べてみる"),
+            w.plot_note("リビングにはテーブルがあり、本が一冊置かれていた"),
+            w.plot_note("破れたソファに拾ってきた新聞が散らばっている"),
+            w.plot_note("奥のキッチンのドアは立て付けが悪く、なんとか開けて入るとゴミがいっぱい"),
+            w.plot_note("最近のものらしく、誰かがここで暮らしていると"),
+            w.plot_note("夜に戻ってくるという話だったので、少し離れた空き家を使い、監視することにする"),
+            w.plot_note("二階の部屋に陣取り、そこから監視する$maryたち"),
+            w.plot_note("$wilsonは買い出しに行く"),
+            w.plot_note("$maryと$limeは少し話す"),
+            w.plot_note("$maryは$sherlockに会ったら謝りたいと言っていた。自分が迷わなかったら、もっとちゃんとしていたらこんなことにならなかったと"),
+            w.plot_note("いつも迷惑をかけてばかりでごめんなさいと"),
+            w.plot_note("$wilsonが戻ってきて、少し食べると仮眠を取った"),
+            #
+            w.plot_note("夜になり、人影が家に入る"),
+            w.plot_note("そこに明かりが灯る"),
+            w.plot_note("浮かび上がったシルエットはまぎれもなく$sherlockのそれだった"),
             outline=ABSTRACT)
 
