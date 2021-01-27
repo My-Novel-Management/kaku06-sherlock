@@ -37,5 +37,19 @@ def main(w: World):
             w.plot_turnpoint("$maryは$patsonから$sherlockを容疑者に考えていることを教わる"),
             w.plot_resolve("$maryは単独で空き家を調査に向かう"),
             w.plot_turnpoint("$maryは抜け道を見つけた"),
+            w.plot_note("監視している空き家に明かりがともり、そこに$sherlockらしき人影が見えた"),
+            w.plot_note("人影はいつも$sherlockがしているように本を読んでいるのが分かった"),
+            w.plot_note("$maryはすぐに確認に行こうというが、$wilsonが少し待つように言う"),
+            w.plot_note("すると、そこに来客があった"),
+            w.plot_note("コートの男が入っていき、何やら口論をしている風"),
+            w.plot_note("$maryたちはじっとその様子を見ている"),
+            w.plot_note("すると突然明かりが消えた。物音がした"),
+            w.plot_note("息を潜めて待つ$maryたち"),
+            w.plot_note("だが何も起こらない"),
+            w.plot_note("$maryは何かを察して飛び出していく"),
+            w.plot_note("慌てて後を追う$wilsonたち"),
+            #
+            w.plot_note("真っ暗な空き家に入る"),
+            w.plot_note(""),# TODO
             outline=ABSTRACT)
 
