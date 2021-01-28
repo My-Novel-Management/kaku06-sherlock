@@ -75,9 +75,9 @@ def main(w: World):
             w.plot_note("その資料は$morianoにより盗まれ、紛失している"),
             w.plot_note("実際にどういうものなのかは$sherlockも知らない"),
             #
+            "$wilsonは最後に登場",
             w.plot_note("大聖堂にやってくると、何があったのか警官（$parkerたち）が警備していた"),
             w.plot_note("巨大な爆弾が見つかったというのでみんなを避難させるように言われたと"),
-            w.plot_note("ちょうど$wilsonもいて$sherlockがいたことに驚いているが、事情を説明している暇はないと言われて理解する"),
             w.plot_note("そこに$restradeもやってきて、困惑している"),
             w.plot_note("一体何をやってるんだ、$patsonはと"),
             w.plot_note("$sherlockはすぐ$patsonの家を調べるように言う。彼が$cultXの手先だった"),
@@ -96,6 +96,7 @@ def main(w: World):
             w.plot_note("$sherlockがすぐにやめるように忠告する"),
             w.plot_note("儀式は失敗すると言った"),
             w.plot_note("しかし$patsonは儀式を行うべく、祝詞をとなえる"),
-            w.plot_note("その$patsonを$wilsonが$gunで撃ち抜いた"),
+            w.plot_note("その$patsonを現れた$wilsonが$gunで撃ち抜いた"),
+            w.plot_note("「間に合ってよかったよ」という$wilson"),
             outline=ABSTRACT)
 
