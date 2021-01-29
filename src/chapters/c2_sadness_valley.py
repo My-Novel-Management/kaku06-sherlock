@@ -8,6 +8,12 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
+from episode2 import family_circumstances
+from episode2 import marys_confession
+from episode2 import real_mind
+from episode2 import sad_case
+from episode2 import suspect_mary
+from episode2 import valley_town
 
 
 # Episodes
@@ -30,85 +36,6 @@ $sherlockは最新の指紋検出技術を用いて凶器となった$gunから$
 $kailが自分一人だけでやったと$jeanを人質に取るが、$transformした$maryにより阻止され、事件は解決した。
 後日、遺産相続権を放棄し、邸宅も地元に寄付をした$maryが、荷物を持って$sherlock宅に押しかけた。
 """
-OUTLINES = [
-"""
-$wilsonは毎日のようにやってきては$sherlockに第二王女失踪事件の調査を依頼しようとする。だが$sherlockはその気はなく、新聞記事を見ては興味のある事件を探している。
-記事のある事件。資産家の男が娘に$gunによって殺されるという悲しい事件があった。明け方に新聞配達の男により沼地で倒れている$royd氏が見つかり、死亡が確認された。
-警察は状況から娘を容疑者として逮捕し、取り調べを行っていると。
-$gunについては詳細は書かれていないが、最近ちょくちょく出回っているものだ。闇社会で資金源になっているのかも知れないと$sherlockは言う。
-一方、失踪事件については明確な証拠も関連性もなく、王女のそれについてもよく分からないと$sherlock。
-$wilsonの依頼は受けないが、警察や他の依頼者の依頼は色々と抱えていた。
-また自分自身で犯罪関連の研究も行っていた。今日は自分の血液を採取して、血の研究をしていた。
-と、そこに訪問者がある。
-その事件の被害者宅に務める使用人の息子$keanが訪れて、$sherlockに容疑者である娘の容疑を晴らして欲しいと依頼した。
-""",
-"""
-$sherlockは$keanから事件のあらましを聞く。おおむね新聞記事の通りだったが、$keanは絶対に娘の$maryが父親を殺すはずはないと断言している。
-なけなしの小銭で依頼する$keanに応える$sherlockは、$wilsonとともに事件のあった街に向かう。
-電車で向かう最中に、どんな地域なのかを教わる。あまり産業のない土地だったが$royd氏が見つけた$stone鉱脈により潤っていた。それで駅も誕生したと。
-街に到着すると、$sherlockたちは事件のあった沼地を訪れる。そこで現場を訪れていた地元の刑事$patsonと遭遇。怪しまれる。
-$sehrlockが$restradeの名前を出すとすぐに縮こまり、協力してなんでも教えてくれるという。
-どうやらただ証言だけで$maryを犯人と決めている訳ではないと語る。
-それについては教えてもらえなかったが、$sherlockは現場で動物の毛を採取した。
-$royd邸にやってきた$sherlockは、使用人の$kailと未亡人となった$jeanから話を聞く。
-それぞれに互いのアリバイの証言を行う。また娘の$maryが父$roydと事件当日夜、外で出会ったことも目撃証言があった。
-二人以外からも外で歩いているのを見たというものもあり、外出し、実際に現場で会ったことは確からしい。
-また凶器となった$gunは$maryの部屋から$kailが発見した。
-$sherlockは何とかして$maryからも話を聞く必要があると、警察に向かう。
-""",
-"""
-警察にやってきた$sherlockたち。$patsonは$maryとは会わせられないという。
-$sherlockは$restradeのツテを利用してなんとか僅かばかりの面会の時間を得る。
-面会した$maryは衰弱していたが、$sherlockが$keanの依頼できたことを知ると、全て話すと言った。
-$maryは自分が父親に話があるからと呼び出されて事件現場に行った。どうしても家の中で話せないことがあるからと。
-そこで自分が拾われた子供だったと告白された。それにショックを受け、そのままその場を立ち去った。途中バラ園で休んでから家に戻った。そのまま部屋から一歩も出ず、翌朝、$kailに起こされて父親が亡くなったことを聞かされた、と。
-その時にはまだ誰が殺したか分からず、ただしんだことだけ教わった。
-その後、警察が来たり、それぞれ事情聴取された。何故か自分の部屋から凶器の$gunが発見され、容疑者になってしまった。
-自分は絶対にやらないし、拾われ子だったことはショックだったが、父親には恩義しか感じていないと。
-面会後、$sherlockは全てを語っていないと言う。
-$maryは$animalだった。またそれが警察の容疑者候補として強い印象になっていると。
-""",
-        # 容疑者の$maryは$animalだった
-"""
-$sherlockは独自に酒場や街を歩いて情報を集める。
-その間に$wilsonは一旦$Londonに戻り、$sherlockに頼まれた仕事をこなしていた。
-ある老人を訪ねる。$edoという名の老人は、$sherlockから頼まれてあるものを開発していた。
-それは指紋検出器だった。指紋とは指の模様だという。
-$sherlockはパブである男性から$jeanが同じ学校だという話を聞く。彼女は後妻で玉の輿に乗れたと喜んでいたと。貧しい家の出で、$royd氏はそういった子供たちに支援もしていた。
-そういう人物を拾った娘が殺したのは酷い話だと。どうも街では娘が拾い子だという話は誰もが知っている噂だった。
-また$royd氏には莫大な遺産があり、本来ならそれは全てあの娘が相続するはずだったとも。
-$sherlockは$jeanが育ったという学校にやってくる。そこで若い頃の$jeanの絵を見つける。卒業生による肖像画だというが、そこに$kailのサインを見つけた。
-一晩泊まり、翌日、$sherlockは単身$royd邸を訪ねる。しかし$jeanが体調不良で面会できないと言われた。
-警察に行くとちょうど$wilsonが戻ったところで、指紋検出を行う。だがそれは$maryの指紋とは異なっていた。
-""",
-"""
-検出結果を受けて$sherlockは再度$royd邸を訪問する。
-$jeanは体調悪いからと使用人$kailに断られたが$maryを連れてきて、彼女と直接話があるというと奥から$jeanが出てきて応じてくれた。
-$maryはあの場所で父親になんと言われたかを語った。
-それは決して遺産相続の話ではなく、自分の出自にかかわることだった。
-拾われた子供だ、というのは既に街の人間の噂から察していたが、それだけでなく$animalだと告白された。それも、自分と別の$animalの子供だ、と。実の娘だった。
-それは$royd氏がずっと隠していた事実であり、だからこそ$royd氏は遺書で全財産を娘にやると書いていたのだ。
-それにショックを受けて家に戻った$mary。一晩中自分の気持を処理できずに寝られなかった。
-その告白に対して$jeanはずっとそうじゃないかと疑っていたと。だから余計に愛せなかったと。
-そして前日の夜、$roydから直接、話す決意をしたと聞かされた。それは$maryの十六歳の誕生日を迎えるからだった。
-$jeanは遺産を$maryにあげたくなくて、$roydを殺して$maryを犯罪者にしたと告白したが、
-その時$kailがナイフを振りかざして人質に取った
-""",
-"""
-殺人を計画したのは$kailだった。学校時代から憧れの女性で、ずっと彼女に思いを寄せていた$kailは、彼女の悩みのよき相談相手だった。
-彼女が結婚してからも、ここで使用人としていることで彼女の助けになった。
-$roydが病気でそう長くないことを知らされ、今回の殺人を思いついた。
-$jeanには口裏をあわせてもらっただけで、あとで殺すつもりだったと語る。
-だがそれが$jeanをかばっていることは明らかだった。
-$kailは剥きになり、$jeanを殺そうとする。
-その時$maryが$transformし、$jeanを守った。だが$jeanはそれでも$maryを愛しているとは言えなかった。
-こうして事件が終わった。
-後日$keanからの手紙で$maryが遺産相続を放棄し、邸宅も地元に寄付することになったと教わる。
-$maryは遠くの親戚に預けられるそうだが、$keanは父親と$jeanの戻る場所を守るために邸宅の管理をしつつバラ園を整備するという。
-そこに$maryが大きな荷物を持ってやってくる。
-$maryは$sherlockの家で暮らすと言った。
-""",
-        ]
 
 # NOTE: charas
 #   ・$mary（初出。最初は怯えて寡黙になっているただの少女。あとで印象変わる
@@ -131,78 +58,6 @@ $maryは$sherlockの家で暮らすと言った。
 #   ・魔導列車
 
 
-def sad_case(w: World):
-    return w.episode("悲しい事件",
-            # NOTE
-            w.plot_setup("$wilsonは毎日のようにやってきて$sherlockに仕事を依頼しようとするが$sherlockは無視して新聞から興味深い事件を探す"),
-            w.plot_turnpoint("$sherlockは犯罪解決のための開発に忙しいと外出してしまう"),
-            w.plot_develop("翌日も訪れた$wilsonは$sherlockが興味を持ちそうな事件を探す。田舎町の悲しい父親殺しの事件をピックアップし、それについて$sherlockに尋ねる"),
-            w.plot_turnpoint("そこに一人の少年（$kean）が仕事を依頼したいと訪れる"),
-            "地元の新聞社の仲良い人の紹介",
-            w.plot_resolve("父親殺し事件の容疑者となった娘の家に勤める使用人$keanが、娘の無実を証明してほしいと依頼に訪れた"),
-            w.plot_turnpoint("なけなしの小遣いで依頼する$keanに、$sherlockは二つ返事で受け付けた"),
-            outline=OUTLINES[0])
-
-
-def valley_town(w: World):
-    return w.episode("谷の田舎町",
-            # NOTE
-            w.plot_setup("事件のあった田舎町にやってくる$sherlockと$wilsonは$keanの案内で事件の調査を行う"),
-            w.plot_turnpoint("地元新聞社の記者$milkから事件に関する記事や情報をもらう"),
-            w.plot_develop("事件現場を確認した後に$royd氏の邸宅で$jean夫人と使用人$kailから話を聞く"),
-            w.plot_turnpoint("$maryは警察に勾留され、面会できないと聞く"),
-            w.plot_resolve("警察にやってきた$sherlockは$restradeの名前を出して交渉する"),
-            w.plot_turnpoint("$restradeのコネで$maryとの面会許可が降りた"),
-            outline=OUTLINES[1])
-
-
-def suspect_mary(w: World):
-    return w.episode("容疑者$mary",
-            # NOTE
-            w.plot_setup("警察にやってきた$sherlockはそこで容疑者の$maryと面会をする"),
-            w.plot_turnpoint("$maryは沈黙を守っていたが$keanの名前に安心して話し始めた"),
-            w.plot_develop("$maryから事件前後の話を聞く。彼女は父親に呼び出されてある話をされたと語った"),
-            w.plot_turnpoint("$maryは家に帰った時に使用人の$kailと顔をあわせたと言った"),
-            w.plot_resolve("地元刑事の$patsonは警察は確かな証拠を掴んでいるからこのまま証拠と証言を固めて裁判所に送ると言う"),
-            w.plot_turnpoint("$sherlockは$maryが$animalであると言った"),
-            outline=OUTLINES[2])
-
-
-def family_circumstances(w: World):
-    return w.episode("家族の事情",
-            # NOTE
-            w.plot_setup("$sherlockは$wilsonにお使いを頼み、その間に街で$royd氏に関する情報を集める"),
-            w.plot_turnpoint("パブで$jeanがかつて通っていた学校の生徒から、彼女が玉の輿に乗れたと喜んでいた話を聞く"),
-            w.plot_develop("$sherlockは$jeanの育った学校に行き、彼女の小さい頃の話などを聞く。またそこで$kailに関する話も入手する"),
-            w.plot_turnpoint("学校に飾られた$jeanの絵に$kailのサインを発見する"),
-            w.plot_resolve("戻ってきた$wilsonから$edoの結果を聞く$sherlock"),
-            w.plot_turnpoint("指紋検出と照合の結果、$gunから$maryのものではない指紋が検出されたと$wilsonから聞いた"),
-            outline=OUTLINES[3])
-
-
-def marys_confession(w: World):
-    return w.episode("$maryの告白",
-            #   NOTE
-            w.plot_setup("$sherlockは再度$jeanと$kailに話を聞きに邸宅を訪れる"),
-            w.plot_turnpoint("$kailから$jeanが体調を崩していて会えないと断られる"),
-            w.plot_develop("$jeanは$maryが拾われ子であり$animalだということを知っていたのを隠していたことを告白する"),
-            w.plot_turnpoint("そこに警察が$maryを連れてくる"),
-            w.plot_resolve("$kailと$jeanは$maryが父親を憎んでいてそれで殺したと罪をなすりつけようとするが、$sherlockにより証言の齟齬が突かれてボロが出る"),
-            w.plot_turnpoint("$maryは$kailたちが父親を殺したことに激怒し、$transformした"),
-            outline=OUTLINES[4])
-
-
-def real_mind(w: World):
-    return w.episode("本当の気持ち",
-            # NOTE
-            w.plot_setup("$transformした$maryを$kailが$gunで殺そうとする"),
-            w.plot_turnpoint("しかし$jeanによりそれが阻止される"),
-            w.plot_develop("実行犯は$kailだった。$jeanも加担したが心の底からは賛成していなかった。逃げ出した$kailが逮捕され、事件は解決に向かう"),
-            w.plot_turnpoint("$jeanは$maryに対して「愛せなくてごめん」と謝罪した"),
-            w.plot_resolve("遺産相続を放棄した$maryは荷物を持って$sherlockの家に押しかけた"),
-            outline=OUTLINES[5])
-
-
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[2],
@@ -215,12 +70,12 @@ def main(w: World):
             #   トリック：アリバイ偽装（偽証と指紋偽装）
             #   結果：共犯として母親が逮捕され、$maryが遺産を独り占めすることになった
             #   ポイント：$animalの存在示唆／改造$gun
-            sad_case(w),
-            valley_town(w),
-            suspect_mary(w),
-            family_circumstances(w),
-            marys_confession(w),
-            real_mind(w),
+            sad_case.main(w),
+            valley_town.main(w),
+            suspect_mary.main(w),
+            family_circumstances.main(w),
+            marys_confession.main(w),
+            real_mind.main(w),
             outline=ABSTRACT)
 
 

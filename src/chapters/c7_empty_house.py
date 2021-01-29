@@ -8,19 +8,12 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from config import TITLES
-from scenes import AbandonedFactory
-from scenes import AbandonedHouse
-from scenes import Church
-from scenes import EmptyHouse
-from scenes import Hideout
-from scenes import Hospital
-from scenes import InCar
-from scenes import Market
-from scenes import MountCottage
-from scenes import PoliceStation
-from scenes import SherlockHouse
-from scenes import SlumTown
-from scenes import WilsonHouse
+from episode7 import adventure_of_empty_house
+from episode7 import he_is_back
+from episode7 import lookfor_sherlock
+from episode7 import one_mans_confess
+from episode7 import revive_boss
+from episode7 import total_the_end
 
 
 # Episode
@@ -56,72 +49,7 @@ $sherlockは$maryを助けるために血を盃に注ぐ。それにより四つ
 $sherlockはそのことに気づいていて、$wilsonの計画が失敗するように敢えて偽物だと分かって儀式を行わせた。
 逃げ出した偽$wilsonは、後日、山中の山小屋で自殺しているのが発見された。$zeronの死により、全ての関連が断たれ、$boss復活にかかわる一連の事件は終焉を迎えた。
 """
-OUTLINES = [
-"""
-$sherlockが消えてから半年、$maryは市場の手伝いをし、$limeは護衛のアルバイトしながら、彼を探し続けていた。しかし未だに何も情報がなく$patsonたちは諦めた方がいいと言っていた。
-だがある日、$sherlockの家が強盗に荒らされていて、まだ$sherlockを探している人物がいることが分かる。
-$maryたちは安全のために一旦$wilsonの家に移り、地道に$sherlockに関する情報を収集した。
-そして遂に$wilsonが$sherlockを見たというホームレスの情報を持ってくる。
-""",
-"""
-ホームレスからスラム街の空き家に$sherlockが出没すると言われ、そこを監視する$maryたち。
-夜になると外見や風貌が$sherlockに似た男がその空き家に入り、明かりが灯った。男はいつも$sherlockがしていたように本を読んでいた。
-そこに来客がある。二人はしばらく何か言い争った後で、突然明かりが消えた。
-しばらく待っても動きがなく、$maryたちは調べるために空き家に突入する。
-そこで殺された男の遺体を発見し、警察に通報した。
-警察の事情聴取を受けた$maryたち。$maryはそこで$patsonから警察は$sherlockを容疑者として疑っている情報を得る。
-$maryは単身で、$sherlockの容疑を晴らすために空き家の調査を行う。
-すると、そこで抜け道を発見した。
-$maryが抜け道を進むと廃工場に出た。そこで今までに失踪した人間たちの遺体を発見する。だがそこで何者かによって意識を失った。
-""",
-"""
-$maryがいなくなり$limeは$ignesたちに協力をしてもらい、彼女を捜索する。だが警察側は$maryが$sherlockの逃亡幇助をしているのだとして、参考人として探していた。
-一方目覚めた$maryの前には$sherlock（に似た男$jake）が現れていた。
-$jakeは今までの失踪事件、猟奇殺人の全てが自分の手によるものだと告白する。自分も$maryと同じように闇の者の血を引く$ajinであり、普通に暮らしていると闇の血が騒ぎ、それを抑えるために誘拐、殺人を行う必要があると語る。
-$jakeは真相を知った$maryを殺そうとする。
-$ignesたちの情報網で、どうやら$maryに似た娘を廃工場街で見かけたという情報が入る。そこに向かう$limeたち。
-$maryは$animal化して$jakeに抵抗していたが、どうしても$sherlockを傷つけることができず、追い詰められる。
-そこに$maryを助けにあのホームレスの男が入ってくる。そのホームレスの正体こそが、$sherlockだった。
-""",
-        # $maryの前に殺人鬼$sherlockが現れた
-"""
-変身して$sherlockたちを追い詰める$jake。しかし$sherlockの機転で工場に穴を開け、日光を浴びせかけることで$jakeは皮膚から大量に出血し、爆発した。
-その爆音を聞いて$limeたちが駆けつける。$maryが身を挺して$sherlockを守っていたが、$maryは大怪我を負ってしまった。入院することになる$mary。
-戻った$sherlockは、一旦$wilsonの家で$limeたちに事情を語る。
-$morianoとの対決により滝壺に落下し、死を覚悟した$sherlockだったが、$maryが繕ってくれた服の裾が引っかかり、何とか死だけは免れた。
-ただ大怪我をしており、そこを助けてくれたのが、$jackだった。彼女の別荘で回復するまで休養しながら各国の情報を集め、$moriano配下の動向を追いかけていた。
-未だに$sherlockを探す動きが見えたので、おびき出すために空き家の件をでっち上げた。だがそれを利用した$jakeにより$maryがおびき出された、というのが今回の一件だった。
-$sherlockは$maryに預けておいた$blue_stoneを取り戻す必要があると言う。
-しかし$sherlockたちが病院に駆けつけると、$maryの姿が消えていた。
-""",
-"""
-$sherlockは$maryが$patsonにより連れ出されたと知り、急いで改装中の大聖堂へと向かう。そこが$boss復活の儀式を行う場所だと言う。
-大聖堂の地下には巨大なホールが広がっていた。そこはかつて$bossの居城があった場所で、封印する目的で聖堂を建てたのが今の大聖堂の元になったと説明する。
-待ち構えていた$patsonは$maryを人質にして、残り一つの「捧げもの」を$sherlockに要求する。それは$heroの血液だった。
-$sherlockの家を荒らしたのは$patsonだった。$sherlockが$heroだと知った彼が血液の研究をしていたのを知っての犯行だ。しかし既に$sherlockが処分した後だった。
-$patsonも一部に$ajinの血が入っており、苦しい幼少期を経て今があった。$boss復活すれば$ajin優遇の世界がくると信じていた。
-だが$sherlockにより過去、$bossがいた時代の$ajinの扱いがどんなに酷いものだったかが語られる。
-$gunを打って$sherlockを負傷させ、$maryを人質に、その血を盃に入れさせた。
-$patsonにより、$boss復活の儀式が始まった。
-""",
-"""
-$boss復活の儀式が行われ、$stoneに封じられた力が周囲に満ち始める。
-だが途中で暴走し、大爆発を引き起こした。$blue_stoneが偽物だったからだ。$jackにより偽物にすりかえられていた。
-$patsonの身体は犠牲となり、肉片となって飛び散った。
-$sherlockは偽物と知っていて儀式を行わせたのだ。
-これで全て終わったかに思えたが、空っぽになった盃を$wilsonが拾い上げる。$wilsonは「また失敗した」と口にする。
-意味が理解できない$maryたちだが、$sherlockは予測していた。
-$sherlockが全てを行ってきた黒幕が$morianoではなく$wilsonだったと語る。いや、偽物の$wilsonだ。
-彼の家を見たときに$wilsonが偽物だと分かった。そこから目的を逆算し、全てを理解した。
-$wislonは$zeronと名乗り、正体を現した。
-彼は闇の世界から$boss復活のために遣わされた存在だった。
-その力は古の魔物のもので、$sherlockたちは太刀打ちできない。$maryが守ろうとしたが負傷していて$transformできない。
-追い詰められたかに思えたが、$patsonの使っていた$gunを利用して心臓を打ち抜き、$zeronが利用している体の機能を止めた。
-$zeronは闇の力により脱出し、その場から逃げていった
-突入した$restradeたちにより助けられ、崩れ去る地下ホールから逃げ出した$sherlockたち。
-後日、指名手配で逃走中だった偽$wilson（$zeron）が山小屋で自殺しているのが発見された。
-""",
-        ]
+
 
 # NOTE: charas
 
@@ -147,77 +75,6 @@ $zeronは闇の力により脱出し、その場から逃げていった
 #   ・
 
 
-def lookfor_sherlock(w: World):
-    return w.episode("$sherlockを探して",
-            # NOTE
-            w.plot_setup("$sherlockが滝壺に落ちてから三ヶ月が経つが何も生存情報が見つからず、$maryたちは新しい生活に馴染み始めていた"),
-            w.plot_turnpoint("$wilsonが$sherlockに似た男を目撃したという情報を持ってくる"),
-            w.plot_develop("ホームレスから情報を得て、$maryたちは$sherlockに似た男が現れるという空き家を監視する"),
-            w.plot_turnpoint("夜になり$sherlockに似た男が空き家に入っていく"),
-            w.plot_resolve("シルエットは$sherlockを思わせたが、その空き家に別の男性が入っていくのを目撃する"),
-            w.plot_turnpoint("争う音がして、明かりが消えた"),
-            outline=OUTLINES[0])
-
-
-def adventure_of_empty_house(w: World):
-    return w.episode("空き家の冒険",
-            # NOTE
-            w.plot_setup("$sherlockが現れるという空き家を監視していた$maryたちは、そこで争いがあるのを目撃して、中を調査する"),
-            w.plot_turnpoint("空き家で男の遺体を発見する"),
-            w.plot_develop("警察に連絡し、$maryたちは事情聴取を受ける。そこで$sherlock生存情報を得たことなどを話す$mary"),
-            w.plot_turnpoint("$maryは$patsonから$sherlockを容疑者に考えていることを教わる"),
-            w.plot_resolve("$maryは単独で空き家を調査に向かう"),
-            w.plot_turnpoint("$maryは抜け道を見つけた"),
-            outline=OUTLINES[1])
-
-
-def one_mans_confess(w: World):
-    return w.episode("ある男の告白",
-            # NOTE
-            w.plot_setup("$maryは空き家からの抜け道を進み、それが廃工場に繋がっていることを知る"),
-            w.plot_turnpoint("廃工場で沢山の遺体を発見する"),
-            w.plot_develop("遺体が行方不明者だと分かったが、手口がどれも猟奇殺人のそれに似ていた"),
-            w.plot_turnpoint("そこに$sherlockに似た男が現れる"),
-            w.plot_resolve("$sherlock（に似た男$jake）は自分が失踪事件、猟奇殺人事件の犯人であると告白し、幼少期から鬱屈した歪んだ感情を抱えていたことを語る"),
-            w.plot_turnpoint("$maryはその男が偽物であることを見抜いた"),
-            outline=OUTLINES[2])
-
-
-def he_is_back(w: World):
-    return w.episode("英雄の帰還",
-            # NOTE
-            w.plot_setup("連続殺人犯$jakeは$maryを殺そうとする"),
-            w.plot_turnpoint("そこにホームレスが助けに入る"),
-            w.plot_develop("$sherlockは$jakeがどんな人生を歩んできたかを全て言い当て$jakeの牙を無力化しようとする"),
-            w.plot_turnpoint("$transformした$maryにより$sherlockが守られるが、彼女が負傷する"),
-            w.plot_resolve("$sherlockが呼んでおいた警察により$jakeは捕らえられた。$maryは入院し、$sherlockも治療を受ける"),
-            w.plot_turnpoint("入院している$maryから$blue_stoneを貰おうと思ったが$patosonにより連れ出された後だった"),
-            outline=OUTLINES[3])
-
-
-def revive_boss(w: World):
-    return w.episode("$bossの復活",
-            # NOTE
-            w.plot_setup("$patsonが裏切り者だった。$boss復活の儀式を行うために$maryを誘拐し、改装中の大聖堂に向かう"),
-            w.plot_turnpoint("改装中の大聖堂に、地下に繋がる階段が見つかった"),
-            w.plot_develop("$patsonは儀式を行うために$maryを盾にして脅す。必要な祭具の残り一つが分からなかったが$sherlockによりそれが$heroの血であることを教えられる"),
-            w.plot_turnpoint("$sherlockは真の$heroだった"),
-            w.plot_resolve("道具が揃った$patosonは$boss復活の儀式を開始した"),
-            w.plot_turnpoint("だが儀式は途中で失敗する"),
-            outline=OUTLINES[4])
-
-
-def total_the_end(w: World):
-    return w.episode("すべての終わり",
-            # NOTE
-            w.plot_setup("$patsonが$boss復活の儀式を行ったが、偽物の$blue_stoneにより儀式は失敗に終わる"),
-            w.plot_turnpoint("$wilsonが$patsonを始末する"),
-            w.plot_develop("$wilsonは偽物で、彼こそが$boss復活の主導者だった。偽$wilsonの$zeronは$sherlockに本物の$blue_stoneを持ってくるよう要求する"),
-            w.plot_turnpoint("$limeが目の前で$stoneを砕いた"),
-            w.plot_resolve("儀式が不可能になり偽$wilsonこと$zeronは逃亡する。後日山中の小屋で自殺しているのが発見された"),
-            outline=OUTLINES[-1])
-
-
 # Chapter
 def main(w: World):
     return w.chapter(TITLES[7],
@@ -230,12 +87,12 @@ def main(w: World):
             #   トリック：偽装トリック（争ったように見せかけて遺体を部屋に置いた）＆抜け道を使った密室
             #   結果：$jakeを殺して事件解決
             #   ポイント：連続失踪事件の犯人／$boss復活の儀式とその失敗
-            lookfor_sherlock(w),
-            adventure_of_empty_house(w),
-            one_mans_confess(w),
-            he_is_back(w),
-            revive_boss(w),
-            total_the_end(w),
+            lookfor_sherlock.main(w),
+            adventure_of_empty_house.main(w),
+            one_mans_confess.main(w),
+            he_is_back.main(w),
+            revive_boss.main(w),
+            total_the_end.main(w),
             outline=ABSTRACT)
 
 
